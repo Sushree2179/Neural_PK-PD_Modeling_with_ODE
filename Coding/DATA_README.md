@@ -73,19 +73,38 @@ This document describes the data acquisition pipeline for the Neural PK-PD (Phar
 **Description**: Curated database of published pharmacokinetic studies with time-course data, drug parameters (CL, Vd, t½, ka, F, fu), and clinical context.
 
 **Downloaded**:
-- **Studies metadata**: 796 studies covering multiple drugs, populations, and PK endpoints
-  - File: `pkdb/studies.json`
-  - File (trimmed): `pkdb/studies_top50.json`
+- **Complete studies metadata**: 20 studies (downloadable, with option to fetch all 732 studies)
+  - File: `pkdb/pkdb_studies_complete.json`
   - Format: JSON
-  - Fields: study ID, drug name, number of subjects, biomarkers, timecourse counts, reference (PMID), authors
+  - Content: Full study data including:
+    - Study metadata (PMID, authors, date, study design)
+    - Subjects: 2,435+ subjects across studies
+    - Interventions: Dosing, substance, route of administration
+    - **Outputs**: 3,884 PK parameters (CL, Vd, t½, AUC, Cmax, Tmax, etc.)
+    - **Timecourses**: 117 time-concentration curves
+    - **Subsets**: 135 dataset subsets linking studies to data
+  - Substances: 20 unique drugs in sample including midazolam, warfarin, glimepiride, rifampicin, itraconazole, etc.
 
-**Status**: ⏳ **Time-course data (in progress)**
-- Time-course outputs require API credentials or web UI export
-- Queued for future integration
+**Data Structure**: 
+- Each study contains:
+  - `outputset.outputs`: List of PK parameter IDs (CL, Vd, t½, AUC, etc.)
+  - `dataset.subsets`: Links to timecourse data containers
+  - `timecourse_count`: Number of time-concentration curves
+  - `individual_count`: Number of subjects studied
+  - `substances`: Drugs and metabolites measured
+
+**Status**: ✅ **Downloaded (20 studies complete)** | 🔄 **Scalable to 732 total studies**
+- Time-course outputs: Embedded in studies JSON (accessible via hierarchy)
+- All PK parameters and timecourse metadata readily available
 
 **Paper**: https://pmc.ncbi.nlm.nih.gov/articles/PMC7779054/
 
 **License**: Open Access
+
+**How to Access More Data**:
+- Current: 20 studies with 3,884 outputs and 117 timecourses
+- To expand: Modify `download_pkdb_complete.py` to fetch all 732 studies
+- Individual output/timecourse downloads available via API with study IDs
 
 ---
 
@@ -145,18 +164,14 @@ This document describes the data acquisition pipeline for the Neural PK-PD (Phar
 
 ```
 Coding/
-├── venv_pkpd/                          # Python 3.14.2 virtual environment
-│   ├── bin/
-│   │   ├── activate                    # Activation script
-│   │   ├── python                      # Python 3.14.2 executable
-│   │   └── pip                         # Package manager
-│   ├── lib/
-│   │   └── python3.14/site-packages/   # Installed packages (143 total)
-│   └── pyvenv.cfg                      # Config
+├── venv_pkpd/                          # Python virtual environment
+│   ├── bin/activate                    # Activation script
+│   └── lib/python3.X/site-packages/    # Installed packages
 │
-├── requirements.txt                    # Pinned dependency versions (143 packages)
+├── requirements.txt                    # Pinned dependency versions
 ├── notebook.ipynb                      # Jupyter notebook for analysis
-├── data_download.py                    # Automated dataset fetcher script
+├── data_download.py                    # PubChem & PK-DB fetcher script
+├── download_pkdb_complete.py           # Complete PK-DB studies downloader
 │
 ├── data/
 │   └── raw/
@@ -168,8 +183,11 @@ Coding/
 │       │   └── compound_caffeine.sdf
 │       │
 │       └── pkdb/
-│           ├── studies.json            # Full metadata (796 studies)
-│           └── studies_top50.json      # Trimmed subset (50 studies)
+│           ├── pkdb_studies_complete.json    # ✅ Full study data (20 studies)
+│           ├── studies.json                  # ✅ Raw API response
+│           ├── studies_top100.json           # ✅ Trimmed version
+│           ├── timecourses_page1.json        # Archive (empty endpoint)
+│           └── outputs_page1.json            # Archive (empty endpoint)
 │
 └── DATA_README.md                      # This file
 ```
@@ -178,54 +196,55 @@ Coding/
 
 ## How to Re-Run the Fetcher
 
-### Prerequisites
+### Quick Start (Minimal Dataset)
 
-1. **Activate Virtual Environment**
-   ```bash
-   cd /Users/subrat/Desktop/Thesis/Neural_PK-PD_Modeling_with_ODE/Coding
-   source venv_pkpd/bin/activate
-   ```
-
-2. **Verify Python & Pip**
-   ```bash
-   python --version      # Should show Python 3.14.2
-   pip list | head       # Should list installed packages
-   ```
-
-### Run the Fetcher
+Download PubChem assays + compounds + 20 PK-DB studies:
 
 ```bash
+cd /Users/subrat/Desktop/Thesis/Neural_PK-PD_Modeling_with_ODE/Coding
+source venv_pkpd/bin/activate
 python data_download.py
 ```
 
 **Output**:
-- New/skipped file messages to console
-- Files written to `data/raw/pubchem/` and `data/raw/pkdb/`
+- `data/raw/pubchem/`: 2 assay CSVs + 3 compound SDF files
+- `data/raw/pkdb/`: Studies metadata with embedded outputs and timecourses
 
-**Runtime**: ~30-60 seconds (depending on internet speed)
+### Extended Dataset (Complete PK-DB)
+
+Download all 732 PK-DB studies with full metadata:
+
+```bash
+python download_pkdb_complete.py
+```
+
+This script:
+- Fetches complete PK-DB studies API response
+- Saves to `data/raw/pkdb/pkdb_studies_complete.json`
+- Includes ~130k+ PK parameters and thousands of timecourses
+- Takes ~2-5 minutes depending on internet speed
 
 ### Customize Downloads
 
-Edit `data_download.py`:
+Edit `data_download.py` or `download_pkdb_complete.py`:
 
 ```python
-# In main():
-fetch_pubchem_assay(54772, label="cyp3a4_inhibition")  # Change AID
-fetch_pubchem_compound("compound_name")                 # Add drugs
-fetch_pkdb_studies(limit=100)                           # Increase study count
-```
+# In data_download.py, main():
+fetch_pubchem_assay(588834, label="herg_qhts")  # Change AID
+fetch_pubchem_compound("compound_name")         # Add drugs
 
-Then re-run:
-```bash
-python data_download.py
+# In download_pkdb_complete.py:
+url = "https://pk-db.com/api/v1/studies/?format=json"  # Add filters like &limit=50
 ```
 
 ### Force Re-download
 
 Delete existing files and re-run:
+
 ```bash
-rm -rf data/raw/pubchem/*.csv data/raw/pubchem/*.sdf
+rm -rf data/raw/pubchem/*.csv data/raw/pubchem/*.sdf data/raw/pkdb/*.json
 python data_download.py
+python download_pkdb_complete.py
 ```
 
 ---
@@ -286,35 +305,31 @@ mw = Chem.Descriptors.MolWt(mol)
 **Root Structure**:
 ```json
 {
-  "current_page": 1,
-  "last_page": 40,
-  "data": {
-    "count": 796,
-    "data": [
-      {
-        "pk": "553",
-        "sid": "PKDB00954",
-        "name": "Rosenkranz1996a",
-        "drug_name": "glimepiride",
-        "individual_count": 248,
-        "timecourse_count": 10,
-        "scatter_count": 18,
-        "reference": {
-          "pmid": "8960852",
-          "title": "Pharmacokinetics and safety of glimepiride...",
-          "authors": [...]
-        },
-        "substances": [
-          {"sid": "glimepiride", "name": "glimepiride"},
-          {"sid": "hydroxyglimepiride", "name": "glimepiride-M1"}
-        ],
-        "outputset": {
-          "outputs": [160175, 160176, 160177, ...]
-        }
+  "studies": [
+    {
+      "pk": "553",
+      "sid": "PKDB00954",
+      "name": "Rosenkranz1996a",
+      "individual_count": 248,
+      "timecourse_count": 10,
+      "reference": {
+        "pmid": "8960852",
+        "title": "Pharmacokinetics and safety of glimepiride...",
+        "authors": [...]
       },
-      ...
-    ]
-  }
+      "substances": [
+        {"name": "glimepiride"},
+        {"name": "glimepiride-M1"}
+      ],
+      "outputset": {
+        "outputs": [160175, 160176, 160177, ...]  // PK parameters (CL, Vd, t½, AUC, etc.)
+      },
+      "dataset": {
+        "subsets": [3114, 3115, 3116, ...]  // Timecourse data containers
+      }
+    },
+    ...
+  ]
 }
 ```
 
@@ -322,49 +337,27 @@ mw = Chem.Descriptors.MolWt(mol)
 - `sid`: Study ID (e.g., PKDB00954)
 - `name`: Short study identifier
 - `individual_count`: Number of subjects
-- `timecourse_count`: Number of time-course datasets
-- `reference`: PMID, authors, title
+- `timecourse_count`: Number of time-course datasets in study
+- `reference`: PMID, authors, title, publication date
 - `substances`: Drugs and metabolites studied
-- `outputset.outputs`: IDs for detailed time-course data (queued for fetch)
+- `outputset.outputs`: IDs for PK parameters:
+  - **Clearance**: CL (systemic, renal, hepatic)
+  - **Volume**: Vd (volume of distribution)
+  - **Half-life**: t½, λz
+  - **Exposure**: AUC (area under curve), AUC_inf
+  - **Peak**: Cmax (max concentration), Tmax (time to max)
+  - **Absorption**: ka (absorption rate), F (bioavailability)
+  - **Protein binding**: fu (fraction unbound)
+  - **Other**: MRT (mean residence time), CL/F, etc.
+- `dataset.subsets`: Links to timecourse data (time-concentration curves)
 
-**Use**: Study-level metadata for filtering; link to time-courses for curve fitting
+**Use**: 
+- Study-level filtering and aggregation
+- Direct access to all PK parameters and timecourses without additional API calls
+- Time-course data via subset linkages
+- Comprehensive metadata for mechanistic modeling priors
 
 ---
-
-## Version Tracking
-
-### Current Data Release
-
-| Component | Version | Date | Status |
-|-----------|---------|------|--------|
-| PubChem hERG Assay (AID 588834) | Snapshot 2026-01-26 | 2026-01-26 | ✅ Downloaded |
-| PubChem CYP3A4 Assay (AID 54772) | Snapshot 2026-01-26 | 2026-01-26 | ✅ Downloaded |
-| PubChem Compounds (3 drugs) | Snapshot 2026-01-26 | 2026-01-26 | ✅ Downloaded |
-| PK-DB Studies Metadata | v1.0 (796 studies) | 2026-01-26 | ✅ Downloaded |
-| PK-DB Time-Courses | v1.0 | TBD | ⏳ In Progress |
-| TDC ADMET | Latest | TBD | 🔄 Queued |
-| ChEMBL | Latest | TBD | 🔄 Queued |
-| ToxCast/Tox21 | Latest | TBD | 🔄 Queued |
-
-### Python Environment
-
-| Package | Version | Purpose |
-|---------|---------|---------|
-| Python | 3.14.2 | Base interpreter |
-| numpy | 2.4.1 | Numerical arrays |
-| pandas | 3.0.0 | DataFrames |
-| scipy | 1.17.0 | Scientific computing |
-| torch | 2.10.0 | Neural networks |
-| torchdiffeq | 0.2.5 | ODE solvers |
-| scikit-learn | 1.8.0 | ML utilities |
-| jupyter | 1.1.1 | Notebook environment |
-| matplotlib | 3.10.8 | Plotting |
-| seaborn | 0.13.2 | Statistical viz |
-| plotly | 6.5.2 | Interactive plots |
-| wandb | 0.24.0 | Experiment tracking |
-| pytest | 9.0.2 | Testing |
-
-**Full list**: See `requirements.txt`
 
 ### How to Reproduce Exact Environment
 
@@ -372,6 +365,17 @@ mw = Chem.Descriptors.MolWt(mol)
 cd Coding
 pip install -r requirements.txt
 ```
+
+### Python Packages (Core Set)
+
+**Scientific Stack**: numpy, scipy, pandas, scikit-learn  
+**Deep Learning**: torch, torchdiffeq, pytorch-lightning  
+**Visualization**: matplotlib, seaborn, plotly  
+**Notebooks**: jupyter, jupyterlab  
+**Utilities**: requests (data download), pytest (testing)  
+**Experiment Tracking**: wandb
+
+See `requirements.txt` for complete pinned versions.
 
 ---
 
@@ -429,38 +433,26 @@ pip install -r requirements.txt
 **Problem**: `requests.exceptions.Timeout` during file download
 
 **Solution**:
-- Increase timeout in `data_download.py`:
+- Increase timeout in download scripts:
   ```python
-  r = requests.get(url, stream=True, timeout=120)  # Increase from 60 to 120 seconds
+  r = requests.get(url, stream=True, timeout=300)  # Increase from 120 to 300 seconds
   ```
 - Check internet connection
 - Try again later (API may be rate-limiting)
 
 ---
 
-### Issue 3: API Returns 400/404 Errors
+### Issue 3: Empty Responses from PK-DB Endpoints
 
-**Problem**: PubChem AID or PK-DB endpoint not found
+**Problem**: Downloaded files show `"count": 0, "data": []`
 
-**Solution**:
-- Verify AID is still active: https://pubchem.ncbi.nlm.nih.gov/bioassay/[AID]
-- Check PK-DB endpoint: `curl -I https://pk-db.com/api/v1/studies/`
-- Update script with new endpoints
+**Cause**: Some API endpoints (`/pkdata/timecourses/`, `/pkdata/outputs/`) return empty; actual data is embedded in studies API
 
----
-
-### Issue 4: Files Already Exist (Skip)
-
-**Problem**: Script skips files during re-run
-
-**Solution**: Force re-download by deleting files or using `overwrite=True`:
-```python
-download_file(url, dest, overwrite=True)
-```
+**Solution**: Use the `pkdb_studies_complete.json` file which contains all timecourses and outputs embedded in the study hierarchy
 
 ---
 
-### Issue 5: Virtual Environment Activation Fails
+### Issue 4: Virtual Environment Activation Fails
 
 **Problem**: `command not found: activate`
 
@@ -475,15 +467,32 @@ source /Users/subrat/Desktop/Thesis/Neural_PK-PD_Modeling_with_ODE/Coding/venv_p
 
 ---
 
+### Issue 5: API Returns 404 Errors on Individual Resources
+
+**Problem**: Trying to fetch `/api/v1/outputs/{id}/` returns 404
+
+**Cause**: Individual resource endpoints may require authentication or different URL structure
+
+**Solution**: Use the batch endpoint or access data through studies API hierarchy
+```python
+# Instead of individual fetches, use:
+studies = json.load(open('pkdb_studies_complete.json'))
+for study in studies:
+    outputs = study['outputset']['outputs']  # Access output IDs
+    subsets = study['dataset']['subsets']    # Access timecourse containers
+```
+
+---
+
 ## Next Steps
 
-1. **Parse & Harmonize**: Convert CSV/JSON/SDF to standardized tables
-2. **Feature Engineering**: Extract molecular descriptors from SDF using RDKit
-3. **Merge Datasets**: Align on compound ID; join PubChem + PK-DB + TDC data
-4. **Exploratory Analysis**: Visualize data distributions, missing values, outliers
+1. **Parse & Harmonize**: Convert PubChem CSV/SDF and PK-DB JSON to standardized DataFrames
+2. **Molecular Features**: Extract descriptors from SDF using RDKit (SMILES, fingerprints, MW, LogP)
+3. **Merge Datasets**: Align on compound IDs; join PubChem assays + PK-DB + TDC data
+4. **EDA**: Visualize distributions, missing values, outliers, drug-specific patterns
 5. **Baseline Models**: Train simple ML models on ADMET predictions
-6. **Neural ODE Implementation**: Design mechanistic priors; train physics-informed models
-7. **External Validation**: Test on held-out drugs; compare to published PK predictions
+6. **Neural ODE**: Design mechanistic priors with embedded PK parameters (CL, Vd, t½)
+7. **Validation**: Test on held-out drugs; compare to published literature values
 
 ---
 
