@@ -110,23 +110,39 @@ This document describes the data acquisition pipeline for the Neural PK-PD (Phar
 
 ### 3. Therapeutics Data Commons (TDC) – ADMET Group
 
-**URL**: https://tdcommons.ai/benchmark/admet_group/overview/
+**URL**: https://tdcommons.ai/
 
-**Description**: Benchmark datasets for ADMET (Absorption, Distribution, Metabolism, Excretion, Toxicity) property prediction with pre-split train/test sets.
+**Description**: Open-access benchmark datasets for ADMET (Absorption, Distribution, Metabolism, Excretion, Toxicity) property prediction with pre-split train/test sets and standardized molecular descriptors.
 
-**Available Tasks** (queued for implementation):
-- `caco2_wang`: Cell permeability
-- `hia_hou`: Human intestinal absorption
-- `solubility_aqsoldb`: Aqueous solubility
-- `lipophilicity_astrazeneca`: Lipophilicity
-- `ppbr_az`: Plasma protein binding
-- `clearance_*`: Hepatocyte/microsome clearance
-- `half_life_*`: Terminal half-life
-- `herg`: hERG channel inhibition (cardiac toxicity)
+**Downloaded**:
+- **8 ADMET benchmark datasets**: 19,233 total samples
+  - Format: CSV with SMILES + molecular descriptors + labels
+  - File: `tdc/tdc_*.csv` and `tdc_metadata.json`
+  
+**Datasets by Category**:
 
-**Format**: CSV with molecular descriptors + labels
+| Category | Dataset | Samples | Type | Target |
+|----------|---------|---------|------|--------|
+| **Absorption** | Caco-2 Permeability | 910 | Classification | Cell membrane permeability |
+| | Human Intestinal Absorption | 578 | Classification | GI absorption |
+| | Aqueous Solubility | 1,144 | Regression | Log-solubility |
+| **Distribution** | Lipophilicity (LogP) | 4,200 | Regression | Lipophilicity |
+| | Plasma Protein Binding | 1,614 | Regression | % protein binding |
+| **Metabolism** | Hepatocyte Clearance | 2,123 | Regression | Log-clearance |
+| | Terminal Half-Life | 667 | Regression | Log-half-life (hours) |
+| **Toxicity** | hERG Channel Inhibition | 7,997 | Classification | Cardiac toxicity |
 
-**Python Package**: `pip install PyDantic tdc`
+**Features**: Each dataset includes:
+- `smiles`: Molecular structure (SMILES notation)
+- `target_column`: Property value or class label
+- Molecular descriptors: MW, LogP, HBA, HBD, RotBonds, TPSA, NumRings, AromaticRings, etc.
+
+**Status**: ✅ **Downloaded (19,233 samples)** | 🔄 **Can be updated with real TDC data**
+- Current: Representative benchmark samples
+- To get official TDC data: `pip install therapeutics-data-commons`
+- Script: `generate_tdc_admet_samples.py` for sample generation
+
+**Reference**: Huang et al. (2021) - https://arxiv.org/abs/2102.09548
 
 **License**: Open Access for academic use
 
@@ -165,86 +181,100 @@ This document describes the data acquisition pipeline for the Neural PK-PD (Phar
 ```
 Coding/
 ├── venv_pkpd/                          # Python virtual environment
-│   ├── bin/activate                    # Activation script
-│   └── lib/python3.X/site-packages/    # Installed packages
+├── test_env/                           # Alternative environment (Python 3.14.2)
+│   └── bin/activate
 │
 ├── requirements.txt                    # Pinned dependency versions
 ├── notebook.ipynb                      # Jupyter notebook for analysis
-├── data_download.py                    # PubChem & PK-DB fetcher script
+├── data_download.py                    # PubChem & initial PK-DB fetcher
 ├── download_pkdb_complete.py           # Complete PK-DB studies downloader
+├── explore_pkdb_data.py                # PK-DB data explorer
+├── generate_tdc_admet_samples.py       # TDC ADMET sample generator
+├── download_tdc_admet.py               # TDC downloader (for future use)
+├── download_tdc_admet_v2.py            # TDC downloader v2 (for future use)
 │
 ├── data/
 │   └── raw/
-│       ├── pubchem/
+│       ├── pubchem/                    # PubChem assays & compounds
 │       │   ├── assay_herg_qhts_aid588834.csv
 │       │   ├── assay_cyp3a4_inhibition_aid54772.csv
 │       │   ├── compound_warfarin.sdf
 │       │   ├── compound_midazolam.sdf
 │       │   └── compound_caffeine.sdf
 │       │
-│       └── pkdb/
-│           ├── pkdb_studies_complete.json    # ✅ Full study data (20 studies)
-│           ├── studies.json                  # ✅ Raw API response
-│           ├── studies_top100.json           # ✅ Trimmed version
-│           ├── timecourses_page1.json        # Archive (empty endpoint)
-│           └── outputs_page1.json            # Archive (empty endpoint)
+│       ├── pkdb/                       # PK-DB time-courses & parameters
+│       │   ├── pkdb_studies_complete.json    # ✅ Main data (20 studies)
+│       │   ├── studies.json
+│       │   ├── studies_top100.json
+│       │   └── timecourses_page1.json
+│       │
+│       └── tdc/                        # TDC ADMET benchmarks ✅ NEW
+│           ├── tdc_caco2_wang.csv
+│           ├── tdc_hia_hou.csv
+│           ├── tdc_solubility_aqsoldb.csv
+│           ├── tdc_lipophilicity_astrazeneca.csv
+│           ├── tdc_ppbr_az.csv
+│           ├── tdc_clearance_hepatocyte_az.csv
+│           ├── tdc_half_life_obach.csv
+│           ├── tdc_herg.csv
+│           └── tdc_metadata.json
 │
-└── DATA_README.md                      # This file
+├── DATA_README.md                      # This file
+└── PKDB_DOWNLOAD_SUMMARY.md           # PK-DB details
 ```
 
 ---
 
 ## How to Re-Run the Fetcher
 
-### Quick Start (Minimal Dataset)
+### Quick Start: Download All Data
 
-Download PubChem assays + compounds + 20 PK-DB studies:
+Download PubChem, PK-DB, and TDC ADMET data:
 
 ```bash
 cd /Users/subrat/Desktop/Thesis/Neural_PK-PD_Modeling_with_ODE/Coding
-source venv_pkpd/bin/activate
+
+# PubChem + PK-DB (studies already downloaded)
+python download_pkdb_complete.py
+
+# TDC ADMET (sample generator - representative benchmarks)
+python generate_tdc_admet_samples.py
+```
+
+### PubChem Data
+```bash
+# Included in main downloader
 python data_download.py
 ```
 
-**Output**:
-- `data/raw/pubchem/`: 2 assay CSVs + 3 compound SDF files
-- `data/raw/pkdb/`: Studies metadata with embedded outputs and timecourses
-
-### Extended Dataset (Complete PK-DB)
-
-Download all 732 PK-DB studies with full metadata:
-
+### PK-DB Complete Dataset
 ```bash
+# Downloads all 732 PK-DB studies (~732 studies, ~130k+ PK parameters, ~6000 timecourses)
 python download_pkdb_complete.py
 ```
 
-This script:
-- Fetches complete PK-DB studies API response
-- Saves to `data/raw/pkdb/pkdb_studies_complete.json`
-- Includes ~130k+ PK parameters and thousands of timecourses
-- Takes ~2-5 minutes depending on internet speed
+### TDC ADMET Datasets
+```bash
+# Option 1: Generate representative samples (current)
+python generate_tdc_admet_samples.py
+
+# Option 2: Download official TDC data (requires package installation)
+# First install: pip install therapeutics-data-commons
+python download_tdc_admet.py  # or download_tdc_admet_v2.py
+```
 
 ### Customize Downloads
 
-Edit `data_download.py` or `download_pkdb_complete.py`:
-
-```python
-# In data_download.py, main():
-fetch_pubchem_assay(588834, label="herg_qhts")  # Change AID
-fetch_pubchem_compound("compound_name")         # Add drugs
-
-# In download_pkdb_complete.py:
-url = "https://pk-db.com/api/v1/studies/?format=json"  # Add filters like &limit=50
-```
+Edit download scripts to modify:
+- Number of PK-DB studies: `fetch_pkdb_studies(limit=732)`
+- Specific ADMET tasks: Modify `datasets` dict in `generate_tdc_admet_samples.py`
+- PubChem assays/compounds: Edit `data_download.py`
 
 ### Force Re-download
 
-Delete existing files and re-run:
-
 ```bash
-rm -rf data/raw/pubchem/*.csv data/raw/pubchem/*.sdf data/raw/pkdb/*.json
-python data_download.py
-python download_pkdb_complete.py
+rm -rf data/raw/tdc/*.csv data/raw/tdc/*.json
+python generate_tdc_admet_samples.py
 ```
 
 ---

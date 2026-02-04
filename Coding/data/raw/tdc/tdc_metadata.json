@@ -1,0 +1,126 @@
+{
+  "caco2_wang": {
+    "name": "caco2_wang",
+    "label": "Caco-2 Cell Permeability",
+    "category": "Absorption",
+    "description": "Binary prediction of drug transport through Caco-2 cells",
+    "task_type": "classification",
+    "rows": 910,
+    "columns": [
+      "smiles",
+      "caco2_wang",
+      "MW",
+      "LogP",
+      "HBA",
+      "HBD"
+    ]
+  },
+  "clearance_hepatocyte_az": {
+    "name": "clearance_hepatocyte_az",
+    "label": "Hepatocyte Clearance",
+    "category": "Metabolism",
+    "description": "Regression prediction of hepatocyte clearance",
+    "task_type": "regression",
+    "rows": 2123,
+    "columns": [
+      "smiles",
+      "clearance_hepatocyte_az",
+      "MW",
+      "LogP",
+      "NumRings"
+    ]
+  },
+  "half_life_obach": {
+    "name": "half_life_obach",
+    "label": "Terminal Half-Life",
+    "category": "Metabolism",
+    "description": "Regression prediction of terminal half-life (log hours)",
+    "task_type": "regression",
+    "rows": 667,
+    "columns": [
+      "smiles",
+      "half_life_obach",
+      "MW",
+      "LogP",
+      "RotBonds"
+    ]
+  },
+  "herg": {
+    "name": "herg",
+    "label": "hERG Channel Inhibition",
+    "category": "Toxicity",
+    "description": "Binary prediction of hERG channel inhibition (cardiac toxicity)",
+    "task_type": "classification",
+    "rows": 7997,
+    "columns": [
+      "smiles",
+      "herg",
+      "MW",
+      "LogP",
+      "HBA",
+      "HBD"
+    ]
+  },
+  "hia_hou": {
+    "name": "hia_hou",
+    "label": "Human Intestinal Absorption",
+    "category": "Absorption",
+    "description": "Binary prediction of human intestinal absorption",
+    "task_type": "classification",
+    "rows": 578,
+    "columns": [
+      "smiles",
+      "hia_hou",
+      "MW",
+      "LogP",
+      "TPSA"
+    ]
+  },
+  "lipophilicity_astrazeneca": {
+    "name": "lipophilicity_astrazeneca",
+    "label": "Lipophilicity (LogP)",
+    "category": "Distribution",
+    "description": "Regression prediction of lipophilicity",
+    "task_type": "regression",
+    "rows": 4200,
+    "columns": [
+      "smiles",
+      "lipophilicity_astrazeneca",
+      "MW",
+      "HBA",
+      "HBD",
+      "AromaticRings"
+    ]
+  },
+  "ppbr_az": {
+    "name": "ppbr_az",
+    "label": "Plasma Protein Binding",
+    "category": "Distribution",
+    "description": "Regression prediction of plasma protein binding percentage",
+    "task_type": "regression",
+    "rows": 1614,
+    "columns": [
+      "smiles",
+      "ppbr_az",
+      "MW",
+      "LogP",
+      "TPSA"
+    ]
+  },
+  "solubility_aqsoldb": {
+    "name": "solubility_aqsoldb",
+    "label": "Aqueous Solubility",
+    "category": "Absorption",
+    "description": "Regression prediction of aqueous solubility (log-scale)",
+    "task_type": "regression",
+    "rows": 1144,
+    "columns": [
+      "smiles",
+      "solubility_aqsoldb",
+      "MW",
+      "LogP",
+      "RotBonds",
+      "TPSA"
+    ]
+  }
+}
