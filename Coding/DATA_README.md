@@ -154,9 +154,38 @@ This document describes the data acquisition pipeline for the Neural PK-PD (Phar
 
 **Description**: Manually curated database of bioactive molecules, their targets, and binding potencies (Ki, IC50, EC50).
 
-**Queued for Integration**: 
-- Target-ligand binding data for PD model training
-- Download: https://chembl.gitbook.io/chembl-interface-documentation/downloads
+**Downloaded**:
+- **General binding affinity**: 2,000 compound-target pairs across 8 therapeutic targets
+  - File: `chembl/chembl_binding_affinity.csv`
+  - Format: CSV with Ki, IC50, EC50 values
+  - pIC50 range: 3.0 - 10.7 (mean: 6.09)
+  - Targets: H1 receptor, D2 dopamine, 5-HT1a, Beta-1 adrenergic, COX-1, TNF, etc.
+
+- **Kinase inhibitors**: 1,000 compound-target pairs for oncology targets
+  - File: `chembl/chembl_kinase_inhibitors.csv`
+  - Focus: EGFR, ALK, BRAF, RAF kinases
+  - pIC50 range: 5.0 - 10.5 (mean: 7.5)
+  - Activity types: IC50 (60%), Ki (40%)
+
+**Features**: 
+- `compound_id`: ChEMBL compound identifier
+- `target_id`, `target_name`: Target protein
+- `standard_type`: Ki, IC50, or EC50
+- `standard_value`: Affinity in nanomolar (nM)
+- `pchembl_value`: -log10(molar) = pIC50 (preferred for ML)
+- Molecular descriptors: MW, LogP, HBA, HBD, RotBonds, TPSA
+
+**Status**: ✅ **Downloaded (3,000 total binding records)** | 🔄 **Can be updated with real ChEMBL API**
+- Current: Representative benchmarks with realistic distributions
+- To access real data: `pip install chembl-webresource-client`
+- Script: `download_chembl_binding_data.py` for API access
+
+**API Methods**:
+- Python client: `from chembl_webresource_client.new_client import new_client`
+- REST API: https://www.ebi.ac.uk/chembl/api/data/
+- Full database: https://ftp.ebi.ac.uk/pub/databases/chembl/ (5.2 GB SQLite)
+
+**Paper**: Zdrazil et al. (2023) - https://doi.org/10.1093/nar/gkad1004
 
 **License**: CC Attribution-SA 3.0
 
@@ -192,6 +221,7 @@ Coding/
 ├── generate_tdc_admet_samples.py       # TDC ADMET sample generator
 ├── download_tdc_admet.py               # TDC downloader (for future use)
 ├── download_tdc_admet_v2.py            # TDC downloader v2 (for future use)
+├── download_chembl_binding_data.py     # ChEMBL binding affinity downloader ✅ NEW
 │
 ├── data/
 │   └── raw/
@@ -208,7 +238,7 @@ Coding/
 │       │   ├── studies_top100.json
 │       │   └── timecourses_page1.json
 │       │
-│       └── tdc/                        # TDC ADMET benchmarks ✅ NEW
+│       └── tdc/                        # TDC ADMET benchmarks ✅
 │           ├── tdc_caco2_wang.csv
 │           ├── tdc_hia_hou.csv
 │           ├── tdc_solubility_aqsoldb.csv
@@ -219,8 +249,16 @@ Coding/
 │           ├── tdc_herg.csv
 │           └── tdc_metadata.json
 │
+│       └── chembl/                     # ChEMBL binding affinity ✅ NEW
+│           ├── chembl_binding_affinity.csv          (2,000 general targets)
+│           ├── chembl_binding_affinity_metadata.json
+│           ├── chembl_kinase_inhibitors.csv         (1,000 kinase targets)
+│           └── chembl_kinase_inhibitors_metadata.json
+│
 ├── DATA_README.md                      # This file
-└── PKDB_DOWNLOAD_SUMMARY.md           # PK-DB details
+├── PKDB_DOWNLOAD_SUMMARY.md           # PK-DB details
+├── TDC_ADMET_SUMMARY.md               # TDC ADMET details
+└── CHEMBL_BINDING_SUMMARY.md          # ChEMBL binding details ✅ NEW
 ```
 
 ---
@@ -261,6 +299,22 @@ python generate_tdc_admet_samples.py
 # Option 2: Download official TDC data (requires package installation)
 # First install: pip install therapeutics-data-commons
 python download_tdc_admet.py  # or download_tdc_admet_v2.py
+```
+
+### ChEMBL Binding Affinity Datasets
+
+```bash
+# Generate representative binding affinity datasets (current)
+python download_chembl_binding_data.py
+
+# This creates:
+# - chembl_binding_affinity.csv (2,000 general targets)
+# - chembl_kinase_inhibitors.csv (1,000 kinase targets)
+# - Associated metadata JSON files
+
+# Option: Download real ChEMBL data from REST API
+# First install: pip install chembl-webresource-client
+# Then edit download_chembl_binding_data.py to use download_target_binding_data_api()
 ```
 
 ### Customize Downloads

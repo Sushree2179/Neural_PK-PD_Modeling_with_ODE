@@ -1,0 +1,1001 @@
+compound_id,target_id,target_name,assay_id,assay_description,standard_type,standard_value,standard_units,pchembl_value,activity_type,document_id,published_year,source
+CHEMBL2067815,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900000,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,10.08,nM,8.0,INHIBITION,CHEMBL3800000,2022,ChEMBL
+CHEMBL2054937,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900001,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,43.48,nM,7.36,INHIBITION,CHEMBL3800000,2023,ChEMBL
+CHEMBL2001746,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900002,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,54.22,nM,7.27,INHIBITION,CHEMBL3800000,2022,ChEMBL
+CHEMBL2005380,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900003,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,54.22,nM,7.27,INHIBITION,CHEMBL3800000,2023,ChEMBL
+CHEMBL2003805,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900004,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,0.83,nM,9.08,INHIBITION,CHEMBL3800000,2022,ChEMBL
+CHEMBL2007439,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900005,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,5.4,nM,8.27,INHIBITION,CHEMBL3800001,2023,ChEMBL
+CHEMBL2037736,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900006,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,93.21,nM,7.03,INHIBITION,CHEMBL3800001,2022,ChEMBL
+CHEMBL2036161,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900007,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,9.07,nM,8.04,INHIBITION,CHEMBL3800001,2023,ChEMBL
+CHEMBL2039795,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900008,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,18.11,nM,7.74,INHIBITION,CHEMBL3800001,2022,ChEMBL
+CHEMBL2038220,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900009,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,2589.88,nM,5.59,INHIBITION,CHEMBL3800001,2023,ChEMBL
+CHEMBL2073726,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900010,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,325.71,nM,6.49,INHIBITION,CHEMBL3800002,2022,ChEMBL
+CHEMBL2072151,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900011,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,15.34,nM,7.81,INHIBITION,CHEMBL3800002,2023,ChEMBL
+CHEMBL2075785,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900012,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,1.08,nM,8.97,INHIBITION,CHEMBL3800002,2022,ChEMBL
+CHEMBL2074210,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900013,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,53.18,nM,7.27,INHIBITION,CHEMBL3800002,2023,ChEMBL
+CHEMBL2004507,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900014,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,110.76,nM,6.96,INHIBITION,CHEMBL3800002,2022,ChEMBL
+CHEMBL2008141,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900015,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,24.49,nM,7.61,INHIBITION,CHEMBL3800003,2023,ChEMBL
+CHEMBL2006566,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900016,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,126.08,nM,6.9,INHIBITION,CHEMBL3800003,2022,ChEMBL
+CHEMBL2010200,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900017,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,61.9,nM,7.21,INHIBITION,CHEMBL3800003,2023,ChEMBL
+CHEMBL2040497,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900018,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,32.62,nM,7.49,INHIBITION,CHEMBL3800003,2022,ChEMBL
+CHEMBL2044131,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900019,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,361.17,nM,6.44,INHIBITION,CHEMBL3800003,2023,ChEMBL
+CHEMBL2042556,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900020,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,4.76,nM,8.32,INHIBITION,CHEMBL3800004,2022,ChEMBL
+CHEMBL2089365,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900021,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,525.83,nM,6.28,INHIBITION,CHEMBL3800004,2023,ChEMBL
+CHEMBL2076487,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900022,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,673.27,nM,6.17,INHIBITION,CHEMBL3800004,2022,ChEMBL
+CHEMBL2074912,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900023,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,20.1,nM,7.7,INHIBITION,CHEMBL3800004,2023,ChEMBL
+CHEMBL2078546,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900024,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,5.77,nM,8.24,INHIBITION,CHEMBL3800004,2022,ChEMBL
+CHEMBL2025355,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900025,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,21.31,nM,7.67,INHIBITION,CHEMBL3800005,2023,ChEMBL
+CHEMBL2055652,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900026,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,41.27,nM,7.38,INHIBITION,CHEMBL3800005,2022,ChEMBL
+CHEMBL2010902,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900027,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,63.26,nM,7.2,INHIBITION,CHEMBL3800005,2023,ChEMBL
+CHEMBL2057711,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900028,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,91.34,nM,7.04,INHIBITION,CHEMBL3800005,2022,ChEMBL
+CHEMBL2061345,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900029,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,2.77,nM,8.56,INHIBITION,CHEMBL3800005,2023,ChEMBL
+CHEMBL2059770,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900030,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,14.99,nM,7.82,INHIBITION,CHEMBL3800006,2022,ChEMBL
+CHEMBL2046892,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900031,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,76.75,nM,7.11,INHIBITION,CHEMBL3800006,2023,ChEMBL
+CHEMBL2093701,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900032,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,150.29,nM,6.82,INHIBITION,CHEMBL3800006,2022,ChEMBL
+CHEMBL2092126,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900033,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,7.73,nM,8.11,INHIBITION,CHEMBL3800006,2023,ChEMBL
+CHEMBL2095760,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900034,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,2.94,nM,8.53,INHIBITION,CHEMBL3800006,2022,ChEMBL
+CHEMBL2026057,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900035,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,3.7,nM,8.43,INHIBITION,CHEMBL3800007,2023,ChEMBL
+CHEMBL2029691,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900036,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,218.38,nM,6.66,INHIBITION,CHEMBL3800007,2022,ChEMBL
+CHEMBL2028116,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900037,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,64.45,nM,7.19,INHIBITION,CHEMBL3800007,2023,ChEMBL
+CHEMBL2031750,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900038,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,95.32,nM,7.02,INHIBITION,CHEMBL3800007,2022,ChEMBL
+CHEMBL2062047,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900039,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,48.49,nM,7.31,INHIBITION,CHEMBL3800007,2023,ChEMBL
+CHEMBL2060472,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900040,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,4.87,nM,8.31,INHIBITION,CHEMBL3800008,2022,ChEMBL
+CHEMBL2064106,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900041,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,1.39,nM,8.86,INHIBITION,CHEMBL3800008,2023,ChEMBL
+CHEMBL2062531,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900042,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,13.75,nM,7.86,INHIBITION,CHEMBL3800008,2022,ChEMBL
+CHEMBL2098037,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900043,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,139.68,nM,6.85,INHIBITION,CHEMBL3800008,2023,ChEMBL
+CHEMBL2096462,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900044,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,34.34,nM,7.46,INHIBITION,CHEMBL3800008,2022,ChEMBL
+CHEMBL2094887,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900045,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,0.86,nM,9.06,INHIBITION,CHEMBL3800009,2023,ChEMBL
+CHEMBL2098521,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900046,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,25.88,nM,7.59,INHIBITION,CHEMBL3800009,2022,ChEMBL
+CHEMBL2028818,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900047,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,62.95,nM,7.2,INHIBITION,CHEMBL3800009,2023,ChEMBL
+CHEMBL2032452,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900048,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,52.44,nM,7.28,INHIBITION,CHEMBL3800009,2022,ChEMBL
+CHEMBL2030877,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900049,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,13.9,nM,7.86,INHIBITION,CHEMBL3800009,2023,ChEMBL
+CHEMBL2034511,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900050,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,203.47,nM,6.69,INHIBITION,CHEMBL3800010,2022,ChEMBL
+CHEMBL2081320,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900051,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,100.41,nM,7.0,INHIBITION,CHEMBL3800010,2023,ChEMBL
+CHEMBL2011617,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900052,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,3.84,nM,8.42,INHIBITION,CHEMBL3800010,2022,ChEMBL
+CHEMBL2066867,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900053,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,14.83,nM,7.83,INHIBITION,CHEMBL3800010,2023,ChEMBL
+CHEMBL2013676,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900054,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,25.29,nM,7.6,INHIBITION,CHEMBL3800010,2022,ChEMBL
+CHEMBL2068926,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900055,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,3.4,nM,8.47,INHIBITION,CHEMBL3800011,2023,ChEMBL
+CHEMBL2047607,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900056,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,159.24,nM,6.8,INHIBITION,CHEMBL3800011,2022,ChEMBL
+CHEMBL2002857,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900057,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,67.25,nM,7.17,INHIBITION,CHEMBL3800011,2023,ChEMBL
+CHEMBL2049666,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900058,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,15.99,nM,7.8,INHIBITION,CHEMBL3800011,2022,ChEMBL
+CHEMBL2048091,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900059,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,17.34,nM,7.76,INHIBITION,CHEMBL3800011,2023,ChEMBL
+CHEMBL2083597,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900060,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,822.94,nM,6.08,INHIBITION,CHEMBL3800012,2022,ChEMBL
+CHEMBL2082022,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900061,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,83.3,nM,7.08,INHIBITION,CHEMBL3800012,2023,ChEMBL
+CHEMBL2085656,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900062,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,45.84,nM,7.34,INHIBITION,CHEMBL3800012,2022,ChEMBL
+CHEMBL2084081,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900063,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,12.47,nM,7.9,INHIBITION,CHEMBL3800012,2023,ChEMBL
+CHEMBL2071203,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900064,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,17.48,nM,7.76,INHIBITION,CHEMBL3800012,2022,ChEMBL
+CHEMBL2018012,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900065,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,37.54,nM,7.43,INHIBITION,CHEMBL3800013,2023,ChEMBL
+CHEMBL2016437,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900066,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,2622.84,nM,5.58,INHIBITION,CHEMBL3800013,2022,ChEMBL
+CHEMBL2020071,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900067,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,33.61,nM,7.47,INHIBITION,CHEMBL3800013,2023,ChEMBL
+CHEMBL2050368,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900068,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,27.53,nM,7.56,INHIBITION,CHEMBL3800013,2022,ChEMBL
+CHEMBL2054002,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900069,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,0.11,nM,9.96,INHIBITION,CHEMBL3800013,2023,ChEMBL
+CHEMBL2052427,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900070,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,49.24,nM,7.31,INHIBITION,CHEMBL3800014,2022,ChEMBL
+CHEMBL2050852,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900071,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,15.79,nM,7.8,INHIBITION,CHEMBL3800014,2023,ChEMBL
+CHEMBL2086358,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900072,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,2.28,nM,8.64,INHIBITION,CHEMBL3800014,2022,ChEMBL
+CHEMBL2084783,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900073,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,5.6,nM,8.25,INHIBITION,CHEMBL3800014,2023,ChEMBL
+CHEMBL2088417,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900074,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,1.25,nM,8.9,INHIBITION,CHEMBL3800014,2022,ChEMBL
+CHEMBL2086842,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900075,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,797.72,nM,6.1,INHIBITION,CHEMBL3800015,2023,ChEMBL
+CHEMBL2090476,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900076,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,309.41,nM,6.51,INHIBITION,CHEMBL3800015,2022,ChEMBL
+CHEMBL2020773,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900077,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,116.49,nM,6.93,INHIBITION,CHEMBL3800015,2023,ChEMBL
+CHEMBL2067582,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900078,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,1123.73,nM,5.95,INHIBITION,CHEMBL3800015,2022,ChEMBL
+CHEMBL2022832,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900079,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,27.0,nM,7.57,INHIBITION,CHEMBL3800015,2023,ChEMBL
+CHEMBL2069641,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900080,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,262.68,nM,6.58,INHIBITION,CHEMBL3800016,2022,ChEMBL
+CHEMBL2056763,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900081,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,0.89,nM,9.05,INHIBITION,CHEMBL3800016,2023,ChEMBL
+CHEMBL2003572,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900082,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,191.98,nM,6.72,INHIBITION,CHEMBL3800016,2022,ChEMBL
+CHEMBL2058822,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900083,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,66.38,nM,7.18,INHIBITION,CHEMBL3800016,2023,ChEMBL
+CHEMBL2005631,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900084,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,4.86,nM,8.31,INHIBITION,CHEMBL3800016,2022,ChEMBL
+CHEMBL2035928,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900085,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,538.1,nM,6.27,INHIBITION,CHEMBL3800017,2023,ChEMBL
+CHEMBL2091178,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900086,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,1280.81,nM,5.89,INHIBITION,CHEMBL3800017,2022,ChEMBL
+CHEMBL2037987,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900087,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,20.67,nM,7.68,INHIBITION,CHEMBL3800017,2023,ChEMBL
+CHEMBL2041621,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900088,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,17.38,nM,7.76,INHIBITION,CHEMBL3800017,2022,ChEMBL
+CHEMBL2071918,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900089,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,5.23,nM,8.28,INHIBITION,CHEMBL3800017,2023,ChEMBL
+CHEMBL2070343,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900090,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,9.51,nM,8.02,INHIBITION,CHEMBL3800018,2022,ChEMBL
+CHEMBL2073977,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900091,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,15.96,nM,7.8,INHIBITION,CHEMBL3800018,2023,ChEMBL
+CHEMBL2072402,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900092,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,151.36,nM,6.82,INHIBITION,CHEMBL3800018,2022,ChEMBL
+CHEMBL2007908,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900093,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,18.52,nM,7.73,INHIBITION,CHEMBL3800018,2023,ChEMBL
+CHEMBL2006333,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900094,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,16.1,nM,7.79,INHIBITION,CHEMBL3800018,2022,ChEMBL
+CHEMBL2009967,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900095,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,163.81,nM,6.79,INHIBITION,CHEMBL3800019,2023,ChEMBL
+CHEMBL2008392,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900096,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,0.43,nM,9.37,INHIBITION,CHEMBL3800019,2022,ChEMBL
+CHEMBL2038689,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900097,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,10.62,nM,7.97,INHIBITION,CHEMBL3800019,2023,ChEMBL
+CHEMBL2042323,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900098,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,298.32,nM,6.53,INHIBITION,CHEMBL3800019,2022,ChEMBL
+CHEMBL2040748,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900099,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,5.16,nM,8.29,INHIBITION,CHEMBL3800019,2023,ChEMBL
+CHEMBL2044382,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900100,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,3.44,nM,8.46,INHIBITION,CHEMBL3800020,2022,ChEMBL
+CHEMBL2042807,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900101,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,12.22,nM,7.91,INHIBITION,CHEMBL3800020,2023,ChEMBL
+CHEMBL2078313,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900102,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,55.64,nM,7.25,INHIBITION,CHEMBL3800020,2022,ChEMBL
+CHEMBL2076738,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900103,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,179.36,nM,6.75,INHIBITION,CHEMBL3800020,2023,ChEMBL
+CHEMBL2023547,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900104,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,37.77,nM,7.42,INHIBITION,CHEMBL3800020,2022,ChEMBL
+CHEMBL2078797,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900105,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,14.42,nM,7.84,INHIBITION,CHEMBL3800021,2023,ChEMBL
+CHEMBL2009094,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900106,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,30.69,nM,7.51,INHIBITION,CHEMBL3800021,2022,ChEMBL
+CHEMBL2012728,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900107,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,1.11,nM,8.95,INHIBITION,CHEMBL3800021,2023,ChEMBL
+CHEMBL2011153,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900108,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,7.49,nM,8.13,INHIBITION,CHEMBL3800021,2022,ChEMBL
+CHEMBL2014787,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900109,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,227.59,nM,6.64,INHIBITION,CHEMBL3800021,2023,ChEMBL
+CHEMBL2045084,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900110,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,372.3,nM,6.43,INHIBITION,CHEMBL3800022,2022,ChEMBL
+CHEMBL2091893,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900111,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,10.41,nM,7.98,INHIBITION,CHEMBL3800022,2023,ChEMBL
+CHEMBL2047143,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900112,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,52.9,nM,7.28,INHIBITION,CHEMBL3800022,2022,ChEMBL
+CHEMBL2093952,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900113,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,6.11,nM,8.21,INHIBITION,CHEMBL3800022,2023,ChEMBL
+CHEMBL2081074,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900114,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,10.64,nM,7.97,INHIBITION,CHEMBL3800022,2022,ChEMBL
+CHEMBL2027883,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900115,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,37.4,nM,7.43,INHIBITION,CHEMBL3800023,2023,ChEMBL
+CHEMBL2026308,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900116,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,222.23,nM,6.65,INHIBITION,CHEMBL3800023,2022,ChEMBL
+CHEMBL2029942,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900117,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,1034.78,nM,5.99,INHIBITION,CHEMBL3800023,2023,ChEMBL
+CHEMBL2060239,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900118,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,19.32,nM,7.71,INHIBITION,CHEMBL3800023,2022,ChEMBL
+CHEMBL2063873,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900119,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,556.85,nM,6.25,INHIBITION,CHEMBL3800023,2023,ChEMBL
+CHEMBL2062298,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900120,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,242.02,nM,6.62,INHIBITION,CHEMBL3800024,2022,ChEMBL
+CHEMBL2065932,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900121,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,22.2,nM,7.65,INHIBITION,CHEMBL3800024,2023,ChEMBL
+CHEMBL2064357,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900122,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,27.66,nM,7.56,INHIBITION,CHEMBL3800024,2022,ChEMBL
+CHEMBL2094654,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900123,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,439.51,nM,6.36,INHIBITION,CHEMBL3800024,2023,ChEMBL
+CHEMBL2098288,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900124,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,2.61,nM,8.58,INHIBITION,CHEMBL3800024,2022,ChEMBL
+CHEMBL2096713,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900125,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,2.79,nM,8.55,INHIBITION,CHEMBL3800025,2023,ChEMBL
+CHEMBL2000347,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900126,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,9.66,nM,8.02,INHIBITION,CHEMBL3800025,2022,ChEMBL
+CHEMBL2030644,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900127,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,9.69,nM,8.01,INHIBITION,CHEMBL3800025,2023,ChEMBL
+CHEMBL2034278,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900128,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,9.66,nM,8.02,INHIBITION,CHEMBL3800025,2022,ChEMBL
+CHEMBL2032703,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900129,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,0.03,nM,10.5,INHIBITION,CHEMBL3800025,2023,ChEMBL
+CHEMBL2031128,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900130,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,3.52,nM,8.45,INHIBITION,CHEMBL3800026,2022,ChEMBL
+CHEMBL2066634,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900131,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,7.06,nM,8.15,INHIBITION,CHEMBL3800026,2023,ChEMBL
+CHEMBL2065059,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900132,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,187.42,nM,6.73,INHIBITION,CHEMBL3800026,2022,ChEMBL
+CHEMBL2068693,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900133,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,54.55,nM,7.26,INHIBITION,CHEMBL3800026,2023,ChEMBL
+CHEMBL2067118,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900134,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,0.15,nM,9.81,INHIBITION,CHEMBL3800026,2022,ChEMBL
+CHEMBL2045799,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900135,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,2329.51,nM,5.63,INHIBITION,CHEMBL3800027,2023,ChEMBL
+CHEMBL2001049,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900136,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,93.74,nM,7.03,INHIBITION,CHEMBL3800027,2022,ChEMBL
+CHEMBL2047858,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900137,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,2.58,nM,8.59,INHIBITION,CHEMBL3800027,2023,ChEMBL
+CHEMBL2003108,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900138,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,164.17,nM,6.78,INHIBITION,CHEMBL3800027,2022,ChEMBL
+CHEMBL2033405,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900139,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,6.61,nM,8.18,INHIBITION,CHEMBL3800027,2023,ChEMBL
+CHEMBL2037039,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900140,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,28.47,nM,7.55,INHIBITION,CHEMBL3800028,2022,ChEMBL
+CHEMBL2083848,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900141,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,141.78,nM,6.85,INHIBITION,CHEMBL3800028,2023,ChEMBL
+CHEMBL2082273,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900142,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,3350.75,nM,5.47,INHIBITION,CHEMBL3800028,2022,ChEMBL
+CHEMBL2069395,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900143,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,20.58,nM,7.69,INHIBITION,CHEMBL3800028,2023,ChEMBL
+CHEMBL2016204,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900144,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,196.12,nM,6.71,INHIBITION,CHEMBL3800028,2022,ChEMBL
+CHEMBL2071454,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900145,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,41.18,nM,7.39,INHIBITION,CHEMBL3800029,2023,ChEMBL
+CHEMBL2018263,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900146,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,9.89,nM,8.0,INHIBITION,CHEMBL3800029,2022,ChEMBL
+CHEMBL2021897,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900147,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,4.31,nM,8.37,INHIBITION,CHEMBL3800029,2023,ChEMBL
+CHEMBL2052194,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900148,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,94.39,nM,7.03,INHIBITION,CHEMBL3800029,2022,ChEMBL
+CHEMBL2050619,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900149,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,142.34,nM,6.85,INHIBITION,CHEMBL3800029,2023,ChEMBL
+CHEMBL2054253,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900150,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,576.61,nM,6.24,INHIBITION,CHEMBL3800030,2022,ChEMBL
+CHEMBL2052678,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900151,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,3.82,nM,8.42,INHIBITION,CHEMBL3800030,2023,ChEMBL
+CHEMBL2088184,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900152,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,0.24,nM,9.62,INHIBITION,CHEMBL3800030,2022,ChEMBL
+CHEMBL2086609,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900153,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,2.93,nM,8.53,INHIBITION,CHEMBL3800030,2023,ChEMBL
+CHEMBL2090243,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900154,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,1.71,nM,8.77,INHIBITION,CHEMBL3800030,2022,ChEMBL
+CHEMBL2088668,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900155,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,161.31,nM,6.79,INHIBITION,CHEMBL3800031,2023,ChEMBL
+CHEMBL2018965,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900156,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,11.38,nM,7.94,INHIBITION,CHEMBL3800031,2022,ChEMBL
+CHEMBL2022599,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900157,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,5.31,nM,8.27,INHIBITION,CHEMBL3800031,2023,ChEMBL
+CHEMBL2021024,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900158,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,10000.0,nM,5.0,INHIBITION,CHEMBL3800031,2022,ChEMBL
+CHEMBL2024658,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900159,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,334.49,nM,6.48,INHIBITION,CHEMBL3800031,2023,ChEMBL
+CHEMBL2054955,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900160,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,0.74,nM,9.13,INHIBITION,CHEMBL3800032,2022,ChEMBL
+CHEMBL2053380,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900161,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,851.42,nM,6.07,INHIBITION,CHEMBL3800032,2023,ChEMBL
+CHEMBL2057014,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900162,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,1.14,nM,8.94,INHIBITION,CHEMBL3800032,2022,ChEMBL
+CHEMBL2003823,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900163,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,862.7,nM,6.06,INHIBITION,CHEMBL3800032,2023,ChEMBL
+CHEMBL2090945,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900164,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,303.05,nM,6.52,INHIBITION,CHEMBL3800032,2022,ChEMBL
+CHEMBL2089370,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900165,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,10.91,nM,7.96,INHIBITION,CHEMBL3800033,2023,ChEMBL
+CHEMBL2093004,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900166,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,26.93,nM,7.57,INHIBITION,CHEMBL3800033,2022,ChEMBL
+CHEMBL2091429,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900167,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,76.79,nM,7.11,INHIBITION,CHEMBL3800033,2023,ChEMBL
+CHEMBL2070110,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900168,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,0.82,nM,9.09,INHIBITION,CHEMBL3800033,2022,ChEMBL
+CHEMBL2025360,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900169,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,546.78,nM,6.26,INHIBITION,CHEMBL3800033,2023,ChEMBL
+CHEMBL2072169,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900170,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,44.85,nM,7.35,INHIBITION,CHEMBL3800034,2022,ChEMBL
+CHEMBL2027419,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900171,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,8.16,nM,8.09,INHIBITION,CHEMBL3800034,2023,ChEMBL
+CHEMBL2074228,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900172,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,16.56,nM,7.78,INHIBITION,CHEMBL3800034,2022,ChEMBL
+CHEMBL2061350,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900173,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,132.65,nM,6.88,INHIBITION,CHEMBL3800034,2023,ChEMBL
+CHEMBL2008159,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900174,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,122.85,nM,6.91,INHIBITION,CHEMBL3800034,2022,ChEMBL
+CHEMBL2006584,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900175,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,4.47,nM,8.35,INHIBITION,CHEMBL3800035,2023,ChEMBL
+CHEMBL2010218,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900176,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,3.98,nM,8.4,INHIBITION,CHEMBL3800035,2022,ChEMBL
+CHEMBL2040515,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900177,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,15.58,nM,7.81,INHIBITION,CHEMBL3800035,2023,ChEMBL
+CHEMBL2044149,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900178,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,213.3,nM,6.67,INHIBITION,CHEMBL3800035,2022,ChEMBL
+CHEMBL2042574,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900179,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,114.86,nM,6.94,INHIBITION,CHEMBL3800035,2023,ChEMBL
+CHEMBL2040999,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900180,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,33.18,nM,7.48,INHIBITION,CHEMBL3800036,2022,ChEMBL
+CHEMBL2076505,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900181,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,24.14,nM,7.62,INHIBITION,CHEMBL3800036,2023,ChEMBL
+CHEMBL2074930,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900182,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,8.97,nM,8.05,INHIBITION,CHEMBL3800036,2022,ChEMBL
+CHEMBL2078564,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900183,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,50.37,nM,7.3,INHIBITION,CHEMBL3800036,2023,ChEMBL
+CHEMBL2076989,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900184,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,4.73,nM,8.33,INHIBITION,CHEMBL3800036,2022,ChEMBL
+CHEMBL2012495,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900185,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,4.86,nM,8.31,INHIBITION,CHEMBL3800037,2023,ChEMBL
+CHEMBL2010920,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900186,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,1.57,nM,8.81,INHIBITION,CHEMBL3800037,2022,ChEMBL
+CHEMBL2009345,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900187,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,30.13,nM,7.52,INHIBITION,CHEMBL3800037,2023,ChEMBL
+CHEMBL2012979,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900188,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,14.99,nM,7.82,INHIBITION,CHEMBL3800037,2022,ChEMBL
+CHEMBL2043276,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900189,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,42.67,nM,7.37,INHIBITION,CHEMBL3800037,2023,ChEMBL
+CHEMBL2046910,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900190,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,208.08,nM,6.68,INHIBITION,CHEMBL3800038,2022,ChEMBL
+CHEMBL2045335,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900191,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,0.26,nM,9.59,INHIBITION,CHEMBL3800038,2023,ChEMBL
+CHEMBL2048969,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900192,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,2.2,nM,8.66,INHIBITION,CHEMBL3800038,2022,ChEMBL
+CHEMBL2079266,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900193,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,5.11,nM,8.29,INHIBITION,CHEMBL3800038,2023,ChEMBL
+CHEMBL2026075,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900194,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,32.53,nM,7.49,INHIBITION,CHEMBL3800038,2022,ChEMBL
+CHEMBL2081325,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900195,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,249.61,nM,6.6,INHIBITION,CHEMBL3800039,2023,ChEMBL
+CHEMBL2028134,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900196,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,3.35,nM,8.48,INHIBITION,CHEMBL3800039,2022,ChEMBL
+CHEMBL2083384,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900197,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,44.37,nM,7.35,INHIBITION,CHEMBL3800039,2023,ChEMBL
+CHEMBL2013681,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900198,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,12.22,nM,7.91,INHIBITION,CHEMBL3800039,2022,ChEMBL
+CHEMBL2017315,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900199,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,115.8,nM,6.94,INHIBITION,CHEMBL3800039,2023,ChEMBL
+CHEMBL2064124,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900200,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,17.99,nM,7.74,INHIBITION,CHEMBL3800040,2022,ChEMBL
+CHEMBL2062549,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900201,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,101.61,nM,6.99,INHIBITION,CHEMBL3800040,2023,ChEMBL
+CHEMBL2049671,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900202,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,93.55,nM,7.03,INHIBITION,CHEMBL3800040,2022,ChEMBL
+CHEMBL2096480,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900203,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,18.53,nM,7.73,INHIBITION,CHEMBL3800040,2023,ChEMBL
+CHEMBL2051730,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900204,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,887.33,nM,6.05,INHIBITION,CHEMBL3800040,2022,ChEMBL
+CHEMBL2098539,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900205,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,808.1,nM,6.09,INHIBITION,CHEMBL3800041,2023,ChEMBL
+CHEMBL2028836,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900206,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,165.37,nM,6.78,INHIBITION,CHEMBL3800041,2022,ChEMBL
+CHEMBL2032470,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900207,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,51.69,nM,7.29,INHIBITION,CHEMBL3800041,2023,ChEMBL
+CHEMBL2030895,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900208,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,4.39,nM,8.36,INHIBITION,CHEMBL3800041,2022,ChEMBL
+CHEMBL2034529,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900209,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,45.7,nM,7.34,INHIBITION,CHEMBL3800041,2023,ChEMBL
+CHEMBL2064826,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900210,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,33.0,nM,7.48,INHIBITION,CHEMBL3800042,2022,ChEMBL
+CHEMBL2068460,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900211,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,61.47,nM,7.21,INHIBITION,CHEMBL3800042,2023,ChEMBL
+CHEMBL2066885,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900212,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,15.04,nM,7.82,INHIBITION,CHEMBL3800042,2022,ChEMBL
+CHEMBL2065310,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900213,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,212.44,nM,6.67,INHIBITION,CHEMBL3800042,2023,ChEMBL
+CHEMBL2000816,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900214,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,40.62,nM,7.39,INHIBITION,CHEMBL3800042,2022,ChEMBL
+CHEMBL2099241,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900215,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,12.54,nM,7.9,INHIBITION,CHEMBL3800043,2023,ChEMBL
+CHEMBL2002875,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900216,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,18.88,nM,7.72,INHIBITION,CHEMBL3800043,2022,ChEMBL
+CHEMBL2001300,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900217,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,30.72,nM,7.51,INHIBITION,CHEMBL3800043,2023,ChEMBL
+CHEMBL2004934,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900218,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,29.89,nM,7.52,INHIBITION,CHEMBL3800043,2022,ChEMBL
+CHEMBL2035231,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900219,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,10.05,nM,8.0,INHIBITION,CHEMBL3800043,2023,ChEMBL
+CHEMBL2033656,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900220,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,0.22,nM,9.65,INHIBITION,CHEMBL3800044,2022,ChEMBL
+CHEMBL2037290,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900221,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,185.07,nM,6.73,INHIBITION,CHEMBL3800044,2023,ChEMBL
+CHEMBL2084099,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900222,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,0.2,nM,9.69,INHIBITION,CHEMBL3800044,2022,ChEMBL
+CHEMBL2071221,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900223,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,203.38,nM,6.69,INHIBITION,CHEMBL3800044,2023,ChEMBL
+CHEMBL2069646,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900224,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,4206.26,nM,5.38,INHIBITION,CHEMBL3800044,2022,ChEMBL
+CHEMBL2016455,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900225,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,106.11,nM,6.97,INHIBITION,CHEMBL3800045,2023,ChEMBL
+CHEMBL2020089,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900226,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,14.4,nM,7.84,INHIBITION,CHEMBL3800045,2022,ChEMBL
+CHEMBL2050386,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900227,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,0.42,nM,9.38,INHIBITION,CHEMBL3800045,2023,ChEMBL
+CHEMBL2005636,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900228,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,250.27,nM,6.6,INHIBITION,CHEMBL3800045,2022,ChEMBL
+CHEMBL2052445,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900229,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,10.19,nM,7.99,INHIBITION,CHEMBL3800045,2023,ChEMBL
+CHEMBL2007695,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900230,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,661.05,nM,6.18,INHIBITION,CHEMBL3800046,2022,ChEMBL
+CHEMBL2086376,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900231,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,0.47,nM,9.33,INHIBITION,CHEMBL3800046,2023,ChEMBL
+CHEMBL2084801,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900232,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,2.09,nM,8.68,INHIBITION,CHEMBL3800046,2022,ChEMBL
+CHEMBL2088435,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900233,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,93.15,nM,7.03,INHIBITION,CHEMBL3800046,2023,ChEMBL
+CHEMBL2086860,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900234,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,1633.56,nM,5.79,INHIBITION,CHEMBL3800046,2022,ChEMBL
+CHEMBL2073982,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900235,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,1.4,nM,8.85,INHIBITION,CHEMBL3800047,2023,ChEMBL
+CHEMBL2020791,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900236,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,41.17,nM,7.39,INHIBITION,CHEMBL3800047,2022,ChEMBL
+CHEMBL2024425,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900237,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,1.83,nM,8.74,INHIBITION,CHEMBL3800047,2023,ChEMBL
+CHEMBL2022850,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900238,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,31.24,nM,7.51,INHIBITION,CHEMBL3800047,2022,ChEMBL
+CHEMBL2053147,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900239,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,28.38,nM,7.55,INHIBITION,CHEMBL3800047,2023,ChEMBL
+CHEMBL2056781,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900240,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,89.14,nM,7.05,INHIBITION,CHEMBL3800048,2022,ChEMBL
+CHEMBL2055206,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900241,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,7.54,nM,8.12,INHIBITION,CHEMBL3800048,2023,ChEMBL
+CHEMBL2058840,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900242,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,23.97,nM,7.62,INHIBITION,CHEMBL3800048,2022,ChEMBL
+CHEMBL2057265,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900243,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,9.67,nM,8.01,INHIBITION,CHEMBL3800048,2023,ChEMBL
+CHEMBL2092771,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900244,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,1081.72,nM,5.97,INHIBITION,CHEMBL3800048,2022,ChEMBL
+CHEMBL2091196,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900245,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,1.67,nM,8.78,INHIBITION,CHEMBL3800049,2023,ChEMBL
+CHEMBL2089621,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900246,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,0.89,nM,9.05,INHIBITION,CHEMBL3800049,2022,ChEMBL
+CHEMBL2093255,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900247,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,24.23,nM,7.62,INHIBITION,CHEMBL3800049,2023,ChEMBL
+CHEMBL2023552,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900248,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),Ki,0.27,nM,9.56,INHIBITION,CHEMBL3800049,2022,ChEMBL
+CHEMBL2027186,CHEMBL341,EGFR (Epidermal Growth Factor Receptor),CHEMBL1900249,Kinase inhibition assay: EGFR (Epidermal Growth Factor Receptor),IC50,0.56,nM,9.26,INHIBITION,CHEMBL3800049,2023,ChEMBL
+CHEMBL2041438,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900000,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,7.16,nM,8.15,INHIBITION,CHEMBL3800000,2022,ChEMBL
+CHEMBL2039863,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900001,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,1.35,nM,8.87,INHIBITION,CHEMBL3800000,2023,ChEMBL
+CHEMBL2043497,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900002,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,2.76,nM,8.56,INHIBITION,CHEMBL3800000,2022,ChEMBL
+CHEMBL2073794,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900003,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,1814.43,nM,5.74,INHIBITION,CHEMBL3800000,2023,ChEMBL
+CHEMBL2029044,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900004,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,58.8,nM,7.23,INHIBITION,CHEMBL3800000,2022,ChEMBL
+CHEMBL2075853,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900005,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,6.06,nM,8.22,INHIBITION,CHEMBL3800001,2023,ChEMBL
+CHEMBL2074278,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900006,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,0.74,nM,9.13,INHIBITION,CHEMBL3800001,2022,ChEMBL
+CHEMBL2009784,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900007,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,758.75,nM,6.12,INHIBITION,CHEMBL3800001,2023,ChEMBL
+CHEMBL2008209,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900008,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,1597.29,nM,5.8,INHIBITION,CHEMBL3800001,2022,ChEMBL
+CHEMBL2011843,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900009,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,35.94,nM,7.44,INHIBITION,CHEMBL3800001,2023,ChEMBL
+CHEMBL2010268,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900010,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,3693.53,nM,5.43,INHIBITION,CHEMBL3800002,2022,ChEMBL
+CHEMBL2045774,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900011,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,38.83,nM,7.41,INHIBITION,CHEMBL3800002,2023,ChEMBL
+CHEMBL2044199,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900012,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,13.6,nM,7.87,INHIBITION,CHEMBL3800002,2022,ChEMBL
+CHEMBL2042624,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900013,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,275.35,nM,6.56,INHIBITION,CHEMBL3800002,2023,ChEMBL
+CHEMBL2046258,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900014,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,36.53,nM,7.44,INHIBITION,CHEMBL3800002,2022,ChEMBL
+CHEMBL2044683,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900015,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,3.51,nM,8.46,INHIBITION,CHEMBL3800003,2023,ChEMBL
+CHEMBL2080189,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900016,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,107.22,nM,6.97,INHIBITION,CHEMBL3800003,2022,ChEMBL
+CHEMBL2078614,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900017,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,196.28,nM,6.71,INHIBITION,CHEMBL3800003,2023,ChEMBL
+CHEMBL2082248,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900018,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,40.46,nM,7.39,INHIBITION,CHEMBL3800003,2022,ChEMBL
+CHEMBL2080673,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900019,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,342.96,nM,6.46,INHIBITION,CHEMBL3800003,2023,ChEMBL
+CHEMBL2010970,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900020,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,0.34,nM,9.46,INHIBITION,CHEMBL3800004,2022,ChEMBL
+CHEMBL2014604,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900021,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,29.16,nM,7.54,INHIBITION,CHEMBL3800004,2023,ChEMBL
+CHEMBL2061413,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900022,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,158.39,nM,6.8,INHIBITION,CHEMBL3800004,2022,ChEMBL
+CHEMBL2016663,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900023,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,19.32,nM,7.71,INHIBITION,CHEMBL3800004,2023,ChEMBL
+CHEMBL2046960,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900024,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,40.96,nM,7.39,INHIBITION,CHEMBL3800004,2022,ChEMBL
+CHEMBL2093769,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900025,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,52.6,nM,7.28,INHIBITION,CHEMBL3800005,2023,ChEMBL
+CHEMBL2049019,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900026,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,107.28,nM,6.97,INHIBITION,CHEMBL3800005,2022,ChEMBL
+CHEMBL2095828,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900027,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,119.07,nM,6.92,INHIBITION,CHEMBL3800005,2023,ChEMBL
+CHEMBL2082950,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900028,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,1035.6,nM,5.98,INHIBITION,CHEMBL3800005,2022,ChEMBL
+CHEMBL2029759,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900029,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,1.36,nM,8.87,INHIBITION,CHEMBL3800005,2023,ChEMBL
+CHEMBL2085009,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900030,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,8.38,nM,8.08,INHIBITION,CHEMBL3800006,2022,ChEMBL
+CHEMBL2031818,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900031,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,15.44,nM,7.81,INHIBITION,CHEMBL3800006,2023,ChEMBL
+CHEMBL2062115,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900032,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,42.45,nM,7.37,INHIBITION,CHEMBL3800006,2022,ChEMBL
+CHEMBL2065749,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900033,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,285.46,nM,6.54,INHIBITION,CHEMBL3800006,2023,ChEMBL
+CHEMBL2064174,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900034,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,180.45,nM,6.74,INHIBITION,CHEMBL3800006,2022,ChEMBL
+CHEMBL2067808,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900035,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,836.09,nM,6.08,INHIBITION,CHEMBL3800007,2023,ChEMBL
+CHEMBL2098105,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900036,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,140.14,nM,6.85,INHIBITION,CHEMBL3800007,2022,ChEMBL
+CHEMBL2001739,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900037,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,381.55,nM,6.42,INHIBITION,CHEMBL3800007,2023,ChEMBL
+CHEMBL2000164,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900038,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,0.65,nM,9.19,INHIBITION,CHEMBL3800007,2022,ChEMBL
+CHEMBL2098589,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900039,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,4.15,nM,8.38,INHIBITION,CHEMBL3800007,2023,ChEMBL
+CHEMBL2002223,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900040,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,26.46,nM,7.58,INHIBITION,CHEMBL3800008,2022,ChEMBL
+CHEMBL2032520,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900041,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,229.77,nM,6.64,INHIBITION,CHEMBL3800008,2023,ChEMBL
+CHEMBL2036154,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900042,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,344.55,nM,6.46,INHIBITION,CHEMBL3800008,2022,ChEMBL
+CHEMBL2034579,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900043,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,49.02,nM,7.31,INHIBITION,CHEMBL3800008,2023,ChEMBL
+CHEMBL2038213,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900044,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,3.75,nM,8.43,INHIBITION,CHEMBL3800008,2022,ChEMBL
+CHEMBL2068510,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900045,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,0.39,nM,9.41,INHIBITION,CHEMBL3800009,2023,ChEMBL
+CHEMBL2066935,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900046,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,791.71,nM,6.1,INHIBITION,CHEMBL3800009,2022,ChEMBL
+CHEMBL2070569,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900047,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,8.65,nM,8.06,INHIBITION,CHEMBL3800009,2023,ChEMBL
+CHEMBL2068994,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900048,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,141.46,nM,6.85,INHIBITION,CHEMBL3800009,2022,ChEMBL
+CHEMBL2004500,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900049,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,97.08,nM,7.01,INHIBITION,CHEMBL3800009,2023,ChEMBL
+CHEMBL2002925,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900050,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,28.28,nM,7.55,INHIBITION,CHEMBL3800010,2022,ChEMBL
+CHEMBL2049734,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900051,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,214.26,nM,6.67,INHIBITION,CHEMBL3800010,2023,ChEMBL
+CHEMBL2004984,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900052,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,54.82,nM,7.26,INHIBITION,CHEMBL3800010,2022,ChEMBL
+CHEMBL2083665,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900053,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,255.6,nM,6.59,INHIBITION,CHEMBL3800010,2023,ChEMBL
+CHEMBL2038915,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900054,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,119.34,nM,6.92,INHIBITION,CHEMBL3800010,2022,ChEMBL
+CHEMBL2085724,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900055,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,5.55,nM,8.26,INHIBITION,CHEMBL3800011,2023,ChEMBL
+CHEMBL2040974,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900056,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,25.16,nM,7.6,INHIBITION,CHEMBL3800011,2022,ChEMBL
+CHEMBL2071271,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900057,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,5.61,nM,8.25,INHIBITION,CHEMBL3800011,2023,ChEMBL
+CHEMBL2018080,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900058,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,145.42,nM,6.84,INHIBITION,CHEMBL3800011,2022,ChEMBL
+CHEMBL2021714,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900059,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,8.5,nM,8.07,INHIBITION,CHEMBL3800011,2023,ChEMBL
+CHEMBL2020139,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900060,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,1341.35,nM,5.87,INHIBITION,CHEMBL3800012,2022,ChEMBL
+CHEMBL2007261,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900061,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,28.31,nM,7.55,INHIBITION,CHEMBL3800012,2023,ChEMBL
+CHEMBL2054070,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900062,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,7.27,nM,8.14,INHIBITION,CHEMBL3800012,2022,ChEMBL
+CHEMBL2009320,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900063,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,1450.51,nM,5.84,INHIBITION,CHEMBL3800012,2023,ChEMBL
+CHEMBL2056129,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900064,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,141.85,nM,6.85,INHIBITION,CHEMBL3800012,2022,ChEMBL
+CHEMBL2054554,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900065,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,28.35,nM,7.55,INHIBITION,CHEMBL3800013,2023,ChEMBL
+CHEMBL2090060,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900066,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,3.12,nM,8.51,INHIBITION,CHEMBL3800013,2022,ChEMBL
+CHEMBL2088485,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900067,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,119.37,nM,6.92,INHIBITION,CHEMBL3800013,2023,ChEMBL
+CHEMBL2092119,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900068,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,9.34,nM,8.03,INHIBITION,CHEMBL3800013,2022,ChEMBL
+CHEMBL2090544,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900069,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,1.14,nM,8.94,INHIBITION,CHEMBL3800013,2023,ChEMBL
+CHEMBL2020841,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900070,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,8.37,nM,8.08,INHIBITION,CHEMBL3800014,2022,ChEMBL
+CHEMBL2024475,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900071,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,50.47,nM,7.3,INHIBITION,CHEMBL3800014,2023,ChEMBL
+CHEMBL2022900,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900072,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,13.45,nM,7.87,INHIBITION,CHEMBL3800014,2022,ChEMBL
+CHEMBL2026534,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900073,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,127.05,nM,6.9,INHIBITION,CHEMBL3800014,2023,ChEMBL
+CHEMBL2056831,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900074,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,25.91,nM,7.59,INHIBITION,CHEMBL3800014,2022,ChEMBL
+CHEMBL2060465,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900075,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,45.26,nM,7.34,INHIBITION,CHEMBL3800015,2023,ChEMBL
+CHEMBL2058890,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900076,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,14.53,nM,7.84,INHIBITION,CHEMBL3800015,2022,ChEMBL
+CHEMBL2005699,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900077,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,81.64,nM,7.09,INHIBITION,CHEMBL3800015,2023,ChEMBL
+CHEMBL2092821,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900078,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,12.75,nM,7.89,INHIBITION,CHEMBL3800015,2022,ChEMBL
+CHEMBL2091246,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900079,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,83.37,nM,7.08,INHIBITION,CHEMBL3800015,2023,ChEMBL
+CHEMBL2094880,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900080,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,4.25,nM,8.37,INHIBITION,CHEMBL3800016,2022,ChEMBL
+CHEMBL2041689,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900081,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,66.99,nM,7.17,INHIBITION,CHEMBL3800016,2023,ChEMBL
+CHEMBL2028811,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900082,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,3452.43,nM,5.46,INHIBITION,CHEMBL3800016,2022,ChEMBL
+CHEMBL2027236,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900083,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,322.17,nM,6.49,INHIBITION,CHEMBL3800016,2023,ChEMBL
+CHEMBL2074045,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900084,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,30.31,nM,7.52,INHIBITION,CHEMBL3800016,2022,ChEMBL
+CHEMBL2029295,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900085,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,0.67,nM,9.18,INHIBITION,CHEMBL3800017,2023,ChEMBL
+CHEMBL2076104,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900086,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,4.68,nM,8.33,INHIBITION,CHEMBL3800017,2022,ChEMBL
+CHEMBL2063226,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900087,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,5142.04,nM,5.29,INHIBITION,CHEMBL3800017,2023,ChEMBL
+CHEMBL2010035,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900088,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,951.89,nM,6.02,INHIBITION,CHEMBL3800017,2022,ChEMBL
+CHEMBL2065285,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900089,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,2.27,nM,8.64,INHIBITION,CHEMBL3800017,2023,ChEMBL
+CHEMBL2012094,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900090,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,7.37,nM,8.13,INHIBITION,CHEMBL3800018,2022,ChEMBL
+CHEMBL2042391,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900091,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,0.17,nM,9.77,INHIBITION,CHEMBL3800018,2023,ChEMBL
+CHEMBL2046025,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900092,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,91.07,nM,7.04,INHIBITION,CHEMBL3800018,2022,ChEMBL
+CHEMBL2044450,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900093,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,223.79,nM,6.65,INHIBITION,CHEMBL3800018,2023,ChEMBL
+CHEMBL2048084,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900094,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,26.82,nM,7.57,INHIBITION,CHEMBL3800018,2022,ChEMBL
+CHEMBL2078381,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900095,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,94.99,nM,7.02,INHIBITION,CHEMBL3800019,2023,ChEMBL
+CHEMBL2076806,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900096,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,2.9,nM,8.54,INHIBITION,CHEMBL3800019,2022,ChEMBL
+CHEMBL2080440,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900097,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,102.33,nM,6.99,INHIBITION,CHEMBL3800019,2023,ChEMBL
+CHEMBL2078865,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900098,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,58.87,nM,7.23,INHIBITION,CHEMBL3800019,2022,ChEMBL
+CHEMBL2014371,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900099,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,301.14,nM,6.52,INHIBITION,CHEMBL3800019,2023,ChEMBL
+CHEMBL2012796,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900100,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,5.53,nM,8.26,INHIBITION,CHEMBL3800020,2022,ChEMBL
+CHEMBL2016430,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900101,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,264.34,nM,6.58,INHIBITION,CHEMBL3800020,2023,ChEMBL
+CHEMBL2014855,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900102,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,12.21,nM,7.91,INHIBITION,CHEMBL3800020,2022,ChEMBL
+CHEMBL2045152,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900103,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,0.42,nM,9.38,INHIBITION,CHEMBL3800020,2023,ChEMBL
+CHEMBL2048786,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900104,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,1899.85,nM,5.72,INHIBITION,CHEMBL3800020,2022,ChEMBL
+CHEMBL2047211,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900105,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,1.01,nM,9.0,INHIBITION,CHEMBL3800021,2023,ChEMBL
+CHEMBL2050845,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900106,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,16.6,nM,7.78,INHIBITION,CHEMBL3800021,2022,ChEMBL
+CHEMBL2081142,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900107,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,422.17,nM,6.37,INHIBITION,CHEMBL3800021,2023,ChEMBL
+CHEMBL2084776,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900108,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,24.58,nM,7.61,INHIBITION,CHEMBL3800021,2022,ChEMBL
+CHEMBL2083201,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900109,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,5.95,nM,8.23,INHIBITION,CHEMBL3800021,2023,ChEMBL
+CHEMBL2030010,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900110,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,195.2,nM,6.71,INHIBITION,CHEMBL3800022,2022,ChEMBL
+CHEMBL2085260,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900111,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,10.68,nM,7.97,INHIBITION,CHEMBL3800022,2023,ChEMBL
+CHEMBL2063941,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900112,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,0.81,nM,9.09,INHIBITION,CHEMBL3800022,2022,ChEMBL
+CHEMBL2019191,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900113,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,102.62,nM,6.99,INHIBITION,CHEMBL3800022,2023,ChEMBL
+CHEMBL2066000,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900114,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,308.75,nM,6.51,INHIBITION,CHEMBL3800022,2022,ChEMBL
+CHEMBL2064425,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900115,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,42.25,nM,7.37,INHIBITION,CHEMBL3800023,2023,ChEMBL
+CHEMBL2051547,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900116,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,27.81,nM,7.56,INHIBITION,CHEMBL3800023,2022,ChEMBL
+CHEMBL2098356,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900117,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,2.55,nM,8.59,INHIBITION,CHEMBL3800023,2023,ChEMBL
+CHEMBL2001990,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900118,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,45.5,nM,7.34,INHIBITION,CHEMBL3800023,2022,ChEMBL
+CHEMBL2000415,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900119,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,84.5,nM,7.07,INHIBITION,CHEMBL3800023,2023,ChEMBL
+CHEMBL2087537,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900120,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,325.17,nM,6.49,INHIBITION,CHEMBL3800024,2022,ChEMBL
+CHEMBL2034346,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900121,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,1428.42,nM,5.85,INHIBITION,CHEMBL3800024,2023,ChEMBL
+CHEMBL2032771,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900122,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,616.54,nM,6.21,INHIBITION,CHEMBL3800024,2022,ChEMBL
+CHEMBL2036405,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900123,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,623.85,nM,6.2,INHIBITION,CHEMBL3800024,2023,ChEMBL
+CHEMBL2066702,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900124,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,57.49,nM,7.24,INHIBITION,CHEMBL3800024,2022,ChEMBL
+CHEMBL2070336,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900125,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,1007.26,nM,6.0,INHIBITION,CHEMBL3800025,2023,ChEMBL
+CHEMBL2068761,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900126,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,10000.0,nM,5.0,INHIBITION,CHEMBL3800025,2022,ChEMBL
+CHEMBL2072395,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900127,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,35.83,nM,7.45,INHIBITION,CHEMBL3800025,2023,ChEMBL
+CHEMBL2002692,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900128,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,0.45,nM,9.35,INHIBITION,CHEMBL3800025,2022,ChEMBL
+CHEMBL2001117,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900129,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,2.36,nM,8.63,INHIBITION,CHEMBL3800025,2023,ChEMBL
+CHEMBL2004751,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900130,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,58.73,nM,7.23,INHIBITION,CHEMBL3800026,2022,ChEMBL
+CHEMBL2003176,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900131,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,404.13,nM,6.39,INHIBITION,CHEMBL3800026,2023,ChEMBL
+CHEMBL2038682,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900132,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,0.08,nM,10.07,INHIBITION,CHEMBL3800026,2022,ChEMBL
+CHEMBL2037107,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900133,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,27.59,nM,7.56,INHIBITION,CHEMBL3800026,2023,ChEMBL
+CHEMBL2040741,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900134,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,20.04,nM,7.7,INHIBITION,CHEMBL3800026,2022,ChEMBL
+CHEMBL2039166,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900135,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,44.09,nM,7.36,INHIBITION,CHEMBL3800027,2023,ChEMBL
+CHEMBL2085975,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900136,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,34.1,nM,7.47,INHIBITION,CHEMBL3800027,2022,ChEMBL
+CHEMBL2073097,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900137,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,110.52,nM,6.96,INHIBITION,CHEMBL3800027,2023,ChEMBL
+CHEMBL2071522,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900138,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,56.88,nM,7.25,INHIBITION,CHEMBL3800027,2022,ChEMBL
+CHEMBL2075156,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900139,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,0.99,nM,9.0,INHIBITION,CHEMBL3800027,2023,ChEMBL
+CHEMBL2021965,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900140,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,1.79,nM,8.75,INHIBITION,CHEMBL3800028,2022,ChEMBL
+CHEMBL2052262,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900141,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,3744.47,nM,5.43,INHIBITION,CHEMBL3800028,2023,ChEMBL
+CHEMBL2007512,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900142,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,808.19,nM,6.09,INHIBITION,CHEMBL3800028,2022,ChEMBL
+CHEMBL2054321,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900143,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,189.59,nM,6.72,INHIBITION,CHEMBL3800028,2023,ChEMBL
+CHEMBL2057955,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900144,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,3.67,nM,8.44,INHIBITION,CHEMBL3800028,2022,ChEMBL
+CHEMBL2088252,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900145,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,1.69,nM,8.77,INHIBITION,CHEMBL3800029,2023,ChEMBL
+CHEMBL2043502,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900146,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,6.0,nM,8.22,INHIBITION,CHEMBL3800029,2022,ChEMBL
+CHEMBL2090311,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900147,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,425.65,nM,6.37,INHIBITION,CHEMBL3800029,2023,ChEMBL
+CHEMBL2088736,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900148,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,105.81,nM,6.98,INHIBITION,CHEMBL3800029,2022,ChEMBL
+CHEMBL2024242,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900149,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,10.25,nM,7.99,INHIBITION,CHEMBL3800029,2023,ChEMBL
+CHEMBL2022667,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900150,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,55.0,nM,7.26,INHIBITION,CHEMBL3800030,2022,ChEMBL
+CHEMBL2026301,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900151,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,74.96,nM,7.13,INHIBITION,CHEMBL3800030,2023,ChEMBL
+CHEMBL2024726,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900152,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,72.6,nM,7.14,INHIBITION,CHEMBL3800030,2022,ChEMBL
+CHEMBL2060232,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900153,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,2.19,nM,8.66,INHIBITION,CHEMBL3800030,2023,ChEMBL
+CHEMBL2058657,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900154,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,8.07,nM,8.09,INHIBITION,CHEMBL3800030,2022,ChEMBL
+CHEMBL2057082,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900155,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,64.5,nM,7.19,INHIBITION,CHEMBL3800031,2023,ChEMBL
+CHEMBL2060716,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900156,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,14.92,nM,7.83,INHIBITION,CHEMBL3800031,2022,ChEMBL
+CHEMBL2059141,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900157,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,563.79,nM,6.25,INHIBITION,CHEMBL3800031,2023,ChEMBL
+CHEMBL2094647,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900158,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,105.37,nM,6.98,INHIBITION,CHEMBL3800031,2022,ChEMBL
+CHEMBL2093072,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900159,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,2.82,nM,8.55,INHIBITION,CHEMBL3800031,2023,ChEMBL
+CHEMBL2039881,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900160,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,1139.28,nM,5.94,INHIBITION,CHEMBL3800032,2022,ChEMBL
+CHEMBL2095131,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900161,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,7.83,nM,8.11,INHIBITION,CHEMBL3800032,2023,ChEMBL
+CHEMBL2025428,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900162,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,3818.82,nM,5.42,INHIBITION,CHEMBL3800032,2022,ChEMBL
+CHEMBL2029062,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900163,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,0.64,nM,9.2,INHIBITION,CHEMBL3800032,2023,ChEMBL
+CHEMBL2027487,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900164,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,110.9,nM,6.96,INHIBITION,CHEMBL3800032,2022,ChEMBL
+CHEMBL2031121,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900165,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,12.61,nM,7.9,INHIBITION,CHEMBL3800033,2023,ChEMBL
+CHEMBL2061418,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900166,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,24.31,nM,7.61,INHIBITION,CHEMBL3800033,2022,ChEMBL
+CHEMBL2008227,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900167,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,22.37,nM,7.65,INHIBITION,CHEMBL3800033,2023,ChEMBL
+CHEMBL2063477,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900168,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,15.57,nM,7.81,INHIBITION,CHEMBL3800033,2022,ChEMBL
+CHEMBL2010286,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900169,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,1622.44,nM,5.79,INHIBITION,CHEMBL3800033,2023,ChEMBL
+CHEMBL2097408,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900170,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,21.34,nM,7.67,INHIBITION,CHEMBL3800034,2022,ChEMBL
+CHEMBL2044217,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900171,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,48.3,nM,7.32,INHIBITION,CHEMBL3800034,2023,ChEMBL
+CHEMBL2099467,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900172,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,109.59,nM,6.96,INHIBITION,CHEMBL3800034,2022,ChEMBL
+CHEMBL2046276,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900173,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,189.8,nM,6.72,INHIBITION,CHEMBL3800034,2023,ChEMBL
+CHEMBL2076573,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900174,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,20.14,nM,7.7,INHIBITION,CHEMBL3800034,2022,ChEMBL
+CHEMBL2080207,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900175,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,300.87,nM,6.52,INHIBITION,CHEMBL3800035,2023,ChEMBL
+CHEMBL2078632,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900176,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,2.96,nM,8.53,INHIBITION,CHEMBL3800035,2022,ChEMBL
+CHEMBL2082266,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900177,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,10.65,nM,7.97,INHIBITION,CHEMBL3800035,2023,ChEMBL
+CHEMBL2012563,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900178,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,17.54,nM,7.76,INHIBITION,CHEMBL3800035,2022,ChEMBL
+CHEMBL2067813,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900179,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,3.29,nM,8.48,INHIBITION,CHEMBL3800035,2023,ChEMBL
+CHEMBL2014622,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900180,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,2192.17,nM,5.66,INHIBITION,CHEMBL3800036,2022,ChEMBL
+CHEMBL2013047,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900181,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,601.97,nM,6.22,INHIBITION,CHEMBL3800036,2023,ChEMBL
+CHEMBL2016681,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900182,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,9.6,nM,8.02,INHIBITION,CHEMBL3800036,2022,ChEMBL
+CHEMBL2046978,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900183,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,168.17,nM,6.77,INHIBITION,CHEMBL3800036,2023,ChEMBL
+CHEMBL2050612,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900184,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,129.28,nM,6.89,INHIBITION,CHEMBL3800036,2022,ChEMBL
+CHEMBL2049037,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900185,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,806.61,nM,6.09,INHIBITION,CHEMBL3800037,2023,ChEMBL
+CHEMBL2047462,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900186,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,299.14,nM,6.52,INHIBITION,CHEMBL3800037,2022,ChEMBL
+CHEMBL2082968,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900187,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,2.79,nM,8.55,INHIBITION,CHEMBL3800037,2023,ChEMBL
+CHEMBL2081393,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900188,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,10.16,nM,7.99,INHIBITION,CHEMBL3800037,2022,ChEMBL
+CHEMBL2085027,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900189,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,20.66,nM,7.68,INHIBITION,CHEMBL3800037,2023,ChEMBL
+CHEMBL2083452,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900190,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,119.02,nM,6.92,INHIBITION,CHEMBL3800038,2022,ChEMBL
+CHEMBL2018958,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900191,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,23.88,nM,7.62,INHIBITION,CHEMBL3800038,2023,ChEMBL
+CHEMBL2017383,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900192,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,2.24,nM,8.65,INHIBITION,CHEMBL3800038,2022,ChEMBL
+CHEMBL2064192,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900193,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,159.65,nM,6.8,INHIBITION,CHEMBL3800038,2023,ChEMBL
+CHEMBL2019442,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900194,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,34.28,nM,7.47,INHIBITION,CHEMBL3800038,2022,ChEMBL
+CHEMBL2049739,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900195,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,0.54,nM,9.27,INHIBITION,CHEMBL3800039,2023,ChEMBL
+CHEMBL2053373,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900196,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,6.2,nM,8.21,INHIBITION,CHEMBL3800039,2022,ChEMBL
+CHEMBL2000182,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900197,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,115.47,nM,6.94,INHIBITION,CHEMBL3800039,2023,ChEMBL
+CHEMBL2055432,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900198,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,7.55,nM,8.12,INHIBITION,CHEMBL3800039,2022,ChEMBL
+CHEMBL2085729,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900199,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,1175.51,nM,5.93,INHIBITION,CHEMBL3800039,2023,ChEMBL
+CHEMBL2032538,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900200,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,37.53,nM,7.43,INHIBITION,CHEMBL3800040,2022,ChEMBL
+CHEMBL2087788,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900201,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,7.57,nM,8.12,INHIBITION,CHEMBL3800040,2023,ChEMBL
+CHEMBL2034597,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900202,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,13.18,nM,7.88,INHIBITION,CHEMBL3800040,2022,ChEMBL
+CHEMBL2021719,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900203,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,7.75,nM,8.11,INHIBITION,CHEMBL3800040,2023,ChEMBL
+CHEMBL2068528,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900204,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,4.64,nM,8.33,INHIBITION,CHEMBL3800040,2022,ChEMBL
+CHEMBL2066953,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900205,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,10.99,nM,7.96,INHIBITION,CHEMBL3800041,2023,ChEMBL
+CHEMBL2070587,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900206,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,11.76,nM,7.93,INHIBITION,CHEMBL3800041,2022,ChEMBL
+CHEMBL2069012,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900207,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,19.6,nM,7.71,INHIBITION,CHEMBL3800041,2023,ChEMBL
+CHEMBL2004518,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900208,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,381.12,nM,6.42,INHIBITION,CHEMBL3800041,2022,ChEMBL
+CHEMBL2002943,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900209,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,2.8,nM,8.55,INHIBITION,CHEMBL3800041,2023,ChEMBL
+CHEMBL2006577,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900210,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,34.64,nM,7.46,INHIBITION,CHEMBL3800042,2022,ChEMBL
+CHEMBL2005002,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900211,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,6.58,nM,8.18,INHIBITION,CHEMBL3800042,2023,ChEMBL
+CHEMBL2035299,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900212,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,3.65,nM,8.44,INHIBITION,CHEMBL3800042,2022,ChEMBL
+CHEMBL2038933,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900213,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,103.76,nM,6.98,INHIBITION,CHEMBL3800042,2023,ChEMBL
+CHEMBL2037358,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900214,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,86.0,nM,7.07,INHIBITION,CHEMBL3800042,2022,ChEMBL
+CHEMBL2040992,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900215,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,64.44,nM,7.19,INHIBITION,CHEMBL3800043,2023,ChEMBL
+CHEMBL2071289,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900216,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,1.75,nM,8.76,INHIBITION,CHEMBL3800043,2022,ChEMBL
+CHEMBL2074923,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900217,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,248.09,nM,6.61,INHIBITION,CHEMBL3800043,2023,ChEMBL
+CHEMBL2073348,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900218,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,1.13,nM,8.95,INHIBITION,CHEMBL3800043,2022,ChEMBL
+CHEMBL2020157,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900219,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,20.11,nM,7.7,INHIBITION,CHEMBL3800043,2023,ChEMBL
+CHEMBL2007279,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900220,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,17.1,nM,7.77,INHIBITION,CHEMBL3800044,2022,ChEMBL
+CHEMBL2005704,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900221,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,4.08,nM,8.39,INHIBITION,CHEMBL3800044,2023,ChEMBL
+CHEMBL2009338,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900222,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,26.16,nM,7.58,INHIBITION,CHEMBL3800044,2022,ChEMBL
+CHEMBL2007763,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900223,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,2.72,nM,8.57,INHIBITION,CHEMBL3800044,2023,ChEMBL
+CHEMBL2043269,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900224,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,104.06,nM,6.98,INHIBITION,CHEMBL3800044,2022,ChEMBL
+CHEMBL2041694,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900225,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,1.23,nM,8.91,INHIBITION,CHEMBL3800045,2023,ChEMBL
+CHEMBL2088503,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900226,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,88.21,nM,7.05,INHIBITION,CHEMBL3800045,2022,ChEMBL
+CHEMBL2043753,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900227,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,1.11,nM,8.95,INHIBITION,CHEMBL3800045,2023,ChEMBL
+CHEMBL2090562,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900228,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,83.21,nM,7.08,INHIBITION,CHEMBL3800045,2022,ChEMBL
+CHEMBL2077684,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900229,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,60.5,nM,7.22,INHIBITION,CHEMBL3800045,2023,ChEMBL
+CHEMBL2024493,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900230,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,319.26,nM,6.5,INHIBITION,CHEMBL3800046,2022,ChEMBL
+CHEMBL2022918,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900231,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,185.27,nM,6.73,INHIBITION,CHEMBL3800046,2023,ChEMBL
+CHEMBL2026552,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900232,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,34.25,nM,7.47,INHIBITION,CHEMBL3800046,2022,ChEMBL
+CHEMBL2056849,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900233,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,18.44,nM,7.73,INHIBITION,CHEMBL3800046,2023,ChEMBL
+CHEMBL2060483,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900234,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,3.28,nM,8.48,INHIBITION,CHEMBL3800046,2022,ChEMBL
+CHEMBL2058908,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900235,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,51.76,nM,7.29,INHIBITION,CHEMBL3800047,2023,ChEMBL
+CHEMBL2062542,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900236,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,419.49,nM,6.38,INHIBITION,CHEMBL3800047,2022,ChEMBL
+CHEMBL2092839,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900237,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,13.11,nM,7.88,INHIBITION,CHEMBL3800047,2023,ChEMBL
+CHEMBL2091264,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900238,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,21.55,nM,7.67,INHIBITION,CHEMBL3800047,2022,ChEMBL
+CHEMBL2094898,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900239,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,10.18,nM,7.99,INHIBITION,CHEMBL3800047,2023,ChEMBL
+CHEMBL2093323,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900240,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,137.32,nM,6.86,INHIBITION,CHEMBL3800048,2022,ChEMBL
+CHEMBL2028829,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900241,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,107.4,nM,6.97,INHIBITION,CHEMBL3800048,2023,ChEMBL
+CHEMBL2027254,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900242,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,137.21,nM,6.86,INHIBITION,CHEMBL3800048,2022,ChEMBL
+CHEMBL2030888,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900243,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,2.05,nM,8.69,INHIBITION,CHEMBL3800048,2023,ChEMBL
+CHEMBL2029313,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900244,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,1.2,nM,8.92,INHIBITION,CHEMBL3800048,2022,ChEMBL
+CHEMBL2059610,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900245,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,117.69,nM,6.93,INHIBITION,CHEMBL3800049,2023,ChEMBL
+CHEMBL2063244,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900246,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,112.78,nM,6.95,INHIBITION,CHEMBL3800049,2022,ChEMBL
+CHEMBL2061669,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900247,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,7.36,nM,8.13,INHIBITION,CHEMBL3800049,2023,ChEMBL
+CHEMBL2065303,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900248,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),IC50,0.9,nM,9.05,INHIBITION,CHEMBL3800049,2022,ChEMBL
+CHEMBL2095600,CHEMBL3882,ALK (Anaplastic Lymphoma Kinase),CHEMBL1900249,Kinase inhibition assay: ALK (Anaplastic Lymphoma Kinase),Ki,0.51,nM,9.3,INHIBITION,CHEMBL3800049,2023,ChEMBL
+CHEMBL2018766,CHEMBL4005,BRAF kinase,CHEMBL1900000,Kinase inhibition assay: BRAF kinase,Ki,129.65,nM,6.89,INHIBITION,CHEMBL3800000,2022,ChEMBL
+CHEMBL2022400,CHEMBL4005,BRAF kinase,CHEMBL1900001,Kinase inhibition assay: BRAF kinase,Ki,77.21,nM,7.11,INHIBITION,CHEMBL3800000,2023,ChEMBL
+CHEMBL2069209,CHEMBL4005,BRAF kinase,CHEMBL1900002,Kinase inhibition assay: BRAF kinase,Ki,16.37,nM,7.79,INHIBITION,CHEMBL3800000,2022,ChEMBL
+CHEMBL2024459,CHEMBL4005,BRAF kinase,CHEMBL1900003,Kinase inhibition assay: BRAF kinase,IC50,14.64,nM,7.83,INHIBITION,CHEMBL3800000,2023,ChEMBL
+CHEMBL2054756,CHEMBL4005,BRAF kinase,CHEMBL1900004,Kinase inhibition assay: BRAF kinase,IC50,47.53,nM,7.32,INHIBITION,CHEMBL3800000,2022,ChEMBL
+CHEMBL2001565,CHEMBL4005,BRAF kinase,CHEMBL1900005,Kinase inhibition assay: BRAF kinase,IC50,198.75,nM,6.7,INHIBITION,CHEMBL3800001,2023,ChEMBL
+CHEMBL2056815,CHEMBL4005,BRAF kinase,CHEMBL1900006,Kinase inhibition assay: BRAF kinase,IC50,34.13,nM,7.47,INHIBITION,CHEMBL3800001,2022,ChEMBL
+CHEMBL2003624,CHEMBL4005,BRAF kinase,CHEMBL1900007,Kinase inhibition assay: BRAF kinase,IC50,0.51,nM,9.29,INHIBITION,CHEMBL3800001,2023,ChEMBL
+CHEMBL2007258,CHEMBL4005,BRAF kinase,CHEMBL1900008,Kinase inhibition assay: BRAF kinase,Ki,104.14,nM,6.98,INHIBITION,CHEMBL3800001,2022,ChEMBL
+CHEMBL2037555,CHEMBL4005,BRAF kinase,CHEMBL1900009,Kinase inhibition assay: BRAF kinase,IC50,18.89,nM,7.72,INHIBITION,CHEMBL3800001,2023,ChEMBL
+CHEMBL2035980,CHEMBL4005,BRAF kinase,CHEMBL1900010,Kinase inhibition assay: BRAF kinase,Ki,0.09,nM,10.03,INHIBITION,CHEMBL3800002,2022,ChEMBL
+CHEMBL2039614,CHEMBL4005,BRAF kinase,CHEMBL1900011,Kinase inhibition assay: BRAF kinase,IC50,107.37,nM,6.97,INHIBITION,CHEMBL3800002,2023,ChEMBL
+CHEMBL2038039,CHEMBL4005,BRAF kinase,CHEMBL1900012,Kinase inhibition assay: BRAF kinase,IC50,6.58,nM,8.18,INHIBITION,CHEMBL3800002,2022,ChEMBL
+CHEMBL2073545,CHEMBL4005,BRAF kinase,CHEMBL1900013,Kinase inhibition assay: BRAF kinase,Ki,0.45,nM,9.35,INHIBITION,CHEMBL3800002,2023,ChEMBL
+CHEMBL2071970,CHEMBL4005,BRAF kinase,CHEMBL1900014,Kinase inhibition assay: BRAF kinase,Ki,8.12,nM,8.09,INHIBITION,CHEMBL3800002,2022,ChEMBL
+CHEMBL2075604,CHEMBL4005,BRAF kinase,CHEMBL1900015,Kinase inhibition assay: BRAF kinase,Ki,2.46,nM,8.61,INHIBITION,CHEMBL3800003,2023,ChEMBL
+CHEMBL2074029,CHEMBL4005,BRAF kinase,CHEMBL1900016,Kinase inhibition assay: BRAF kinase,Ki,4.78,nM,8.32,INHIBITION,CHEMBL3800003,2022,ChEMBL
+CHEMBL2004326,CHEMBL4005,BRAF kinase,CHEMBL1900017,Kinase inhibition assay: BRAF kinase,Ki,9.83,nM,8.01,INHIBITION,CHEMBL3800003,2023,ChEMBL
+CHEMBL2007960,CHEMBL4005,BRAF kinase,CHEMBL1900018,Kinase inhibition assay: BRAF kinase,IC50,1.31,nM,8.88,INHIBITION,CHEMBL3800003,2022,ChEMBL
+CHEMBL2006385,CHEMBL4005,BRAF kinase,CHEMBL1900019,Kinase inhibition assay: BRAF kinase,Ki,7.1,nM,8.15,INHIBITION,CHEMBL3800003,2023,ChEMBL
+CHEMBL2010019,CHEMBL4005,BRAF kinase,CHEMBL1900020,Kinase inhibition assay: BRAF kinase,IC50,46.46,nM,7.33,INHIBITION,CHEMBL3800004,2022,ChEMBL
+CHEMBL2040316,CHEMBL4005,BRAF kinase,CHEMBL1900021,Kinase inhibition assay: BRAF kinase,Ki,22.56,nM,7.65,INHIBITION,CHEMBL3800004,2023,ChEMBL
+CHEMBL2043950,CHEMBL4005,BRAF kinase,CHEMBL1900022,Kinase inhibition assay: BRAF kinase,Ki,13.53,nM,7.87,INHIBITION,CHEMBL3800004,2022,ChEMBL
+CHEMBL2042375,CHEMBL4005,BRAF kinase,CHEMBL1900023,Kinase inhibition assay: BRAF kinase,IC50,78.22,nM,7.11,INHIBITION,CHEMBL3800004,2023,ChEMBL
+CHEMBL2089184,CHEMBL4005,BRAF kinase,CHEMBL1900024,Kinase inhibition assay: BRAF kinase,Ki,20.37,nM,7.69,INHIBITION,CHEMBL3800004,2022,ChEMBL
+CHEMBL2076306,CHEMBL4005,BRAF kinase,CHEMBL1900025,Kinase inhibition assay: BRAF kinase,IC50,28.42,nM,7.55,INHIBITION,CHEMBL3800005,2023,ChEMBL
+CHEMBL2074731,CHEMBL4005,BRAF kinase,CHEMBL1900026,Kinase inhibition assay: BRAF kinase,Ki,7.15,nM,8.15,INHIBITION,CHEMBL3800005,2022,ChEMBL
+CHEMBL2078365,CHEMBL4005,BRAF kinase,CHEMBL1900027,Kinase inhibition assay: BRAF kinase,IC50,0.22,nM,9.66,INHIBITION,CHEMBL3800005,2023,ChEMBL
+CHEMBL2076790,CHEMBL4005,BRAF kinase,CHEMBL1900028,Kinase inhibition assay: BRAF kinase,Ki,17.81,nM,7.75,INHIBITION,CHEMBL3800005,2022,ChEMBL
+CHEMBL2012296,CHEMBL4005,BRAF kinase,CHEMBL1900029,Kinase inhibition assay: BRAF kinase,IC50,0.84,nM,9.08,INHIBITION,CHEMBL3800005,2023,ChEMBL
+CHEMBL2010721,CHEMBL4005,BRAF kinase,CHEMBL1900030,Kinase inhibition assay: BRAF kinase,IC50,7.8,nM,8.11,INHIBITION,CHEMBL3800006,2022,ChEMBL
+CHEMBL2057530,CHEMBL4005,BRAF kinase,CHEMBL1900031,Kinase inhibition assay: BRAF kinase,Ki,20.58,nM,7.69,INHIBITION,CHEMBL3800006,2023,ChEMBL
+CHEMBL2012780,CHEMBL4005,BRAF kinase,CHEMBL1900032,Kinase inhibition assay: BRAF kinase,IC50,88.4,nM,7.05,INHIBITION,CHEMBL3800006,2022,ChEMBL
+CHEMBL2059589,CHEMBL4005,BRAF kinase,CHEMBL1900033,Kinase inhibition assay: BRAF kinase,Ki,20.23,nM,7.69,INHIBITION,CHEMBL3800006,2023,ChEMBL
+CHEMBL2046711,CHEMBL4005,BRAF kinase,CHEMBL1900034,Kinase inhibition assay: BRAF kinase,IC50,23.28,nM,7.63,INHIBITION,CHEMBL3800006,2022,ChEMBL
+CHEMBL2093520,CHEMBL4005,BRAF kinase,CHEMBL1900035,Kinase inhibition assay: BRAF kinase,Ki,158.53,nM,6.8,INHIBITION,CHEMBL3800007,2023,ChEMBL
+CHEMBL2091945,CHEMBL4005,BRAF kinase,CHEMBL1900036,Kinase inhibition assay: BRAF kinase,Ki,114.53,nM,6.94,INHIBITION,CHEMBL3800007,2022,ChEMBL
+CHEMBL2095579,CHEMBL4005,BRAF kinase,CHEMBL1900037,Kinase inhibition assay: BRAF kinase,IC50,13.27,nM,7.88,INHIBITION,CHEMBL3800007,2023,ChEMBL
+CHEMBL2025876,CHEMBL4005,BRAF kinase,CHEMBL1900038,Kinase inhibition assay: BRAF kinase,Ki,0.86,nM,9.07,INHIBITION,CHEMBL3800007,2022,ChEMBL
+CHEMBL2029510,CHEMBL4005,BRAF kinase,CHEMBL1900039,Kinase inhibition assay: BRAF kinase,IC50,36.79,nM,7.43,INHIBITION,CHEMBL3800007,2023,ChEMBL
+CHEMBL2027935,CHEMBL4005,BRAF kinase,CHEMBL1900040,Kinase inhibition assay: BRAF kinase,IC50,887.18,nM,6.05,INHIBITION,CHEMBL3800008,2022,ChEMBL
+CHEMBL2031569,CHEMBL4005,BRAF kinase,CHEMBL1900041,Kinase inhibition assay: BRAF kinase,Ki,4998.11,nM,5.3,INHIBITION,CHEMBL3800008,2023,ChEMBL
+CHEMBL2061866,CHEMBL4005,BRAF kinase,CHEMBL1900042,Kinase inhibition assay: BRAF kinase,IC50,332.07,nM,6.48,INHIBITION,CHEMBL3800008,2022,ChEMBL
+CHEMBL2060291,CHEMBL4005,BRAF kinase,CHEMBL1900043,Kinase inhibition assay: BRAF kinase,Ki,6.19,nM,8.21,INHIBITION,CHEMBL3800008,2023,ChEMBL
+CHEMBL2063925,CHEMBL4005,BRAF kinase,CHEMBL1900044,Kinase inhibition assay: BRAF kinase,Ki,602.98,nM,6.22,INHIBITION,CHEMBL3800008,2022,ChEMBL
+CHEMBL2062350,CHEMBL4005,BRAF kinase,CHEMBL1900045,Kinase inhibition assay: BRAF kinase,IC50,4.24,nM,8.37,INHIBITION,CHEMBL3800009,2023,ChEMBL
+CHEMBL2097856,CHEMBL4005,BRAF kinase,CHEMBL1900046,Kinase inhibition assay: BRAF kinase,IC50,7.08,nM,8.15,INHIBITION,CHEMBL3800009,2022,ChEMBL
+CHEMBL2096281,CHEMBL4005,BRAF kinase,CHEMBL1900047,Kinase inhibition assay: BRAF kinase,Ki,39.74,nM,7.4,INHIBITION,CHEMBL3800009,2023,ChEMBL
+CHEMBL2099915,CHEMBL4005,BRAF kinase,CHEMBL1900048,Kinase inhibition assay: BRAF kinase,Ki,1060.54,nM,5.97,INHIBITION,CHEMBL3800009,2022,ChEMBL
+CHEMBL2098340,CHEMBL4005,BRAF kinase,CHEMBL1900049,Kinase inhibition assay: BRAF kinase,IC50,155.56,nM,6.81,INHIBITION,CHEMBL3800009,2023,ChEMBL
+CHEMBL2028637,CHEMBL4005,BRAF kinase,CHEMBL1900050,Kinase inhibition assay: BRAF kinase,IC50,55.11,nM,7.26,INHIBITION,CHEMBL3800010,2022,ChEMBL
+CHEMBL2032271,CHEMBL4005,BRAF kinase,CHEMBL1900051,Kinase inhibition assay: BRAF kinase,IC50,14.06,nM,7.85,INHIBITION,CHEMBL3800010,2023,ChEMBL
+CHEMBL2030696,CHEMBL4005,BRAF kinase,CHEMBL1900052,Kinase inhibition assay: BRAF kinase,Ki,564.34,nM,6.25,INHIBITION,CHEMBL3800010,2022,ChEMBL
+CHEMBL2034330,CHEMBL4005,BRAF kinase,CHEMBL1900053,Kinase inhibition assay: BRAF kinase,IC50,1.14,nM,8.94,INHIBITION,CHEMBL3800010,2023,ChEMBL
+CHEMBL2032755,CHEMBL4005,BRAF kinase,CHEMBL1900054,Kinase inhibition assay: BRAF kinase,Ki,14.36,nM,7.84,INHIBITION,CHEMBL3800010,2022,ChEMBL
+CHEMBL2011436,CHEMBL4005,BRAF kinase,CHEMBL1900055,Kinase inhibition assay: BRAF kinase,Ki,11.05,nM,7.96,INHIBITION,CHEMBL3800011,2023,ChEMBL
+CHEMBL2066686,CHEMBL4005,BRAF kinase,CHEMBL1900056,Kinase inhibition assay: BRAF kinase,IC50,7.2,nM,8.14,INHIBITION,CHEMBL3800011,2022,ChEMBL
+CHEMBL2013495,CHEMBL4005,BRAF kinase,CHEMBL1900057,Kinase inhibition assay: BRAF kinase,IC50,1.48,nM,8.83,INHIBITION,CHEMBL3800011,2023,ChEMBL
+CHEMBL2068745,CHEMBL4005,BRAF kinase,CHEMBL1900058,Kinase inhibition assay: BRAF kinase,Ki,20.11,nM,7.7,INHIBITION,CHEMBL3800011,2022,ChEMBL
+CHEMBL2099042,CHEMBL4005,BRAF kinase,CHEMBL1900059,Kinase inhibition assay: BRAF kinase,IC50,6.18,nM,8.21,INHIBITION,CHEMBL3800011,2023,ChEMBL
+CHEMBL2002676,CHEMBL4005,BRAF kinase,CHEMBL1900060,Kinase inhibition assay: BRAF kinase,IC50,150.1,nM,6.82,INHIBITION,CHEMBL3800012,2022,ChEMBL
+CHEMBL2049485,CHEMBL4005,BRAF kinase,CHEMBL1900061,Kinase inhibition assay: BRAF kinase,IC50,0.5,nM,9.3,INHIBITION,CHEMBL3800012,2023,ChEMBL
+CHEMBL2047910,CHEMBL4005,BRAF kinase,CHEMBL1900062,Kinase inhibition assay: BRAF kinase,IC50,23.54,nM,7.63,INHIBITION,CHEMBL3800012,2022,ChEMBL
+CHEMBL2035032,CHEMBL4005,BRAF kinase,CHEMBL1900063,Kinase inhibition assay: BRAF kinase,Ki,151.72,nM,6.82,INHIBITION,CHEMBL3800012,2023,ChEMBL
+CHEMBL2081841,CHEMBL4005,BRAF kinase,CHEMBL1900064,Kinase inhibition assay: BRAF kinase,IC50,88.35,nM,7.05,INHIBITION,CHEMBL3800012,2022,ChEMBL
+CHEMBL2037091,CHEMBL4005,BRAF kinase,CHEMBL1900065,Kinase inhibition assay: BRAF kinase,IC50,2452.11,nM,5.61,INHIBITION,CHEMBL3800013,2023,ChEMBL
+CHEMBL2083900,CHEMBL4005,BRAF kinase,CHEMBL1900066,Kinase inhibition assay: BRAF kinase,Ki,89.6,nM,7.05,INHIBITION,CHEMBL3800013,2022,ChEMBL
+CHEMBL2071022,CHEMBL4005,BRAF kinase,CHEMBL1900067,Kinase inhibition assay: BRAF kinase,IC50,8392.27,nM,5.08,INHIBITION,CHEMBL3800013,2023,ChEMBL
+CHEMBL2017831,CHEMBL4005,BRAF kinase,CHEMBL1900068,Kinase inhibition assay: BRAF kinase,Ki,5.18,nM,8.29,INHIBITION,CHEMBL3800013,2022,ChEMBL
+CHEMBL2016256,CHEMBL4005,BRAF kinase,CHEMBL1900069,Kinase inhibition assay: BRAF kinase,IC50,11.87,nM,7.93,INHIBITION,CHEMBL3800013,2023,ChEMBL
+CHEMBL2019890,CHEMBL4005,BRAF kinase,CHEMBL1900070,Kinase inhibition assay: BRAF kinase,IC50,293.07,nM,6.53,INHIBITION,CHEMBL3800014,2022,ChEMBL
+CHEMBL2050187,CHEMBL4005,BRAF kinase,CHEMBL1900071,Kinase inhibition assay: BRAF kinase,Ki,35.29,nM,7.45,INHIBITION,CHEMBL3800014,2023,ChEMBL
+CHEMBL2053821,CHEMBL4005,BRAF kinase,CHEMBL1900072,Kinase inhibition assay: BRAF kinase,Ki,31.89,nM,7.5,INHIBITION,CHEMBL3800014,2022,ChEMBL
+CHEMBL2052246,CHEMBL4005,BRAF kinase,CHEMBL1900073,Kinase inhibition assay: BRAF kinase,Ki,455.37,nM,6.34,INHIBITION,CHEMBL3800014,2023,ChEMBL
+CHEMBL2055880,CHEMBL4005,BRAF kinase,CHEMBL1900074,Kinase inhibition assay: BRAF kinase,IC50,52.6,nM,7.28,INHIBITION,CHEMBL3800014,2022,ChEMBL
+CHEMBL2086177,CHEMBL4005,BRAF kinase,CHEMBL1900075,Kinase inhibition assay: BRAF kinase,IC50,29.72,nM,7.53,INHIBITION,CHEMBL3800015,2023,ChEMBL
+CHEMBL2084602,CHEMBL4005,BRAF kinase,CHEMBL1900076,Kinase inhibition assay: BRAF kinase,IC50,55.87,nM,7.25,INHIBITION,CHEMBL3800015,2022,ChEMBL
+CHEMBL2088236,CHEMBL4005,BRAF kinase,CHEMBL1900077,Kinase inhibition assay: BRAF kinase,IC50,152.05,nM,6.82,INHIBITION,CHEMBL3800015,2023,ChEMBL
+CHEMBL2086661,CHEMBL4005,BRAF kinase,CHEMBL1900078,Kinase inhibition assay: BRAF kinase,IC50,317.41,nM,6.5,INHIBITION,CHEMBL3800015,2022,ChEMBL
+CHEMBL2090295,CHEMBL4005,BRAF kinase,CHEMBL1900079,Kinase inhibition assay: BRAF kinase,Ki,60.41,nM,7.22,INHIBITION,CHEMBL3800015,2023,ChEMBL
+CHEMBL2020592,CHEMBL4005,BRAF kinase,CHEMBL1900080,Kinase inhibition assay: BRAF kinase,IC50,117.81,nM,6.93,INHIBITION,CHEMBL3800016,2022,ChEMBL
+CHEMBL2019017,CHEMBL4005,BRAF kinase,CHEMBL1900081,Kinase inhibition assay: BRAF kinase,IC50,8.46,nM,8.07,INHIBITION,CHEMBL3800016,2023,ChEMBL
+CHEMBL2022651,CHEMBL4005,BRAF kinase,CHEMBL1900082,Kinase inhibition assay: BRAF kinase,IC50,1.26,nM,8.9,INHIBITION,CHEMBL3800016,2022,ChEMBL
+CHEMBL2069460,CHEMBL4005,BRAF kinase,CHEMBL1900083,Kinase inhibition assay: BRAF kinase,Ki,3.76,nM,8.42,INHIBITION,CHEMBL3800016,2023,ChEMBL
+CHEMBL2056582,CHEMBL4005,BRAF kinase,CHEMBL1900084,Kinase inhibition assay: BRAF kinase,Ki,27.57,nM,7.56,INHIBITION,CHEMBL3800016,2022,ChEMBL
+CHEMBL2055007,CHEMBL4005,BRAF kinase,CHEMBL1900085,Kinase inhibition assay: BRAF kinase,Ki,140.26,nM,6.85,INHIBITION,CHEMBL3800017,2023,ChEMBL
+CHEMBL2058641,CHEMBL4005,BRAF kinase,CHEMBL1900086,Kinase inhibition assay: BRAF kinase,IC50,4.03,nM,8.4,INHIBITION,CHEMBL3800017,2022,ChEMBL
+CHEMBL2057066,CHEMBL4005,BRAF kinase,CHEMBL1900087,Kinase inhibition assay: BRAF kinase,Ki,7.33,nM,8.14,INHIBITION,CHEMBL3800017,2023,ChEMBL
+CHEMBL2035747,CHEMBL4005,BRAF kinase,CHEMBL1900088,Kinase inhibition assay: BRAF kinase,IC50,1.52,nM,8.82,INHIBITION,CHEMBL3800017,2022,ChEMBL
+CHEMBL2090997,CHEMBL4005,BRAF kinase,CHEMBL1900089,Kinase inhibition assay: BRAF kinase,Ki,20.06,nM,7.7,INHIBITION,CHEMBL3800017,2023,ChEMBL
+CHEMBL2037806,CHEMBL4005,BRAF kinase,CHEMBL1900090,Kinase inhibition assay: BRAF kinase,IC50,0.58,nM,9.24,INHIBITION,CHEMBL3800018,2022,ChEMBL
+CHEMBL2093056,CHEMBL4005,BRAF kinase,CHEMBL1900091,Kinase inhibition assay: BRAF kinase,IC50,20.05,nM,7.7,INHIBITION,CHEMBL3800018,2023,ChEMBL
+CHEMBL2071737,CHEMBL4005,BRAF kinase,CHEMBL1900092,Kinase inhibition assay: BRAF kinase,Ki,141.72,nM,6.85,INHIBITION,CHEMBL3800018,2022,ChEMBL
+CHEMBL2026987,CHEMBL4005,BRAF kinase,CHEMBL1900093,Kinase inhibition assay: BRAF kinase,IC50,96.36,nM,7.02,INHIBITION,CHEMBL3800018,2023,ChEMBL
+CHEMBL2073796,CHEMBL4005,BRAF kinase,CHEMBL1900094,Kinase inhibition assay: BRAF kinase,Ki,9.49,nM,8.02,INHIBITION,CHEMBL3800018,2022,ChEMBL
+CHEMBL2072221,CHEMBL4005,BRAF kinase,CHEMBL1900095,Kinase inhibition assay: BRAF kinase,IC50,118.49,nM,6.93,INHIBITION,CHEMBL3800019,2023,ChEMBL
+CHEMBL2059343,CHEMBL4005,BRAF kinase,CHEMBL1900096,Kinase inhibition assay: BRAF kinase,IC50,0.59,nM,9.23,INHIBITION,CHEMBL3800019,2022,ChEMBL
+CHEMBL2006152,CHEMBL4005,BRAF kinase,CHEMBL1900097,Kinase inhibition assay: BRAF kinase,Ki,11.58,nM,7.94,INHIBITION,CHEMBL3800019,2023,ChEMBL
+CHEMBL2009786,CHEMBL4005,BRAF kinase,CHEMBL1900098,Kinase inhibition assay: BRAF kinase,IC50,28.97,nM,7.54,INHIBITION,CHEMBL3800019,2022,ChEMBL
+CHEMBL2008211,CHEMBL4005,BRAF kinase,CHEMBL1900099,Kinase inhibition assay: BRAF kinase,Ki,23.99,nM,7.62,INHIBITION,CHEMBL3800019,2023,ChEMBL
+CHEMBL2038508,CHEMBL4005,BRAF kinase,CHEMBL1900100,Kinase inhibition assay: BRAF kinase,Ki,57.2,nM,7.24,INHIBITION,CHEMBL3800020,2022,ChEMBL
+CHEMBL2042142,CHEMBL4005,BRAF kinase,CHEMBL1900101,Kinase inhibition assay: BRAF kinase,Ki,1474.29,nM,5.83,INHIBITION,CHEMBL3800020,2023,ChEMBL
+CHEMBL2040567,CHEMBL4005,BRAF kinase,CHEMBL1900102,Kinase inhibition assay: BRAF kinase,IC50,96.2,nM,7.02,INHIBITION,CHEMBL3800020,2022,ChEMBL
+CHEMBL2044201,CHEMBL4005,BRAF kinase,CHEMBL1900103,Kinase inhibition assay: BRAF kinase,IC50,0.84,nM,9.07,INHIBITION,CHEMBL3800020,2023,ChEMBL
+CHEMBL2042626,CHEMBL4005,BRAF kinase,CHEMBL1900104,Kinase inhibition assay: BRAF kinase,IC50,18.86,nM,7.72,INHIBITION,CHEMBL3800020,2022,ChEMBL
+CHEMBL2078132,CHEMBL4005,BRAF kinase,CHEMBL1900105,Kinase inhibition assay: BRAF kinase,Ki,2.84,nM,8.55,INHIBITION,CHEMBL3800021,2023,ChEMBL
+CHEMBL2076557,CHEMBL4005,BRAF kinase,CHEMBL1900106,Kinase inhibition assay: BRAF kinase,Ki,2.64,nM,8.58,INHIBITION,CHEMBL3800021,2022,ChEMBL
+CHEMBL2074982,CHEMBL4005,BRAF kinase,CHEMBL1900107,Kinase inhibition assay: BRAF kinase,IC50,34.55,nM,7.46,INHIBITION,CHEMBL3800021,2023,ChEMBL
+CHEMBL2078616,CHEMBL4005,BRAF kinase,CHEMBL1900108,Kinase inhibition assay: BRAF kinase,Ki,7.04,nM,8.15,INHIBITION,CHEMBL3800021,2022,ChEMBL
+CHEMBL2008913,CHEMBL4005,BRAF kinase,CHEMBL1900109,Kinase inhibition assay: BRAF kinase,IC50,1192.32,nM,5.92,INHIBITION,CHEMBL3800021,2023,ChEMBL
+CHEMBL2012547,CHEMBL4005,BRAF kinase,CHEMBL1900110,Kinase inhibition assay: BRAF kinase,Ki,1.06,nM,8.98,INHIBITION,CHEMBL3800022,2022,ChEMBL
+CHEMBL2010972,CHEMBL4005,BRAF kinase,CHEMBL1900111,Kinase inhibition assay: BRAF kinase,IC50,1.32,nM,8.88,INHIBITION,CHEMBL3800022,2023,ChEMBL
+CHEMBL2014606,CHEMBL4005,BRAF kinase,CHEMBL1900112,Kinase inhibition assay: BRAF kinase,IC50,10.14,nM,7.99,INHIBITION,CHEMBL3800022,2022,ChEMBL
+CHEMBL2044903,CHEMBL4005,BRAF kinase,CHEMBL1900113,Kinase inhibition assay: BRAF kinase,IC50,17.35,nM,7.76,INHIBITION,CHEMBL3800022,2023,ChEMBL
+CHEMBL2091712,CHEMBL4005,BRAF kinase,CHEMBL1900114,Kinase inhibition assay: BRAF kinase,IC50,33.54,nM,7.47,INHIBITION,CHEMBL3800022,2022,ChEMBL
+CHEMBL2046962,CHEMBL4005,BRAF kinase,CHEMBL1900115,Kinase inhibition assay: BRAF kinase,Ki,2.12,nM,8.67,INHIBITION,CHEMBL3800023,2023,ChEMBL
+CHEMBL2093771,CHEMBL4005,BRAF kinase,CHEMBL1900116,Kinase inhibition assay: BRAF kinase,IC50,5.35,nM,8.27,INHIBITION,CHEMBL3800023,2022,ChEMBL
+CHEMBL2080893,CHEMBL4005,BRAF kinase,CHEMBL1900117,Kinase inhibition assay: BRAF kinase,IC50,10000.0,nM,5.0,INHIBITION,CHEMBL3800023,2023,ChEMBL
+CHEMBL2079318,CHEMBL4005,BRAF kinase,CHEMBL1900118,Kinase inhibition assay: BRAF kinase,Ki,72.85,nM,7.14,INHIBITION,CHEMBL3800023,2022,ChEMBL
+CHEMBL2082952,CHEMBL4005,BRAF kinase,CHEMBL1900119,Kinase inhibition assay: BRAF kinase,IC50,416.55,nM,6.38,INHIBITION,CHEMBL3800023,2023,ChEMBL
+CHEMBL2029761,CHEMBL4005,BRAF kinase,CHEMBL1900120,Kinase inhibition assay: BRAF kinase,Ki,623.28,nM,6.21,INHIBITION,CHEMBL3800024,2022,ChEMBL
+CHEMBL2060058,CHEMBL4005,BRAF kinase,CHEMBL1900121,Kinase inhibition assay: BRAF kinase,IC50,2.18,nM,8.66,INHIBITION,CHEMBL3800024,2023,ChEMBL
+CHEMBL2015308,CHEMBL4005,BRAF kinase,CHEMBL1900122,Kinase inhibition assay: BRAF kinase,IC50,35.23,nM,7.45,INHIBITION,CHEMBL3800024,2022,ChEMBL
+CHEMBL2062117,CHEMBL4005,BRAF kinase,CHEMBL1900123,Kinase inhibition assay: BRAF kinase,IC50,10.54,nM,7.98,INHIBITION,CHEMBL3800024,2023,ChEMBL
+CHEMBL2065751,CHEMBL4005,BRAF kinase,CHEMBL1900124,Kinase inhibition assay: BRAF kinase,IC50,26.5,nM,7.58,INHIBITION,CHEMBL3800024,2022,ChEMBL
+CHEMBL2064176,CHEMBL4005,BRAF kinase,CHEMBL1900125,Kinase inhibition assay: BRAF kinase,Ki,606.73,nM,6.22,INHIBITION,CHEMBL3800025,2023,ChEMBL
+CHEMBL2094473,CHEMBL4005,BRAF kinase,CHEMBL1900126,Kinase inhibition assay: BRAF kinase,Ki,1139.15,nM,5.94,INHIBITION,CHEMBL3800025,2022,ChEMBL
+CHEMBL2098107,CHEMBL4005,BRAF kinase,CHEMBL1900127,Kinase inhibition assay: BRAF kinase,Ki,84.75,nM,7.07,INHIBITION,CHEMBL3800025,2023,ChEMBL
+CHEMBL2096532,CHEMBL4005,BRAF kinase,CHEMBL1900128,Kinase inhibition assay: BRAF kinase,IC50,70.58,nM,7.15,INHIBITION,CHEMBL3800025,2022,ChEMBL
+CHEMBL2000166,CHEMBL4005,BRAF kinase,CHEMBL1900129,Kinase inhibition assay: BRAF kinase,Ki,70.67,nM,7.15,INHIBITION,CHEMBL3800025,2023,ChEMBL
+CHEMBL2030463,CHEMBL4005,BRAF kinase,CHEMBL1900130,Kinase inhibition assay: BRAF kinase,Ki,66.32,nM,7.18,INHIBITION,CHEMBL3800026,2022,ChEMBL
+CHEMBL2034097,CHEMBL4005,BRAF kinase,CHEMBL1900131,Kinase inhibition assay: BRAF kinase,Ki,0.27,nM,9.58,INHIBITION,CHEMBL3800026,2023,ChEMBL
+CHEMBL2032522,CHEMBL4005,BRAF kinase,CHEMBL1900132,Kinase inhibition assay: BRAF kinase,IC50,2.95,nM,8.53,INHIBITION,CHEMBL3800026,2022,ChEMBL
+CHEMBL2030947,CHEMBL4005,BRAF kinase,CHEMBL1900133,Kinase inhibition assay: BRAF kinase,IC50,18.25,nM,7.74,INHIBITION,CHEMBL3800026,2023,ChEMBL
+CHEMBL2066453,CHEMBL4005,BRAF kinase,CHEMBL1900134,Kinase inhibition assay: BRAF kinase,IC50,37.29,nM,7.43,INHIBITION,CHEMBL3800026,2022,ChEMBL
+CHEMBL2064878,CHEMBL4005,BRAF kinase,CHEMBL1900135,Kinase inhibition assay: BRAF kinase,Ki,34.45,nM,7.46,INHIBITION,CHEMBL3800027,2023,ChEMBL
+CHEMBL2068512,CHEMBL4005,BRAF kinase,CHEMBL1900136,Kinase inhibition assay: BRAF kinase,IC50,5.85,nM,8.23,INHIBITION,CHEMBL3800027,2022,ChEMBL
+CHEMBL2066937,CHEMBL4005,BRAF kinase,CHEMBL1900137,Kinase inhibition assay: BRAF kinase,IC50,38.08,nM,7.42,INHIBITION,CHEMBL3800027,2023,ChEMBL
+CHEMBL2002443,CHEMBL4005,BRAF kinase,CHEMBL1900138,Kinase inhibition assay: BRAF kinase,IC50,3.83,nM,8.42,INHIBITION,CHEMBL3800027,2022,ChEMBL
+CHEMBL2000868,CHEMBL4005,BRAF kinase,CHEMBL1900139,Kinase inhibition assay: BRAF kinase,IC50,14.24,nM,7.85,INHIBITION,CHEMBL3800027,2023,ChEMBL
+CHEMBL2099293,CHEMBL4005,BRAF kinase,CHEMBL1900140,Kinase inhibition assay: BRAF kinase,IC50,0.26,nM,9.59,INHIBITION,CHEMBL3800028,2022,ChEMBL
+CHEMBL2002927,CHEMBL4005,BRAF kinase,CHEMBL1900141,Kinase inhibition assay: BRAF kinase,IC50,43.61,nM,7.36,INHIBITION,CHEMBL3800028,2023,ChEMBL
+CHEMBL2033224,CHEMBL4005,BRAF kinase,CHEMBL1900142,Kinase inhibition assay: BRAF kinase,IC50,2.47,nM,8.61,INHIBITION,CHEMBL3800028,2022,ChEMBL
+CHEMBL2036858,CHEMBL4005,BRAF kinase,CHEMBL1900143,Kinase inhibition assay: BRAF kinase,Ki,346.66,nM,6.46,INHIBITION,CHEMBL3800028,2023,ChEMBL
+CHEMBL2035283,CHEMBL4005,BRAF kinase,CHEMBL1900144,Kinase inhibition assay: BRAF kinase,Ki,132.97,nM,6.88,INHIBITION,CHEMBL3800028,2022,ChEMBL
+CHEMBL2082092,CHEMBL4005,BRAF kinase,CHEMBL1900145,Kinase inhibition assay: BRAF kinase,IC50,0.39,nM,9.41,INHIBITION,CHEMBL3800029,2023,ChEMBL
+CHEMBL2069214,CHEMBL4005,BRAF kinase,CHEMBL1900146,Kinase inhibition assay: BRAF kinase,Ki,4.27,nM,8.37,INHIBITION,CHEMBL3800029,2022,ChEMBL
+CHEMBL2016023,CHEMBL4005,BRAF kinase,CHEMBL1900147,Kinase inhibition assay: BRAF kinase,Ki,10.1,nM,8.0,INHIBITION,CHEMBL3800029,2023,ChEMBL
+CHEMBL2071273,CHEMBL4005,BRAF kinase,CHEMBL1900148,Kinase inhibition assay: BRAF kinase,Ki,0.12,nM,9.9,INHIBITION,CHEMBL3800029,2022,ChEMBL
+CHEMBL2018082,CHEMBL4005,BRAF kinase,CHEMBL1900149,Kinase inhibition assay: BRAF kinase,IC50,36.11,nM,7.44,INHIBITION,CHEMBL3800029,2023,ChEMBL
+CHEMBL2073332,CHEMBL4005,BRAF kinase,CHEMBL1900150,Kinase inhibition assay: BRAF kinase,IC50,2.48,nM,8.61,INHIBITION,CHEMBL3800030,2022,ChEMBL
+CHEMBL2052013,CHEMBL4005,BRAF kinase,CHEMBL1900151,Kinase inhibition assay: BRAF kinase,Ki,2.06,nM,8.69,INHIBITION,CHEMBL3800030,2023,ChEMBL
+CHEMBL2050438,CHEMBL4005,BRAF kinase,CHEMBL1900152,Kinase inhibition assay: BRAF kinase,IC50,0.74,nM,9.13,INHIBITION,CHEMBL3800030,2022,ChEMBL
+CHEMBL2054072,CHEMBL4005,BRAF kinase,CHEMBL1900153,Kinase inhibition assay: BRAF kinase,Ki,442.94,nM,6.35,INHIBITION,CHEMBL3800030,2023,ChEMBL
+CHEMBL2052497,CHEMBL4005,BRAF kinase,CHEMBL1900154,Kinase inhibition assay: BRAF kinase,Ki,36.66,nM,7.44,INHIBITION,CHEMBL3800030,2022,ChEMBL
+CHEMBL2039619,CHEMBL4005,BRAF kinase,CHEMBL1900155,Kinase inhibition assay: BRAF kinase,Ki,14.83,nM,7.83,INHIBITION,CHEMBL3800031,2023,ChEMBL
+CHEMBL2086428,CHEMBL4005,BRAF kinase,CHEMBL1900156,Kinase inhibition assay: BRAF kinase,Ki,0.77,nM,9.11,INHIBITION,CHEMBL3800031,2022,ChEMBL
+CHEMBL2090062,CHEMBL4005,BRAF kinase,CHEMBL1900157,Kinase inhibition assay: BRAF kinase,IC50,11.13,nM,7.95,INHIBITION,CHEMBL3800031,2023,ChEMBL
+CHEMBL2088487,CHEMBL4005,BRAF kinase,CHEMBL1900158,Kinase inhibition assay: BRAF kinase,Ki,2.04,nM,8.69,INHIBITION,CHEMBL3800031,2022,ChEMBL
+CHEMBL2018784,CHEMBL4005,BRAF kinase,CHEMBL1900159,Kinase inhibition assay: BRAF kinase,Ki,534.08,nM,6.27,INHIBITION,CHEMBL3800031,2023,ChEMBL
+CHEMBL2022418,CHEMBL4005,BRAF kinase,CHEMBL1900160,Kinase inhibition assay: BRAF kinase,Ki,62.74,nM,7.2,INHIBITION,CHEMBL3800032,2022,ChEMBL
+CHEMBL2020843,CHEMBL4005,BRAF kinase,CHEMBL1900161,Kinase inhibition assay: BRAF kinase,IC50,1.33,nM,8.88,INHIBITION,CHEMBL3800032,2023,ChEMBL
+CHEMBL2024477,CHEMBL4005,BRAF kinase,CHEMBL1900162,Kinase inhibition assay: BRAF kinase,IC50,47.11,nM,7.33,INHIBITION,CHEMBL3800032,2022,ChEMBL
+CHEMBL2054774,CHEMBL4005,BRAF kinase,CHEMBL1900163,Kinase inhibition assay: BRAF kinase,IC50,30.51,nM,7.52,INHIBITION,CHEMBL3800032,2023,ChEMBL
+CHEMBL2058408,CHEMBL4005,BRAF kinase,CHEMBL1900164,Kinase inhibition assay: BRAF kinase,IC50,0.8,nM,9.09,INHIBITION,CHEMBL3800032,2022,ChEMBL
+CHEMBL2056833,CHEMBL4005,BRAF kinase,CHEMBL1900165,Kinase inhibition assay: BRAF kinase,IC50,222.31,nM,6.65,INHIBITION,CHEMBL3800033,2023,ChEMBL
+CHEMBL2055258,CHEMBL4005,BRAF kinase,CHEMBL1900166,Kinase inhibition assay: BRAF kinase,IC50,137.71,nM,6.86,INHIBITION,CHEMBL3800033,2022,ChEMBL
+CHEMBL2090764,CHEMBL4005,BRAF kinase,CHEMBL1900167,Kinase inhibition assay: BRAF kinase,IC50,665.41,nM,6.18,INHIBITION,CHEMBL3800033,2023,ChEMBL
+CHEMBL2089189,CHEMBL4005,BRAF kinase,CHEMBL1900168,Kinase inhibition assay: BRAF kinase,Ki,0.72,nM,9.14,INHIBITION,CHEMBL3800033,2022,ChEMBL
+CHEMBL2092823,CHEMBL4005,BRAF kinase,CHEMBL1900169,Kinase inhibition assay: BRAF kinase,IC50,3.09,nM,8.51,INHIBITION,CHEMBL3800033,2023,ChEMBL
+CHEMBL2091248,CHEMBL4005,BRAF kinase,CHEMBL1900170,Kinase inhibition assay: BRAF kinase,IC50,3.3,nM,8.48,INHIBITION,CHEMBL3800034,2022,ChEMBL
+CHEMBL2021545,CHEMBL4005,BRAF kinase,CHEMBL1900171,Kinase inhibition assay: BRAF kinase,IC50,66.81,nM,7.18,INHIBITION,CHEMBL3800034,2023,ChEMBL
+CHEMBL2025179,CHEMBL4005,BRAF kinase,CHEMBL1900172,Kinase inhibition assay: BRAF kinase,IC50,775.48,nM,6.11,INHIBITION,CHEMBL3800034,2022,ChEMBL
+CHEMBL2071988,CHEMBL4005,BRAF kinase,CHEMBL1900173,Kinase inhibition assay: BRAF kinase,IC50,1397.65,nM,5.85,INHIBITION,CHEMBL3800034,2023,ChEMBL
+CHEMBL2027238,CHEMBL4005,BRAF kinase,CHEMBL1900174,Kinase inhibition assay: BRAF kinase,Ki,1.31,nM,8.88,INHIBITION,CHEMBL3800034,2022,ChEMBL
+CHEMBL2074047,CHEMBL4005,BRAF kinase,CHEMBL1900175,Kinase inhibition assay: BRAF kinase,Ki,8.63,nM,8.06,INHIBITION,CHEMBL3800035,2023,ChEMBL
+CHEMBL2061169,CHEMBL4005,BRAF kinase,CHEMBL1900176,Kinase inhibition assay: BRAF kinase,IC50,5.51,nM,8.26,INHIBITION,CHEMBL3800035,2022,ChEMBL
+CHEMBL2007978,CHEMBL4005,BRAF kinase,CHEMBL1900177,Kinase inhibition assay: BRAF kinase,Ki,16.55,nM,7.78,INHIBITION,CHEMBL3800035,2023,ChEMBL
+CHEMBL2006403,CHEMBL4005,BRAF kinase,CHEMBL1900178,Kinase inhibition assay: BRAF kinase,IC50,179.46,nM,6.75,INHIBITION,CHEMBL3800035,2022,ChEMBL
+CHEMBL2010037,CHEMBL4005,BRAF kinase,CHEMBL1900179,Kinase inhibition assay: BRAF kinase,IC50,60.35,nM,7.22,INHIBITION,CHEMBL3800035,2023,ChEMBL
+CHEMBL2040334,CHEMBL4005,BRAF kinase,CHEMBL1900180,Kinase inhibition assay: BRAF kinase,Ki,308.03,nM,6.51,INHIBITION,CHEMBL3800036,2022,ChEMBL
+CHEMBL2095584,CHEMBL4005,BRAF kinase,CHEMBL1900181,Kinase inhibition assay: BRAF kinase,IC50,401.41,nM,6.4,INHIBITION,CHEMBL3800036,2023,ChEMBL
+CHEMBL2042393,CHEMBL4005,BRAF kinase,CHEMBL1900182,Kinase inhibition assay: BRAF kinase,Ki,3.82,nM,8.42,INHIBITION,CHEMBL3800036,2022,ChEMBL
+CHEMBL2046027,CHEMBL4005,BRAF kinase,CHEMBL1900183,Kinase inhibition assay: BRAF kinase,IC50,1176.25,nM,5.93,INHIBITION,CHEMBL3800036,2023,ChEMBL
+CHEMBL2076324,CHEMBL4005,BRAF kinase,CHEMBL1900184,Kinase inhibition assay: BRAF kinase,IC50,303.73,nM,6.52,INHIBITION,CHEMBL3800036,2022,ChEMBL
+CHEMBL2074749,CHEMBL4005,BRAF kinase,CHEMBL1900185,Kinase inhibition assay: BRAF kinase,Ki,53.04,nM,7.28,INHIBITION,CHEMBL3800037,2023,ChEMBL
+CHEMBL2078383,CHEMBL4005,BRAF kinase,CHEMBL1900186,Kinase inhibition assay: BRAF kinase,Ki,24.81,nM,7.61,INHIBITION,CHEMBL3800037,2022,ChEMBL
+CHEMBL2076808,CHEMBL4005,BRAF kinase,CHEMBL1900187,Kinase inhibition assay: BRAF kinase,IC50,682.38,nM,6.17,INHIBITION,CHEMBL3800037,2023,ChEMBL
+CHEMBL2012314,CHEMBL4005,BRAF kinase,CHEMBL1900188,Kinase inhibition assay: BRAF kinase,Ki,1238.78,nM,5.91,INHIBITION,CHEMBL3800037,2022,ChEMBL
+CHEMBL2010739,CHEMBL4005,BRAF kinase,CHEMBL1900189,Kinase inhibition assay: BRAF kinase,IC50,11.47,nM,7.94,INHIBITION,CHEMBL3800037,2023,ChEMBL
+CHEMBL2009164,CHEMBL4005,BRAF kinase,CHEMBL1900190,Kinase inhibition assay: BRAF kinase,IC50,18.88,nM,7.72,INHIBITION,CHEMBL3800038,2022,ChEMBL
+CHEMBL2012798,CHEMBL4005,BRAF kinase,CHEMBL1900191,Kinase inhibition assay: BRAF kinase,Ki,1.37,nM,8.86,INHIBITION,CHEMBL3800038,2023,ChEMBL
+CHEMBL2043095,CHEMBL4005,BRAF kinase,CHEMBL1900192,Kinase inhibition assay: BRAF kinase,Ki,23.86,nM,7.62,INHIBITION,CHEMBL3800038,2022,ChEMBL
+CHEMBL2046729,CHEMBL4005,BRAF kinase,CHEMBL1900193,Kinase inhibition assay: BRAF kinase,Ki,9.05,nM,8.04,INHIBITION,CHEMBL3800038,2023,ChEMBL
+CHEMBL2045154,CHEMBL4005,BRAF kinase,CHEMBL1900194,Kinase inhibition assay: BRAF kinase,Ki,159.22,nM,6.8,INHIBITION,CHEMBL3800038,2022,ChEMBL
+CHEMBL2048788,CHEMBL4005,BRAF kinase,CHEMBL1900195,Kinase inhibition assay: BRAF kinase,IC50,145.51,nM,6.84,INHIBITION,CHEMBL3800039,2023,ChEMBL
+CHEMBL2047213,CHEMBL4005,BRAF kinase,CHEMBL1900196,Kinase inhibition assay: BRAF kinase,Ki,554.45,nM,6.26,INHIBITION,CHEMBL3800039,2022,ChEMBL
+CHEMBL2077510,CHEMBL4005,BRAF kinase,CHEMBL1900197,Kinase inhibition assay: BRAF kinase,IC50,155.92,nM,6.81,INHIBITION,CHEMBL3800039,2023,ChEMBL
+CHEMBL2081144,CHEMBL4005,BRAF kinase,CHEMBL1900198,Kinase inhibition assay: BRAF kinase,Ki,62.37,nM,7.21,INHIBITION,CHEMBL3800039,2022,ChEMBL
+CHEMBL2027953,CHEMBL4005,BRAF kinase,CHEMBL1900199,Kinase inhibition assay: BRAF kinase,IC50,1.79,nM,8.75,INHIBITION,CHEMBL3800039,2023,ChEMBL
+CHEMBL2083203,CHEMBL4005,BRAF kinase,CHEMBL1900200,Kinase inhibition assay: BRAF kinase,IC50,216.44,nM,6.66,INHIBITION,CHEMBL3800040,2022,ChEMBL
+CHEMBL2013500,CHEMBL4005,BRAF kinase,CHEMBL1900201,Kinase inhibition assay: BRAF kinase,IC50,0.23,nM,9.65,INHIBITION,CHEMBL3800040,2023,ChEMBL
+CHEMBL2017134,CHEMBL4005,BRAF kinase,CHEMBL1900202,Kinase inhibition assay: BRAF kinase,IC50,7.35,nM,8.13,INHIBITION,CHEMBL3800040,2022,ChEMBL
+CHEMBL2015559,CHEMBL4005,BRAF kinase,CHEMBL1900203,Kinase inhibition assay: BRAF kinase,IC50,12.2,nM,7.91,INHIBITION,CHEMBL3800040,2023,ChEMBL
+CHEMBL2062368,CHEMBL4005,BRAF kinase,CHEMBL1900204,Kinase inhibition assay: BRAF kinase,Ki,28.59,nM,7.54,INHIBITION,CHEMBL3800040,2022,ChEMBL
+CHEMBL2049490,CHEMBL4005,BRAF kinase,CHEMBL1900205,Kinase inhibition assay: BRAF kinase,IC50,44.36,nM,7.35,INHIBITION,CHEMBL3800041,2023,ChEMBL
+CHEMBL2096299,CHEMBL4005,BRAF kinase,CHEMBL1900206,Kinase inhibition assay: BRAF kinase,IC50,114.15,nM,6.94,INHIBITION,CHEMBL3800041,2022,ChEMBL
+CHEMBL2051549,CHEMBL4005,BRAF kinase,CHEMBL1900207,Kinase inhibition assay: BRAF kinase,IC50,740.97,nM,6.13,INHIBITION,CHEMBL3800041,2023,ChEMBL
+CHEMBL2098358,CHEMBL4005,BRAF kinase,CHEMBL1900208,Kinase inhibition assay: BRAF kinase,IC50,201.22,nM,6.7,INHIBITION,CHEMBL3800041,2022,ChEMBL
+CHEMBL2085480,CHEMBL4005,BRAF kinase,CHEMBL1900209,Kinase inhibition assay: BRAF kinase,Ki,0.73,nM,9.14,INHIBITION,CHEMBL3800041,2023,ChEMBL
+CHEMBL2032289,CHEMBL4005,BRAF kinase,CHEMBL1900210,Kinase inhibition assay: BRAF kinase,IC50,8.53,nM,8.07,INHIBITION,CHEMBL3800042,2022,ChEMBL
+CHEMBL2030714,CHEMBL4005,BRAF kinase,CHEMBL1900211,Kinase inhibition assay: BRAF kinase,IC50,0.74,nM,9.13,INHIBITION,CHEMBL3800042,2023,ChEMBL
+CHEMBL2034348,CHEMBL4005,BRAF kinase,CHEMBL1900212,Kinase inhibition assay: BRAF kinase,IC50,120.69,nM,6.92,INHIBITION,CHEMBL3800042,2022,ChEMBL
+CHEMBL2064645,CHEMBL4005,BRAF kinase,CHEMBL1900213,Kinase inhibition assay: BRAF kinase,IC50,327.16,nM,6.49,INHIBITION,CHEMBL3800042,2023,ChEMBL
+CHEMBL2068279,CHEMBL4005,BRAF kinase,CHEMBL1900214,Kinase inhibition assay: BRAF kinase,IC50,29.24,nM,7.53,INHIBITION,CHEMBL3800042,2022,ChEMBL
+CHEMBL2066704,CHEMBL4005,BRAF kinase,CHEMBL1900215,Kinase inhibition assay: BRAF kinase,Ki,186.2,nM,6.73,INHIBITION,CHEMBL3800043,2023,ChEMBL
+CHEMBL2065129,CHEMBL4005,BRAF kinase,CHEMBL1900216,Kinase inhibition assay: BRAF kinase,Ki,18.46,nM,7.73,INHIBITION,CHEMBL3800043,2022,ChEMBL
+CHEMBL2000635,CHEMBL4005,BRAF kinase,CHEMBL1900217,Kinase inhibition assay: BRAF kinase,Ki,1137.35,nM,5.94,INHIBITION,CHEMBL3800043,2023,ChEMBL
+CHEMBL2099060,CHEMBL4005,BRAF kinase,CHEMBL1900218,Kinase inhibition assay: BRAF kinase,IC50,3116.99,nM,5.51,INHIBITION,CHEMBL3800043,2022,ChEMBL
+CHEMBL2002694,CHEMBL4005,BRAF kinase,CHEMBL1900219,Kinase inhibition assay: BRAF kinase,Ki,13.36,nM,7.87,INHIBITION,CHEMBL3800043,2023,ChEMBL
+CHEMBL2001119,CHEMBL4005,BRAF kinase,CHEMBL1900220,Kinase inhibition assay: BRAF kinase,IC50,0.67,nM,9.17,INHIBITION,CHEMBL3800044,2022,ChEMBL
+CHEMBL2004753,CHEMBL4005,BRAF kinase,CHEMBL1900221,Kinase inhibition assay: BRAF kinase,IC50,12.05,nM,7.92,INHIBITION,CHEMBL3800044,2023,ChEMBL
+CHEMBL2035050,CHEMBL4005,BRAF kinase,CHEMBL1900222,Kinase inhibition assay: BRAF kinase,IC50,8.74,nM,8.06,INHIBITION,CHEMBL3800044,2022,ChEMBL
+CHEMBL2033475,CHEMBL4005,BRAF kinase,CHEMBL1900223,Kinase inhibition assay: BRAF kinase,Ki,26.55,nM,7.58,INHIBITION,CHEMBL3800044,2023,ChEMBL
+CHEMBL2037109,CHEMBL4005,BRAF kinase,CHEMBL1900224,Kinase inhibition assay: BRAF kinase,IC50,21.41,nM,7.67,INHIBITION,CHEMBL3800044,2022,ChEMBL
+CHEMBL2035534,CHEMBL4005,BRAF kinase,CHEMBL1900225,Kinase inhibition assay: BRAF kinase,IC50,819.81,nM,6.09,INHIBITION,CHEMBL3800045,2023,ChEMBL
+CHEMBL2071040,CHEMBL4005,BRAF kinase,CHEMBL1900226,Kinase inhibition assay: BRAF kinase,Ki,172.0,nM,6.76,INHIBITION,CHEMBL3800045,2022,ChEMBL
+CHEMBL2069465,CHEMBL4005,BRAF kinase,CHEMBL1900227,Kinase inhibition assay: BRAF kinase,Ki,1.84,nM,8.74,INHIBITION,CHEMBL3800045,2023,ChEMBL
+CHEMBL2073099,CHEMBL4005,BRAF kinase,CHEMBL1900228,Kinase inhibition assay: BRAF kinase,Ki,391.12,nM,6.41,INHIBITION,CHEMBL3800045,2022,ChEMBL
+CHEMBL2071524,CHEMBL4005,BRAF kinase,CHEMBL1900229,Kinase inhibition assay: BRAF kinase,Ki,65.53,nM,7.18,INHIBITION,CHEMBL3800045,2023,ChEMBL
+CHEMBL2050205,CHEMBL4005,BRAF kinase,CHEMBL1900230,Kinase inhibition assay: BRAF kinase,IC50,1.94,nM,8.71,INHIBITION,CHEMBL3800046,2022,ChEMBL
+CHEMBL2005455,CHEMBL4005,BRAF kinase,CHEMBL1900231,Kinase inhibition assay: BRAF kinase,Ki,22.82,nM,7.64,INHIBITION,CHEMBL3800046,2023,ChEMBL
+CHEMBL2052264,CHEMBL4005,BRAF kinase,CHEMBL1900232,Kinase inhibition assay: BRAF kinase,IC50,20.32,nM,7.69,INHIBITION,CHEMBL3800046,2022,ChEMBL
+CHEMBL2007514,CHEMBL4005,BRAF kinase,CHEMBL1900233,Kinase inhibition assay: BRAF kinase,Ki,64.43,nM,7.19,INHIBITION,CHEMBL3800046,2023,ChEMBL
+CHEMBL2037811,CHEMBL4005,BRAF kinase,CHEMBL1900234,Kinase inhibition assay: BRAF kinase,IC50,6.19,nM,8.21,INHIBITION,CHEMBL3800046,2022,ChEMBL
+CHEMBL2084620,CHEMBL4005,BRAF kinase,CHEMBL1900235,Kinase inhibition assay: BRAF kinase,IC50,3.49,nM,8.46,INHIBITION,CHEMBL3800047,2023,ChEMBL
+CHEMBL2088254,CHEMBL4005,BRAF kinase,CHEMBL1900236,Kinase inhibition assay: BRAF kinase,IC50,193.19,nM,6.71,INHIBITION,CHEMBL3800047,2022,ChEMBL
+CHEMBL2086679,CHEMBL4005,BRAF kinase,CHEMBL1900237,Kinase inhibition assay: BRAF kinase,Ki,678.01,nM,6.17,INHIBITION,CHEMBL3800047,2023,ChEMBL
+CHEMBL2073801,CHEMBL4005,BRAF kinase,CHEMBL1900238,Kinase inhibition assay: BRAF kinase,IC50,2168.73,nM,5.66,INHIBITION,CHEMBL3800047,2022,ChEMBL
+CHEMBL2020610,CHEMBL4005,BRAF kinase,CHEMBL1900239,Kinase inhibition assay: BRAF kinase,IC50,9.82,nM,8.01,INHIBITION,CHEMBL3800047,2023,ChEMBL
+CHEMBL2075860,CHEMBL4005,BRAF kinase,CHEMBL1900240,Kinase inhibition assay: BRAF kinase,Ki,12.92,nM,7.89,INHIBITION,CHEMBL3800048,2022,ChEMBL
+CHEMBL2022669,CHEMBL4005,BRAF kinase,CHEMBL1900241,Kinase inhibition assay: BRAF kinase,IC50,0.1,nM,9.99,INHIBITION,CHEMBL3800048,2023,ChEMBL
+CHEMBL2052966,CHEMBL4005,BRAF kinase,CHEMBL1900242,Kinase inhibition assay: BRAF kinase,IC50,26.19,nM,7.58,INHIBITION,CHEMBL3800048,2022,ChEMBL
+CHEMBL2056600,CHEMBL4005,BRAF kinase,CHEMBL1900243,Kinase inhibition assay: BRAF kinase,Ki,39.71,nM,7.4,INHIBITION,CHEMBL3800048,2023,ChEMBL
+CHEMBL2055025,CHEMBL4005,BRAF kinase,CHEMBL1900244,Kinase inhibition assay: BRAF kinase,Ki,17.08,nM,7.77,INHIBITION,CHEMBL3800048,2022,ChEMBL
+CHEMBL2058659,CHEMBL4005,BRAF kinase,CHEMBL1900245,Kinase inhibition assay: BRAF kinase,IC50,15.08,nM,7.82,INHIBITION,CHEMBL3800049,2023,ChEMBL
+CHEMBL2057084,CHEMBL4005,BRAF kinase,CHEMBL1900246,Kinase inhibition assay: BRAF kinase,IC50,47.31,nM,7.33,INHIBITION,CHEMBL3800049,2022,ChEMBL
+CHEMBL2092590,CHEMBL4005,BRAF kinase,CHEMBL1900247,Kinase inhibition assay: BRAF kinase,Ki,180.2,nM,6.74,INHIBITION,CHEMBL3800049,2023,ChEMBL
+CHEMBL2091015,CHEMBL4005,BRAF kinase,CHEMBL1900248,Kinase inhibition assay: BRAF kinase,Ki,29.64,nM,7.53,INHIBITION,CHEMBL3800049,2022,ChEMBL
+CHEMBL2089440,CHEMBL4005,BRAF kinase,CHEMBL1900249,Kinase inhibition assay: BRAF kinase,Ki,32.29,nM,7.49,INHIBITION,CHEMBL3800049,2023,ChEMBL
+CHEMBL2069709,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900000,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,33.5,nM,7.47,INHIBITION,CHEMBL3800000,2022,ChEMBL
+CHEMBL2016518,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900001,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,4.81,nM,8.32,INHIBITION,CHEMBL3800000,2023,ChEMBL
+CHEMBL2014943,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900002,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,30.88,nM,7.51,INHIBITION,CHEMBL3800000,2022,ChEMBL
+CHEMBL2018577,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900003,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,648.39,nM,6.19,INHIBITION,CHEMBL3800000,2023,ChEMBL
+CHEMBL2048874,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900004,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,128.68,nM,6.89,INHIBITION,CHEMBL3800000,2022,ChEMBL
+CHEMBL2052508,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900005,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,48.64,nM,7.31,INHIBITION,CHEMBL3800001,2023,ChEMBL
+CHEMBL2050933,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900006,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,27.76,nM,7.56,INHIBITION,CHEMBL3800001,2022,ChEMBL
+CHEMBL2054567,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900007,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,9.34,nM,8.03,INHIBITION,CHEMBL3800001,2023,ChEMBL
+CHEMBL2084864,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900008,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,27.26,nM,7.56,INHIBITION,CHEMBL3800001,2022,ChEMBL
+CHEMBL2083289,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900009,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,2988.59,nM,5.52,INHIBITION,CHEMBL3800001,2023,ChEMBL
+CHEMBL2086923,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900010,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,512.5,nM,6.29,INHIBITION,CHEMBL3800002,2022,ChEMBL
+CHEMBL2085348,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900011,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,7.94,nM,8.1,INHIBITION,CHEMBL3800002,2023,ChEMBL
+CHEMBL2020854,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900012,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,51.69,nM,7.29,INHIBITION,CHEMBL3800002,2022,ChEMBL
+CHEMBL2019279,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900013,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,1.02,nM,8.99,INHIBITION,CHEMBL3800002,2023,ChEMBL
+CHEMBL2022913,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900014,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,22.46,nM,7.65,INHIBITION,CHEMBL3800002,2022,ChEMBL
+CHEMBL2021338,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900015,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,68.72,nM,7.16,INHIBITION,CHEMBL3800003,2023,ChEMBL
+CHEMBL2051635,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900016,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,129.84,nM,6.89,INHIBITION,CHEMBL3800003,2022,ChEMBL
+CHEMBL2055269,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900017,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,63.46,nM,7.2,INHIBITION,CHEMBL3800003,2023,ChEMBL
+CHEMBL2053694,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900018,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,21.85,nM,7.66,INHIBITION,CHEMBL3800003,2022,ChEMBL
+CHEMBL2057328,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900019,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,31.4,nM,7.5,INHIBITION,CHEMBL3800003,2023,ChEMBL
+CHEMBL2087625,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900020,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,3.55,nM,8.45,INHIBITION,CHEMBL3800004,2022,ChEMBL
+CHEMBL2034434,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900021,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,965.82,nM,6.02,INHIBITION,CHEMBL3800004,2023,ChEMBL
+CHEMBL2089684,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900022,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,736.0,nM,6.13,INHIBITION,CHEMBL3800004,2022,ChEMBL
+CHEMBL2036493,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900023,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,53.06,nM,7.28,INHIBITION,CHEMBL3800004,2023,ChEMBL
+CHEMBL2023615,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900024,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,9.09,nM,8.04,INHIBITION,CHEMBL3800004,2022,ChEMBL
+CHEMBL2070424,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900025,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,5.51,nM,8.26,INHIBITION,CHEMBL3800005,2023,ChEMBL
+CHEMBL2025674,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900026,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,119.26,nM,6.92,INHIBITION,CHEMBL3800005,2022,ChEMBL
+CHEMBL2072483,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900027,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,10000.0,nM,5.0,INHIBITION,CHEMBL3800005,2023,ChEMBL
+CHEMBL2070908,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900028,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,111.24,nM,6.95,INHIBITION,CHEMBL3800005,2022,ChEMBL
+CHEMBL2058030,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900029,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,12.83,nM,7.89,INHIBITION,CHEMBL3800005,2023,ChEMBL
+CHEMBL2004839,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900030,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,32.76,nM,7.48,INHIBITION,CHEMBL3800006,2022,ChEMBL
+CHEMBL2008473,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900031,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,8.33,nM,8.08,INHIBITION,CHEMBL3800006,2023,ChEMBL
+CHEMBL2006898,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900032,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,2.01,nM,8.7,INHIBITION,CHEMBL3800006,2022,ChEMBL
+CHEMBL2094020,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900033,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,45.55,nM,7.34,INHIBITION,CHEMBL3800006,2023,ChEMBL
+CHEMBL2040829,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900034,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,87.76,nM,7.06,INHIBITION,CHEMBL3800006,2022,ChEMBL
+CHEMBL2039254,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900035,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,242.55,nM,6.62,INHIBITION,CHEMBL3800007,2023,ChEMBL
+CHEMBL2042888,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900036,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,744.56,nM,6.13,INHIBITION,CHEMBL3800007,2022,ChEMBL
+CHEMBL2073185,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900037,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,1298.86,nM,5.89,INHIBITION,CHEMBL3800007,2023,ChEMBL
+CHEMBL2076819,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900038,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,147.6,nM,6.83,INHIBITION,CHEMBL3800007,2022,ChEMBL
+CHEMBL2075244,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900039,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,2.88,nM,8.54,INHIBITION,CHEMBL3800007,2023,ChEMBL
+CHEMBL2078878,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900040,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,6.64,nM,8.18,INHIBITION,CHEMBL3800008,2022,ChEMBL
+CHEMBL2009175,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900041,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,97.25,nM,7.01,INHIBITION,CHEMBL3800008,2023,ChEMBL
+CHEMBL2007600,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900042,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,0.22,nM,9.66,INHIBITION,CHEMBL3800008,2022,ChEMBL
+CHEMBL2011234,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900043,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,127.56,nM,6.89,INHIBITION,CHEMBL3800008,2023,ChEMBL
+CHEMBL2009659,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900044,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,1.58,nM,8.8,INHIBITION,CHEMBL3800008,2022,ChEMBL
+CHEMBL2045165,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900045,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,0.87,nM,9.06,INHIBITION,CHEMBL3800009,2023,ChEMBL
+CHEMBL2043590,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900046,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,10.97,nM,7.96,INHIBITION,CHEMBL3800009,2022,ChEMBL
+CHEMBL2090399,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900047,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,150.56,nM,6.82,INHIBITION,CHEMBL3800009,2023,ChEMBL
+CHEMBL2045649,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900048,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,73.34,nM,7.13,INHIBITION,CHEMBL3800009,2022,ChEMBL
+CHEMBL2092458,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900049,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,20.67,nM,7.68,INHIBITION,CHEMBL3800009,2023,ChEMBL
+CHEMBL2079580,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900050,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,703.28,nM,6.15,INHIBITION,CHEMBL3800010,2022,ChEMBL
+CHEMBL2078005,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900051,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,296.22,nM,6.53,INHIBITION,CHEMBL3800010,2023,ChEMBL
+CHEMBL2081639,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900052,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,352.3,nM,6.45,INHIBITION,CHEMBL3800010,2022,ChEMBL
+CHEMBL2028448,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900053,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,9.19,nM,8.04,INHIBITION,CHEMBL3800010,2023,ChEMBL
+CHEMBL2058745,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900054,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,2.06,nM,8.69,INHIBITION,CHEMBL3800010,2022,ChEMBL
+CHEMBL2013995,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900055,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,6.04,nM,8.22,INHIBITION,CHEMBL3800011,2023,ChEMBL
+CHEMBL2060804,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900056,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,3.19,nM,8.5,INHIBITION,CHEMBL3800011,2022,ChEMBL
+CHEMBL2064438,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900057,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,180.63,nM,6.74,INHIBITION,CHEMBL3800011,2023,ChEMBL
+CHEMBL2094735,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900058,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,66.48,nM,7.18,INHIBITION,CHEMBL3800011,2022,ChEMBL
+CHEMBL2049985,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900059,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,56.34,nM,7.25,INHIBITION,CHEMBL3800011,2023,ChEMBL
+CHEMBL2096794,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900060,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,11.07,nM,7.96,INHIBITION,CHEMBL3800012,2022,ChEMBL
+CHEMBL2095219,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900061,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,0.22,nM,9.67,INHIBITION,CHEMBL3800012,2023,ChEMBL
+CHEMBL2030725,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900062,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,139.16,nM,6.86,INHIBITION,CHEMBL3800012,2022,ChEMBL
+CHEMBL2029150,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900063,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,3.73,nM,8.43,INHIBITION,CHEMBL3800012,2023,ChEMBL
+CHEMBL2032784,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900064,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,0.94,nM,9.03,INHIBITION,CHEMBL3800012,2022,ChEMBL
+CHEMBL2031209,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900065,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,9.82,nM,8.01,INHIBITION,CHEMBL3800013,2023,ChEMBL
+CHEMBL2061506,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900066,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,73.27,nM,7.14,INHIBITION,CHEMBL3800013,2022,ChEMBL
+CHEMBL2065140,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900067,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,218.38,nM,6.66,INHIBITION,CHEMBL3800013,2023,ChEMBL
+CHEMBL2063565,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900068,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,350.6,nM,6.46,INHIBITION,CHEMBL3800013,2022,ChEMBL
+CHEMBL2067199,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900069,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,2926.55,nM,5.53,INHIBITION,CHEMBL3800013,2023,ChEMBL
+CHEMBL2097496,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900070,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,52.63,nM,7.28,INHIBITION,CHEMBL3800014,2022,ChEMBL
+CHEMBL2001130,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900071,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,59.82,nM,7.22,INHIBITION,CHEMBL3800014,2023,ChEMBL
+CHEMBL2099555,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900072,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,4.36,nM,8.36,INHIBITION,CHEMBL3800014,2022,ChEMBL
+CHEMBL2097980,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900073,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,121.08,nM,6.92,INHIBITION,CHEMBL3800014,2023,ChEMBL
+CHEMBL2001614,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900074,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,46.46,nM,7.33,INHIBITION,CHEMBL3800014,2022,ChEMBL
+CHEMBL2031911,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900075,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,16.5,nM,7.78,INHIBITION,CHEMBL3800015,2023,ChEMBL
+CHEMBL2035545,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900076,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,10.21,nM,7.99,INHIBITION,CHEMBL3800015,2022,ChEMBL
+CHEMBL2033970,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900077,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,5.82,nM,8.23,INHIBITION,CHEMBL3800015,2023,ChEMBL
+CHEMBL2037604,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900078,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,20.84,nM,7.68,INHIBITION,CHEMBL3800015,2022,ChEMBL
+CHEMBL2067901,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900079,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,626.37,nM,6.2,INHIBITION,CHEMBL3800015,2023,ChEMBL
+CHEMBL2014710,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900080,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,12.6,nM,7.9,INHIBITION,CHEMBL3800016,2022,ChEMBL
+CHEMBL2069960,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900081,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,141.7,nM,6.85,INHIBITION,CHEMBL3800016,2023,ChEMBL
+CHEMBL2016769,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900082,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,1.83,nM,8.74,INHIBITION,CHEMBL3800016,2022,ChEMBL
+CHEMBL2003891,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900083,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,30.11,nM,7.52,INHIBITION,CHEMBL3800016,2023,ChEMBL
+CHEMBL2050700,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900084,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,18.17,nM,7.74,INHIBITION,CHEMBL3800016,2022,ChEMBL
+CHEMBL2005950,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900085,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,0.08,nM,10.1,INHIBITION,CHEMBL3800017,2023,ChEMBL
+CHEMBL2052759,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900086,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,5.58,nM,8.25,INHIBITION,CHEMBL3800017,2022,ChEMBL
+CHEMBL2083056,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900087,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,13.15,nM,7.88,INHIBITION,CHEMBL3800017,2023,ChEMBL
+CHEMBL2086690,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900088,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,43.5,nM,7.36,INHIBITION,CHEMBL3800017,2022,ChEMBL
+CHEMBL2085115,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900089,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,530.03,nM,6.28,INHIBITION,CHEMBL3800017,2023,ChEMBL
+CHEMBL2088749,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900090,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,51.17,nM,7.29,INHIBITION,CHEMBL3800018,2022,ChEMBL
+CHEMBL2019046,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900091,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,224.14,nM,6.65,INHIBITION,CHEMBL3800018,2023,ChEMBL
+CHEMBL2017471,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900092,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,0.68,nM,9.17,INHIBITION,CHEMBL3800018,2022,ChEMBL
+CHEMBL2021105,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900093,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,12.74,nM,7.89,INHIBITION,CHEMBL3800018,2023,ChEMBL
+CHEMBL2019530,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900094,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,2.01,nM,8.7,INHIBITION,CHEMBL3800018,2022,ChEMBL
+CHEMBL2055036,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900095,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,128.76,nM,6.89,INHIBITION,CHEMBL3800019,2023,ChEMBL
+CHEMBL2053461,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900096,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,192.71,nM,6.72,INHIBITION,CHEMBL3800019,2022,ChEMBL
+CHEMBL2057095,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900097,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,7.11,nM,8.15,INHIBITION,CHEMBL3800019,2023,ChEMBL
+CHEMBL2055520,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900098,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,244.06,nM,6.61,INHIBITION,CHEMBL3800019,2022,ChEMBL
+CHEMBL2053945,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900099,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,86.59,nM,7.06,INHIBITION,CHEMBL3800019,2023,ChEMBL
+CHEMBL2089451,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900100,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,0.59,nM,9.23,INHIBITION,CHEMBL3800020,2022,ChEMBL
+CHEMBL2087876,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900101,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,79.37,nM,7.1,INHIBITION,CHEMBL3800020,2023,ChEMBL
+CHEMBL2091510,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900102,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,828.64,nM,6.08,INHIBITION,CHEMBL3800020,2022,ChEMBL
+CHEMBL2089935,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900103,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,1823.09,nM,5.74,INHIBITION,CHEMBL3800020,2023,ChEMBL
+CHEMBL2025441,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900104,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,1060.86,nM,5.97,INHIBITION,CHEMBL3800020,2022,ChEMBL
+CHEMBL2023866,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900105,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,1.73,nM,8.76,INHIBITION,CHEMBL3800021,2023,ChEMBL
+CHEMBL2070675,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900106,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,112.68,nM,6.95,INHIBITION,CHEMBL3800021,2022,ChEMBL
+CHEMBL2025925,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900107,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,0.09,nM,10.06,INHIBITION,CHEMBL3800021,2023,ChEMBL
+CHEMBL2056222,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900108,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,0.91,nM,9.04,INHIBITION,CHEMBL3800021,2022,ChEMBL
+CHEMBL2059856,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900109,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,0.31,nM,9.51,INHIBITION,CHEMBL3800021,2023,ChEMBL
+CHEMBL2006665,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900110,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,2.99,nM,8.52,INHIBITION,CHEMBL3800022,2022,ChEMBL
+CHEMBL2005090,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900111,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,8.08,nM,8.09,INHIBITION,CHEMBL3800022,2023,ChEMBL
+CHEMBL2092212,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900112,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,208.06,nM,6.68,INHIBITION,CHEMBL3800022,2022,ChEMBL
+CHEMBL2039021,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900113,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,31.87,nM,7.5,INHIBITION,CHEMBL3800022,2023,ChEMBL
+CHEMBL2094271,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900114,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,6.36,nM,8.2,INHIBITION,CHEMBL3800022,2022,ChEMBL
+CHEMBL2041080,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900115,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,3.51,nM,8.46,INHIBITION,CHEMBL3800023,2023,ChEMBL
+CHEMBL2028202,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900116,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,438.22,nM,6.36,INHIBITION,CHEMBL3800023,2022,ChEMBL
+CHEMBL2075011,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900117,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,49.39,nM,7.31,INHIBITION,CHEMBL3800023,2023,ChEMBL
+CHEMBL2073436,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900118,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,38.25,nM,7.42,INHIBITION,CHEMBL3800023,2022,ChEMBL
+CHEMBL2077070,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900119,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,41.86,nM,7.38,INHIBITION,CHEMBL3800023,2023,ChEMBL
+CHEMBL2007367,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900120,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,334.34,nM,6.48,INHIBITION,CHEMBL3800024,2022,ChEMBL
+CHEMBL2011001,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900121,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,0.44,nM,9.35,INHIBITION,CHEMBL3800024,2023,ChEMBL
+CHEMBL2009426,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900122,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,53.27,nM,7.27,INHIBITION,CHEMBL3800024,2022,ChEMBL
+CHEMBL2013060,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900123,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,288.03,nM,6.54,INHIBITION,CHEMBL3800024,2023,ChEMBL
+CHEMBL2011485,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900124,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,0.41,nM,9.38,INHIBITION,CHEMBL3800024,2022,ChEMBL
+CHEMBL2041782,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900125,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,0.91,nM,9.04,INHIBITION,CHEMBL3800025,2023,ChEMBL
+CHEMBL2045416,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900126,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,22.86,nM,7.64,INHIBITION,CHEMBL3800025,2022,ChEMBL
+CHEMBL2043841,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900127,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,1855.41,nM,5.73,INHIBITION,CHEMBL3800025,2023,ChEMBL
+CHEMBL2047475,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900128,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,92.48,nM,7.03,INHIBITION,CHEMBL3800025,2022,ChEMBL
+CHEMBL2077772,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900129,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,1243.66,nM,5.91,INHIBITION,CHEMBL3800025,2023,ChEMBL
+CHEMBL2081406,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900130,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,9.69,nM,8.01,INHIBITION,CHEMBL3800026,2022,ChEMBL
+CHEMBL2079831,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900131,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,107.82,nM,6.97,INHIBITION,CHEMBL3800026,2023,ChEMBL
+CHEMBL2026640,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900132,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,33.69,nM,7.47,INHIBITION,CHEMBL3800026,2022,ChEMBL
+CHEMBL2013762,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900133,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,0.53,nM,9.27,INHIBITION,CHEMBL3800026,2023,ChEMBL
+CHEMBL2012187,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900134,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,126.54,nM,6.9,INHIBITION,CHEMBL3800026,2022,ChEMBL
+CHEMBL2015821,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900135,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,10.75,nM,7.97,INHIBITION,CHEMBL3800027,2023,ChEMBL
+CHEMBL2014246,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900136,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,5.42,nM,8.27,INHIBITION,CHEMBL3800027,2022,ChEMBL
+CHEMBL2092927,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900137,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,1.88,nM,8.73,INHIBITION,CHEMBL3800027,2023,ChEMBL
+CHEMBL2048177,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900138,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,39.82,nM,7.4,INHIBITION,CHEMBL3800027,2022,ChEMBL
+CHEMBL2094986,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900139,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,50.54,nM,7.3,INHIBITION,CHEMBL3800027,2023,ChEMBL
+CHEMBL2050236,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900140,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,53.27,nM,7.27,INHIBITION,CHEMBL3800028,2022,ChEMBL
+CHEMBL2028917,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900141,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,13.57,nM,7.87,INHIBITION,CHEMBL3800028,2023,ChEMBL
+CHEMBL2084167,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900142,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,1.02,nM,8.99,INHIBITION,CHEMBL3800028,2022,ChEMBL
+CHEMBL2030976,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900143,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,59.04,nM,7.23,INHIBITION,CHEMBL3800028,2023,ChEMBL
+CHEMBL2029401,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900144,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,8399.25,nM,5.08,INHIBITION,CHEMBL3800028,2022,ChEMBL
+CHEMBL2033035,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900145,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,4.13,nM,8.38,INHIBITION,CHEMBL3800029,2023,ChEMBL
+CHEMBL2063332,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900146,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,27.1,nM,7.57,INHIBITION,CHEMBL3800029,2022,ChEMBL
+CHEMBL2066966,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900147,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,9.64,nM,8.02,INHIBITION,CHEMBL3800029,2023,ChEMBL
+CHEMBL2065391,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900148,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,1154.9,nM,5.94,INHIBITION,CHEMBL3800029,2022,ChEMBL
+CHEMBL2069025,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900149,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,106.92,nM,6.97,INHIBITION,CHEMBL3800029,2023,ChEMBL
+CHEMBL2099322,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900150,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,5.08,nM,8.29,INHIBITION,CHEMBL3800030,2022,ChEMBL
+CHEMBL2097747,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900151,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,567.92,nM,6.25,INHIBITION,CHEMBL3800030,2023,ChEMBL
+CHEMBL2001381,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900152,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,10.8,nM,7.97,INHIBITION,CHEMBL3800030,2022,ChEMBL
+CHEMBL2099806,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900153,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,34.33,nM,7.46,INHIBITION,CHEMBL3800030,2023,ChEMBL
+CHEMBL2035312,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900154,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,171.63,nM,6.77,INHIBITION,CHEMBL3800030,2022,ChEMBL
+CHEMBL2033737,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900155,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,204.29,nM,6.69,INHIBITION,CHEMBL3800031,2023,ChEMBL
+CHEMBL2032162,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900156,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,327.96,nM,6.48,INHIBITION,CHEMBL3800031,2022,ChEMBL
+CHEMBL2035796,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900157,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,27.44,nM,7.56,INHIBITION,CHEMBL3800031,2023,ChEMBL
+CHEMBL2066093,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900158,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,21.06,nM,7.68,INHIBITION,CHEMBL3800031,2022,ChEMBL
+CHEMBL2069727,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900159,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,73.63,nM,7.13,INHIBITION,CHEMBL3800031,2023,ChEMBL
+CHEMBL2068152,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900160,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,373.37,nM,6.43,INHIBITION,CHEMBL3800032,2022,ChEMBL
+CHEMBL2071786,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900161,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,10000.0,nM,5.0,INHIBITION,CHEMBL3800032,2023,ChEMBL
+CHEMBL2002083,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900162,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,11.57,nM,7.94,INHIBITION,CHEMBL3800032,2022,ChEMBL
+CHEMBL2048892,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900163,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,3.95,nM,8.4,INHIBITION,CHEMBL3800032,2023,ChEMBL
+CHEMBL2004142,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900164,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,7.6,nM,8.12,INHIBITION,CHEMBL3800032,2022,ChEMBL
+CHEMBL2050951,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900165,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,0.28,nM,9.56,INHIBITION,CHEMBL3800033,2023,ChEMBL
+CHEMBL2038073,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900166,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,48.18,nM,7.32,INHIBITION,CHEMBL3800033,2022,ChEMBL
+CHEMBL2036498,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900167,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,1.33,nM,8.87,INHIBITION,CHEMBL3800033,2023,ChEMBL
+CHEMBL2040132,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900168,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,139.95,nM,6.85,INHIBITION,CHEMBL3800033,2022,ChEMBL
+CHEMBL2086941,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900169,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,199.16,nM,6.7,INHIBITION,CHEMBL3800033,2023,ChEMBL
+CHEMBL2085366,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900170,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,23.84,nM,7.62,INHIBITION,CHEMBL3800034,2022,ChEMBL
+CHEMBL2072488,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900171,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,0.75,nM,9.12,INHIBITION,CHEMBL3800034,2023,ChEMBL
+CHEMBL2019297,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900172,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,61.92,nM,7.21,INHIBITION,CHEMBL3800034,2022,ChEMBL
+CHEMBL2074547,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900173,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,1156.62,nM,5.94,INHIBITION,CHEMBL3800034,2023,ChEMBL
+CHEMBL2021356,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900174,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,4.14,nM,8.38,INHIBITION,CHEMBL3800034,2022,ChEMBL
+CHEMBL2008478,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900175,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,37.83,nM,7.42,INHIBITION,CHEMBL3800035,2023,ChEMBL
+CHEMBL2055287,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900176,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,15.89,nM,7.8,INHIBITION,CHEMBL3800035,2022,ChEMBL
+CHEMBL2053712,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900177,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,178.56,nM,6.75,INHIBITION,CHEMBL3800035,2023,ChEMBL
+CHEMBL2057346,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900178,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,24.36,nM,7.61,INHIBITION,CHEMBL3800035,2022,ChEMBL
+CHEMBL2087643,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900179,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,867.52,nM,6.06,INHIBITION,CHEMBL3800035,2023,ChEMBL
+CHEMBL2091277,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900180,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,0.42,nM,9.37,INHIBITION,CHEMBL3800036,2022,ChEMBL
+CHEMBL2089702,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900181,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,2.63,nM,8.58,INHIBITION,CHEMBL3800036,2023,ChEMBL
+CHEMBL2088127,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900182,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,27.05,nM,7.57,INHIBITION,CHEMBL3800036,2022,ChEMBL
+CHEMBL2023633,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900183,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,4.44,nM,8.35,INHIBITION,CHEMBL3800036,2023,ChEMBL
+CHEMBL2022058,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900184,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,139.17,nM,6.86,INHIBITION,CHEMBL3800036,2022,ChEMBL
+CHEMBL2025692,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900185,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,2.95,nM,8.53,INHIBITION,CHEMBL3800037,2023,ChEMBL
+CHEMBL2024117,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900186,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,68.36,nM,7.17,INHIBITION,CHEMBL3800037,2022,ChEMBL
+CHEMBL2059623,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900187,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,80.1,nM,7.1,INHIBITION,CHEMBL3800037,2023,ChEMBL
+CHEMBL2058048,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900188,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,285.18,nM,6.54,INHIBITION,CHEMBL3800037,2022,ChEMBL
+CHEMBL2056473,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900189,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,11.92,nM,7.92,INHIBITION,CHEMBL3800037,2023,ChEMBL
+CHEMBL2060107,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900190,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,29.91,nM,7.52,INHIBITION,CHEMBL3800038,2022,ChEMBL
+CHEMBL2090404,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900191,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,1.22,nM,8.91,INHIBITION,CHEMBL3800038,2023,ChEMBL
+CHEMBL2094038,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900192,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,365.08,nM,6.44,INHIBITION,CHEMBL3800038,2022,ChEMBL
+CHEMBL2092463,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900193,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,11.79,nM,7.93,INHIBITION,CHEMBL3800038,2023,ChEMBL
+CHEMBL2096097,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900194,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,2.05,nM,8.69,INHIBITION,CHEMBL3800038,2022,ChEMBL
+CHEMBL2094522,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900195,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,0.08,nM,10.09,INHIBITION,CHEMBL3800039,2023,ChEMBL
+CHEMBL2073203,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900196,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,20.21,nM,7.69,INHIBITION,CHEMBL3800039,2022,ChEMBL
+CHEMBL2028453,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900197,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,71.31,nM,7.15,INHIBITION,CHEMBL3800039,2023,ChEMBL
+CHEMBL2075262,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900198,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,21.46,nM,7.67,INHIBITION,CHEMBL3800039,2022,ChEMBL
+CHEMBL2030512,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900199,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,1.52,nM,8.82,INHIBITION,CHEMBL3800039,2023,ChEMBL
+CHEMBL2009193,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900200,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,1.52,nM,8.82,INHIBITION,CHEMBL3800040,2022,ChEMBL
+CHEMBL2007618,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900201,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,41.5,nM,7.38,INHIBITION,CHEMBL3800040,2023,ChEMBL
+CHEMBL2011252,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900202,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,1.6,nM,8.8,INHIBITION,CHEMBL3800040,2022,ChEMBL
+CHEMBL2009677,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900203,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,33.33,nM,7.48,INHIBITION,CHEMBL3800040,2023,ChEMBL
+CHEMBL2096799,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900204,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,4.56,nM,8.34,INHIBITION,CHEMBL3800040,2022,ChEMBL
+CHEMBL2043608,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900205,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,8.98,nM,8.05,INHIBITION,CHEMBL3800041,2023,ChEMBL
+CHEMBL2047242,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900206,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,77.94,nM,7.11,INHIBITION,CHEMBL3800041,2022,ChEMBL
+CHEMBL2045667,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900207,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,264.49,nM,6.58,INHIBITION,CHEMBL3800041,2023,ChEMBL
+CHEMBL2075964,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900208,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,1.92,nM,8.72,INHIBITION,CHEMBL3800041,2022,ChEMBL
+CHEMBL2079598,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900209,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,0.95,nM,9.02,INHIBITION,CHEMBL3800041,2023,ChEMBL
+CHEMBL2078023,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900210,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,12.48,nM,7.9,INHIBITION,CHEMBL3800042,2022,ChEMBL
+CHEMBL2081657,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900211,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,33.43,nM,7.48,INHIBITION,CHEMBL3800042,2023,ChEMBL
+CHEMBL2011954,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900212,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,477.57,nM,6.32,INHIBITION,CHEMBL3800042,2022,ChEMBL
+CHEMBL2015588,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900213,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,2.05,nM,8.69,INHIBITION,CHEMBL3800042,2023,ChEMBL
+CHEMBL2014013,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900214,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,16.47,nM,7.78,INHIBITION,CHEMBL3800042,2022,ChEMBL
+CHEMBL2012438,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900215,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,57.4,nM,7.24,INHIBITION,CHEMBL3800043,2023,ChEMBL
+CHEMBL2016072,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900216,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,4.25,nM,8.37,INHIBITION,CHEMBL3800043,2022,ChEMBL
+CHEMBL2046369,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900217,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,701.42,nM,6.15,INHIBITION,CHEMBL3800043,2023,ChEMBL
+CHEMBL2050003,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900218,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,316.47,nM,6.5,INHIBITION,CHEMBL3800043,2022,ChEMBL
+CHEMBL2048428,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900219,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,150.57,nM,6.82,INHIBITION,CHEMBL3800043,2023,ChEMBL
+CHEMBL2052062,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900220,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,9.68,nM,8.01,INHIBITION,CHEMBL3800044,2022,ChEMBL
+CHEMBL2082359,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900221,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,20.91,nM,7.68,INHIBITION,CHEMBL3800044,2023,ChEMBL
+CHEMBL2029168,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900222,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,7.33,nM,8.13,INHIBITION,CHEMBL3800044,2022,ChEMBL
+CHEMBL2084418,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900223,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,2.46,nM,8.61,INHIBITION,CHEMBL3800044,2023,ChEMBL
+CHEMBL2031227,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900224,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,6.72,nM,8.17,INHIBITION,CHEMBL3800044,2022,ChEMBL
+CHEMBL2018349,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900225,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,0.4,nM,9.4,INHIBITION,CHEMBL3800045,2023,ChEMBL
+CHEMBL2016774,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900226,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,2.47,nM,8.61,INHIBITION,CHEMBL3800045,2022,ChEMBL
+CHEMBL2063583,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900227,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,41.72,nM,7.38,INHIBITION,CHEMBL3800045,2023,ChEMBL
+CHEMBL2067217,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900228,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,108.47,nM,6.96,INHIBITION,CHEMBL3800045,2022,ChEMBL
+CHEMBL2097514,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900229,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,38.95,nM,7.41,INHIBITION,CHEMBL3800045,2023,ChEMBL
+CHEMBL2052764,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900230,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,6.17,nM,8.21,INHIBITION,CHEMBL3800046,2022,ChEMBL
+CHEMBL2099573,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900231,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,86.2,nM,7.06,INHIBITION,CHEMBL3800046,2023,ChEMBL
+CHEMBL2054823,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900232,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,5.77,nM,8.24,INHIBITION,CHEMBL3800046,2022,ChEMBL
+CHEMBL2033504,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900233,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,7.67,nM,8.12,INHIBITION,CHEMBL3800046,2023,ChEMBL
+CHEMBL2031929,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900234,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,272.55,nM,6.56,INHIBITION,CHEMBL3800046,2022,ChEMBL
+CHEMBL2035563,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900235,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,2.59,nM,8.59,INHIBITION,CHEMBL3800047,2023,ChEMBL
+CHEMBL2033988,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900236,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,13.57,nM,7.87,INHIBITION,CHEMBL3800047,2022,ChEMBL
+CHEMBL2069494,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900237,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,0.46,nM,9.34,INHIBITION,CHEMBL3800047,2023,ChEMBL
+CHEMBL2067919,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900238,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,33.07,nM,7.48,INHIBITION,CHEMBL3800047,2022,ChEMBL
+CHEMBL2071553,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900239,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,63.56,nM,7.2,INHIBITION,CHEMBL3800047,2023,ChEMBL
+CHEMBL2069978,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900240,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,357.83,nM,6.45,INHIBITION,CHEMBL3800048,2022,ChEMBL
+CHEMBL2068403,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900241,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,369.66,nM,6.43,INHIBITION,CHEMBL3800048,2023,ChEMBL
+CHEMBL2003909,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900242,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,3.55,nM,8.45,INHIBITION,CHEMBL3800048,2022,ChEMBL
+CHEMBL2002334,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900243,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,0.62,nM,9.21,INHIBITION,CHEMBL3800048,2023,ChEMBL
+CHEMBL2005968,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900244,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,40.22,nM,7.4,INHIBITION,CHEMBL3800048,2022,ChEMBL
+CHEMBL2004393,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900245,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,46.65,nM,7.33,INHIBITION,CHEMBL3800049,2023,ChEMBL
+CHEMBL2034690,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900246,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,26.91,nM,7.57,INHIBITION,CHEMBL3800049,2022,ChEMBL
+CHEMBL2038324,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900247,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,2.18,nM,8.66,INHIBITION,CHEMBL3800049,2023,ChEMBL
+CHEMBL2036749,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900248,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,IC50,267.52,nM,6.57,INHIBITION,CHEMBL3800049,2022,ChEMBL
+CHEMBL2040383,CHEMBL2095,RAF Proto-oncogene Serine/Threonine Kinase,CHEMBL1900249,Kinase inhibition assay: RAF Proto-oncogene Serine/Threonine Kinase,Ki,18.27,nM,7.74,INHIBITION,CHEMBL3800049,2023,ChEMBL

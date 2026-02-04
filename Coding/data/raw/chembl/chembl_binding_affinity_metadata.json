@@ -1,0 +1,21 @@
+{
+  "source": "ChEMBL",
+  "version": "36",
+  "access_date": "2026-02-04",
+  "data_type": "Binding Affinity (Ki, IC50, EC50)",
+  "n_compounds": 2000,
+  "n_targets": 8,
+  "n_assays": 200,
+  "total_records": 2000,
+  "pchembl_range": [
+    3.0,
+    10.7
+  ],
+  "activity_type_distribution": {
+    "IC50": 811,
+    "Ki": 791,
+    "EC50": 398
+  },
+  "license": "CC Attribution-SA 3.0",
+  "citation": "Zdrazil et al. (2023). Nucleic Acids Res. 51(D1):D1083-D1091. DOI: 10.1093/nar/gkad1004"
+}

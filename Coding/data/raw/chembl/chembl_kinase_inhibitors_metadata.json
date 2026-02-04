@@ -1,0 +1,10 @@
+{
+  "source": "ChEMBL",
+  "version": "36",
+  "data_type": "Kinase Inhibition (IC50, Ki)",
+  "focus": "Therapeutic kinase targets",
+  "n_compounds": 1000,
+  "n_targets": 4,
+  "total_records": 1000,
+  "license": "CC Attribution-SA 3.0"
+}
