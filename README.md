@@ -1,9 +1,23 @@
 # Neural_PK-PD_Modeling_with_ODE
 Neural PK-PD Modeling: Integrating Mechanistic Priors with Neural ODEs
-2025-01-21 - Initial draft
 
+---
+
+## 📚 **[→ MASTER INDEX - Complete Project Navigation](MASTER_INDEX.md)** ⭐
+
+**New to this project?** The [MASTER_INDEX.md](MASTER_INDEX.md) provides complete navigation to all 14 documentation files, organized by date and reading order.
+
+**Quick Links**:
+- [📄 Executive Summary](Coding/EXECUTIVE_SUMMARY.md) - One-page overview
+- [📋 Complete Project Documentation](Coding/PROJECT_SUMMARY.md) - Full story with issues & solutions
+- [🔧 Troubleshooting Guide](Coding/TROUBLESHOOTING_GUIDE.md) - Problem solving reference
+- [📓 Jupyter Notebook](Coding/notebook.ipynb) - Working code (29 cells)
+
+---
 
 ## Summary of Setup & Data Download Process
+
+**Note**: This document covers initial setup (January 21, 2026). For current project status, see [MASTER_INDEX.md](MASTER_INDEX.md).
 
 ### **Initial Setup Steps**
 
