@@ -9,7 +9,8 @@
 - **[← Master Index](../MASTER_INDEX.md)** - All documentation organized by date
 - **[Quick Summary →](EXECUTIVE_SUMMARY.md)** - One-page overview
 - **[Complete Docs →](PROJECT_SUMMARY.md)** - Full project documentation
-- **[Notebook →](notebook.ipynb)** - Working code
+- **[Notebook (EDA) →](phase1_2_data_exploration.ipynb)** - Phase 1–2 working code
+- **[Notebook (Neural ODE) →](phase3_neural_ode_model.ipynb)** - Phase 3 model code
 
 ---
 
@@ -314,6 +315,187 @@ weights = compute_class_weight('balanced', classes=np.unique(y), y=y)
 
 ---
 
+## 🧠 Phase 3: Neural ODE Model Issues (February 24, 2026)
+
+> These issues were encountered while building `phase3_neural_ode_model.ipynb`.
+
+---
+
+### Issue P3-1: FileNotFoundError — TDC CSV files not found
+
+**Error:**
+```
+FileNotFoundError: [Errno 2] No such file or directory: 'data/raw/tdc/tdc_caco2.csv'
+FileNotFoundError: [Errno 2] No such file or directory: 'data/raw/tdc/tdc_clearance_hepatocyte.csv'
+```
+
+**Cause:** TDC downloads save files with the variant name appended.
+
+**Fix:**
+```python
+# Wrong:
+caco2_df   = pd.read_csv(DATA_DIR / 'tdc/tdc_caco2.csv')
+clear_df   = pd.read_csv(DATA_DIR / 'tdc/tdc_clearance_hepatocyte.csv')
+
+# Correct:
+caco2_df   = pd.read_csv(DATA_DIR / 'tdc/tdc_caco2_wang.csv')
+clear_df   = pd.read_csv(DATA_DIR / 'tdc/tdc_clearance_hepatocyte_az.csv')
+```
+
+**Check actual filenames first:**
+```python
+import os
+print(sorted(os.listdir('data/raw/tdc/')))
+```
+
+---
+
+### Issue P3-2: ReduceLROnPlateau `verbose` deprecated in PyTorch 2.10
+
+**Warning / Error:**
+```
+DeprecationWarning: The `verbose` parameter is deprecated.
+```
+
+**Fix:**
+```python
+# Remove verbose=True:
+scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
+    optimizer, mode='min', factor=0.5, patience=10  # no verbose
+)
+```
+
+---
+
+### Issue P3-3: `torch.load` security warning — missing `weights_only`
+
+**Warning:**
+```
+FutureWarning: You are using `torch.load` without specifying the `weights_only` parameter...
+```
+
+**Fix:**
+```python
+# Always specify weights_only in PyTorch 2.x:
+checkpoint = torch.load('model_checkpoint.pt', weights_only=True)
+```
+
+---
+
+### Issue P3-4: BatchNorm corrupts multi-task training
+
+**Symptom:** Loss spikes or diverges when switching tasks mid-epoch; training unstable.
+
+**Cause:** `BatchNorm1d` maintains running mean/variance across the whole batch.
+When batches alternate between tasks of very different sizes (e.g. hERG 7,997 vs
+Caco-2 637), the running stats are dominated by the large task and corrupt the
+normalization for smaller tasks.
+
+**Fix:** Replace all `BatchNorm1d` with `LayerNorm` in your encoder:
+```python
+# Instead of:
+nn.BatchNorm1d(hidden_dim)
+
+# Use:
+nn.LayerNorm(hidden_dim)
+```
+
+`LayerNorm` normalizes per sample, independent of batch composition.
+
+---
+
+### Issue P3-5: Large task dominates training (task imbalance)
+
+**Symptom:** hERG metrics improve but Caco-2 / clearance stay near baseline;
+training steps heavily skewed toward the largest dataset.
+
+**Cause:** If interleaving iterates to the largest loader's length, small-dataset
+tasks run once while large-dataset tasks run many more times.
+
+**Fix:** Use min-step interleaving — cap all tasks to the smallest loader:
+```python
+n_steps = min(len(loader) for loader in train_loaders.values())
+loops   = [iter(loader) for loader in train_loaders.values()]
+
+for step in range(n_steps):
+    for task_iter in loops:
+        X_batch, y_batch = next(task_iter)
+        # ... forward pass for this task
+```
+
+---
+
+### Issue P3-6: Regression loss explodes — targets not normalized
+
+**Symptom:** Training loss suddenly jumps to NaN or very large values;
+MSE for clearance (~10⁴) overwhelms MSE for binding (~0.01).
+
+**Cause:** Different regression targets live on very different scales
+(pChEMBL binding: 4–11; hepatocyte clearance: 0.01–500).
+
+**Fix:** Normalize each regression target independently before training:
+```python
+from sklearn.preprocessing import StandardScaler
+
+target_scalers = {}
+for task, y_train in regression_targets.items():
+    sc = StandardScaler()
+    y_train_scaled = sc.fit_transform(y_train.reshape(-1, 1)).ravel()
+    target_scalers[task] = sc
+    # store y_train_scaled for DataLoader
+
+# At inference time, inverse-transform to get real units:
+y_pred_real = target_scalers[task].inverse_transform(y_pred_scaled)
+```
+
+---
+
+### Issue P3-7: Caco-2 set up as classification instead of regression
+
+**Symptom:** Caco-2 R² stuck at −0.1; loss shows binary cross-entropy behaviour
+on continuous permeability values.
+
+**Cause:** Caco-2 permeability is a continuous real-valued measurement, not a
+binary label — using `ClassificationHead` + BCE is incorrect.
+
+**Fix:** Use `RegressionHead` + MSE for Caco-2:
+```python
+# In MultiTaskPKPDModel:
+self.caco2_head = RegressionHead(latent_dim)   # NOT ClassificationHead
+
+# In MultiTaskLoss:
+def forward(self, preds, targets):
+    loss_caco2 = F.mse_loss(preds['caco2'], targets['caco2'])  # NOT BCE
+```
+
+---
+
+### Issue P3-8: All ADMET tasks stuck near mean-prediction (open)
+
+**Symptom:** All regression tasks have R² ≈ 0; hERG AUROC ≈ 0.5;
+training loss decreases but validation metrics don't improve.
+
+**Diagnosis:** With only 64-bit Morgan fingerprints, bit collision is severe —
+structurally different molecules map to identical fingerprint vectors, making
+structure–activity discrimination impossible for the model.
+
+**Fix (in progress):** Increase fingerprint bit width:
+```python
+# In Cell 11 of phase3_neural_ode_model.ipynb:
+N_BITS = 1024   # was 64 — dramatically reduces collisions
+
+# In Cell 5 (config):
+config['input_dim'] = 1028   # 4 physico + 1024 Morgan  (was 68)
+```
+Then re-run cells 11 → 12 → 13 → 35.
+
+**Status:** Open — 1024-bit retraining not yet done.
+
+**Longer-term fix:** Replace static fingerprints with a GNN molecular encoder
+(PyTorch Geometric) for richer structural representations.
+
+---
+
 ## 🔍 Debugging Tips
 
 ### General Debugging Strategy
@@ -454,6 +636,6 @@ python -m ipykernel install --user --name=venv_pkpd --display-name="venv_pkpd (P
 
 ---
 
-**Last Updated**: February 17, 2026
+**Last Updated**: February 24, 2026 (Phase 3 issues added)
 
 ---

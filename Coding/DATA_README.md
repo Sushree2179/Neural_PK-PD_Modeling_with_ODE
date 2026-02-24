@@ -262,7 +262,7 @@ Coding/
 │   └── bin/activate
 │
 ├── requirements.txt                    # Pinned dependency versions
-├── notebook.ipynb                      # Jupyter notebook for analysis
+├── phase1_2_data_exploration.ipynb      # Jupyter notebook for Phase 1–2 analysis
 ├── data_download.py                    # PubChem & initial PK-DB fetcher
 ├── download_pkdb_complete.py           # Complete PK-DB studies downloader
 ├── explore_pkdb_data.py                # PK-DB data explorer

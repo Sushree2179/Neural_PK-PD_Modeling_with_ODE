@@ -124,7 +124,7 @@ Building a comprehensive multi-source dataset for training neural ODE models to 
 │
 └── 🔧 Configuration
     ├── requirements.txt
-    ├── notebook.ipynb
+    ├── phase1_2_data_exploration.ipynb
     └── Vs_Workspace.code-workspace
 ```
 

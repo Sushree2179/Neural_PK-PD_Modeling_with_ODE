@@ -11,7 +11,7 @@
 - **[← Master Index](../MASTER_INDEX.md)** - All documentation organized by date
 - **[Quick Summary →](EXECUTIVE_SUMMARY.md)** - One-page overview
 - **[Troubleshooting →](TROUBLESHOOTING_GUIDE.md)** - Problem solving guide
-- **[Notebook →](notebook.ipynb)** - Working code
+- **[Notebook (Phase 1–2) →](phase1_2_data_exploration.ipynb)** - EDA & feature engineering
 
 ---
 
@@ -357,7 +357,7 @@ max         3.71        4.38
 
 ```
 Coding/
-├── notebook.ipynb              # Main analysis notebook (29 cells)
+├── phase1_2_data_exploration.ipynb  # Main analysis notebook (29 cells)
 ├── requirements.txt            # 143 package dependencies
 ├── PROJECT_SUMMARY.md         # This document
 ├── data/

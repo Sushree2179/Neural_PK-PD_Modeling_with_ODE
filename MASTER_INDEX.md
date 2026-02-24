@@ -2,8 +2,8 @@
 
 **Project**: Physics-Informed Neural ODE for Pharmacokinetic-Pharmacodynamic Modeling  
 **Author**: Subrat  
-**Last Updated**: February 17, 2026  
-**Current Status**: ✅ Phase 2 Complete | Ready for Phase 3
+**Last Updated**: February 24, 2026  
+**Current Status**: 🔬 Phase 3 In Progress | Neural ODE Multi-Task Model Built & Training
 
 ---
 
@@ -14,7 +14,7 @@
 1. 📖 [EXECUTIVE_SUMMARY.md](Coding/EXECUTIVE_SUMMARY.md) - **One-page overview** (2 min read)
 2. 📋 [PROJECT_SUMMARY.md](Coding/PROJECT_SUMMARY.md) - **Complete documentation** (15 min read)
 3. 🔧 [TROUBLESHOOTING_GUIDE.md](Coding/TROUBLESHOOTING_GUIDE.md) - **Problem solving** (reference)
-4. 📓 [notebook.ipynb](Coding/notebook.ipynb) - **Working code** (interactive)
+4. 📓 [phase1_2_data_exploration.ipynb](Coding/phase1_2_data_exploration.ipynb) - **Phase 1–2 EDA & feature engineering** (interactive)
 
 ---
 
@@ -158,7 +158,7 @@
 
 ### **Phase 2: Data Exploration & Feature Engineering** (February 17, 2026)
 
-#### 📓 [notebook.ipynb](Coding/notebook.ipynb)
+#### 📓 [phase1_2_data_exploration.ipynb](Coding/phase1_2_data_exploration.ipynb)
 **Date**: February 17, 2026 (Latest)  
 **Purpose**: Complete data analysis and feature engineering pipeline  
 **Structure**:
@@ -179,7 +179,7 @@
 - 4 prediction tasks (binding, hERG, Caco-2, clearance)
 - Features normalized (mean=0, std=1)
 
-**When to Read**: For hands-on analysis and code reference
+**When to Read**: For hands-on analysis and code reference (Phase 1–2 EDA; for Phase 3 model see phase3_neural_ode_model.ipynb)
 
 ---
 
@@ -251,6 +251,52 @@
 
 ---
 
+### **Phase 3: Neural ODE Model Development** (February 24, 2026)
+
+#### 📓 [phase3_neural_ode_model.ipynb](Coding/phase3_neural_ode_model.ipynb) ⭐ **ACTIVE DEVELOPMENT**
+**Date**: February 24, 2026 (Active)  
+**Purpose**: Multi-task Neural ODE model for simultaneous ADMET and PK/PD prediction  
+**Structure** (36 cells, all executed):
+- **Cells 1-2**: Project header and setup
+- **Cell 3**: Imports (torch, torchdiffeq, rdkit, sklearn, scipy)
+- **Cells 4-5**: Configuration dict (input_dim=68, hidden_dim=128, latent_dim=64)
+- **Cells 6-8**: Data loading — 4 tasks, 13,030 total samples
+- **Cells 9-10**: Feature engineering helper (`prepare_task_data()`)
+- **Cell 11**: Morgan ECFP4 fingerprint generation (64-bit, radius=2)
+- **Cell 12**: 68-dim feature assembly (4 physico + 64 Morgan) for all tasks
+- **Cell 13**: Per-task DataLoaders with target normalization
+- **Cell 15**: `MultiTaskDataset` class
+- **Cell 17**: `SharedEncoder` (LayerNorm, 128→64 latent)
+- **Cell 19**: `RegressionHead` and `ClassificationHead`
+- **Cell 21**: `PKODEFunc` (Neural ODE dynamics)
+- **Cell 23**: `MultiTaskPKPDModel` (4 tasks unified)
+- **Cell 24**: Model instantiation (44,710 trainable params)
+- **Cell 26**: `MultiTaskLoss` (MSE + weighted BCE, pos_weight=2.5)
+- **Cells 28-30**: Training pipeline — interleaved, early stopping, gradient clipping
+- **Cells 32-33**: Visualization (`plot_training_history`, `plot_pk_curves`)
+- **Cell 35**: Training execution (best val_loss=3.54, stopped epoch 42)
+- **Cell 36**: PK curve demo + comprehensive status summary
+
+**Current Results** (epoch 42, early stopped):
+| Task | Metric | Result | Target | Status |
+|------|--------|--------|--------|--------|
+| Binding Affinity | R² | −0.025 | >0.60 | ✗ |
+| hERG Inhibition | AUROC | 0.507 | >0.80 | ✗ |
+| Caco-2 Permeability | R² | −0.118 | >0.60 | ✗ |
+| Hepatocyte Clearance | RMSE | 0.968 | <1.00 | ✓ |
+
+**Key Decisions Made**:
+- LayerNorm (not BatchNorm) for multi-task training stability
+- Min-step interleaved sampling to prevent large-task dominance
+- Target normalization (StandardScaler) on all regression outputs
+- Caco-2 corrected to regression (was incorrectly binary classification)
+- ChEMBL zero-padded for Morgan fingerprints (no SMILES column)
+- Gradient clipping at 1.0; LR scheduling with ReduceLROnPlateau
+
+**When to Read**: For Neural ODE architecture, training pipeline, and multi-task ADMET results
+
+---
+
 ## 📊 Documentation by Category
 
 ### 🎯 Start Here (Ordered for New Users)
@@ -258,7 +304,7 @@
 1. [EXECUTIVE_SUMMARY.md](Coding/EXECUTIVE_SUMMARY.md) - Quick overview
 2. [PROJECT_SUMMARY.md](Coding/PROJECT_SUMMARY.md) - Complete story
 3. [DATA_README.md](Coding/DATA_README.md) - Data sources
-4. [notebook.ipynb](Coding/notebook.ipynb) - Working code
+4. [phase1_2_data_exploration.ipynb](Coding/phase1_2_data_exploration.ipynb) - Phase 1–2 EDA & feature engineering
 
 ### 📚 Dataset Documentation (By Data Source)
 
@@ -279,7 +325,7 @@
 
 - [TROUBLESHOOTING_GUIDE.md](Coding/TROUBLESHOOTING_GUIDE.md) - Problem solving
 - [README.md](README.md) - Environment setup
-- [notebook.ipynb](Coding/notebook.ipynb) - Code implementation
+- [phase1_2_data_exploration.ipynb](Coding/phase1_2_data_exploration.ipynb) - Phase 1–2 code implementation
 
 ### 📈 Progress Tracking
 
@@ -302,7 +348,7 @@
 1. [EXECUTIVE_SUMMARY.md](Coding/EXECUTIVE_SUMMARY.md) - Understand what was built
 2. [README.md](README.md) - Learn about setup
 3. [DATA_README.md](Coding/DATA_README.md) - Explore data sources
-4. [notebook.ipynb](Coding/notebook.ipynb) - See the code
+4. [phase1_2_data_exploration.ipynb](Coding/phase1_2_data_exploration.ipynb) - See the Phase 1–2 code
 5. [TROUBLESHOOTING_GUIDE.md](Coding/TROUBLESHOOTING_GUIDE.md) - Learn from issues
 
 **Time**: ~2 hours
@@ -319,7 +365,7 @@
    - [TOXCAST_TOX21_SUMMARY.md](Coding/TOXCAST_TOX21_SUMMARY.md)
    - [TDC_ADMET_SUMMARY.md](Coding/TDC_ADMET_SUMMARY.md)
    - [PKDB_DOWNLOAD_SUMMARY.md](Coding/PKDB_DOWNLOAD_SUMMARY.md)
-4. [notebook.ipynb](Coding/notebook.ipynb) - Implementation details
+4. [phase1_2_data_exploration.ipynb](Coding/phase1_2_data_exploration.ipynb) - Implementation details
 
 **Time**: ~4 hours
 
@@ -345,7 +391,7 @@
 2. [TROUBLESHOOTING_GUIDE.md](Coding/TROUBLESHOOTING_GUIDE.md) - Known issues
 3. [README.md](README.md) - Environment setup
 4. [PROJECT_SUMMARY.md](Coding/PROJECT_SUMMARY.md) - Section: "Phase 3 Roadmap"
-5. [notebook.ipynb](Coding/notebook.ipynb) - Working code
+5. [phase1_2_data_exploration.ipynb](Coding/phase1_2_data_exploration.ipynb) - Phase 1–2 working code
 6. Check variables in notebook:
    - `X_normalized` - Features
    - `y_targets` - Targets
@@ -369,7 +415,8 @@ Neural_PK-PD_Modeling_with_ODE/
 │   ├── PROJECT_SUMMARY.md             ⭐ Complete docs (Feb 17)
 │   ├── TROUBLESHOOTING_GUIDE.md       🔧 Problem solving (Feb 17)
 │   │
-│   ├── notebook.ipynb                 📓 Main analysis (29 cells)
+│   ├── phase3_neural_ode_model.ipynb  📓 ACTIVE: Neural ODE model (36 cells, Feb 24)
+│   ├── phase1_2_data_exploration.ipynb 📓 EDA & feature engineering (29 cells)
 │   ├── requirements.txt               📦 143 packages
 │   │
 │   ├── DATA_README.md                 📄 Data overview
@@ -410,10 +457,12 @@ Looking for specific information? Use this guide:
 | **Environment setup** | [README.md](README.md), [TROUBLESHOOTING_GUIDE.md](Coding/TROUBLESHOOTING_GUIDE.md) |
 | **Data sources** | [DATA_README.md](Coding/DATA_README.md) |
 | **RDKit issues** | [TROUBLESHOOTING_GUIDE.md](Coding/TROUBLESHOOTING_GUIDE.md) |
-| **Feature engineering** | [PROJECT_SUMMARY.md](Coding/PROJECT_SUMMARY.md) - Phase 2, [notebook.ipynb](Coding/notebook.ipynb) cells 16-28 |
-| **Visualizations** | [notebook.ipynb](Coding/notebook.ipynb) cells 9-11, [PROJECT_SUMMARY.md](Coding/PROJECT_SUMMARY.md) - Phase 1 |
-| **Multi-task learning** | [PROJECT_SUMMARY.md](Coding/PROJECT_SUMMARY.md) - Phase 2 |
-| **Neural ODE roadmap** | [PROJECT_SUMMARY.md](Coding/PROJECT_SUMMARY.md) - Phase 3 |
+| **Feature engineering** | [PROJECT_SUMMARY.md](Coding/PROJECT_SUMMARY.md) - Phase 2, [phase1_2_data_exploration.ipynb](Coding/phase1_2_data_exploration.ipynb) cells 16-28 |
+| **Visualizations** | [phase1_2_data_exploration.ipynb](Coding/phase1_2_data_exploration.ipynb) cells 9-11, [PROJECT_SUMMARY.md](Coding/PROJECT_SUMMARY.md) - Phase 1 |
+| **Multi-task learning** | [PROJECT_SUMMARY.md](Coding/PROJECT_SUMMARY.md) - Phase 2, [phase3_neural_ode_model.ipynb](Coding/phase3_neural_ode_model.ipynb) |
+| **Neural ODE model** | [phase3_neural_ode_model.ipynb](Coding/phase3_neural_ode_model.ipynb) cells 17-35 |
+| **PK curve generation** | [phase3_neural_ode_model.ipynb](Coding/phase3_neural_ode_model.ipynb) cell 33, `PKODEFunc` |
+| **Training issues & fixes** | See Phase 3 section in this index above |
 | **ChEMBL binding data** | [CHEMBL_BINDING_SUMMARY.md](Coding/CHEMBL_BINDING_SUMMARY.md) |
 | **ToxCast safety data** | [TOXCAST_TOX21_SUMMARY.md](Coding/TOXCAST_TOX21_SUMMARY.md) |
 | **ADMET properties** | [TDC_ADMET_SUMMARY.md](Coding/TDC_ADMET_SUMMARY.md) |
@@ -429,14 +478,15 @@ Looking for specific information? Use this guide:
 | Metric | Value |
 |--------|-------|
 | **Total Documentation Files** | 14 markdown files |
-| **Total Code Files** | 1 notebook (29 cells) |
+| **Total Code Files** | 2 notebooks (29 + 36 cells) |
 | **Datasets Integrated** | 5 sources |
 | **Total Data Records** | 347,896 |
-| **Training Samples Prepared** | 13,030 |
-| **Prediction Tasks** | 4 (multi-task) |
-| **Features** | 2 (MW, LogP) |
+| **Training Samples** | 13,030 (4 tasks) |
+| **Prediction Tasks** | 4 (binding, hERG, Caco-2, clearance) |
+| **Feature Dimensions** | 68 (4 physico + 64 Morgan ECFP4) |
+| **Model Parameters** | 44,710 (MultiTaskPKPDModel) |
 | **Documentation Pages** | ~50 pages total |
-| **Project Completion** | 50% (Phase 2/4) |
+| **Project Completion** | 65% (Phase 3 in progress) |
 
 ---
 
@@ -456,11 +506,14 @@ Looking for specific information? Use this guide:
 - [x] Preprocessing pipeline saved
 - [x] Issues and resolutions logged
 
-### Phase 3: Model Development (PENDING)
-- [ ] Neural architecture documentation
-- [ ] Training pipeline description
-- [ ] Validation results
-- [ ] Model interpretation
+### Phase 3: Model Development (IN PROGRESS 🔬)
+- [x] Neural architecture built (`SharedEncoder` + 4 task heads + `PKODEFunc`)
+- [x] Training pipeline implemented (interleaved, early stopping, LR scheduling)
+- [x] First training run complete (epoch 42 early stop, 44,710 params)
+- [x] Neural ODE PK curve generation working (`plot_pk_curves()`)
+- [ ] Hit target metrics (binding R²>0.6, hERG AUROC>0.8, Caco-2 R²>0.6)
+- [ ] Increase Morgan bits 64→1024 to reduce fingerprint collisions
+- [ ] Model interpretation and attention analysis
 
 ### Phase 4: Deployment (PENDING)
 - [ ] API documentation
@@ -474,6 +527,7 @@ Looking for specific information? Use this guide:
 
 | Version | Date | Changes |
 |---------|------|---------|
+| **2.0** | Feb 24, 2026 | Phase 3 Neural ODE model session — architecture, training, results |
 | **1.0** | Feb 17, 2026 | Initial master index creation |
 | **0.9** | Feb 4, 2026 | Original INDEX.md (superseded) |
 
@@ -508,15 +562,17 @@ For a complete documentation package:
 ## 🎯 Next Actions
 
 ### For Continuing Development:
-1. ✅ Read [EXECUTIVE_SUMMARY.md](Coding/EXECUTIVE_SUMMARY.md)
-2. ✅ Review [PROJECT_SUMMARY.md](Coding/PROJECT_SUMMARY.md) - Phase 3 Roadmap
-3. ⏭️ Open [notebook.ipynb](Coding/notebook.ipynb) and verify variables
-4. ⏭️ Begin Phase 3: Neural ODE implementation
-5. ⏭️ Document new progress in PROJECT_SUMMARY.md
+1. ✅ Open [phase3_neural_ode_model.ipynb](Coding/phase3_neural_ode_model.ipynb) — model is built and trained
+2. ⏭️ Increase Morgan fingerprints: `N_BITS = 64 → 1024` (highest-impact fix)
+   - Cell 11: change `N_BITS = 64` → `N_BITS = 1024`
+   - Cell 5: change `config['input_dim'] = 68` → `1028`
+   - Re-run cells 11 → 12 → 13 → 35 to retrain
+3. ⏭️ Evaluate: binding R²>0.6, hERG AUROC>0.8, Caco-2 R²>0.6
+4. ⏭️ If targets met → Phase 4: deployment/API documentation
 
 ### For Understanding What Was Done:
 1. ✅ Read [EXECUTIVE_SUMMARY.md](Coding/EXECUTIVE_SUMMARY.md)
-2. ✅ Review visualizations in [notebook.ipynb](Coding/notebook.ipynb) cells 9-14
+2. ✅ Review visualizations in [phase1_2_data_exploration.ipynb](Coding/phase1_2_data_exploration.ipynb) cells 9-14
 3. ✅ Read issues section in [PROJECT_SUMMARY.md](Coding/PROJECT_SUMMARY.md)
 
 ### For Troubleshooting:
@@ -526,11 +582,11 @@ For a complete documentation package:
 
 ---
 
-**🚀 Current Status: READY FOR PHASE 3 - NEURAL ODE MODEL DEVELOPMENT**
+**� Current Status: PHASE 3 IN PROGRESS — NEURAL ODE MODEL TRAINED, OPTIMIZING ADMET METRICS**
 
-**Last Updated**: February 17, 2026  
+**Last Updated**: February 24, 2026  
 **Maintained By**: Subrat  
-**Project Progress**: 50% Complete
+**Project Progress**: 65% Complete (Phase 3 active — architecture done, metric targets pending)
 
 ---
 

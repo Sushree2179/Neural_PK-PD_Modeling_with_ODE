@@ -11,7 +11,7 @@ Neural PK-PD Modeling: Integrating Mechanistic Priors with Neural ODEs
 - [📄 Executive Summary](Coding/EXECUTIVE_SUMMARY.md) - One-page overview
 - [📋 Complete Project Documentation](Coding/PROJECT_SUMMARY.md) - Full story with issues & solutions
 - [🔧 Troubleshooting Guide](Coding/TROUBLESHOOTING_GUIDE.md) - Problem solving reference
-- [📓 Jupyter Notebook](Coding/notebook.ipynb) - Working code (29 cells)
+- [📓 Phase 1–2 Notebook](Coding/phase1_2_data_exploration.ipynb) - EDA & feature engineering (29 cells)
 
 ---
 
@@ -26,7 +26,7 @@ Neural PK-PD Modeling: Integrating Mechanistic Priors with Neural ODEs
    - Initial Python version: 3.9.13
 
 2. **Created Empty Jupyter Notebook**
-   - Created `notebook.ipynb` in Coding folder
+   - Created `notebook.ipynb` in Coding folder (later renamed to `phase1_2_data_exploration.ipynb`)
 
 3. **Python Version Upgrade**
    - **Problem**: System had Python 3.8.10, needed latest version
@@ -102,7 +102,7 @@ Neural PK-PD Modeling: Integrating Mechanistic Priors with Neural ODEs
 
 1. venv_pkpd - Python 3.14.2 virtual environment
 2. requirements.txt - Package dependencies
-3. notebook.ipynb - Empty Jupyter notebook
+3. phase1_2_data_exploration.ipynb - Jupyter notebook (originally created as notebook.ipynb)
 4. data_download.py - Automated dataset fetcher
 5. raw - Downloaded data directory structure
 

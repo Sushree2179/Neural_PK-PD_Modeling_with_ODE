@@ -11,7 +11,7 @@
 - **[← Master Index](../MASTER_INDEX.md)** - All documentation organized by date
 - **[Complete Documentation →](PROJECT_SUMMARY.md)** - Full 18-page project summary
 - **[Troubleshooting →](TROUBLESHOOTING_GUIDE.md)** - Problem solving guide
-- **[Notebook →](notebook.ipynb)** - Working code
+- **[Notebook (Phase 1–2) →](phase1_2_data_exploration.ipynb)** - EDA & feature engineering
 
 ---
 
@@ -127,7 +127,7 @@ Outputs: [binding, hERG, Caco2, clearance]
 - `README.md` - Existing project overview
 
 ### Code
-- `notebook.ipynb` - Main analysis (29 cells, fully executed)
+- `phase1_2_data_exploration.ipynb` - Main analysis (29 cells, fully executed)
 - `requirements.txt` - 143 package dependencies
 
 ### Data
@@ -191,7 +191,7 @@ preprocessing_objects  # scaler + metadata
 source Coding/venv_pkpd/bin/activate
 
 # 2. Launch Jupyter
-jupyter notebook Coding/notebook.ipynb
+jupyter notebook Coding/phase1_2_data_exploration.ipynb
 
 # 3. Select kernel: venv_pkpd (Python 3.14)
 

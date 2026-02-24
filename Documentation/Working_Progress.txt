@@ -94,3 +94,127 @@
 1. **For PK-DB time-courses**: Export from web UI or obtain API credentials
 2. **For bulk downloads**: Implement TDC tasks, ToxCast, ChEMBL fetchers
 3. **Data preprocessing**: Parse SDF/CSV files into unified format for modeling
+
+---
+
+## Phase 3: Neural ODE Multi-Task Model (February 24, 2026)
+
+### Session Goals
+Build and train a multi-task Neural ODE that jointly predicts binding affinity (ChEMBL),
+hERG inhibition, Caco-2 permeability, and hepatocyte clearance while generating mechanistic
+PK concentration-time curves via torchdiffeq (physics-based ODE solver).
+
+---
+
+### Architecture Built
+
+- SharedEncoder:      2-layer MLP + LayerNorm: input(68) -> 128 -> 64 latent dim
+- RegressionHead:     64 -> 32 -> 1  for binding, Caco-2, clearance
+- ClassificationHead: 64 -> 32 -> 1 + Sigmoid  for hERG
+- PKODEFunc:          Neural ODE dynamics: latent -> (CL, V) -> dC/dt = -(CL/V)*C
+- MultiTaskPKPDModel: 4 heads + ODE (44,710 total trainable parameters)
+- MultiTaskLoss:      MSE (regression) + Weighted BCE for hERG (pos_weight=2.5)
+
+Feature Representation (68-dim):
+  - 4 physicochemical: MW, LogP, HBA, HBD
+  - 64-bit ECFP4 Morgan fingerprints (radius=2, RDKit)
+  - ChEMBL: Morgan bits zero-padded (no SMILES column in ChEMBL CSV)
+  - Clearance: HBA=0, HBD=0 padded (column schema mismatch with other tasks)
+
+Training Setup:
+  - Min-step interleaved sampling (10 steps/epoch, bottlenecked by Caco-2 = 637 train)
+  - Gradient clipping: max_norm=1.0
+  - LR: 1e-3 with ReduceLROnPlateau; weight_decay=1e-4
+  - Early stopping: patience=40 epochs
+  - Target normalization: StandardScaler per regression task (fit on train only)
+
+---
+
+### Problems Encountered and Resolutions
+
+1. FileNotFoundError for TDC files
+   PROBLEM: tdc_caco2.csv and tdc_clearance_hepatocyte.csv did not exist on disk
+   FIX:     Corrected to tdc_caco2_wang.csv and tdc_clearance_hepatocyte_az.csv
+   STATUS:  RESOLVED
+
+2. verbose=True deprecated in PyTorch 2.10 ReduceLROnPlateau
+   FIX:    Removed verbose=True argument
+   STATUS: RESOLVED
+
+3. torch.load unsafe in PyTorch 2.x without weights_only parameter
+   FIX:    Added weights_only=True to all torch.load() calls
+   STATUS: RESOLVED
+
+4. BatchNorm corrupts multi-task training
+   PROBLEM: BatchNorm running stats dominated by largest task (hERG 7997 vs Caco-2 637)
+   FIX:    Replaced all BatchNorm1d with LayerNorm throughout SharedEncoder
+   STATUS: RESOLVED
+
+5. hERG task dominance during training
+   PROBLEM: hERG 5597 train vs Caco-2 637; naive interleaving gave hERG ~9x more updates
+   FIX:    Min-step interleaving -- all tasks capped at min(len(loader)) = 10 steps/epoch
+   STATUS: RESOLVED
+
+6. Regression targets on very different scales (pChEMBL 4-11, clearance 0.01-500)
+   FIX:    StandardScaler normalization on all regression targets before training
+   STATUS: RESOLVED
+
+7. Caco-2 incorrectly set up as binary classification
+   PROBLEM: Caco-2 has continuous permeability values, not binary labels
+   FIX:    Changed caco2_head to RegressionHead + MSE loss in MultiTaskLoss
+   STATUS: RESOLVED
+
+8. All ADMET tasks stuck near mean-prediction
+   ROOT CAUSE: 64-bit Morgan fingerprints have severe bit collisions; structurally
+               different molecules map to identical bit patterns, blocking SAR learning
+   STATUS: OPEN -- next fix: increase N_BITS 64 -> 1024
+
+---
+
+### Training Results (Best Run)
+
+Notebook: phase3_neural_ode_model.ipynb (36 cells, all executed, venv_pkpd kernel)
+Stopped at: epoch 42 (early stopping), best val_loss = 3.54
+
+  Task                  | Metric | Result | Target | Status
+  ----------------------|--------|--------|--------|-------------------
+  Binding Affinity      | R2     | -0.025 | >0.60  | FAIL
+  hERG Inhibition       | AUROC  |  0.507 | >0.80  | FAIL
+  Caco-2 Permeability   | R2     | -0.118 | >0.60  | FAIL
+  Hepatocyte Clearance  | RMSE   |  0.968 | <1.00  | PASS (borderline)
+
+Neural ODE PK Curves: Fully functional -- torchdiffeq.odeint generates C(t) curves.
+Output saved to pk_curves.png.
+
+---
+
+### Completed Today (Feb 24, 2026)
+
+[x] Config updated (input_dim=68, hidden_dim=128, latent_dim=64)
+[x] Feature extraction expanded to 68-dim (4 physico + 64 ECFP4 Morgan)
+[x] Clearance DataFrame padded (HBA=0, HBD=0) for schema compatibility
+[x] Morgan fingerprint cell added (smiles_to_morgan(), 64-bit ECFP4, radius=2)
+[x] LayerNorm replacing BatchNorm throughout SharedEncoder
+[x] Caco-2 head fixed to RegressionHead + MSE loss
+[x] hERG pos_weight=2.5 added to MultiTaskLoss for class imbalance
+[x] validate() updated -- REGRESSION_TASKS = {binding, caco2, clearance}
+[x] Target normalization per regression task (StandardScaler, fit on train only)
+[x] Min-step interleaved training (10 steps/epoch)
+[x] Gradient clipping (max_norm=1.0)
+[x] Training run completed (epoch 42, early stopped, val_loss=3.54)
+[x] PK curve visualization (plot_pk_curves(), saved pk_curves.png)
+[x] Status summary cell added to notebook (Cell 36)
+
+---
+
+### Next Steps (Carry Forward)
+
+1. HIGH PRIORITY: Increase Morgan bits 64 -> 1024 (reduces bit collision)
+   - Cell 11: N_BITS = 64  ->  N_BITS = 1024
+   - Cell 5:  config['input_dim'] = 68  ->  1028
+   - Re-run cells 11 -> 12 -> 13 -> 35 to retrain
+
+2. If still underfitting after 1024-bit fingerprints:
+   - Add GNN molecular encoder (PyTorch Geometric message passing)
+   - Task-specific pre-encoders before shared latent space
+   - Data augmentation for Caco-2 (only 637 train samples)
