@@ -1,5 +1,10 @@
 # Neural PK-PD Modeling Dataset - Master Index
 
+> **Legacy index notice:** This file is retained as a historical dataset-focused index.
+> For the maintained project navigation and current status, use:
+> - [../MASTER_INDEX.md](../MASTER_INDEX.md)
+> - [../Documentation/PROJECT_STATUS.md](../Documentation/PROJECT_STATUS.md)
+
 ## 📊 Complete Data Integration Summary
 
 **Date**: February 4, 2026  

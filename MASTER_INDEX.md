@@ -2,8 +2,8 @@
 
 **Project**: Physics-Informed Neural ODE for Pharmacokinetic-Pharmacodynamic Modeling  
 **Author**: Subrat  
-**Last Updated**: February 24, 2026  
-**Current Status**: 🔬 Phase 3 In Progress | Neural ODE Multi-Task Model Built & Training
+**Last Updated**: March 4, 2026  
+**Current Status**: 🔬 Phase 3 In Progress | Phase 2→3 Integration Complete, Multi-Variant Benchmarks Executed
 
 ---
 
@@ -11,10 +11,20 @@
 
 **New to this project?** Start here:
 
-1. 📖 [EXECUTIVE_SUMMARY.md](Coding/EXECUTIVE_SUMMARY.md) - **One-page overview** (2 min read)
-2. 📋 [PROJECT_SUMMARY.md](Coding/PROJECT_SUMMARY.md) - **Complete documentation** (15 min read)
-3. 🔧 [TROUBLESHOOTING_GUIDE.md](Coding/TROUBLESHOOTING_GUIDE.md) - **Problem solving** (reference)
-4. 📓 [phase1_2_data_exploration.ipynb](Coding/phase1_2_data_exploration.ipynb) - **Phase 1–2 EDA & feature engineering** (interactive)
+1. 📌 [PROJECT_STATUS.md](Documentation/PROJECT_STATUS.md) - **Canonical live status** (phase, latest metrics, next action)
+2. 📖 [EXECUTIVE_SUMMARY.md](Coding/EXECUTIVE_SUMMARY.md) - **One-page overview** (2 min read)
+3. 📋 [PROJECT_SUMMARY.md](Coding/PROJECT_SUMMARY.md) - **Complete documentation** (15 min read)
+4. 🔧 [TROUBLESHOOTING_GUIDE.md](Coding/TROUBLESHOOTING_GUIDE.md) - **Problem solving** (reference)
+5. 📓 [phase1_2_data_exploration.ipynb](Coding/phase1_2_data_exploration.ipynb) - **Phase 1–2 EDA & feature engineering** (interactive)
+6. 🧭 [DOCUMENTATION_GOVERNANCE.md](Documentation/DOCUMENTATION_GOVERNANCE.md) - **Update protocol** (how to keep docs in sync)
+7. 🎞️ [Slides/README.md](Slides/README.md) - **Slides generation guide** (canonical PPTX commands)
+
+### Canonical vs Historical
+
+- **Canonical live status source**: [Documentation/PROJECT_STATUS.md](Documentation/PROJECT_STATUS.md)
+- **Historical snapshots retained for traceability**:
+   - [INTEGRATION_STATUS.md](INTEGRATION_STATUS.md)
+   - [Coding/INDEX.md](Coding/INDEX.md)
 
 ---
 
@@ -133,13 +143,13 @@
 
 ##### 📄 [INTEGRATION_STATUS.md](INTEGRATION_STATUS.md)
 **Date**: February 4, 2026  
-**Purpose**: Integration progress tracking  
+**Purpose**: Integration progress tracking (**historical snapshot**)  
 **Key Topics**:
 - Completion status by dataset
 - Known issues and resolutions
 - Next steps for integration
 
-**When to Read**: For project status overview
+**When to Read**: For historical context only (for current status use [Documentation/PROJECT_STATUS.md](Documentation/PROJECT_STATUS.md))
 
 ---
 
@@ -251,33 +261,33 @@
 
 ---
 
-### **Phase 3: Neural ODE Model Development** (February 24, 2026)
+### **Phase 3: Neural ODE Model Development** (February 24, 2026 → March 4, 2026 updates)
 
 #### 📓 [phase3_neural_ode_model.ipynb](Coding/phase3_neural_ode_model.ipynb) ⭐ **ACTIVE DEVELOPMENT**
-**Date**: February 24, 2026 (Active)  
+**Date**: February 24, 2026 (Active; updated March 4, 2026)  
 **Purpose**: Multi-task Neural ODE model for simultaneous ADMET and PK/PD prediction  
 **Structure** (36 cells, all executed):
 - **Cells 1-2**: Project header and setup
 - **Cell 3**: Imports (torch, torchdiffeq, rdkit, sklearn, scipy)
-- **Cells 4-5**: Configuration dict (input_dim=68, hidden_dim=128, latent_dim=64)
+- **Cells 4-5**: Configuration dict (input_dim resolved from processed features; hidden_dim=128, latent_dim=64)
 - **Cells 6-8**: Data loading — 4 tasks, 13,030 total samples
 - **Cells 9-10**: Feature engineering helper (`prepare_task_data()`)
-- **Cell 11**: Morgan ECFP4 fingerprint generation (64-bit, radius=2)
-- **Cell 12**: 68-dim feature assembly (4 physico + 64 Morgan) for all tasks
+- **Cell 11**: Task heads and architecture modules
+- **Cell 12**: Feature-space setup from Phase 2 processed matrix (2 physico + 256 fingerprints)
 - **Cell 13**: Per-task DataLoaders with target normalization
 - **Cell 15**: `MultiTaskDataset` class
 - **Cell 17**: `SharedEncoder` (LayerNorm, 128→64 latent)
 - **Cell 19**: `RegressionHead` and `ClassificationHead`
 - **Cell 21**: `PKODEFunc` (Neural ODE dynamics)
 - **Cell 23**: `MultiTaskPKPDModel` (4 tasks unified)
-- **Cell 24**: Model instantiation (44,710 trainable params)
+- **Cell 24**: Model instantiation (~73,190 trainable params in current variant)
 - **Cell 26**: `MultiTaskLoss` (MSE + weighted BCE, pos_weight=2.5)
 - **Cells 28-30**: Training pipeline — interleaved, early stopping, gradient clipping
 - **Cells 32-33**: Visualization (`plot_training_history`, `plot_pk_curves`)
-- **Cell 35**: Training execution (best val_loss=3.54, stopped epoch 42)
+- **Cell 35**: Training execution (multiple benchmark variants)
 - **Cell 36**: PK curve demo + comprehensive status summary
 
-**Current Results** (epoch 42, early stopped):
+**Current Results** (historical Feb 24 baseline):
 | Task | Metric | Result | Target | Status |
 |------|--------|--------|--------|--------|
 | Binding Affinity | R² | −0.025 | >0.60 | ✗ |
@@ -292,6 +302,25 @@
 - Caco-2 corrected to regression (was incorrectly binary classification)
 - ChEMBL zero-padded for Morgan fingerprints (no SMILES column)
 - Gradient clipping at 1.0; LR scheduling with ReduceLROnPlateau
+
+**March 4, 2026 Update (supersedes Feb 24 snapshot):**
+- Phase 2 missing component fixed: fingerprints are now included in the unified matrix and exported.
+- Phase 3 now consumes processed Phase 2 features directly from:
+   - [data/processed/phase2_multitask_features_with_fingerprints.csv](Coding/data/processed/phase2_multitask_features_with_fingerprints.csv)
+- Current feature space: **258 dims** (2 physico + 256 fingerprints).
+- Caco-2 objective aligned to classification with AUROC reporting.
+- Additional controlled experiments completed:
+   1. Deep-head + task-loss reweighting
+   2. Focal loss + auto class-weighting
+   3. Logits-based classification + validation threshold tuning
+
+**Latest Benchmark (March 4, 2026):**
+| Task | Metric | Result | Target | Status |
+|------|--------|--------|--------|--------|
+| Binding Affinity | R² | -0.029 | > 0.60 | ✗ |
+| hERG Inhibition | AUROC | 0.482 | > 0.80 | ✗ |
+| Caco-2 Permeability | AUROC | 0.518 | > 0.75 | ✗ |
+| Clearance | RMSE | 0.969 | < 1.00 | ✓ |
 
 **When to Read**: For Neural ODE architecture, training pipeline, and multi-task ADMET results
 
@@ -483,8 +512,8 @@ Looking for specific information? Use this guide:
 | **Total Data Records** | 347,896 |
 | **Training Samples** | 13,030 (4 tasks) |
 | **Prediction Tasks** | 4 (binding, hERG, Caco-2, clearance) |
-| **Feature Dimensions** | 68 (4 physico + 64 Morgan ECFP4) |
-| **Model Parameters** | 44,710 (MultiTaskPKPDModel) |
+| **Feature Dimensions** | 258 (2 physico + 256 Morgan ECFP4) |
+| **Model Parameters** | 73,190 (current MultiTaskPKPDModel variant) |
 | **Documentation Pages** | ~50 pages total |
 | **Project Completion** | 65% (Phase 3 in progress) |
 
@@ -509,10 +538,11 @@ Looking for specific information? Use this guide:
 ### Phase 3: Model Development (IN PROGRESS 🔬)
 - [x] Neural architecture built (`SharedEncoder` + 4 task heads + `PKODEFunc`)
 - [x] Training pipeline implemented (interleaved, early stopping, LR scheduling)
-- [x] First training run complete (epoch 42 early stop, 44,710 params)
+- [x] Multiple retraining cycles completed (deep-head, focal, logits variants)
 - [x] Neural ODE PK curve generation working (`plot_pk_curves()`)
-- [ ] Hit target metrics (binding R²>0.6, hERG AUROC>0.8, Caco-2 R²>0.6)
-- [ ] Increase Morgan bits 64→1024 to reduce fingerprint collisions
+- [ ] Hit target metrics (binding R²>0.6, hERG AUROC>0.8, Caco-2 AUROC>0.75)
+- [x] Phase 2→3 processed feature handoff completed (258-dim inputs)
+- [ ] Task-specific fine-tuning for hERG/Caco-2 on frozen shared encoder
 - [ ] Model interpretation and attention analysis
 
 ### Phase 4: Deployment (PENDING)
@@ -527,6 +557,7 @@ Looking for specific information? Use this guide:
 
 | Version | Date | Changes |
 |---------|------|---------|
+| **2.1** | Mar 4, 2026 | Phase 3 objective alignment + multi-variant benchmark updates (processed-feature ingestion, Caco-2 classification, focal/logits trials) |
 | **2.0** | Feb 24, 2026 | Phase 3 Neural ODE model session — architecture, training, results |
 | **1.0** | Feb 17, 2026 | Initial master index creation |
 | **0.9** | Feb 4, 2026 | Original INDEX.md (superseded) |
@@ -563,11 +594,8 @@ For a complete documentation package:
 
 ### For Continuing Development:
 1. ✅ Open [phase3_neural_ode_model.ipynb](Coding/phase3_neural_ode_model.ipynb) — model is built and trained
-2. ⏭️ Increase Morgan fingerprints: `N_BITS = 64 → 1024` (highest-impact fix)
-   - Cell 11: change `N_BITS = 64` → `N_BITS = 1024`
-   - Cell 5: change `config['input_dim'] = 68` → `1028`
-   - Re-run cells 11 → 12 → 13 → 35 to retrain
-3. ⏭️ Evaluate: binding R²>0.6, hERG AUROC>0.8, Caco-2 R²>0.6
+2. ⏭️ Run task-specific fine-tuning for hERG/Caco-2 with frozen shared encoder
+3. ⏭️ Evaluate: binding R²>0.6, hERG AUROC>0.8, Caco-2 AUROC>0.75
 4. ⏭️ If targets met → Phase 4: deployment/API documentation
 
 ### For Understanding What Was Done:
@@ -584,7 +612,7 @@ For a complete documentation package:
 
 **� Current Status: PHASE 3 IN PROGRESS — NEURAL ODE MODEL TRAINED, OPTIMIZING ADMET METRICS**
 
-**Last Updated**: February 24, 2026  
+**Last Updated**: March 4, 2026  
 **Maintained By**: Subrat  
 **Project Progress**: 65% Complete (Phase 3 active — architecture done, metric targets pending)
 

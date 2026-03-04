@@ -1,8 +1,38 @@
 # Neural PK-PD Modeling: Executive Summary
 
 **Project**: Physics-Informed Neural ODE for Pharmacokinetic-Pharmacodynamic Modeling  
-**Date**: February 17, 2026  
-**Status**: ✅ Phase 2 Complete | Ready for Phase 3
+**Date**: March 4, 2026  
+**Status**: 🔬 Phase 3 In Progress | Multi-Variant Benchmarking Complete, Targets Pending
+
+---
+
+## 🔄 March 4, 2026 Addendum (Latest)
+
+This document originally summarized Phase 2 completion. The following update reflects current Phase 3 progress.
+
+### What changed since Feb 17
+- Phase 2 missing fingerprint component was implemented and exported to:
+   - [data/processed/phase2_multitask_features_with_fingerprints.csv](data/processed/phase2_multitask_features_with_fingerprints.csv)
+- Phase 3 was refactored to consume Phase 2 processed features directly.
+- Input feature space is now **258 dimensions** (2 physico + 256 fingerprints).
+- Caco-2 objective was aligned to **classification** with AUROC reporting.
+- Three targeted model variants were benchmarked:
+   1. Deep-head + task-loss reweighting
+   2. Focal loss + automatic class weights
+   3. Logits-based classification + validation threshold tuning
+
+### Current benchmark snapshot (latest run)
+| Task | Metric | Result | Target | Status |
+|------|--------|--------|--------|--------|
+| Binding Affinity | R² | -0.029 | > 0.60 | ✗ |
+| hERG Inhibition | AUROC | 0.482 | > 0.80 | ✗ |
+| Caco-2 Permeability | AUROC | 0.518 | > 0.75 | ✗ |
+| Hepatocyte Clearance | RMSE | 0.969 | < 1.00 | ✓ |
+
+### Current interpretation
+- Pipeline reliability and task/metric alignment have materially improved.
+- Clearance remains close to target; classification/regression generalization remains limited.
+- Next highest-impact step: task-specific fine-tuning for hERG/Caco-2 with a frozen shared encoder.
 
 ---
 
@@ -15,16 +45,22 @@
 
 ---
 
+## ℹ️ Historical Context
+
+Sections below this point contain the original Feb 17 Phase 2 snapshot for record-keeping. Use the March 4 addendum above for current Phase 3 status.
+
+---
+
 ## �📊 At A Glance
 
 | Metric | Value |
 |--------|-------|
 | **Training Samples** | 13,030 |
 | **Prediction Tasks** | 4 (binding, hERG, Caco-2, clearance) |
-| **Features** | 2 (MW, LogP) - normalized |
+| **Features (current model input)** | 258 (2 physico + 256 fingerprint) |
 | **Datasets Integrated** | 5 (ChEMBL, TDC, ToxCast, PubChem, PK-DB) |
 | **Total Data Volume** | 347,896 records (~84 MB) |
-| **Notebook Cells** | 29 (all executed successfully) |
+| **Notebook Cells** | Phase 1–2: 29; Phase 3: 38 |
 
 ---
 
@@ -72,7 +108,7 @@
 ### Multi-Task Learning Format
 
 ```
-Features (X): [MW, LogP] - 2 dimensions, standardized
+Features (X): [MW, LogP] + fingerprint bits (current Phase 3 path uses 258 dims)
 Tasks (y): 4 prediction endpoints
 ```
 
@@ -80,7 +116,7 @@ Tasks (y): 4 prediction endpoints
 |------|---------|------|-------|
 | **Binding Affinity** | 2,000 | Regression | 3.0 - 10.7 pIC50 |
 | **hERG Inhibition** | 7,997 | Binary | 0 or 1 |
-| **Caco-2 Permeability** | 910 | Binary | 0 or 1 |
+| **Caco-2 Permeability** | 910 | Classification (current Phase 3 benchmark track) | 0 or 1 |
 | **Hepatocyte Clearance** | 2,123 | Regression | -7.7 to 4.6 |
 
 ### Feature Statistics (Normalized)
@@ -99,8 +135,8 @@ max       3.71        4.38
 
 ### Architecture
 ```python
-Input: [MW, LogP] → 
-Shared Encoder (64→32) → 
+Input: [MW, LogP, fp_000..fp_255] → 
+Shared Encoder (258→128→64 latent) → 
 4 Task-Specific Heads → 
 Outputs: [binding, hERG, Caco2, clearance]
 ```
@@ -122,16 +158,16 @@ Outputs: [binding, hERG, Caco2, clearance]
 ## 📁 Key Files
 
 ### Documentation
-- `PROJECT_SUMMARY.md` - Comprehensive project documentation (18 pages)
-- `TROUBLESHOOTING_GUIDE.md` - Issue resolution reference
-- `README.md` - Existing project overview
+- [PROJECT_SUMMARY.md](PROJECT_SUMMARY.md) - Comprehensive project documentation (18 pages)
+- [TROUBLESHOOTING_GUIDE.md](TROUBLESHOOTING_GUIDE.md) - Issue resolution reference
+- [README.md](../README.md) - Existing project overview
 
 ### Code
-- `phase1_2_data_exploration.ipynb` - Main analysis (29 cells, fully executed)
-- `requirements.txt` - 143 package dependencies
+- [phase1_2_data_exploration.ipynb](phase1_2_data_exploration.ipynb) - Main analysis (29 cells, fully executed)
+- [requirements.txt](requirements.txt) - 143 package dependencies
 
 ### Data
-- `data/raw/` - 5 datasets (84 MB total)
+- [data/raw/](data/raw/) - 5 datasets (84 MB total)
 - Pre-processed features saved in notebook variables
 
 ---
@@ -168,11 +204,11 @@ Key Packages:
 
 ### Variables Available in Notebook
 ```python
-X_normalized      # (13030, 2) - standardized features
-y_targets         # dict - targets by task
-X_targets         # dict - features by task  
-task_info         # task labels for each sample
-preprocessing_objects  # scaler + metadata
+phase2_features   # processed matrix with task + target + fp_* columns
+FEATURE_COLS      # model input feature columns (258 dims in current run)
+train_loaders     # task-specific train DataLoaders
+val_loaders       # task-specific validation DataLoaders
+history           # training losses + per-task metrics
 ```
 
 ### Data Quality
@@ -203,7 +239,7 @@ jupyter notebook Coding/phase1_2_data_exploration.ipynb
 - **Column not in index**: Check dataset schema
 - **Import errors**: Verify kernel selection
 
-See `TROUBLESHOOTING_GUIDE.md` for detailed solutions.
+See [TROUBLESHOOTING_GUIDE.md](TROUBLESHOOTING_GUIDE.md) for detailed solutions.
 
 ---
 
@@ -277,13 +313,15 @@ Week 8:   Thesis Writing
 
 ---
 
-**🚀 Status: READY FOR PHASE 3 - NEURAL ODE DEVELOPMENT**
+**📌 Historical Snapshot (February 17, 2026): READY FOR PHASE 3 - NEURAL ODE DEVELOPMENT**
 
-All prerequisites met. Dataset prepared. Documentation complete. Proceed to model implementation.
+This section is retained as a milestone checkpoint from February 17, 2026.
+For the current project state, latest metrics, and next action, use:
+[Documentation/PROJECT_STATUS.md](../Documentation/PROJECT_STATUS.md).
 
 ---
 
-**Last Updated**: February 17, 2026  
+**Snapshot Date**: February 17, 2026  
 **Next Milestone**: Multi-task neural architecture implementation  
 **Target Completion**: Week 5
 

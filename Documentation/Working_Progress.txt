@@ -1,3 +1,48 @@
+## Phase 3 Progress Update (March 4, 2026)
+
+### What was completed in this session
+
+1. **Execution integrity and notebook reliability**
+   - Stabilized execution timestamp logging and timeline behavior.
+   - Verified end-to-end run order and logger outputs across reruns.
+
+2. **Phase 2 completion and integration fix**
+   - Implemented the missing fingerprint component in Phase 2 feature pipeline.
+   - Unified matrix now includes `MW`, `LogP`, and `fp_000`–`fp_255`.
+   - Exported processed artifact: `data/processed/phase2_multitask_features_with_fingerprints.csv`.
+
+3. **Phase 3 refactor to consume Phase 2 processed matrix**
+   - Replaced ad hoc per-cell feature rebuilding from raw sources.
+   - Feature ingestion now detects fingerprint columns from processed Phase 2 output.
+   - Effective model input dimension now resolves to **258** features (2 physico + 256 fingerprints).
+
+4. **Task objective correction and experiment cycle**
+   - Caco-2 objective aligned to **classification** and evaluated via **AUROC**.
+   - Ran controlled model variants:
+     - Deeper regression heads + task reweighting
+     - Focal loss + auto class-weight estimation
+     - Logits-based classification with threshold tuning (Youden J)
+
+### Latest benchmark status (best recent run)
+
+- Binding affinity (R²): **-0.029** (target > 0.60)
+- hERG (AUROC): **0.482** (target > 0.80)
+- Caco-2 (AUROC): **0.518** (target > 0.75)
+- Clearance (RMSE): **0.969** (target < 1.00)
+
+### Interpretation
+
+- Pipeline and metrics are now aligned with task definitions, and all key experiments execute successfully.
+- Clearance remains near target; other tasks are still near baseline.
+- Immediate bottleneck appears to be representation quality / task interference rather than runtime stability.
+
+### Next recommended step
+
+1. Keep shared encoder frozen and run **task-specific classifier fine-tuning** for hERG/Caco-2.
+2. Compare against current logits benchmark using AUROC, F1, and calibrated threshold behavior.
+
+---
+
 ## Summary of Setup & Data Download Process
 
 ### **Initial Setup Steps**

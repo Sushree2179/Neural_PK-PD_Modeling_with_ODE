@@ -1,5 +1,9 @@
 # Neural PK-PD Modeling with ODE: Data Integration Complete ✅
 
+> **Historical snapshot notice (Feb 4, 2026):** This file is retained for integration milestone history.
+> For current project state, active phase, and latest model metrics, use:
+> [Documentation/PROJECT_STATUS.md](Documentation/PROJECT_STATUS.md)
+
 **Project**: Neural Pharmacokinetics-Pharmacodynamics Modeling with Physics-Informed Neural ODEs  
 **Date**: February 4, 2026  
 **Status**: ✅ **5-SOURCE DATASET READY - 500,000+ RECORDS INTEGRATED**

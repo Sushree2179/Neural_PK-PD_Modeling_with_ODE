@@ -1,8 +1,53 @@
 # Neural PK-PD Modeling Project Summary
 
-**Date**: February 17, 2026  
-**Status**: Phase 2 Complete - Feature Engineering  
-**Next Phase**: Phase 3 - Neural ODE Model Development
+**Date**: March 4, 2026  
+**Status**: Phase 3 In Progress - Integration + Benchmark Iterations Complete  
+**Next Phase**: Targeted task-specific fine-tuning and metric improvement
+
+---
+
+## 🔄 March 4, 2026 Addendum (Latest)
+
+This document originally captured the Phase 1–2 completion milestone. The following update summarizes the latest Phase 3 work.
+
+### What was completed
+
+1. **Phase 2 missing component fixed**
+    - Fingerprints were fully integrated into the actual Phase 2 unified matrix.
+    - Processed export created and used downstream:
+    - [data/processed/phase2_multitask_features_with_fingerprints.csv](data/processed/phase2_multitask_features_with_fingerprints.csv)
+
+2. **Phase 3 data path refactor completed**
+    - Phase 3 now loads the processed Phase 2 matrix directly, instead of rebuilding features ad hoc.
+    - Current effective input feature space: **258 dimensions** (2 physico + 256 fingerprints).
+
+3. **Task objective alignment improved**
+    - Caco-2 pathway aligned to classification objective in current benchmark track.
+    - Evaluation/reporting now uses AUROC for Caco-2 alongside hERG.
+
+4. **Controlled benchmark variants executed**
+    - Deep-head + task-loss reweighting
+    - Focal loss + automatic class-weighting
+    - Logits-based classification + threshold tuning
+
+### Latest benchmark snapshot
+
+| Task | Metric | Result | Target | Status |
+|------|--------|--------|--------|--------|
+| Binding Affinity | R² | -0.029 | > 0.60 | ✗ |
+| hERG Inhibition | AUROC | 0.482 | > 0.80 | ✗ |
+| Caco-2 Permeability | AUROC | 0.518 | > 0.75 | ✗ |
+| Hepatocyte Clearance | RMSE | 0.969 | < 1.00 | ✓ |
+
+### Current interpretation
+
+- End-to-end pipeline is stable and reproducible after refactors.
+- Metric/target reporting is now consistent with task setup in active experiments.
+- Clearance remains close to target; binding/hERG/Caco-2 remain below target.
+
+### Recommended next step
+
+- Run task-specific fine-tuning for hERG and Caco-2 while freezing the shared encoder, then compare AUROC/F1/threshold behavior against the current logits benchmark.
 
 ---
 
@@ -616,15 +661,17 @@ loss = (
 For questions or issues:
 1. Check this summary document first
 2. Review notebook comments and docstrings
-3. Consult `requirements.txt` for environment setup
+3. Consult [requirements.txt](requirements.txt) for environment setup
 4. See inline cell documentation for implementation details
 
 ---
 
-**🎯 Current Status: Ready for Phase 3 - Neural ODE Model Development**
+**📌 Historical Snapshot (February 17, 2026): Ready for Phase 3 - Neural ODE Model Development**
 
-All data preprocessing complete. Feature matrix normalized and ready for neural network training. Multi-task learning architecture designed. Proceed to model implementation.
+This section is retained as a milestone checkpoint from February 17, 2026.
+For the current project state, latest metrics, and next action, use:
+[Documentation/PROJECT_STATUS.md](../Documentation/PROJECT_STATUS.md).
 
-**Last Updated**: February 17, 2026
+**Snapshot Date**: February 17, 2026
 
 ---

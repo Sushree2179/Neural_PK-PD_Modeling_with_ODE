@@ -7,17 +7,21 @@ Neural PK-PD Modeling: Integrating Mechanistic Priors with Neural ODEs
 
 **New to this project?** The [MASTER_INDEX.md](MASTER_INDEX.md) provides complete navigation to all 14 documentation files, organized by date and reading order.
 
+**Canonical live status**: [Documentation/PROJECT_STATUS.md](Documentation/PROJECT_STATUS.md)
+
 **Quick Links**:
+- [📌 Project Status (Canonical)](Documentation/PROJECT_STATUS.md) - Current phase, latest metrics, next action
 - [📄 Executive Summary](Coding/EXECUTIVE_SUMMARY.md) - One-page overview
 - [📋 Complete Project Documentation](Coding/PROJECT_SUMMARY.md) - Full story with issues & solutions
 - [🔧 Troubleshooting Guide](Coding/TROUBLESHOOTING_GUIDE.md) - Problem solving reference
 - [📓 Phase 1–2 Notebook](Coding/phase1_2_data_exploration.ipynb) - EDA & feature engineering (29 cells)
+- [🎞️ Slides Generation Guide](Slides/README.md) - Canonical PPTX generation commands and outputs
 
 ---
 
 ## Summary of Setup & Data Download Process
 
-**Note**: This document covers initial setup (January 21, 2026). For current project status, see [MASTER_INDEX.md](MASTER_INDEX.md).
+**Note**: This document covers initial setup (January 21, 2026). For current project status, see [Documentation/PROJECT_STATUS.md](Documentation/PROJECT_STATUS.md).
 
 ### **Initial Setup Steps**
 
@@ -26,7 +30,7 @@ Neural PK-PD Modeling: Integrating Mechanistic Priors with Neural ODEs
    - Initial Python version: 3.9.13
 
 2. **Created Empty Jupyter Notebook**
-   - Created `notebook.ipynb` in Coding folder (later renamed to `phase1_2_data_exploration.ipynb`)
+   - Created [notebook.ipynb](Coding/notebook.ipynb) in Coding folder (later renamed to [phase1_2_data_exploration.ipynb](Coding/phase1_2_data_exploration.ipynb))
 
 3. **Python Version Upgrade**
    - **Problem**: System had Python 3.8.10, needed latest version

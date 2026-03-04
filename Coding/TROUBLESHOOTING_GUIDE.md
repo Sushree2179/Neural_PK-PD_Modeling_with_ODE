@@ -317,7 +317,7 @@ weights = compute_class_weight('balanced', classes=np.unique(y), y=y)
 
 ## 🧠 Phase 3: Neural ODE Model Issues (February 24, 2026)
 
-> These issues were encountered while building `phase3_neural_ode_model.ipynb`.
+> These issues were encountered while building [phase3_neural_ode_model.ipynb](phase3_neural_ode_model.ipynb).
 
 ---
 
@@ -636,6 +636,8 @@ python -m ipykernel install --user --name=venv_pkpd --display-name="venv_pkpd (P
 
 ---
 
-**Last Updated**: February 24, 2026 (Phase 3 issues added)
+**Historical Update Stamp**: February 24, 2026 (Phase 3 issues added)
+For current project state and latest benchmark context, use:
+[Documentation/PROJECT_STATUS.md](../Documentation/PROJECT_STATUS.md)
 
 ---
