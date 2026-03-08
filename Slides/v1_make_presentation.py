@@ -146,7 +146,7 @@ SLIDES = [
         bullets=[
             "Repo: Sushree2179/Neural_PK-PD_Modeling_with_ODE",
             "Presenter: Subrat",
-            "Snapshot date: Mar 4, 2026",
+            "Snapshot date: Mar 8, 2026",
         ],
         notes=(
             "Today I’m presenting Phase 2 and Phase 3 of the Neural PK–PD Modeling project. "
@@ -374,16 +374,17 @@ SLIDES = [
     ),
     # 20
     dict(
-        title="Latest Results vs Targets (Mar 4, 2026)",
+        title="Latest Results vs Targets (Mar 8, 2026)",
         bullets=[
-            "Binding R²: -0.029 (target > 0.60) → not met",
-            "hERG AUROC: 0.482 (target > 0.80) → not met",
-            "Caco-2 AUROC: 0.518 (target > 0.75) → not met",
-            "Clearance RMSE: 0.969 (target < 1.00) → met",
+            "Binding R²: 0.0019 (target > 0.60) → not met",
+            "hERG AUROC: 0.4836 (target > 0.80) → not met",
+            "Caco-2 AUROC: 0.4719 (target > 0.75) → not met",
+            "Clearance RMSE: 0.9766 (target < 1.00) → met",
+            "Locked thresholds: hERG=0.49, Caco-2=0.50",
         ],
         notes=(
             "Clearance remains near threshold while binding, hERG, and Caco-2 remain below targets. "
-            "Current strategy prioritizes focused optimization of classification tasks."
+            "Current strategy prioritizes split-leakage mitigation and re-benchmarking."
         ),
     ),
     # 21
@@ -401,15 +402,14 @@ SLIDES = [
     ),
     # 22
     dict(
-        title="Primary Next Action: Task-Specific Fine-Tuning",
+        title="Primary Next Action: Split-Leakage Mitigation",
         bullets=[
-            "Freeze shared encoder + ODE backbone",
-            "Fine-tune hERG and Caco-2 task heads",
-            "Tune thresholds and compare AUROC/F1 to canonical benchmark",
+            "Fix split strategy for leakage-prone tasks (starting with binding)",
+            "Re-run quality gate and confirm zero overlap leakage",
+            "Re-benchmark with locked thresholds and compare against Mar 8 snapshot",
         ],
         notes=(
-            "Targeted head fine-tuning is the shortest path to improve classification metrics without destabilizing "
-            "the full model."
+            "Leakage control is prioritized before further model optimization so metric deltas remain trustworthy."
         ),
     ),
     # 23

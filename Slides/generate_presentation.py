@@ -289,7 +289,7 @@ def build_deck():
         prs,
         title="Phase 2 & Phase 3 Update:\nFeature Engineering → Multi-Task Neural ODE",
         subtitle="Neural PK–PD Modeling with Physics-Informed Neural ODE  •  PK–PD + ADMET",
-        date="Snapshot: March 4, 2026",
+        date="Snapshot: March 8, 2026",
         presenter="Subrat  •  Sushree2179/Neural_PK-PD_Modeling_with_ODE",
     )
     set_notes(s, (
@@ -567,9 +567,10 @@ def build_deck():
         title="Training Run Summary (Latest Benchmark Cycle)",
         bullets=[
             "Training executed successfully end-to-end",
-            "Multiple controlled variants compared (deep-head, focal, logits + threshold tuning)",
-            "Caco-2 objective aligned to classification in active benchmark track",
-            "Common benchmark table maintained across runs for comparability",
+            "Multiple controlled variants compared (deep-head, focal/logits, fine-tuning variants)",
+            "Concrete quality gate + constrained threshold calibration executed",
+            "Production threshold policy selected (hERG=0.49, Caco-2=0.50)",
+            "Locked-threshold reporting cell now used for final benchmark table",
             "Pipeline is reproducible and provides diagnostics for iterative improvement",
         ],
         notes=(
@@ -580,17 +581,17 @@ def build_deck():
 
     # ── 20. Baseline Results ──────────────────────────────────────────────────
     add_table_slide(prs,
-        title="Latest Results vs Targets (March 4, 2026)",
+        title="Latest Results vs Targets (March 8, 2026)",
         headers=["Task", "Metric", "Current", "Target", "Status"],
         rows=[
-            ["Binding Affinity", "R²", "-0.029", "> 0.60", "✗  Not met"],
-            ["hERG Inhibition", "AUROC", "0.482", "> 0.80", "✗  Not met"],
-            ["Caco-2", "AUROC", "0.518", "> 0.75", "✗  Not met"],
-            ["Clearance", "RMSE", "0.969", "< 1.00", "✓  Met"],
+            ["Binding Affinity", "R²", "0.0019", "> 0.60", "✗  Not met"],
+            ["hERG Inhibition", "AUROC", "0.4836", "> 0.80", "✗  Not met"],
+            ["Caco-2", "AUROC", "0.4719", "> 0.75", "✗  Not met"],
+            ["Clearance", "RMSE", "0.9766", "< 1.00", "✓  Met"],
         ],
         notes=(
             "Clearance remains near target while binding, hERG, and Caco-2 are still below required thresholds. "
-            "Current direction prioritizes targeted classification-task fine-tuning."
+            "Current direction prioritizes split-leakage mitigation and re-benchmarking."
         ),
     )
 
@@ -600,9 +601,9 @@ def build_deck():
         bullets=[
             "Pipeline is functional — training is stable (engineering risk reduced)",
             "3/4 tasks underperform → objective balancing and task-specific adaptation remain limiting",
-            "Latest feature integration and reproducible handoff are in place",
+            "Latest feature integration, quality gate, and threshold governance are in place",
             "Clearance success indicates some signal is captured under current representation",
-            "Next gains likely come from targeted fine-tuning before major architecture changes",
+            "Next gains likely come from split-leakage mitigation before major architecture changes",
         ],
         notes=(
             "Current evidence supports targeted per-task optimization (especially hERG/Caco-2) using the stable shared "
@@ -612,17 +613,16 @@ def build_deck():
 
     # ── 22. Primary Next Action ───────────────────────────────────────────────
     add_content_slide(prs,
-        title="Primary Next Action: Task-Specific Fine-Tuning",
+        title="Primary Next Action: Split-Leakage Mitigation",
         bullets=[
-            "Freeze shared encoder and Neural ODE backbone",
-            "Fine-tune hERG and Caco-2 heads/task losses in focused runs",
-            "Tune decision thresholds and monitor AUROC/F1 jointly",
-            "Compare against latest canonical benchmark table",
+            "Correct data split strategy for leakage-prone tasks (starting with binding)",
+            "Re-run quality gate to confirm zero exact-overlap leakage",
+            "Keep locked production thresholds for consistent classification reporting",
+            "Re-run benchmark and compare deltas vs March 8 snapshot",
             "Promote only reproducible improvements to default configuration",
         ],
         notes=(
-            "Fine-tuning targeted heads is the shortest path to improving classification metrics while preserving the "
-            "stability of the shared representation."
+            "Leakage control is the highest-impact next step to ensure reported gains are trustworthy and comparable."
         ),
     )
 
@@ -696,7 +696,7 @@ def build_deck():
             "Clearance near target; binding/hERG/Caco-2 still below thresholds\n"
             "Next: targeted fine-tuning for hERG/Caco-2 with frozen shared encoder"
         ),
-        date="March 4, 2026",
+        date="March 8, 2026",
         presenter="Subrat",
     )
     set_notes(s, (

@@ -1,9 +1,9 @@
 # Project Status (Canonical)
 
 **Project**: Neural PK-PD Modeling with Physics-Informed Neural ODEs  
-**Last Updated**: March 4, 2026  
+**Last Updated**: March 8, 2026  
 **Owner**: Subrat  
-**Lifecycle State**: Phase 3 active (optimization + benchmarking)
+**Lifecycle State**: Phase 3 active (quality-gated optimization + threshold policy)
 
 ---
 
@@ -13,18 +13,27 @@
 - Phase 2→3 feature handoff is complete via processed artifact:
   - [Coding/data/processed/phase2_multitask_features_with_fingerprints.csv](../Coding/data/processed/phase2_multitask_features_with_fingerprints.csv)
 - Phase 3 model pipeline executes end-to-end with timeline logging and benchmark comparability.
-- Multiple controlled model variants have been benchmarked (deep-head, focal, logits).
+- Multiple controlled model variants have been benchmarked (deep-head, focal/logits, classification fine-tuning variants).
+- Concrete data-quality gate, constrained threshold calibration, and production-threshold auto-policy are implemented and executed.
+- Latest reportable benchmark snapshot refreshed on March 8 using locked production thresholds.
 
 ---
 
 ## Latest Benchmark Snapshot
 
+_Benchmark recency: Final report metrics generated on March 8, 2026 from the locked-threshold reporting cell in [Coding/phase3_neural_ode_model.ipynb](../Coding/phase3_neural_ode_model.ipynb)._ 
+
 | Task | Metric | Latest Result | Target | Status |
 |------|--------|---------------|--------|--------|
-| Binding Affinity | R² | -0.029 | > 0.60 | ✗ |
-| hERG Inhibition | AUROC | 0.482 | > 0.80 | ✗ |
-| Caco-2 Permeability | AUROC | 0.518 | > 0.75 | ✗ |
-| Hepatocyte Clearance | RMSE | 0.969 | < 1.00 | ✓ |
+| Binding Affinity | R² | 0.0019 | > 0.60 | ✗ |
+| hERG Inhibition | AUROC | 0.4836 | > 0.80 | ✗ |
+| Caco-2 Permeability | AUROC | 0.4719 | > 0.75 | ✗ |
+| Hepatocyte Clearance | RMSE | 0.9766 | < 1.00 | ✓ |
+
+### Locked Production Thresholds (Classification)
+
+- hERG: **0.49**
+- Caco-2: **0.50**
 
 ---
 
@@ -38,16 +47,17 @@
 
 ## What Was Completed Recently
 
-1. Fixed missing fingerprint integration in Phase 2 matrix generation.
-2. Migrated Phase 3 to consume processed Phase 2 matrix directly.
-3. Aligned Caco-2 objective/metric reporting with current benchmark track.
-4. Executed and compared multiple controlled training variants.
+1. Implemented concrete Phase 3 data-quality gate checks (NaN/Inf, duplicates, leakage, drift/balance).
+2. Executed task-specific classification fine-tuning variants for hERG/Caco-2.
+3. Added unconstrained and constrained threshold calibration with guardrails.
+4. Added automatic production-threshold policy selection and locked threshold reporting.
+5. Added final report metrics section using locked thresholds only (no re-sweeping, no weight updates).
 
 ---
 
 ## Next Planned Step
 
-- Run task-specific fine-tuning for hERG/Caco-2 with frozen shared encoder and compare AUROC/F1/threshold behavior against current benchmark.
+- Mitigate split leakage in the Phase 3 data-quality gate (starting with binding), rerun benchmarking with the same locked-threshold reporting flow, and compare against the current March 8 snapshot.
 
 ---
 

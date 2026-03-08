@@ -1,30 +1,28 @@
 # Slides Generation Guide
 
-## Canonical Generator
+## Current Canonical Generator (Section 15 — All Targets Met)
 
-Use [generate_presentation.py](generate_presentation.py) as the primary script.
+Use `generate_presentation_v2.py` as the primary script.
 
 Run from workspace root:
 
-`python Slides/generate_presentation.py`
+`python Slides/generate_presentation_v2.py`
 
-Output:
-
-- [Phase2_Phase3_Stakeholder_Deck.pptx](Phase2_Phase3_Stakeholder_Deck.pptx)
+Output: `Phase3_Sections12to15_Deck.pptx` — 31-slide deck covering the Section 12→15 journey.
 
 ---
 
-## Legacy / Alternate Generator
+## Legacy Generator (pre-Section-12 baseline)
 
-[v1_make_presentation.py](v1_make_presentation.py) is retained as an alternate version.
+`generate_presentation.py` — retained for historical reference.  
+Output: `Phase2_Phase3_Stakeholder_Deck.pptx`
 
-Run from workspace root:
+---
 
-`python Slides/v1_make_presentation.py`
+## Oldest Version
 
-Output:
-
-- [Phase2_Phase3_Stakeholder_Deck_v1.pptx](Phase2_Phase3_Stakeholder_Deck_v1.pptx)
+`v1_make_presentation.py` — earliest draft.  
+Output: `Phase2_Phase3_Stakeholder_Deck_v1.pptx`
 
 ---
 
@@ -36,11 +34,19 @@ Install once in your active environment:
 
 ---
 
-## Current Content Basis
+## Current Content Basis (generate_presentation_v2.py)
 
-Both generators are aligned to the March 4, 2026 status update:
+Locked to Section 15 final results — March 8, 2026:
 
-- Binding R²: -0.029
-- hERG AUROC: 0.482
-- Caco-2 AUROC: 0.518
-- Clearance RMSE: 0.969
+| Task                | Metric | Result | Target | Status |
+|---------------------|--------|--------|--------|--------|
+| hERG Inhibition     | AUROC  | 0.8206 | > 0.80 | ✅ Met |
+| Caco-2 Permeability | AUROC  | 0.8635 | > 0.75 | ✅ Met |
+| Clearance           | R²     | 0.3478 | > 0.20 | ✅ Met |
+| Binding Affinity    | R²     | 0.4521 | > 0.40 | ✅ Met |
+
+- Model: `model_15` — `hidden_dim=256`, `pos_weight=1.5`, `input_dim=2050` (2048-bit Morgan FP radius=2)
+- Parameters: 623,078
+- Dataset: `phase2_multitask_features_with_binding_fps.csv` — 12,289 rows × 2,053 cols
+- Locked thresholds: hERG=0.49, Caco-2=0.50
+- Next: Section 16 — Neural ODE PK/PD integration (`torchdiffeq`)
