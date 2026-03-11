@@ -1,3 +1,78 @@
+## Sections 21-23: Clinical Decision Support — Scenario Analysis, Sensitivity Analysis, Dose Optimization ✅
+
+### Date
+March 11, 2026
+
+### Objective
+Implement clinical decision support tools to evaluate dosing strategies, identify critical parameters, and optimize dose regimens balancing efficacy vs safety.
+
+### Steps Completed
+
+1. **Section 21: Scenario Analysis** (cells 109-112)
+   - Evaluated 4 dosing scenarios: baseline, low_dose, high_dose, high_iiv
+   - Each scenario assessed across 11 PK-PD-safety metrics
+   - Risk-benefit scatter plot: AUC_E vs composite safety score
+   - **Key finding**: 0/4 scenarios passed all safety constraints (hERG, Caco-2, Cmax)
+   - Outputs: s21_risk_benefit.png (51KB), s21_scenario_results.csv (493B)
+
+2. **Section 22: Sensitivity Analysis** (cells 113-116)
+   - One-at-time (OAT) analysis of 9 parameters: CL, V1, V2, Q, ke0, EC50, Emax, gamma, DOSE
+   - Perturbation range: ±20% around baseline values
+   - 27 parameter-output combinations analyzed (3 outputs × 9 parameters)
+   - Tornado plot visualization (3-panel: AUC_E, Cmax, AUC_C1)
+   - **Key findings**:
+     * AUC_E most sensitive to Emax (sensitivity index = 1.000)
+     * Cmax most sensitive to DOSE (sensitivity index = 1.000)
+     * AUC_C1 most sensitive to CL (sensitivity index = -1.015)
+   - Outputs: s22_tornado_plot.png (52KB), s22_sensitivity_results.csv (3.0KB)
+
+3. **Section 23: Dose Optimization** (cells 117-120)
+   - Multi-objective optimization: maximize efficacy, minimize hERG/Caco-2 risks
+   - Grid search: 300 points (20 dose values × 15 CV values)
+   - Global optimization: differential evolution (100 iterations, population=15)
+   - 4-panel heatmap: AUC_E surface, hERG risk, Caco-2 risk, composite score
+   - **Results**:
+     * Optimal dose: 200 mg (upper boundary)
+     * Optimal CV IIV: 0.15 (minimum variability)
+     * Efficacy: AUC_E = 30.85 (2.3× baseline improvement)
+     * Trade-off: 100% hERG risk, 70% Caco-2 risk → constraints violated
+   - Outputs: s23_dose_optimization.png (151KB), s23_grid_search_results.csv (44KB), s23_optimal_regimen.csv (238B)
+
+### Clinical Insights
+
+**Scenario Analysis**: No simple dosing strategy meets all safety criteria simultaneously
+
+**Sensitivity Analysis**: 
+- Efficacy controlled by PD parameter (Emax), not PK
+- Safety (Cmax) has linear dose relationship
+- Exposure inversely proportional to clearance
+
+**Dose Optimization**:
+- Single-objective optimization insufficient
+- Fundamental efficacy-safety trade-off discovered
+- Maximum efficacy at boundary violates both hERG and Caco-2 constraints
+- Indicates need for Pareto frontier analysis to find compromise solutions
+
+### Artifacts Created
+- PNG visualizations: s21_risk_benefit.png, s22_tornado_plot.png, s23_dose_optimization.png
+- CSV data files: s21_scenario_results.csv, s22_sensitivity_results.csv, s23_grid_search_results.csv, s23_optimal_regimen.csv
+- Calibration dicts: calibration_21, calibration_22, calibration_23
+
+### Next Steps
+**Recommended**: Section 24 — Pareto Frontier Analysis
+- Map multi-objective trade-off surface
+- Identify Pareto-optimal solutions (non-dominated solutions)
+- Find balanced dose regimens that compromise between efficacy and safety
+- Provide clinical decision makers with trade-off curves
+
+### Technical Notes
+- All sections executed successfully in notebook kernel
+- Used scipy.optimize.differential_evolution for global optimization
+- Power-law scaling relationships for ADME-dose interactions
+- Constrained optimization with explicit safety thresholds
+
+---
+
 ## Section 15: hERG AUROC Push — ALL 4 Targets Met ✅
 
 ### Date

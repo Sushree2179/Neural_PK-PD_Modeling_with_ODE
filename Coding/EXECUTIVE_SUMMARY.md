@@ -1,12 +1,120 @@
 # Neural PK-PD Modeling: Executive Summary
 
 **Project**: Physics-Informed Neural ODE for Pharmacokinetic-Pharmacodynamic Modeling  
-**Date**: Current (post March 8, 2026)  
-**Status**: 🏆 Phase 3 Section 15 Complete | **ALL 4 performance targets met** — hERG 0.82, Caco-2 0.86, Clearance R²=0.35, Binding R²=0.45
+**Date**: Current (post March 11, 2026)  
+**Status**: 🎯 Phase 3 Sections 21-23 Complete | **Clinical Decision Support Tools** — Scenario Analysis, Sensitivity Analysis, Dose Optimization
 
 ---
 
-## 🏆 Section 15 Addendum (Latest — all targets met)
+## 🎯 Sections 21-23 Addendum (March 11, 2026 — Clinical Decision Support)
+
+### Section 21: Scenario Analysis (cells 109-112)
+**Purpose**: Evaluate alternative dosing strategies with risk-benefit trade-offs
+
+**Scenarios Tested**:
+1. Baseline: 100mg dose, 30% CV IIV
+2. Low dose: 50mg dose, 20% CV IIV
+3. High dose: 150mg dose, 35% CV IIV
+4. High variability: 100mg dose, 45% CV IIV
+
+**Results Summary**:
+- All scenarios evaluated across 11 metrics (PK, PD, safety)
+- Risk-benefit scatter plot: AUC_E vs composite safety score
+- **Finding**: 0/4 scenarios passed all safety constraints
+  - All exceeded hERG risk threshold (>50% cardiotoxicity probability)
+  - Most exceeded Caco-2 permeability targets
+  - Cmax limits maintained across scenarios
+
+**Outputs**:
+- Visualization: `data/raw/s21_risk_benefit.png` (51 KB)
+- Data: `data/raw/s21_scenario_results.csv` (493 B, 4×11 table)
+- Calibration dict: `calibration_21`
+
+### Section 22: Sensitivity Analysis (cells 113-116)
+**Purpose**: Identify critical parameters driving PK-PD variability
+
+**Method**: One-at-time (OAT) sensitivity analysis
+- **9 parameters**: CL, V1, V2, Q, ke0, EC50, Emax, gamma, DOSE
+- **Perturbation**: ±20% around baseline values
+- **Outputs analyzed**: AUC_E (efficacy), Cmax, AUC_C1 (exposure)
+
+**Key Findings**:
+| Output | Most Sensitive To | Sensitivity Index |
+|--------|-------------------|-------------------|
+| AUC_E (efficacy) | Emax | 1.000 |
+| Cmax (peak) | DOSE | 1.000 |
+| AUC_C1 (exposure) | CL (clearance) | -1.015 |
+
+**Interpretation**:
+- **Efficacy** dominated by pharmacodynamic parameter (Emax)
+- **Safety** (Cmax) linearly proportional to dose
+- **Exposure** inversely related to clearance (faster clearance = lower exposure)
+
+**Outputs**:
+- Visualization: `data/raw/s22_tornado_plot.png` (52 KB, 3-panel)
+- Data: `data/raw/s22_sensitivity_results.csv` (3.0 KB, 27 combinations)
+- Calibration dict: `calibration_22` with baseline metrics
+
+### Section 23: Dose Optimization (cells 117-120)
+**Purpose**: Find optimal dose and IIV that maximize efficacy while minimizing toxicity
+
+**Optimization Setup**:
+- **Decision variables**: Dose (50-200 mg), CV IIV (0.15-0.50)
+- **Objectives**: Maximize AUC_E, minimize hERG risk, minimize Caco-2 risk
+- **Constraints**: Cmax < 150 mg/L, efficacy > 10, safety rates < 50%
+
+**Method**:
+1. **Grid search**: 300 points (20 dose × 15 CV combinations)
+2. **Global optimization**: Differential evolution (100 iterations, population=15)
+
+**Results**:
+| Parameter | Baseline | Optimized | Improvement |
+|-----------|----------|-----------|-------------|
+| Dose | 100 mg | **200 mg** | +100% |
+| CV IIV | 0.30 | **0.15** | -50% |
+| AUC_E | 13.4 | **30.9** | +130% |
+| hERG risk | 50% | **100%** | +50% ⚠️ |
+| Caco-2 risk | 35% | **70%** | +35% ⚠️ |
+
+**Trade-off Discovery**:
+- Optimizer pushed to **upper dose boundary** (200 mg) for maximum efficacy
+- Reduced variability (**CV=0.15**) for consistent response
+- **Critical finding**: Maximum efficacy violates both safety constraints
+  - 100% hERG cardiotoxicity risk (target: <50%)
+  - 70% Caco-2 permeability issues (target: <50%)
+- Indicates fundamental **efficacy-safety trade-off** requiring multi-objective balancing
+
+**Outputs**:
+- Visualization: `data/raw/s23_dose_optimization.png` (151 KB, 4-panel heatmap)
+- Grid data: `data/raw/s23_grid_search_results.csv` (44 KB, 300 points)
+- Optimal regimen: `data/raw/s23_optimal_regimen.csv` (238 B)
+- Calibration dict: `calibration_23` with optimization results
+
+### Clinical Implications
+
+**From Section 21**: No tested regimen meets all safety criteria → need alternative strategies
+
+**From Section 22**: 
+- Focus on Emax modulation for efficacy improvements
+- Clearance is critical for exposure control
+- Dose adjustments have direct linear impact on Cmax
+
+**From Section 23**: 
+- Simple single-objective optimization insufficient
+- Must explicitly balance efficacy vs toxicity trade-offs
+- Pareto frontier analysis needed to find compromise solutions
+
+### Next Steps
+
+**Recommended**: Section 24 — Pareto Frontier Analysis
+- Map the multi-objective trade-off surface
+- Identify Pareto-optimal solutions (no improvement in one objective without worsening another)
+- Visualize compromise curves for clinical decision-making
+- Find dose regimens that balance efficacy and safety within acceptable ranges
+
+---
+
+## 🏆 Section 15 Addendum (March 8, 2026 — ADME Targets Met)
 
 ### What changed since Section 14
 - Ran pos_weight grid search {0.5, 1.0, 1.5, 2.0, 3.0} with `hidden_dim=256` (60 epochs each).
