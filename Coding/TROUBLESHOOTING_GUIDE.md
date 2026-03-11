@@ -6,9 +6,7 @@
 
 ## 📚 Navigation
 
-- **[← Master Index](../MASTER_INDEX.md)** - All documentation organized by date
-- **[Quick Summary →](EXECUTIVE_SUMMARY.md)** - One-page overview
-- **[Complete Docs →](PROJECT_SUMMARY.md)** - Full project documentation
+- **[← Project Summary](../Documentation/PROJECT_SUMMARY.md)** - Complete project documentation
 - **[Notebook (EDA) →](phase1_2_data_exploration.ipynb)** - Phase 1–2 working code
 - **[Notebook (Neural ODE) →](phase3_neural_ode_model.ipynb)** - Phase 3 model code
 
@@ -638,6 +636,6 @@ python -m ipykernel install --user --name=venv_pkpd --display-name="venv_pkpd (P
 
 **Historical Update Stamp**: February 24, 2026 (Phase 3 issues added)
 For current project state and latest benchmark context, use:
-[Documentation/PROJECT_STATUS.md](../Documentation/PROJECT_STATUS.md)
+[Documentation/PROJECT_SUMMARY.md](../Documentation/PROJECT_SUMMARY.md)
 
 ---

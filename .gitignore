@@ -1,0 +1,30 @@
+# Virtual environments
+.venv/
+Coding/venv_pkpd/
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+*.code-workspace
+
+# Model checkpoints (large binary files)
+*.pt
+
+# Generated images (reproducible from notebooks)
+*.png
+
+# Section outputs (reproducible from notebook re-execution)
+Coding/data/outputs/
+
+# Processed data (reproducible from pipeline)
+Coding/data/processed/

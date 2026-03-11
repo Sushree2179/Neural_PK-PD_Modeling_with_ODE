@@ -291,7 +291,7 @@ SLIDES = [
         bullets=[
             "Notebook: Coding/phase1_2_data_exploration.ipynb (data inspection + feature engineering)",
             "Processed artifact: Coding/data/processed/phase2_multitask_features_with_fingerprints.csv",
-            "Docs: Coding/PROJECT_SUMMARY.md (main), Coding/EXECUTIVE_SUMMARY.md, Coding/TROUBLESHOOTING_GUIDE.md",
+            "Docs: Documentation/PROJECT_SUMMARY.md (main), Coding/TROUBLESHOOTING_GUIDE.md",
         ],
         notes=(
             "These artifacts document the full Phase 2 pipeline. Reviewers can trace the feature engineering choices "
