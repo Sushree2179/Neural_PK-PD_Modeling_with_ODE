@@ -50,3 +50,5 @@ Locked to Section 15 final results — March 8, 2026:
 - Dataset: `phase2_multitask_features_with_binding_fps.csv` — 12,289 rows × 2,053 cols
 - Locked thresholds: hERG=0.49, Caco-2=0.50
 - Next: Section 16 — Neural ODE PK/PD integration (`torchdiffeq`)
+
+- https://teams.microsoft.com/l/message/19:1ca21585-37d5-465c-bfd3-e2a5024dfdce_c5e61a9c-c484-4404-a8db-a24eea1cfe99@unq.gbl.spaces/1772542642575?context=%7B%22contextType%22%3A%22chat%22%7D
