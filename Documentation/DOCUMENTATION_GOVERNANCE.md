@@ -30,7 +30,8 @@
 
 ## Historical Document Rules
 
-- All dataset and integration documentation is consolidated in [MASTER_DATASET_REFERENCE.md](../Coding/MASTER_DATASET_REFERENCE.md).
+- All dataset and integration documentation is consolidated in [MASTER_DATASET_REFERENCE.md](MASTER_DATASET_REFERENCE.md).
+- Phase 3 is split into 4 notebooks: `phase3a` (features) → `phase3b` (model) → `phase3c` (fine-tuning) → `phase3d` (experiments). The original monolithic `phase3_neural_ode_model.ipynb` is preserved as an archive.
 - Do not replace old historical metrics; annotate them as snapshots when needed.
 
 ---

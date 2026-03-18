@@ -5,7 +5,8 @@
 **Date**: Current (post March 11, 2026)  
 **Status**: 🎯 Phase 3 Sections 21-23 Complete | **Clinical Decision Support Tools**  
 **Lifecycle State**: Phase 3 active — Sections 21-23 Complete (Scenario Analysis, Sensitivity Analysis, Dose Optimization)  
-**Next Step**: Section 24 — Pareto Frontier Analysis
+**Next Step**: Section 24 — Pareto Frontier Analysis  
+**Notebook Layout**: Phase 3 split into 4 notebooks (3a → 3b → 3c → 3d) with artifact bridging
 
 ---
 
@@ -14,7 +15,11 @@
 - **[Troubleshooting →](../Coding/TROUBLESHOOTING_GUIDE.md)** - Problem solving guide
 - **[Dataset Reference →](MASTER_DATASET_REFERENCE.md)** - All 5 data sources
 - **[Notebook (Phase 1–2) →](../Coding/phase1_2_data_exploration.ipynb)** - EDA & feature engineering
-- **[Notebook (Phase 3) →](../Coding/phase3_neural_ode_model.ipynb)** - Neural ODE model
+- **[Notebook (Phase 3A) →](../Coding/phase3a_feature_engineering.ipynb)** - Feature engineering (18 cells)
+- **[Notebook (Phase 3B) →](../Coding/phase3b_model_design.ipynb)** - Model architecture & training (30 cells)
+- **[Notebook (Phase 3C) →](../Coding/phase3c_finetuning.ipynb)** - Fine-tuning & calibration (28 cells)
+- **[Notebook (Phase 3D) →](../Coding/phase3d_experiments.ipynb)** - Advanced experiments (68 cells)
+- **[Notebook (Phase 3 — original) →](../Coding/phase3_neural_ode_model.ipynb)** - Monolithic archive (121 cells, preserved)
 - **[Documentation Governance →](DOCUMENTATION_GOVERNANCE.md)** - Update protocol
 - **[Slides Guide →](../Slides/README.md)** - Presentation generation
 
@@ -29,7 +34,7 @@
 | **Features (current model input)** | 258 (2 physico + 256 fingerprint) |
 | **Datasets Integrated** | 5 (ChEMBL, TDC, ToxCast, PubChem, PK-DB) |
 | **Total Data Volume** | 347,896 records (~84 MB) |
-| **Notebook Cells** | Phase 1–2: 29; Phase 3: 120 |
+| **Notebook Cells** | Phase 1–2: 29; Phase 3: 144 (3a:18 + 3b:30 + 3c:28 + 3d:68) |
 | **Model Parameters** | 623,078 (model_15; hidden_dim=256) |
 | **Locked Thresholds** | hERG: 0.49, Caco-2: 0.50 |
 | **Project Completion** | ~75% (Phase 3 active — next: Section 24) |
@@ -52,7 +57,11 @@
 1. **This document** — Start with [At A Glance](#-at-a-glance) for metrics, then skim latest work
 2. **[TROUBLESHOOTING_GUIDE.md](../Coding/TROUBLESHOOTING_GUIDE.md)** — Reference when encountering errors
 3. **[phase1_2_data_exploration.ipynb](../Coding/phase1_2_data_exploration.ipynb)** — Phase 1–2 EDA & feature engineering (29 cells)
-4. **[phase3_neural_ode_model.ipynb](../Coding/phase3_neural_ode_model.ipynb)** — Neural ODE model (120 cells, active)
+4. **Phase 3 Notebooks** (run in order):
+   - **[phase3a_feature_engineering.ipynb](../Coding/phase3a_feature_engineering.ipynb)** — Feature engineering & data prep (18 cells)
+   - **[phase3b_model_design.ipynb](../Coding/phase3b_model_design.ipynb)** — Architecture & initial training (30 cells)
+   - **[phase3c_finetuning.ipynb](../Coding/phase3c_finetuning.ipynb)** — Fine-tuning, calibration & leakage mitigation (28 cells)
+   - **[phase3d_experiments.ipynb](../Coding/phase3d_experiments.ipynb)** — Advanced experiments: GNN, Neural ODE PK/PD, fusion (68 cells)
 5. **[DOCUMENTATION_GOVERNANCE.md](DOCUMENTATION_GOVERNANCE.md)** — How to keep docs in sync
 6. **[Slides/README.md](../Slides/README.md)** — Canonical PPTX generation commands
 
@@ -62,13 +71,13 @@
 This document (overview) → [MASTER_DATASET_REFERENCE.md](MASTER_DATASET_REFERENCE.md) → [phase1_2_data_exploration.ipynb](../Coding/phase1_2_data_exploration.ipynb) → [TROUBLESHOOTING_GUIDE.md](../Coding/TROUBLESHOOTING_GUIDE.md)
 
 **👨‍🔬 Researchers** (~4 hours):
-This document (full) → [MASTER_DATASET_REFERENCE.md](MASTER_DATASET_REFERENCE.md) → Both notebooks
+This document (full) → [MASTER_DATASET_REFERENCE.md](MASTER_DATASET_REFERENCE.md) → Phase 1–2 notebook → Phase 3 notebooks (3a → 3b → 3c → 3d)
 
 **👨‍💼 Stakeholders/Advisors** (~20 min):
 [At A Glance](#-at-a-glance) → [Sections 21-23](#-sections-21-23-clinical-decision-support-march-11-2026) → [Next Planned Steps](#next-planned-steps)
 
 **👨‍💻 Developers** (~1 hour):
-[Phase 3 section](#-phase-3-neural-ode-model-development) → [TROUBLESHOOTING_GUIDE.md](../Coding/TROUBLESHOOTING_GUIDE.md) → [phase3_neural_ode_model.ipynb](../Coding/phase3_neural_ode_model.ipynb) → Check variables: `X_normalized`, `y_targets`, `preprocessing_objects`
+[Phase 3 section](#-phase-3-neural-ode-model-development) → [TROUBLESHOOTING_GUIDE.md](../Coding/TROUBLESHOOTING_GUIDE.md) → [phase3a](../Coding/phase3a_feature_engineering.ipynb) (features) → [phase3b](../Coding/phase3b_model_design.ipynb) (model) → [phase3c](../Coding/phase3c_finetuning.ipynb) (fine-tuning) → [phase3d](../Coding/phase3d_experiments.ipynb) (experiments)
 
 ---
 
@@ -81,13 +90,108 @@ This document (full) → [MASTER_DATASET_REFERENCE.md](MASTER_DATASET_REFERENCE.
 | **Data sources** | [MASTER_DATASET_REFERENCE.md](MASTER_DATASET_REFERENCE.md) |
 | **Feature engineering** | [Phase 2](#-phase-2-feature-engineering-completed-) below, [phase1_2_data_exploration.ipynb](../Coding/phase1_2_data_exploration.ipynb) cells 16-28 |
 | **Visualizations** | [phase1_2_data_exploration.ipynb](../Coding/phase1_2_data_exploration.ipynb) cells 9-11, [Phase 1](#-phase-1-data-exploration-completed-) below |
-| **Neural ODE model** | [phase3_neural_ode_model.ipynb](../Coding/phase3_neural_ode_model.ipynb) cells 17-35 |
-| **PK curve generation** | [phase3_neural_ode_model.ipynb](../Coding/phase3_neural_ode_model.ipynb) cell 33, `PKODEFunc` |
-| **Multi-task learning** | [Phase 2](#-phase-2-feature-engineering-completed-) below, [phase3_neural_ode_model.ipynb](../Coding/phase3_neural_ode_model.ipynb) |
+| **Neural ODE model** | [phase3b_model_design.ipynb](../Coding/phase3b_model_design.ipynb) (architecture, training) |
+| **PK curve generation** | [phase3b_model_design.ipynb](../Coding/phase3b_model_design.ipynb) `PKODEFunc`, [phase3d_experiments.ipynb](../Coding/phase3d_experiments.ipynb) §16 |
+| **Multi-task learning** | [Phase 2](#-phase-2-feature-engineering-completed-) below, [phase3a](../Coding/phase3a_feature_engineering.ipynb) → [phase3b](../Coding/phase3b_model_design.ipynb) |
 | **ChEMBL / ToxCast / ADMET / PK data** | [MASTER_DATASET_REFERENCE.md](MASTER_DATASET_REFERENCE.md) §2.2-2.5 |
 | **Integration strategy** | [MASTER_DATASET_REFERENCE.md](MASTER_DATASET_REFERENCE.md) §5 |
 | **Known issues & RDKit** | [Issues & Resolutions](#-issues-encountered--resolutions) below, [TROUBLESHOOTING_GUIDE.md](../Coding/TROUBLESHOOTING_GUIDE.md) |
 | **Next steps** | [Next Planned Steps](#next-planned-steps) below |
+
+---
+
+## Section 12: Clean-Split Baseline (March 8, 2026)
+
+### What was completed
+1. Phase 2 fingerprint component implemented and exported to `phase2_multitask_features_with_fingerprints.csv`
+2. Phase 3 refactored to consume Phase 2 processed features directly (258 dimensions: 2 physico + 256 FPs)
+3. Caco-2 aligned to classification objective; AUROC reporting added
+4. Controlled benchmark variants: deep-head + reweighting, focal loss, logits-based classification
+5. Data-quality gate: NaN/Inf, duplicates, split leakage, drift/balance checks
+6. Constrained threshold calibration + production threshold policy
+7. Locked-threshold final report (no re-sweep)
+
+### Section 12 benchmark snapshot
+
+| Task | Metric | Result | Target | Status |
+|------|--------|--------|--------|--------|
+| Binding | R² | 0.0019 | > 0.60 | ✗ |
+| hERG | AUROC | 0.4836 | > 0.80 | ✗ |
+| Caco-2 | AUROC | 0.4719 | > 0.75 | ✗ |
+| Clearance | RMSE | 0.9766 | < 1.00 | ✓ |
+
+**Locked production thresholds**: hERG: **0.49**, Caco-2: **0.50**
+
+---
+
+## Section 13: 2048-bit Real-SMILES Upgrade
+
+### What was completed
+- **Real SMILES downloaded** from ChEMBL REST API: 4,916 hERG / 1,855 Caco-2 / 2,127 clearance
+- **Phase-2 matrix rebuilt** with 2,048-bit Morgan FPs: `phase2_multitask_features_with_fingerprints.csv` — 10,879 × 2,053
+- **`model_2048` trained** (input_dim=2,050) — 41 epochs, best val_loss=2.144
+- All Section-12 split-leakage mitigations carried forward
+
+### Section 13 test results (locked thresholds: hERG=0.49, Caco-2=0.50)
+
+| Task | Metric | Sec-12 | **Sec-13** | Δ |
+|------|--------|--------|------------|---|
+| hERG | AUROC | 0.4835 | **0.6989** | +0.2154 ↑ |
+| hERG | F1@0.49 | 0.2456 | **0.8684** | +0.6228 ↑ |
+| Caco-2 | AUROC | 0.4211 | **0.8550** | +0.4339 ↑ |
+| Clearance | R² | 0.0037 | **0.2115** | +0.2078 ↑ |
+| Binding | R² | −0.0070 | −0.0079 | ≈0 (zero synth FPs) |
+
+---
+
+## Section 14: Real Binding SMILES Integration
+
+### What was completed
+- **Root cause confirmed**: `chembl_binding_affinity.csv` had synthetic compound IDs (CHEMBL1000000+) → zero Morgan FPs → R²(binding)=−0.0079 in Section 13
+- **Real binding SMILES downloaded** via `data_download_pipeline.ipynb § 5B` — 3,410 compounds from 8 ChEMBL protein targets (D2, A2a, EGFR, CDK2, β2AR, AR, GR, 5-HT2A), pChEMBL 4.00–10.52
+- **Phase-2 CSV rebuilt** with real binding FPs: `phase2_multitask_features_with_binding_fps.csv` — 12,289 × 2,053, all 4 tasks 100% nonzero FPs
+- After dedup: binding=3,281, hERG=4,746, Caco-2=1,803, clearance=2,077
+- **`model_bind` trained** — 46 epochs, best val_loss=2.005
+
+### Section 14 test results (locked thresholds: hERG=0.49, Caco-2=0.50)
+
+| Task | Metric | Sec-12 | Sec-13 | **Sec-14** | Δ13→14 |
+|------|--------|--------|--------|------------|--------|
+| hERG | AUROC | 0.4835 | 0.6989 | **0.7738** | +0.0749 ↑ |
+| Caco-2 | AUROC | 0.4211 | 0.8550 | **0.8713** | +0.0163 ↑ |
+| Clearance | R² | 0.0037 | 0.2115 | **0.3013** | +0.0899 ↑ |
+| Binding | R² | −0.0070 | −0.0079 | **+0.4306** | +0.4385 ↑ ★ |
+
+---
+
+## 🏆 Section 15: All ADME Targets Met (March 8, 2026)
+
+### What was completed
+- pos_weight grid search {0.5, 1.0, 1.5, 2.0, 3.0} with `hidden_dim=256` (60 epochs each)
+- Best: `pos_weight=1.5` → val hERG AUROC 0.7658
+- Full `model_15` (623,078 params): hidden_dim=256, pos_weight=1.5, patience=60 → 68 epochs (best at epoch 23)
+
+### Section 15 test results (locked thresholds: hERG=0.49, Caco-2=0.50)
+
+| Task | Metric | Sec-14 | **Sec-15** | Δ |
+|------|--------|--------|------------|---|
+| hERG | AUROC | 0.7738 | **0.8206** | +0.0468 ↑ ★ |
+| hERG | F1@0.49 | 0.8369 | **0.8739** | +0.0370 ↑ |
+| hERG | Accuracy | 0.7546 | **0.7980** | +0.0435 ↑ |
+| Caco-2 | AUROC | 0.8713 | **0.8635** | −0.0078 |
+| Caco-2 | Accuracy | 0.7860 | **0.8007** | +0.0148 ↑ |
+| Clearance | R² | 0.3013 | **0.3478** | +0.0464 ↑ |
+| Binding | R² | 0.4306 | **0.4521** | +0.0215 ↑ |
+
+### Path forward from Section 15
+
+All ADME property targets met. The project moved to its core thesis contribution:
+1. **Section 16** — Neural ODE PK/PD Integration: `model_15`'s predicted ADME properties as 2-compartment ODE parameters
+   - $\frac{dC_c}{dt} = -\frac{CL}{V_c}C_c - k_{12}C_c + k_{21}C_t$ (PK layer, solved with `torchdiffeq.odeint`)
+   - $E(t) = E_{\max} \cdot \frac{C(t)^n}{EC_{50}^n + C(t)^n}$ (PD layer driven by binding affinity)
+   - Located in [phase3d_experiments.ipynb](../Coding/phase3d_experiments.ipynb) §16
+2. **Section 17** — GNN encoder: replace Morgan FPs with graph neural network ([phase3d](../Coding/phase3d_experiments.ipynb) §17)
+3. **Section 18** — Calibration: Platt/temperature scaling ([phase3d](../Coding/phase3d_experiments.ipynb) §18)
 
 ---
 
@@ -188,100 +292,6 @@ This document (full) → [MASTER_DATASET_REFERENCE.md](MASTER_DATASET_REFERENCE.
 - Simple single-objective optimization insufficient
 - Must explicitly balance efficacy vs toxicity trade-offs
 - Pareto frontier analysis needed to find compromise solutions
-
----
-
-## 🏆 Section 15: All ADME Targets Met (March 8, 2026)
-
-### What was completed
-- pos_weight grid search {0.5, 1.0, 1.5, 2.0, 3.0} with `hidden_dim=256` (60 epochs each)
-- Best: `pos_weight=1.5` → val hERG AUROC 0.7658
-- Full `model_15` (623,078 params): hidden_dim=256, pos_weight=1.5, patience=60 → 68 epochs (best at epoch 23)
-
-### Section 15 test results (locked thresholds: hERG=0.49, Caco-2=0.50)
-
-| Task | Metric | Sec-14 | **Sec-15** | Δ |
-|------|--------|--------|------------|---|
-| hERG | AUROC | 0.7738 | **0.8206** | +0.0468 ↑ ★ |
-| hERG | F1@0.49 | 0.8369 | **0.8739** | +0.0370 ↑ |
-| hERG | Accuracy | 0.7546 | **0.7980** | +0.0435 ↑ |
-| Caco-2 | AUROC | 0.8713 | **0.8635** | −0.0078 |
-| Caco-2 | Accuracy | 0.7860 | **0.8007** | +0.0148 ↑ |
-| Clearance | R² | 0.3013 | **0.3478** | +0.0464 ↑ |
-| Binding | R² | 0.4306 | **0.4521** | +0.0215 ↑ |
-
-### Path forward from Section 15
-
-All ADME property targets met. The project moved to its core thesis contribution:
-1. **Section 16** — Neural ODE PK/PD Integration: `model_15`'s predicted ADME properties as 2-compartment ODE parameters
-   - $\frac{dC_c}{dt} = -\frac{CL}{V_c}C_c - k_{12}C_c + k_{21}C_t$ (PK layer, solved with `torchdiffeq.odeint`)
-   - $E(t) = E_{\max} \cdot \frac{C(t)^n}{EC_{50}^n + C(t)^n}$ (PD layer driven by binding affinity)
-2. **Section 17** — GNN encoder: replace Morgan FPs with graph neural network
-3. **Section 18** — Calibration: Platt/temperature scaling
-
----
-
-## Section 14: Real Binding SMILES Integration
-
-### What was completed
-- **Root cause confirmed**: `chembl_binding_affinity.csv` had synthetic compound IDs (CHEMBL1000000+) → zero Morgan FPs → R²(binding)=−0.0079 in Section 13
-- **Real binding SMILES downloaded** via `data_download_pipeline.ipynb § 5B` — 3,410 compounds from 8 ChEMBL protein targets (D2, A2a, EGFR, CDK2, β2AR, AR, GR, 5-HT2A), pChEMBL 4.00–10.52
-- **Phase-2 CSV rebuilt** with real binding FPs: `phase2_multitask_features_with_binding_fps.csv` — 12,289 × 2,053, all 4 tasks 100% nonzero FPs
-- After dedup: binding=3,281, hERG=4,746, Caco-2=1,803, clearance=2,077
-- **`model_bind` trained** — 46 epochs, best val_loss=2.005
-
-### Section 14 test results (locked thresholds: hERG=0.49, Caco-2=0.50)
-
-| Task | Metric | Sec-12 | Sec-13 | **Sec-14** | Δ13→14 |
-|------|--------|--------|--------|------------|--------|
-| hERG | AUROC | 0.4835 | 0.6989 | **0.7738** | +0.0749 ↑ |
-| Caco-2 | AUROC | 0.4211 | 0.8550 | **0.8713** | +0.0163 ↑ |
-| Clearance | R² | 0.0037 | 0.2115 | **0.3013** | +0.0899 ↑ |
-| Binding | R² | −0.0070 | −0.0079 | **+0.4306** | +0.4385 ↑ ★ |
-
----
-
-## Section 13: 2048-bit Real-SMILES Upgrade
-
-### What was completed
-- **Real SMILES downloaded** from ChEMBL REST API: 4,916 hERG / 1,855 Caco-2 / 2,127 clearance
-- **Phase-2 matrix rebuilt** with 2,048-bit Morgan FPs: `phase2_multitask_features_with_fingerprints.csv` — 10,879 × 2,053
-- **`model_2048` trained** (input_dim=2,050) — 41 epochs, best val_loss=2.144
-- All Section-12 split-leakage mitigations carried forward
-
-### Section 13 test results (locked thresholds: hERG=0.49, Caco-2=0.50)
-
-| Task | Metric | Sec-12 | **Sec-13** | Δ |
-|------|--------|--------|------------|---|
-| hERG | AUROC | 0.4835 | **0.6989** | +0.2154 ↑ |
-| hERG | F1@0.49 | 0.2456 | **0.8684** | +0.6228 ↑ |
-| Caco-2 | AUROC | 0.4211 | **0.8550** | +0.4339 ↑ |
-| Clearance | R² | 0.0037 | **0.2115** | +0.2078 ↑ |
-| Binding | R² | −0.0070 | −0.0079 | ≈0 (zero synth FPs) |
-
----
-
-## Section 12: Clean-Split Baseline (March 8, 2026)
-
-### What was completed
-1. Phase 2 fingerprint component implemented and exported to `phase2_multitask_features_with_fingerprints.csv`
-2. Phase 3 refactored to consume Phase 2 processed features directly (258 dimensions: 2 physico + 256 FPs)
-3. Caco-2 aligned to classification objective; AUROC reporting added
-4. Controlled benchmark variants: deep-head + reweighting, focal loss, logits-based classification
-5. Data-quality gate: NaN/Inf, duplicates, split leakage, drift/balance checks
-6. Constrained threshold calibration + production threshold policy
-7. Locked-threshold final report (no re-sweep)
-
-### Section 12 benchmark snapshot
-
-| Task | Metric | Result | Target | Status |
-|------|--------|--------|--------|--------|
-| Binding | R² | 0.0019 | > 0.60 | ✗ |
-| hERG | AUROC | 0.4836 | > 0.80 | ✗ |
-| Caco-2 | AUROC | 0.4719 | > 0.75 | ✗ |
-| Clearance | RMSE | 0.9766 | < 1.00 | ✓ |
-
-**Locked production thresholds**: hERG: **0.49**, Caco-2: **0.50**
 
 ---
 
@@ -459,33 +469,54 @@ Created unified dataset with:
 
 ### Notebook Structure
 
-**[phase3_neural_ode_model.ipynb](../Coding/phase3_neural_ode_model.ipynb)** — 120 cells, Sections 1-23 executed:
+Phase 3 is split into **4 notebooks** connected via artifact bridging (pickle/JSON/parquet files in `data/processed/phase3{a,b,c}_artifacts/`). Run them in order: **3a → 3b → 3c → 3d**.
 
-| Cells | Content |
-|-------|---------|
-| 1-2 | Project header and setup |
-| 3 | Imports (torch, torchdiffeq, rdkit, sklearn, scipy) |
-| 4-5 | Configuration dict (input_dim from processed features; hidden_dim=128, latent_dim=64) |
-| 6-8 | Data loading — 4 tasks, 13,030 total samples |
-| 9-10 | Feature engineering helper (`prepare_task_data()`) |
-| 11 | Task heads and architecture modules |
-| 12 | Feature-space setup from Phase 2 processed matrix (2 physico + 256 FPs) |
-| 13 | Per-task DataLoaders with target normalization |
-| 15 | `MultiTaskDataset` class |
-| 17 | `SharedEncoder` (LayerNorm, 128→64 latent) |
-| 19 | `RegressionHead` and `ClassificationHead` |
-| 21 | `PKODEFunc` (Neural ODE dynamics) |
-| 23 | `MultiTaskPKPDModel` (4 tasks unified) |
-| 24 | Model instantiation (~73,190 trainable params in current variant) |
-| 26 | `MultiTaskLoss` (MSE + weighted BCE, pos_weight=2.5) |
-| 28-30 | Training pipeline — interleaved, early stopping, gradient clipping |
-| 32-33 | Visualization (`plot_training_history`, `plot_pk_curves`) |
-| 35 | Training execution (multiple benchmark variants) |
-| 36 | PK curve demo + comprehensive status summary |
-| 37-108 | Sections 12-20 (data-quality gate, fine-tuning, threshold calibration, Neural ODE PK/PD, GNN, reliability, joint model, population PK-PD) |
-| 109-112 | Section 21 — Scenario Analysis (4 dosing scenarios) |
-| 113-116 | Section 22 — Sensitivity Analysis (9 parameters, tornado plots) |
-| 117-120 | Section 23 — Dose Optimization (grid search + differential evolution) |
+> **Note:** The original monolithic notebook [phase3_neural_ode_model.ipynb](../Coding/phase3_neural_ode_model.ipynb) (121 cells) is preserved as an archive.
+
+#### [phase3a_feature_engineering.ipynb](../Coding/phase3a_feature_engineering.ipynb) — 18 cells
+
+| Content | Sections |
+|---------|----------|
+| Environment setup & configuration | §1–2 |
+| Data loading — 4 tasks, 13,030 samples | §3 |
+| Feature engineering (Morgan FPs, normalization, quality gate) | §4–4.5 |
+| Save artifacts → `data/processed/phase3a_artifacts/` | Bridge cell |
+
+#### [phase3b_model_design.ipynb](../Coding/phase3b_model_design.ipynb) — 30 cells
+
+| Content | Sections |
+|---------|----------|
+| Load Phase 3A artifacts | Bridge cell |
+| `MultiTaskDataset` class | §5 |
+| `SharedEncoder` (LayerNorm), `RegressionHead`, `ClassificationHead`, `PKODEFunc`, `MultiTaskPKPDModel` | §6 |
+| `MultiTaskLoss` (MSE + weighted BCE) | §7 |
+| Training pipeline (interleaved, early stopping, gradient clipping) | §8 |
+| Visualization (`plot_training_history`, `plot_pk_curves`) | §9 |
+| Training execution + PK curve demo | §10 |
+| Save artifacts → `data/processed/phase3b_artifacts/` | Bridge cell |
+
+#### [phase3c_finetuning.ipynb](../Coding/phase3c_finetuning.ipynb) — 28 cells
+
+| Content | Sections |
+|---------|----------|
+| Load Phase 3B artifacts, rebuild model & dataloaders | Bridge cell |
+| Fine-tuning (hERG, Caco-2), threshold calibration, constrained calibration, production threshold policy | §11 |
+| Split-leakage mitigation (dedup + retrain) | §12 |
+| Save artifacts → `data/processed/phase3c_artifacts/` | Bridge cell |
+
+#### [phase3d_experiments.ipynb](../Coding/phase3d_experiments.ipynb) — 68 cells
+
+| Content | Sections |
+|---------|----------|
+| Load Phase 3C artifacts, rebuild model & core functions | Bridge cell |
+| 2048-bit real fingerprints | §13 |
+| Real binding SMILES integration | §14 |
+| hERG AUROC push (hidden_dim=256, pos_weight tuning) | §15 |
+| Neural ODE PK/PD integration | §16 |
+| GNN MPNN encoder | §17 |
+| Probability calibration (Platt/temperature scaling) | §18 |
+| GNN+MLP fusion model | §19 |
+| Execution timeline | Summary |
 
 ### Key Design Decisions
 - **LayerNorm** (not BatchNorm) for multi-task training stability
@@ -705,11 +736,15 @@ Neural_PK-PD_Modeling_with_ODE/
 ├── Coding/
 │   ├── TROUBLESHOOTING_GUIDE.md       🔧 Problem solving
 │   │
-│   ├── phase3_neural_ode_model.ipynb  📓 ACTIVE: Neural ODE model (120 cells)
-│   ├── phase1_2_data_exploration.ipynb 📓 EDA & feature engineering (29 cells)
-│   ├── requirements.txt               📦 Dependencies
+│   ├── phase3a_feature_engineering.ipynb  📓 Feature engineering & data prep (18 cells)
+│   ├── phase3b_model_design.ipynb        📓 Architecture & initial training (30 cells)
+│   ├── phase3c_finetuning.ipynb          📓 Fine-tuning & calibration (28 cells)
+│   ├── phase3d_experiments.ipynb         📓 Advanced experiments (68 cells)
+│   ├── phase3_neural_ode_model.ipynb     📓 ARCHIVE: Original monolithic (121 cells)
+│   ├── phase1_2_data_exploration.ipynb   📓 EDA & feature engineering (29 cells)
+│   ├── requirements.txt                  📦 Dependencies
 │   │
-│   ├── data_download_pipeline.ipynb    📓 Data download pipeline (all sources)
+│   ├── data_download_pipeline.ipynb      📓 Data download pipeline (all sources)
 │   │
 │   ├── data/
 │   │   ├── raw/                       Raw datasets
@@ -718,7 +753,10 @@ Neural_PK-PD_Modeling_with_ODE/
 │   │   │   ├── toxcast/           (80 MB)
 │   │   │   ├── pubchem/           (1.8 MB)
 │   │   │   └── pkdb/              (300 KB)
-│   │   ├── processed/                 Feature matrices
+│   │   ├── processed/                 Feature matrices + notebook artifacts
+│   │   │   ├── phase3a_artifacts/     3a → 3b bridge (features, config, scalers)
+│   │   │   ├── phase3b_artifacts/     3b → 3c bridge (model state, history)
+│   │   │   └── phase3c_artifacts/     3c → 3d bridge (production model, thresholds)
 │   │   └── outputs/                   Section outputs (PNGs, CSVs)
 │   │
 │   └── venv_pkpd/                     🐍 Python 3.14 environment
@@ -853,10 +891,14 @@ history           # training losses + per-task metrics
 ### Data Quality
 - ✅ No missing values — properly normalized — task labels verified — train/val/test split ready
 
-### Running the Notebook
+### Running the Notebooks
 ```bash
 source Coding/venv_pkpd/bin/activate
-jupyter notebook Coding/phase1_2_data_exploration.ipynb
+# Run Phase 3 notebooks in order (each saves artifacts for the next):
+jupyter notebook Coding/phase3a_feature_engineering.ipynb   # Feature engineering
+jupyter notebook Coding/phase3b_model_design.ipynb          # Architecture & training
+jupyter notebook Coding/phase3c_finetuning.ipynb            # Fine-tuning & calibration
+jupyter notebook Coding/phase3d_experiments.ipynb            # Advanced experiments
 # Select kernel: venv_pkpd (Python 3.14), Run all cells
 ```
 
@@ -905,13 +947,57 @@ Condensed record of each development session (full details in sections above).
 | Mar 8, 2026 | **Section 14: Real binding SMILES** | 3,410 real compounds from 8 ChEMBL targets; binding R² -0.008→+0.431; all 4 tasks improved |
 | Mar 8, 2026 | **Section 15: hERG AUROC push** | hidden_dim=256, pos_weight=1.5; hERG AUROC 0.77→0.82; **ALL 4 ADME targets met** |
 | Mar 11, 2026 | **Sections 21-23: Clinical decision support** | Scenario analysis (4 regimens), sensitivity analysis (9 params), dose optimization (grid + differential evolution); efficacy-safety trade-off identified |
+| Mar 11, 2026 | **Notebook split (3a/3b/3c/3d)** | Split monolithic Phase 3 notebook (121 cells) into 4 modular notebooks with artifact bridging; updated all 5 documentation files |
+
+---
+
+## 📝 Change History
+
+Detailed record of structural and documentation changes.
+
+### March 11, 2026 — Phase 3 Notebook Split
+
+**What changed**: The monolithic `phase3_neural_ode_model.ipynb` (121 cells) was split into 4 modular notebooks connected by artifact bridging.
+
+| Before | After | Cells |
+|--------|-------|-------|
+| `phase3_neural_ode_model.ipynb` (monolithic) | `phase3a_feature_engineering.ipynb` | 18 |
+| | `phase3b_model_design.ipynb` | 30 |
+| | `phase3c_finetuning.ipynb` | 28 |
+| | `phase3d_experiments.ipynb` | 68 |
+| **Total: 121 cells** | **Total: 144 cells** (includes 23 bridge cells) | |
+
+**Artifact pipeline**: Each notebook saves state to `data/processed/phase3{a,b,c}_artifacts/` and the next notebook loads from there.
+
+```
+phase3a (features, config, scalers)
+  → saves to data/processed/phase3a_artifacts/
+    → phase3b loads, trains model
+      → saves to data/processed/phase3b_artifacts/
+        → phase3c loads, fine-tunes
+          → saves to data/processed/phase3c_artifacts/
+            → phase3d loads, runs experiments
+```
+
+**Why**: The 121-cell monolith was unwieldy for development and review. The 4-way split groups logically related work:
+- **3a**: Data prep (run once, reuse artifacts)
+- **3b**: Architecture iteration (fast reload without re-processing data)
+- **3c**: Fine-tuning experiments (independent of architecture changes)
+- **3d**: Advanced experiments (GNN, Neural ODE PK/PD, fusion)
+
+**Documentation updated**: PROJECT_SUMMARY.md, README.md, TROUBLESHOOTING_GUIDE.md, MASTER_DATASET_REFERENCE.md, DOCUMENTATION_GOVERNANCE.md
+
+**Original preserved**: `phase3_neural_ode_model.ipynb` kept as archive (unchanged).
 
 ---
 
 ## �🔄 Version History
 
 | Version | Date | Changes |
-|---------|------|---------|| **4.2** | Mar 11, 2026 | Consolidated 7 download .py scripts into `data_download_pipeline.ipynb`; updated all cross-references |
+|---------|------|---------|
+| **4.4** | Mar 11, 2026 | Reordered experiment sections to ascending order (12→13→14→15→21-23); added Change History section with notebook split details |
+| **4.3** | Mar 11, 2026 | Split Phase 3 monolithic notebook (121 cells) into 4 modular notebooks: phase3a (18), phase3b (30), phase3c (28), phase3d (68) with artifact bridging; updated all documentation cross-references |
+| **4.2** | Mar 11, 2026 | Consolidated 7 download .py scripts into `data_download_pipeline.ipynb`; updated all cross-references |
 | **4.1** | Mar 11, 2026 | Folded Working_Progress.txt session log into Development Session Log + Issue 4 table || **4.0** | Mar 11, 2026 | Consolidated PROJECT_SUMMARY + PROJECT_STATUS + MASTER_INDEX + README into single document |
 | **3.3** | Mar 11, 2026 | Merged PROJECT_SUMMARY.md + EXECUTIVE_SUMMARY.md |
 | **3.2** | Mar 11, 2026 | Merged INTEGRATION_STATUS.md into MASTER_DATASET_REFERENCE.md; moved to Documentation/ |
@@ -934,7 +1020,7 @@ Condensed record of each development session (full details in sections above).
 
 ---
 
-**📎 Current Status: PHASE 3 IN PROGRESS — Sections 21-23 Complete (Scenario Analysis, Sensitivity, Dose Optimization)**
+**📎 Current Status: PHASE 3 IN PROGRESS — Sections 21-23 Complete (Scenario Analysis, Sensitivity, Dose Optimization) | 4-Notebook Split Active**
 
 **Last Updated**: March 11, 2026  
 **Maintained By**: Subrat

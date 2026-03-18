@@ -1,29 +1,8 @@
 {
-  "source": "ToxCast",
-  "version": "4.3 (Representative)",
-  "access_date": "2026-02-04",
-  "data_type": "Toxicity Screening - High-Throughput Assays",
+  "source": "ToxCast (representative)",
   "total_compounds": 5000,
-  "total_assay_results": 332507,
-  "unique_assays": 14,
-  "categories": [
-    "cardiac",
-    "developmental",
-    "nuclear_receptor",
-    "liver",
-    "kidney",
-    "stress_response",
-    "metabolic"
-  ],
-  "category_distribution": {
-    "cardiac": 11869,
-    "developmental": 7046,
-    "nuclear_receptor": 14113,
-    "liver": 10444,
-    "kidney": 5608,
-    "stress_response": 9386,
-    "metabolic": 8558
-  },
+  "total_results": 332507,
+  "overall_hit_rate": 20.2,
   "hit_rate_by_category": {
     "cardiac": 24.8,
     "developmental": 14.8,
@@ -33,8 +12,5 @@
     "stress_response": 19.8,
     "metabolic": 18.0
   },
-  "overall_hit_rate": 20.2,
-  "license": "Public Domain (EPA)",
-  "citation": "U.S. EPA (2025). ToxCast Database. Retrieved from https://www.epa.gov/comptox-tools/",
-  "paper": "Knudsen et al. (2015) CompTox Dashboard. Xenobiotica, 45(3), 219-231."
+  "license": "Public Domain (EPA)"
 }

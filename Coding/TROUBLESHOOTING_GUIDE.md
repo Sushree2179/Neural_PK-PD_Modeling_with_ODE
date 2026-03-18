@@ -8,7 +8,11 @@
 
 - **[← Project Summary](../Documentation/PROJECT_SUMMARY.md)** - Complete project documentation
 - **[Notebook (EDA) →](phase1_2_data_exploration.ipynb)** - Phase 1–2 working code
-- **[Notebook (Neural ODE) →](phase3_neural_ode_model.ipynb)** - Phase 3 model code
+- **[Notebook (Phase 3A) →](phase3a_feature_engineering.ipynb)** - Feature engineering
+- **[Notebook (Phase 3B) →](phase3b_model_design.ipynb)** - Model architecture & training
+- **[Notebook (Phase 3C) →](phase3c_finetuning.ipynb)** - Fine-tuning & calibration
+- **[Notebook (Phase 3D) →](phase3d_experiments.ipynb)** - Advanced experiments
+- **[Notebook (Phase 3 archive) →](phase3_neural_ode_model.ipynb)** - Original monolithic notebook
 
 ---
 
@@ -315,7 +319,7 @@ weights = compute_class_weight('balanced', classes=np.unique(y), y=y)
 
 ## 🧠 Phase 3: Neural ODE Model Issues (February 24, 2026)
 
-> These issues were encountered while building [phase3_neural_ode_model.ipynb](phase3_neural_ode_model.ipynb).
+> These issues were encountered while building the Phase 3 notebooks (originally [phase3_neural_ode_model.ipynb](phase3_neural_ode_model.ipynb), now split into [phase3a](phase3a_feature_engineering.ipynb) / [phase3b](phase3b_model_design.ipynb) / [phase3c](phase3c_finetuning.ipynb) / [phase3d](phase3d_experiments.ipynb)).
 
 ---
 
@@ -479,7 +483,7 @@ structure–activity discrimination impossible for the model.
 
 **Fix (in progress):** Increase fingerprint bit width:
 ```python
-# In Cell 11 of phase3_neural_ode_model.ipynb:
+# In phase3b_model_design.ipynb (architecture section):
 N_BITS = 1024   # was 64 — dramatically reduces collisions
 
 # In Cell 5 (config):

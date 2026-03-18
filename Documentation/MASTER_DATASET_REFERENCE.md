@@ -332,11 +332,14 @@ Coding/data/raw/
     └── toxcast_high_priority_metadata.json
 ```
 
-**Processed Data** (from Phase 2 feature engineering):
+**Processed Data** (from Phase 2 feature engineering + Phase 3 notebook artifacts):
 ```
 Coding/data/processed/
 ├── phase2_multitask_features_with_fingerprints.csv     (258 dims: 2 physico + 256 ECFP4)
-└── phase2_multitask_features_with_binding_fps.csv
+├── phase2_multitask_features_with_binding_fps.csv
+├── phase3a_artifacts/     (features, config, scalers — 3a→3b bridge)
+├── phase3b_artifacts/     (model state, history, loader state — 3b→3c bridge)
+└── phase3c_artifacts/     (production model, thresholds — 3c→3d bridge)
 ```
 
 ### Download Notebook
@@ -441,6 +444,7 @@ DTXSID10000001, CC(C)Cc1ccc..., 12345-67-8, 234.5, 2.3, cardiac, hERG Antagonist
 - Physics-informed Neural ODE architecture
 - Multi-task learning (binding, hERG, Caco-2, clearance)
 - Safety constraints from ToxCast data
+- **Notebook structure**: `phase3a` (features) → `phase3b` (model) → `phase3c` (fine-tuning) → `phase3d` (experiments)
 
 **Target Architecture**:
 ```
