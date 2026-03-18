@@ -28,3 +28,9 @@ Coding/data/outputs/
 
 # Processed data (reproducible from pipeline)
 Coding/data/processed/
+
+# LaTeX thesis template (external)
+Thesis_Latex/
+
+# Slide-generation template
+Slides/Masters-thesis-title-page-template-*.docx

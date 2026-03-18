@@ -3,9 +3,9 @@
 **Project**: Physics-Informed Neural ODE for Pharmacokinetic-Pharmacodynamic Modeling  
 **Author**: Subrat  
 **Date**: Current (post March 11, 2026)  
-**Status**: 🎯 Phase 3 Sections 21-23 Complete | **Clinical Decision Support Tools**  
-**Lifecycle State**: Phase 3 active — Sections 21-23 Complete (Scenario Analysis, Sensitivity Analysis, Dose Optimization)  
-**Next Step**: Section 24 — Pareto Frontier Analysis  
+**Status**: 🎯 Phase 3 Sections 12-28 Complete | **Full Pipeline: MLP → GNN → PK-PD → Clinical Trial → Summary → Interpretation**  
+**Lifecycle State**: Phase 3 complete — Sections 12-28 Done (all experiments + interpretation)  
+**Next Step**: Phase 4 — Deployment or Thesis Writing  
 **Notebook Layout**: Phase 3 split into 4 notebooks (3a → 3b → 3c → 3d) with artifact bridging
 
 ---
@@ -18,7 +18,7 @@
 - **[Notebook (Phase 3A) →](../Coding/phase3a_feature_engineering.ipynb)** - Feature engineering (18 cells)
 - **[Notebook (Phase 3B) →](../Coding/phase3b_model_design.ipynb)** - Model architecture & training (30 cells)
 - **[Notebook (Phase 3C) →](../Coding/phase3c_finetuning.ipynb)** - Fine-tuning & calibration (28 cells)
-- **[Notebook (Phase 3D) →](../Coding/phase3d_experiments.ipynb)** - Advanced experiments (68 cells)
+- **[Notebook (Phase 3D) →](../Coding/phase3d_experiments.ipynb)** - Advanced experiments (88 cells)
 - **[Notebook (Phase 3 — original) →](../Coding/phase3_neural_ode_model.ipynb)** - Monolithic archive (121 cells, preserved)
 - **[Documentation Governance →](DOCUMENTATION_GOVERNANCE.md)** - Update protocol
 - **[Slides Guide →](../Slides/README.md)** - Presentation generation
@@ -34,10 +34,10 @@
 | **Features (current model input)** | 258 (2 physico + 256 fingerprint) |
 | **Datasets Integrated** | 5 (ChEMBL, TDC, ToxCast, PubChem, PK-DB) |
 | **Total Data Volume** | 347,896 records (~84 MB) |
-| **Notebook Cells** | Phase 1–2: 29; Phase 3: 144 (3a:18 + 3b:30 + 3c:28 + 3d:68) |
+| **Notebook Cells** | Phase 1–2: 29; Phase 3: 169 (3a:18 + 3b:30 + 3c:28 + 3d:93) |
 | **Model Parameters** | 623,078 (model_15; hidden_dim=256) |
 | **Locked Thresholds** | hERG: 0.49, Caco-2: 0.50 |
-| **Project Completion** | ~75% (Phase 3 active — next: Section 24) |
+| **Project Completion** | ~92% (Phase 3 experiments + interpretation complete — Sections 12-28) |
 
 ### All 4 Performance Targets Met ✅ (Section 15)
 
@@ -61,7 +61,7 @@
    - **[phase3a_feature_engineering.ipynb](../Coding/phase3a_feature_engineering.ipynb)** — Feature engineering & data prep (18 cells)
    - **[phase3b_model_design.ipynb](../Coding/phase3b_model_design.ipynb)** — Architecture & initial training (30 cells)
    - **[phase3c_finetuning.ipynb](../Coding/phase3c_finetuning.ipynb)** — Fine-tuning, calibration & leakage mitigation (28 cells)
-   - **[phase3d_experiments.ipynb](../Coding/phase3d_experiments.ipynb)** — Advanced experiments: GNN, Neural ODE PK/PD, fusion (68 cells)
+   - **[phase3d_experiments.ipynb](../Coding/phase3d_experiments.ipynb)** — Advanced experiments: GNN, Neural ODE PK/PD, fusion, Pareto, Monte Carlo, Clinical Trial, Summary (88 cells)
 5. **[DOCUMENTATION_GOVERNANCE.md](DOCUMENTATION_GOVERNANCE.md)** — How to keep docs in sync
 6. **[Slides/README.md](../Slides/README.md)** — Canonical PPTX generation commands
 
@@ -74,7 +74,7 @@ This document (overview) → [MASTER_DATASET_REFERENCE.md](MASTER_DATASET_REFERE
 This document (full) → [MASTER_DATASET_REFERENCE.md](MASTER_DATASET_REFERENCE.md) → Phase 1–2 notebook → Phase 3 notebooks (3a → 3b → 3c → 3d)
 
 **👨‍💼 Stakeholders/Advisors** (~20 min):
-[At A Glance](#-at-a-glance) → [Sections 21-23](#-sections-21-23-clinical-decision-support-march-11-2026) → [Next Planned Steps](#next-planned-steps)
+[At A Glance](#-at-a-glance) → [Sections 21-27](#-sections-21-27-clinical-decision-support-pareto-monte-carlo-trial-simulation--summary) → [Next Planned Steps](#next-planned-steps)
 
 **👨‍💻 Developers** (~1 hour):
 [Phase 3 section](#-phase-3-neural-ode-model-development) → [TROUBLESHOOTING_GUIDE.md](../Coding/TROUBLESHOOTING_GUIDE.md) → [phase3a](../Coding/phase3a_feature_engineering.ipynb) (features) → [phase3b](../Coding/phase3b_model_design.ipynb) (model) → [phase3c](../Coding/phase3c_finetuning.ipynb) (fine-tuning) → [phase3d](../Coding/phase3d_experiments.ipynb) (experiments)
@@ -195,7 +195,7 @@ All ADME property targets met. The project moved to its core thesis contribution
 
 ---
 
-## 🎯 Sections 21-23: Clinical Decision Support (March 11, 2026)
+## 🎯 Sections 21-27: Clinical Decision Support, Pareto, Monte Carlo, Trial Simulation & Summary
 
 ### Section 21: Scenario Analysis (cells 109-112)
 **Purpose**: Evaluate alternative dosing strategies with risk-benefit trade-offs
@@ -279,6 +279,43 @@ All ADME property targets met. The project moved to its core thesis contribution
 - Optimal regimen: `data/raw/s23_optimal_regimen.csv` (238 B)
 - Calibration dict: `calibration_23` with optimization results
 
+### Section 24: Pareto Frontier Analysis (cells 68-72)
+**Purpose**: Map the multi-objective efficacy-safety trade-off surface and identify compromise solutions
+
+**Method**:
+- **Dense grid search**: 50×50 = 2,500 points (Dose 50-200 mg × CV 0.15-0.50)
+- **Three objectives**: Maximize AUC_E, Minimize hERG risk, Minimize Caco-2 risk
+- **Pareto dominance**: Non-dominated sorting to identify frontier
+- **Knee-point selection**: Normalized Euclidean distance to utopia point
+
+**Results**:
+| Metric | Value |
+|--------|-------|
+| Grid points evaluated | 2,500 |
+| Pareto-optimal regimens | **33** |
+| Feasible (all constraints met) | **0** |
+| Knee-point dose | **114.3 mg** |
+| Knee-point CV IIV | **0.150** |
+| Knee-point AUC_E | 18.13 |
+| Knee-point hERG risk | 83.1% |
+| Knee-point Caco-2 risk | 82.8% |
+
+**Extreme Points on Pareto Front**:
+| Strategy | Dose | AUC_E | hERG Risk | Caco-2 Risk |
+|----------|------|-------|-----------|-------------|
+| Max efficacy | 200 mg | 30.85 | 100% | 70% |
+| Lowest hERG | 50 mg | 8.27 | 44.7% | 100% |
+| Lowest Caco-2 | 200 mg | 30.85 | 100% | 70% |
+
+**Key Finding**: No regimen simultaneously satisfies all safety constraints (hERG <50%, Caco-2 <50%). The Pareto frontier quantifies the fundamental efficacy-safety trade-off — any gain in one objective necessarily worsens another.
+
+**Outputs**:
+- Visualization: `data/raw/s24_pareto_frontier.png` (4-panel Pareto frontier plot)
+- Pareto front: `data/outputs/s24_pareto_front.csv` (33 non-dominated regimens)
+- Full grid: `data/outputs/s24_full_grid.csv` (2,500 grid search results)
+- Recommendations: `data/outputs/s24_pareto_recommendations.csv` (ranked table)
+- Calibration dict: `calibration_24`
+
 ### Clinical Implications
 
 **From Section 21**: No tested regimen meets all safety criteria → need alternative strategies
@@ -292,6 +329,168 @@ All ADME property targets met. The project moved to its core thesis contribution
 - Simple single-objective optimization insufficient
 - Must explicitly balance efficacy vs toxicity trade-offs
 - Pareto frontier analysis needed to find compromise solutions
+
+**From Section 24**:
+- 33 Pareto-optimal regimens identified from 2,500 candidate points
+- Fundamental efficacy-safety conflict confirmed: 0 feasible solutions under all constraints
+- Knee-point (114 mg, CV 0.15) offers best compromise but still exceeds safety thresholds
+- Suggests structural modifications (prodrug design, selective analogues) needed beyond dosing optimization alone
+
+**From Section 25**:
+- Full ODE-based Monte Carlo (N=1,000) confirms knee-point AUC_E = 16.93 [16.79, 17.09] (95% CI)
+- All regimens show >99% hERG flag rate and 100% Caco-2 flag rate under the calibrated safety model
+- Baseline vs knee-point: statistically significant (Mann-Whitney p = 4.68e-14 ***)
+- Convergence verified: metrics stable within 2% over last 250 patients
+- Reinforces need for molecular-level interventions rather than dose optimization alone
+
+**From Section 26**:
+- Virtual Phase II adaptive trial (800 patients, 4 arms: placebo + 69/114/160 mg) confirms robust efficacy signal
+- All active arms achieve 100% power (200 replications); dose-response follows Emax model (ED50=78.3 mg)
+- 160 mg selected as winning dose in 100% of replications; interim futility rules functional
+- Type-I error: 7.0% (slightly above nominal 5%), safety flags remain >99% across all active arms
+- Supports go/no-go framework: strong efficacy signal but safety liabilities require molecular redesign
+
+### Section 25: Monte Carlo Validation (cells 73-77)
+**Purpose**: Formal uncertainty quantification on recommended regimens via large-scale
+Monte Carlo simulation with bootstrap confidence intervals.
+
+**Method**:
+- **1,000 virtual patients** per regimen (3,000 ODE solves total)
+- **2-compartment IV-bolus PK ODE** + Emax PD + calibrated safety model (same as §20)
+- **Log-normal IIV** on CL, V1, V2, Q, EC50
+- **2,000 bootstrap resamples** for 95% CIs on all metrics
+- **Convergence analysis**: running statistics vs sample size
+
+**Regimens Tested**:
+| Regimen | Dose | CV IIV | AUC_E Median | 95% CI | hERG Rate | Caco-2 Rate |
+|---------|------|--------|--------------|--------|-----------|-------------|
+| Baseline | 100 mg | 0.30 | 16.09 | [15.85, 16.34] | 99.3% | 100% |
+| Knee-Point (S24) | 114 mg | 0.15 | 16.93 | [16.79, 17.09] | 99.6% | 100% |
+| Max-Efficacy | 200 mg | 0.15 | 21.05 | [20.90, 21.20] | 100% | 100% |
+
+**Statistical Tests (Baseline vs Knee-Point)**:
+| Metric | Mann-Whitney U | p-value | Significance |
+|--------|---------------|---------|--------|
+| AUC_E | 402,628 | 4.68e-14 | *** |
+| Cmax | 340,057 | 3.11e-35 | *** |
+| hERG prob | 474,054 | 4.45e-02 | * |
+| Caco-2 prob | 554,820 | 2.18e-05 | *** |
+
+**Convergence**: AUC_E median and hERG rate stable within 2% drift over last 250 patients ✅
+
+**Outputs**:
+- Visualization: `data/raw/s25_monte_carlo.png` (4-panel: PK envelope, PD envelope, convergence, forest plot)
+- Comparison: `data/outputs/s25_mc_comparison.csv` (3 regimens × 10 metrics)
+- Bootstrap CIs: `data/outputs/s25_bootstrap_cis.csv` (15 metric-regimen CIs)
+- Calibration dict: `calibration_25`
+
+### Section 26: Clinical Trial Simulation (cells 78-82)
+**Purpose**: Simulate a virtual Phase II adaptive dose-finding trial to project how the
+Neural PK-PD model's predictions translate into clinical decision-making.
+
+**Design**:
+- **4-arm parallel trial**: Placebo + 3 active doses (69 mg, 114 mg, 160 mg)
+- **N = 200 patients per arm** (800 total), randomised 1:1:1:1
+- **ODE-based PK-PD + safety** per patient (same 2-cpt model as §20/§25)
+- **Interim analysis** at 50% enrollment — futility & efficacy stopping rules
+- **200 trial replications** for operating characteristics
+
+**Exemplar Trial Results**:
+| Arm | Dose | AUC_E (mean ± SD) | Cmax (median) | hERG flag | p vs placebo |
+|-----|------|--------------------|---------------|-----------|-------------|
+| Placebo | 0 mg | 0.11 ± 0.18 | 0.00 | 0.0% | — |
+| Low | 69 mg | 13.54 ± 1.40 | 6.76 | 99.0% | 1.52e-68 *** |
+| Mid (knee-point) | 114 mg | 17.02 ± 1.58 | 11.59 | 100% | 1.52e-68 *** |
+| High | 160 mg | 19.48 ± 2.26 | 16.13 | 100% | 1.52e-68 *** |
+
+**Operating Characteristics (200 replications)**:
+| Arm | Power (%) | Futility Stop (%) | Mean Δ AUC_E | Dose Selected (%) |
+|-----|-----------|-------------------|--------------|-------------------|
+| 69 mg | 100.0 | 0.0 | +13.61 | 0.0 |
+| 114 mg | 100.0 | 0.0 | +16.94 | 0.0 |
+| 160 mg | 100.0 | 0.0 | +19.37 | 100.0 |
+
+**Dose-Response Model**: Emax fit — E0=0.11, Emax=28.67, ED50=78.3 mg, ED90=705 mg
+
+**Type-I Error**: 7.0% (nominal α=5%) — 14/200 placebo-vs-placebo comparisons significant
+
+**Outputs**:
+- Visualization: `data/raw/s26_clinical_trial.png` (4-panel: dose-response, arm distributions, power/selection, safety)
+- Trial summary: `data/outputs/s26_trial_summary.csv`
+- Operating characteristics: `data/outputs/s26_operating_characteristics.csv`
+
+### Section 27: Summary & Conclusions (cells 83-86)
+**Purpose**: Consolidate all results from Sections 12–26 into a comprehensive summary with
+cross-section performance dashboard, pipeline visualization, key findings, and master summary table.
+
+**Cell A — Cross-Section Performance Dashboard**:
+- MLP Evolution table: S12→S15 improvement (hERG AUROC 0.48→0.73, Caco-2 AUROC 0.47→0.73, Binding R² 0.00→0.31)
+- GNN Fusion progression: S15 MLP (R²=0.310) → S17 MPNN (R²=0.412) → S19 Fusion (R²=0.545)
+- Population PK-PD: N=500, AUC_E median=15.97 [14.02–18.61]
+- Clinical Decision Support: 4 scenarios, sensitivity analysis, dose optimization
+- Advanced Analytics: 33 Pareto points (knee=114mg), 200 MC replications, 4-arm trial
+
+**Cell B — Pipeline Visualization (6-panel figure)**:
+| Panel | Content |
+|-------|---------|
+| A | Safety model evolution (S12→S15 AUROC bar chart) |
+| B | Binding affinity R² (MLP → MPNN → Fusion) |
+| C | Population PD response histogram (N=500) |
+| D | Pareto frontier — efficacy vs safety (S24) |
+| E | Monte Carlo validation — bootstrap CIs (S25) |
+| F | Clinical trial operating characteristics (S26) |
+
+**Cell C — Key Findings & Recommendations**: Narrative summary of achievements, limitations, and future directions
+
+**Cell D — Master Summary Table & Sign-Off**:
+- 15-row summary table (S12–S26) with section, topic, key metric, value, status
+- Notebook statistics: 103 cells executed, 4.2 min compute, 10 calibration dicts
+- CSV export: `data/outputs/s27_master_summary.csv`
+- `calibration_27` dict created
+
+### Section 28: Model Interpretation & Attention Analysis (cells 87-91)
+**Purpose**: Gradient-based feature attribution, atom-level GNN saliency, branch ablation
+for the joint fusion model, and latent-space visualisation — quantifying what the models
+learned and which molecular features drive each prediction.
+
+**Cell A — MLP Feature Importance (Input × Gradient)**:
+- Computed saliency for model_bind across 4 tasks (hERG: 92, Caco-2: 123, Binding: 493, Clearance: 150 test samples)
+- Top features: fp_1683 (hERG, Clearance), fp_0573 (Caco-2), fp_1039 (Binding)
+- Fingerprint bits dominate (>99%) across all tasks; LogP ranks #2 for Caco-2
+- Cross-task overlap: hERG ∩ Clearance share 10/20 top features; other pairs share 4-5
+- 2×2 bar chart with physico (red) vs fingerprint (blue) color coding
+
+**Cell B — GNN Atom-Level Saliency (MPNN17)**:
+- Per-atom gradient saliency (||∂ŷ/∂AF||₂) for 512 test molecules
+- Top atom types by saliency: Br > P > S > I > N > Cl > O > C > F
+- Heteroatoms (Br, S, N) receive higher attention than carbon backbone
+- 6 example molecule saliency maps with RDKit 2D coordinate visualization
+- 2-panel figure: atom-type importance bar chart + molecule saliency maps
+
+**Cell C — Branch Ablation & Latent Space t-SNE**:
+- JointGNNMLP ablation: Full R²=-36.39, No-GNN R²=-37.16 (Δ=+0.77), No-Tab R²=-37.37 (Δ=+0.98)
+- Tabular branch contributes slightly more than GNN branch
+- t-SNE of model_bind shared encoder latent space (749 samples, 64-dim → 2-dim)
+- Clear task-specific clustering visible in 2D projection (KL div = 0.86)
+- 2-panel figure: ablation bar chart + t-SNE scatter
+
+**Cell D — Interpretation Summary & Calibration**:
+- CSV exports: `data/outputs/s28_feature_importance.csv`, `data/outputs/s28_atom_saliency.csv`
+- `calibration_28` dict with all interpretation results
+- Summary: fingerprints drive predictions, heteroatoms most salient in GNN, both branches contribute to fusion
+
+**Artifacts**:
+- Feature importance chart: `data/raw/s28_feature_importance.png`
+- GNN saliency chart: `data/raw/s28_gnn_saliency.png`
+- Ablation & t-SNE chart: `data/raw/s28_ablation_tsne.png`
+- Feature importance CSV: `data/outputs/s28_feature_importance.csv`
+- Atom saliency CSV: `data/outputs/s28_atom_saliency.csv`
+
+**Outputs**:
+- Visualization: `data/raw/s27_pipeline_summary.png` (6-panel end-to-end summary)
+- Master summary: `data/outputs/s27_master_summary.csv`
+- Detail: `data/outputs/s26_oc_detail.csv`
+- Calibration dict: `calibration_26`
 
 ---
 
@@ -504,7 +703,7 @@ Phase 3 is split into **4 notebooks** connected via artifact bridging (pickle/JS
 | Split-leakage mitigation (dedup + retrain) | §12 |
 | Save artifacts → `data/processed/phase3c_artifacts/` | Bridge cell |
 
-#### [phase3d_experiments.ipynb](../Coding/phase3d_experiments.ipynb) — 68 cells
+#### [phase3d_experiments.ipynb](../Coding/phase3d_experiments.ipynb) — 83 cells
 
 | Content | Sections |
 |---------|----------|
@@ -516,6 +715,10 @@ Phase 3 is split into **4 notebooks** connected via artifact bridging (pickle/JS
 | GNN MPNN encoder | §17 |
 | Probability calibration (Platt/temperature scaling) | §18 |
 | GNN+MLP fusion model | §19 |
+| Scenario, sensitivity, dose optimization | §21-23 |
+| Pareto frontier analysis (multi-objective trade-offs) | §24 |
+| Monte Carlo validation (bootstrap CIs, convergence) | §25 |
+| Clinical trial simulation (Phase II adaptive, 200 replications) | §26 |
 | Execution timeline | Summary |
 
 ### Key Design Decisions
@@ -570,17 +773,20 @@ loss = (
 
 ### Next Planned Steps
 
-**Option 1 (Recommended)**: Section 24 — Pareto Frontier Analysis
-- Map multi-objective efficacy-safety trade-off surface
-- Identify Pareto-optimal solutions balancing efficacy vs toxicity
-- Visualize compromise frontiers for clinical decision-making
-- Address constraint violations found in Section 23
+**Phase 3 Experiments Complete** — All 16 sections (S12–S27) fully implemented.
 
-**Option 2**: Monte Carlo Validation (uncertainty quantification with 1000+ virtual patients)
+**Option 1 (Recommended)**: Model Interpretation & Attention Analysis
+- Feature importance / SHAP analysis for MLP and GNN models
+- Attention weight visualization for MPNN
+- Model comparison interpretability
 
-**Option 3**: Clinical Trial Simulation (Phase II/III projections)
+**Option 2**: Thesis Writing & Documentation Finalization
+- Compile results into thesis chapters
+- Generate final presentation materials
 
-**Option 4**: Summary & Conclusions (comprehensive findings, recommendations, limitations)
+**Option 3**: Phase 4 — Deployment
+- API documentation and model export
+- User guide and deployment checklist
 
 ---
 
@@ -739,7 +945,7 @@ Neural_PK-PD_Modeling_with_ODE/
 │   ├── phase3a_feature_engineering.ipynb  📓 Feature engineering & data prep (18 cells)
 │   ├── phase3b_model_design.ipynb        📓 Architecture & initial training (30 cells)
 │   ├── phase3c_finetuning.ipynb          📓 Fine-tuning & calibration (28 cells)
-│   ├── phase3d_experiments.ipynb         📓 Advanced experiments (68 cells)
+│   ├── phase3d_experiments.ipynb         📓 Advanced experiments (83 cells)
 │   ├── phase3_neural_ode_model.ipynb     📓 ARCHIVE: Original monolithic (121 cells)
 │   ├── phase1_2_data_exploration.ipynb   📓 EDA & feature engineering (29 cells)
 │   ├── requirements.txt                  📦 Dependencies
@@ -804,8 +1010,11 @@ Neural_PK-PD_Modeling_with_ODE/
 - [x] Section 21: Scenario Analysis (4 dosing scenarios)
 - [x] Section 22: Sensitivity Analysis (9 parameters, tornado plots)
 - [x] Section 23: Dose Optimization (grid search + differential evolution)
-- [ ] Section 24: Pareto Frontier Analysis
-- [ ] Model interpretation and attention analysis
+- [x] Section 24: Pareto Frontier Analysis (2,500-point grid, 33 Pareto-optimal, knee-point at 114mg)
+- [x] Section 25: Monte Carlo Validation (1,000 patients × 3 regimens, 2,000 bootstrap, convergence verified)
+- [x] Section 26: Clinical Trial Simulation (800 patients, 4 arms, 200 replications, 100% power, Emax dose-response)
+- [x] Section 27: Summary & Conclusions (cross-section dashboard, 6-panel figure, master summary table, calibration_27)
+- [x] Section 28: Model Interpretation & Attention Analysis (gradient saliency, atom-level GNN, branch ablation, t-SNE)
 
 ### Phase 4: Deployment (PENDING)
 - [ ] API documentation
@@ -947,7 +1156,12 @@ Condensed record of each development session (full details in sections above).
 | Mar 8, 2026 | **Section 14: Real binding SMILES** | 3,410 real compounds from 8 ChEMBL targets; binding R² -0.008→+0.431; all 4 tasks improved |
 | Mar 8, 2026 | **Section 15: hERG AUROC push** | hidden_dim=256, pos_weight=1.5; hERG AUROC 0.77→0.82; **ALL 4 ADME targets met** |
 | Mar 11, 2026 | **Sections 21-23: Clinical decision support** | Scenario analysis (4 regimens), sensitivity analysis (9 params), dose optimization (grid + differential evolution); efficacy-safety trade-off identified |
+| Mar 11, 2026 | **Section 24: Pareto Frontier Analysis** | 2,500-point dense grid, 33 Pareto-optimal regimens, 0 feasible under all constraints, knee-point at 114mg/0.15 CV; fundamental efficacy-safety trade-off quantified |
 | Mar 11, 2026 | **Notebook split (3a/3b/3c/3d)** | Split monolithic Phase 3 notebook (121 cells) into 4 modular notebooks with artifact bridging; updated all 5 documentation files |
+| Mar 18, 2026 | **Section 25: Monte Carlo Validation** | 1,000 patients × 3 regimens (3,000 ODE solves); 2,000 bootstrap CIs; knee-point AUC_E=16.93 [16.79,17.09]; all differences significant (p<0.05); convergence stable |
+| Mar 18, 2026 | **Section 26: Clinical Trial Simulation** | 4-arm Phase II trial (placebo + 69/114/160 mg, 200/arm); 200 replications; 100% power all arms; Emax fit ED50=78.3 mg; dose selection → 160 mg (100%); type-I error 7.0% |
+| Mar 18, 2026 | **Section 27: Summary & Conclusions** | Cross-section performance dashboard (S12–S26); 6-panel pipeline visualization; master summary table (15 rows); calibration_27; phase3d 83→88 cells; Phase 3 experiments complete |
+| Mar 18, 2026 | **Section 28: Model Interpretation** | Input×Gradient feature importance (4 tasks); GNN atom saliency (Br>P>S>I>N); branch ablation (tab>GNN); t-SNE latent space; phase3d 88→93 cells |
 
 ---
 
@@ -964,8 +1178,8 @@ Detailed record of structural and documentation changes.
 | `phase3_neural_ode_model.ipynb` (monolithic) | `phase3a_feature_engineering.ipynb` | 18 |
 | | `phase3b_model_design.ipynb` | 30 |
 | | `phase3c_finetuning.ipynb` | 28 |
-| | `phase3d_experiments.ipynb` | 68 |
-| **Total: 121 cells** | **Total: 144 cells** (includes 23 bridge cells) | |
+| | `phase3d_experiments.ipynb` | 78 |
+| **Total: 121 cells** | **Total: 159 cells** (includes 23 bridge + 5 S24 + 5 S25 + 5 S26 cells) | |
 
 **Artifact pipeline**: Each notebook saves state to `data/processed/phase3{a,b,c}_artifacts/` and the next notebook loads from there.
 
@@ -995,6 +1209,11 @@ phase3a (features, config, scalers)
 
 | Version | Date | Changes |
 |---------|------|---------|
+| **4.9** | Mar 18, 2026 | Section 28 Model Interpretation added (5 cells); phase3d 88→93 cells; gradient saliency, atom-level GNN, branch ablation, t-SNE latent space |
+| **4.8** | Mar 18, 2026 | Section 27 Summary & Conclusions added (5 cells); phase3d 83→88 cells; cross-section dashboard, 6-panel figure, master summary table, Phase 3 experiments complete |
+| **4.7** | Mar 18, 2026 | Section 26 Clinical Trial Simulation added (5 cells); phase3d 78→83 cells; 4-arm Phase II trial, 200 replications, Emax dose-response, operating characteristics |
+| **4.6** | Mar 18, 2026 | Section 25 Monte Carlo Validation added (5 cells); phase3d 73→78 cells; 1,000 patients × 3 regimens, bootstrap CIs, convergence analysis |
+| **4.5** | Mar 11, 2026 | Section 24 Pareto Frontier Analysis added (5 cells); phase3d 68→73 cells; updated Next Planned Steps, clinical implications, completion status |
 | **4.4** | Mar 11, 2026 | Reordered experiment sections to ascending order (12→13→14→15→21-23); added Change History section with notebook split details |
 | **4.3** | Mar 11, 2026 | Split Phase 3 monolithic notebook (121 cells) into 4 modular notebooks: phase3a (18), phase3b (30), phase3c (28), phase3d (68) with artifact bridging; updated all documentation cross-references |
 | **4.2** | Mar 11, 2026 | Consolidated 7 download .py scripts into `data_download_pipeline.ipynb`; updated all cross-references |
@@ -1020,11 +1239,11 @@ phase3a (features, config, scalers)
 
 ---
 
-**📎 Current Status: PHASE 3 IN PROGRESS — Sections 21-23 Complete (Scenario Analysis, Sensitivity, Dose Optimization) | 4-Notebook Split Active**
+**📎 Current Status: PHASE 3 EXPERIMENTS COMPLETE — Sections 12-27 Done (16 sections) | 4-Notebook Split Active**
 
-**Last Updated**: March 11, 2026  
+**Last Updated**: March 18, 2026  
 **Maintained By**: Subrat
 
 ---
 
-*This document is the single authoritative reference for the Neural PK-PD Modeling project. It consolidates the former PROJECT_SUMMARY.md, EXECUTIVE_SUMMARY.md, PROJECT_STATUS.md, MASTER_INDEX.md, README.md setup documentation, and Working_Progress.txt session log.*
+*This document is the single authoritative reference for the Neural PK-PD Modeling project. It consolidates the former PROJECT_SUMMARY.md, EXECUTIVE_SUMMARY.md, PROJECT_STATUS.md, MASTER_INDEX.md, README.md setup documentation, and Working_Progress.txt session log. Last updated: v4.8 (Mar 18, 2026).*
