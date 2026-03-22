@@ -39,6 +39,51 @@
   - Scaffold-group cross-validation summary
 - Status classification: **Exploratory prototype (not production model replacement yet)**.
 
+## 📝 Daily Update (22 Mar 2026)
+
+### Completed Today
+
+1. **Phase 3B rerun with RapidDock bridge integration completed**
+  - `docking_quality` wired as feature 2051 via bridge alignment.
+  - Binding task rebuilt from raw ChEMBL binding SMILES (3,410 compounds).
+  - Artifacts saved to `Coding/data/processed/phase3b_artifacts/`.
+
+2. **Phase 3C fine-tuning and calibration completed**
+  - Frozen-encoder fine-tuning improved classification heads.
+  - hERG AUROC improved from ~0.72 to ~0.807.
+  - Caco-2 AUROC improved from ~0.82 to ~0.877.
+  - Threshold policy finalized and clean-split retraining completed.
+  - Artifacts saved to `Coding/data/processed/phase3c_artifacts/`.
+
+3. **Phase 3D notebook executed end-to-end (Sections 12-28)**
+  - S18 calibration completed (temperature scaling best for both tasks):
+    - hERG ECE: 0.1727 → 0.0058
+    - Caco-2 ECE: 0.3583 → 0.0448
+  - S19 joint model completed with strong binding improvement:
+    - S15 MLP R2: 0.3099
+    - S17 GNN R2: 0.4115
+    - S19 Joint GNN+MLP R2: 0.5502 (best)
+  - S20-S27 population PK/PD, scenario, sensitivity, optimization, Pareto, Monte Carlo, trial simulation, and master summary all completed.
+  - S28 interpretation completed with export of feature and atom saliency outputs.
+
+### Outputs Generated/Updated Today
+
+- `Coding/data/outputs/s24_pareto_front.csv`
+- `Coding/data/outputs/s24_full_grid.csv`
+- `Coding/data/outputs/s24_pareto_recommendations.csv`
+- `Coding/data/outputs/s25_bootstrap_cis.csv`
+- `Coding/data/outputs/s25_mc_comparison.csv`
+- `Coding/data/outputs/s26_trial_summary.csv`
+- `Coding/data/outputs/s26_operating_characteristics.csv`
+- `Coding/data/outputs/s26_oc_detail.csv`
+- `Coding/data/outputs/s27_master_summary.csv`
+- `Coding/data/outputs/s28_feature_importance.csv`
+- `Coding/data/outputs/s28_atom_saliency.csv`
+
+### Follow-up Item
+
+- **S28 ablation metric consistency check**: Section 28 branch-ablation reporting is under review to ensure exact scale alignment with Section 19 evaluation path.
+
 ---
 
 ## 📊 At A Glance

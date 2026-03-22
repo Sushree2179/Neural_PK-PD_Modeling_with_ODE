@@ -77,3 +77,9 @@ Use the following structure as the stable documentation layout:
 ## Suggested Commit Message Format
 
 `docs(status): sync <date> benchmark + refresh canonical status and summaries`
+
+---
+
+## Change Log
+
+- 22 Mar 2026: Added daily execution summary to [PROJECT_SUMMARY.md](PROJECT_SUMMARY.md) and added hub-level "Latest Update" note in [README.md](README.md) to reflect completed Phase 3B/3C/3D run coverage.
