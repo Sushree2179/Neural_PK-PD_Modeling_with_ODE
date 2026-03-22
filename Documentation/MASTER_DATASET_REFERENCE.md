@@ -1,33 +1,46 @@
 # Master Dataset Reference — Neural PK-PD Modeling
 
-**Project**: Physics-Informed Neural ODE for Pharmacokinetic-Pharmacodynamic Modeling  
-**Status**: ✅ **5-Source Dataset Complete — 500,000+ Records**  
-**Last Updated**: March 11, 2026
+Project: Physics-Informed Neural ODE for Pharmacokinetic-Pharmacodynamic Modeling  
+Status: Reference document for dataset sources, schemas, and integration notes  
+Last Updated: 22 Mar 2026
 
-> This document consolidates all data acquisition, integration, and analysis documentation
-> into a single authoritative reference for the project's multi-source dataset.
+---
+
+## Scope
+
+This document is the canonical data-source and schema reference for the project.
+
+- It describes dataset origins, file inventory, and integration strategy.
+- It preserves historical acquisition details and benchmark-data context.
+- It should not be used as the canonical source of current model status metrics.
+
+For current experiment status and milestone outcomes, use [PROJECT_SUMMARY.md](PROJECT_SUMMARY.md).
+
+This document consolidates data acquisition, integration, and analysis reference notes
+into a single authoritative source for the project's multi-source dataset.
 
 ---
 
 ## Table of Contents
 
-1. [Overview](#1-overview)
-2. [Data Sources](#2-data-sources)
+1. [Scope](#scope)
+2. [Overview](#1-overview)
+3. [Data Sources](#2-data-sources)
    - [2.1 PubChem](#21-pubchem-compounds--bioassays)
    - [2.2 PK-DB](#22-pk-db-pharmacokinetic-time-courses)
    - [2.3 TDC ADMET](#23-tdc-admet-benchmarks)
    - [2.4 ChEMBL](#24-chembl-target-binding-affinity)
    - [2.5 ToxCast/Tox21](#25-toxcasttox21-safety-endpoints)
-3. [Directory Structure & File Inventory](#3-directory-structure--file-inventory)
-4. [Data Schemas & Formats](#4-data-schemas--formats)
-5. [Integration Strategy](#5-integration-strategy)
-6. [Cross-Source Use Cases](#6-cross-source-use-cases)
-7. [Quick-Start Code](#7-quick-start-code)
-8. [Download & Regeneration](#8-download--regeneration)
-9. [Upgrading to Real Data](#9-upgrading-to-real-data)
-10. [Best Practices](#10-best-practices)
-11. [Troubleshooting](#11-troubleshooting)
-12. [Citations & References](#12-citations--references)
+4. [Directory Structure & File Inventory](#3-directory-structure--file-inventory)
+5. [Data Schemas & Formats](#4-data-schemas--formats)
+6. [Integration Strategy](#5-integration-strategy)
+7. [Cross-Source Use Cases](#6-cross-source-use-cases)
+8. [Quick-Start Code](#7-quick-start-code)
+9. [Download & Regeneration](#8-download--regeneration)
+10. [Upgrading to Real Data](#9-upgrading-to-real-data)
+11. [Best Practices](#10-best-practices)
+12. [Troubleshooting](#11-troubleshooting)
+13. [Citations & References](#12-citations--references)
 
 ---
 

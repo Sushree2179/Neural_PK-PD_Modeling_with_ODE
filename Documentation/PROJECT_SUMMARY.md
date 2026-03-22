@@ -2,7 +2,7 @@
 
 **Project**: Physics-Informed Neural ODE for Pharmacokinetic-Pharmacodynamic Modeling  
 **Author**: Subrat  
-**Date**: Current (post March 11, 2026)  
+**Last Updated**: 22 Mar 2026  
 **Status**: 🎯 Phase 3 Sections 12-28 Complete | **Full Pipeline: MLP → GNN → PK-PD → Clinical Trial → Summary → Interpretation**  
 **Lifecycle State**: Phase 3 complete — Sections 12-28 Done (all experiments + interpretation)  
 **Next Step**: Phase 4 — Deployment or Thesis Writing  
@@ -12,6 +12,7 @@
 
 ## 📚 Navigation
 
+- **[Documentation Hub →](README.md)** - Documentation index and reading order
 - **[Troubleshooting →](../Coding/TROUBLESHOOTING_GUIDE.md)** - Problem solving guide
 - **[Dataset Reference →](MASTER_DATASET_REFERENCE.md)** - All 5 data sources
 - **[Notebook (Phase 1–2) →](../Coding/phase1_2_data_exploration.ipynb)** - EDA & feature engineering
@@ -19,9 +20,24 @@
 - **[Notebook (Phase 3B) →](../Coding/phase3b_model_design.ipynb)** - Model architecture & training (30 cells)
 - **[Notebook (Phase 3C) →](../Coding/phase3c_finetuning.ipynb)** - Fine-tuning & calibration (28 cells)
 - **[Notebook (Phase 3D) →](../Coding/phase3d_experiments.ipynb)** - Advanced experiments (88 cells)
+- **[Notebook (RapidDock Prototype) →](../Coding/rapid_dock_transformer_demo.ipynb)** - Distance-biased transformer prototype with GCN baseline and scaffold CV
 - **[Notebook (Phase 3 — original) →](../Coding/phase3_neural_ode_model.ipynb)** - Monolithic archive (121 cells, preserved)
 - **[Documentation Governance →](DOCUMENTATION_GOVERNANCE.md)** - Update protocol
 - **[Slides Guide →](../Slides/README.md)** - Presentation generation
+
+---
+
+## 🆕 Current Addendum (22 Mar 2026)
+
+- RapidDock prototype notebook is now integrated as an exploratory branch in `Coding/rapid_dock_transformer_demo.ipynb`.
+- Current prototype includes:
+  - Real-data loading from ChEMBL with fallback to synthetic sample
+  - 3D conformer and distance-matrix preprocessing (RDKit)
+  - RapidDock-style distance-biased transformer regression model
+  - GCN baseline comparison
+  - Scaffold split evaluation with early stopping
+  - Scaffold-group cross-validation summary
+- Status classification: **Exploratory prototype (not production model replacement yet)**.
 
 ---
 

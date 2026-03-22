@@ -1,0 +1,5 @@
+scenario,dose_mg,cv_iiv,AUC_E_median,Cmax_median,hERG_rate,Caco2_rate,pass_effect,pass_hERG,pass_Caco2,overall_pass
+high_dose,125.0,0.3,19.740563069807067,12.46800631704319,1.0,1.0,True,False,False,False
+base,100.0,0.3,15.969636238356076,9.974405053634552,0.992,0.99,True,False,False,False
+high_iiv,100.0,0.4,15.969636238356076,9.974405053634552,1.0,1.0,True,False,False,False
+low_dose,75.0,0.3,12.150753876705542,7.480803790225914,0.7994800292767151,0.8451209923163066,True,False,False,False
