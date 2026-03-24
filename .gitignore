@@ -1,5 +1,5 @@
 # Virtual environments
-.venv/
+.venv*/
 Coding/venv_pkpd/
 
 # macOS
@@ -30,7 +30,7 @@ Coding/data/outputs/
 Coding/data/processed/
 
 # LaTeX thesis template (external)
-Thesis_Latex/
+#Thesis_Latex/
 
 # Slide-generation template
 Slides/Masters-thesis-title-page-template-*.docx

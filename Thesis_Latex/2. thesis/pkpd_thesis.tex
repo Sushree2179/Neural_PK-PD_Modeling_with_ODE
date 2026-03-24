@@ -1,0 +1,548 @@
+\documentclass[a4paper,11pt,twoside]{report}
+% THIS FILE SHOULD BE COMPILED BY pdfLaTeX
+
+% ----------------------   PREAMBLE PART ------------------------------
+
+% ------------------------ ENCODING & LANGUAGES ----------------------
+
+\usepackage[utf8]{inputenc}
+%\usepackage[MeX]{polski} % Not needed unless You have a name with polish symbols or sth
+\usepackage[T1]{fontenc}
+\usepackage[english, polish]{babel}
+
+
+\usepackage{amsmath, amsfonts, amsthm, latexsym} % MOSTLY MATHEMATICAL SYMBOLS
+
+\usepackage[final]{pdfpages} % INPUTING TITLE PDF PAGE - GENERATE IT FIRST!
+%\usepackage[backend=bibtex, style=verbose-trad2]{biblatex}
+
+
+\usepackage{commath} % various commands which can make writing math expressions easier --- documentation available at: https://ctan.gust.org.pl/tex-archive/macros/latex/contrib/commath/commath.pdf
+
+\usepackage[hidelinks]{hyperref} % for hyperlinks, for example, urls, references to equations, entries in a bibliography --- hidelinks option removes rectangles around hiperlinks
+
+
+% ---------------- MARGINS, INDENTATION, LINESPREAD ------------------
+
+\usepackage[inner=20mm, outer=20mm, bindingoffset=10mm, top=25mm, bottom=25mm]{geometry} % MARGINS
+
+
+\linespread{1.5}
+\allowdisplaybreaks         % ALLOWS BREAKING PAGE IN MATH MODE
+
+\usepackage{indentfirst}    % IT MAKES THE FIRST PARAGRAPH INDENTED; NOT NEEDED
+\setlength{\parindent}{5mm} % WIDTH OF AN INDENTATION
+
+
+%---------------- RUNNING HEAD - CHAPTER NAMES, PAGE NUMBERS ETC. -------------------
+
+\usepackage{fancyhdr}
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}
+\fancyhf{}
+% PAGINATION: LEFT ALIGNMENT ON EVEN PAGES, RIGHT ALIGNMENT ON ODD PAGES 
+\fancyfoot[LE,RO]{\thepage} 
+% RIGHT HEADER: zawartość \rightmark do lewego, wewnętrznego (marginesu) 
+\fancyhead[LO]{\sc \nouppercase{\rightmark}}
+% lewa pagina: zawartość \leftmark do prawego, wewnętrznego (marginesu) 
+\fancyhead[RE]{\sc \leftmark}
+
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
+
+% HEAD RULE - IT'S A LINE WHICH SEPARATES HEADER AND FOOTER FROM CONTENT
+\renewcommand{\headrulewidth}{0 pt} % 0 MEANS NO RULE, 0.5 MEANS FINE RULE, THE BIGGER VALUE THE THICKER RULE
+
+
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyfoot[LE,RO]{\thepage}
+  
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0.0pt}
+}
+
+
+
+% --------------------------- CHAPTER HEADERS ---------------------
+
+\usepackage{titlesec}
+\titleformat{\chapter}
+  {\normalfont\Large \bfseries}
+  {\thechapter.}{1ex}{\Large}
+
+\titleformat{\section}
+  {\normalfont\large\bfseries}
+  {\thesection.}{1ex}{}
+\titlespacing{\section}{0pt}{30pt}{20pt} 
+
+    
+\titleformat{\subsection}
+  {\normalfont \bfseries}
+  {\thesubsection.}{1ex}{}
+
+
+% ----------------------- TABLE OF CONTENTS SETUP ---------------------------
+
+\def\cleardoublepage{\clearpage\if@twoside
+\ifodd\c@page\else\hbox{}\thispagestyle{empty}\newpage
+\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+
+
+% THIS MAKES DOTS IN TOC FOR CHAPTERS
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\l@chapter}
+  {\hfil}
+  {\leaders\hbox{\normalfont$\m@th\mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}\hfill}
+  {}{}
+\makeatother
+
+\usepackage{titletoc}
+\makeatletter
+\titlecontents{chapter}% <section-type>
+  [0pt]% <left>
+  {}% <above-code>
+  {\bfseries \thecontentslabel.\quad}% <numbered-entry-format>
+  {\bfseries}% <numberless-entry-format>
+  {\bfseries\leaders\hbox{\normalfont$\m@th\mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}\hfill\contentspage}% <filler-page-format>
+
+\titlecontents{section}
+  [1em]
+  {}
+  {\thecontentslabel.\quad}
+  {}
+  {\leaders\hbox{\normalfont$\m@th\mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}\hfill\contentspage}
+
+\titlecontents{subsection}
+  [2em]
+  {}
+  {\thecontentslabel.\quad}
+  {}
+  {\leaders\hbox{\normalfont$\m@th\mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}\hfill\contentspage}
+\makeatother
+
+
+
+% ---------------------- TABLES AD FIGURES NUMBERING ----------------------
+
+\renewcommand*{\thetable}{\arabic{chapter}.\arabic{table}}
+\renewcommand*{\thefigure}{\arabic{chapter}.\arabic{figure}}
+
+
+% ------------- DEFINING ENVIRONMENTS FOR THEOREMS, DEFINITIONS ETC. ---------------
+
+\makeatletter
+\newtheoremstyle{definition}
+{3ex}%                           % Space above
+{3ex}%                           % Space below
+{\upshape}%                      % Body font
+{}%                              % Indent amount
+{\bfseries}%                     % Theorem head font
+{.}%                             % Punctuation after theorem head
+{.5em}%                          % Space after theorem head, ' ', or \newline
+{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+% --------------------- END OF PREAMBLE PART (MOSTLY) --------------------------
+
+
+
+
+
+% -------------------------- USER SETTINGS ---------------------------
+
+\newcommand{\tytul}{Modelowanie farmakokinetyczno-farmakodynamiczne z wykorzystaniem metod uczenia maszynowego i równań różniczkowych zwyczajnych}
+\renewcommand{\title}{Neural PK-PD Modeling with ODE: Multi-Task Molecular Property Prediction and Decision-Oriented Simulation}
+\newcommand{\type}{Master} % Master OR Engineer
+\newcommand{\supervisor}{dr inż. Promotor X} % TITLE AND NAME OF THE SUPERVISOR
+
+
+
+\begin{document}
+\sloppy
+\selectlanguage{english}
+
+\includepdf[pages=-]{titlepage-en} % THIS INPUTS THE TITLE PAGE
+
+
+% ------------------ PAGE WITH SIGNATURES --------------------------------
+
+%\thispagestyle{empty}\newpage
+%\null
+%
+%\vfill
+%
+%\begin{center}
+%\begin{tabular}[t]{ccc}
+%............................................. & \hspace*{100pt} & .............................................\\
+%supervisor's signature & \hspace*{100pt} & author's signature
+%\end{tabular}
+%\end{center}
+%
+
+
+% ---------------------------- ABSTRACTS -----------------------------
+
+{  \fontsize{12}{14} \selectfont
+\begin{abstract}
+
+\begin{center}
+\title
+\end{center}
+
+This thesis presents an end-to-end machine learning framework for early drug development that combines molecular property prediction with mechanistic pharmacokinetic-pharmacodynamic (PK-PD) simulation. The proposed workflow integrates heterogeneous public datasets, performs robust feature engineering and data quality checks, and trains multi-task neural models to predict binding affinity, hERG-related cardiotoxicity, Caco-2 permeability, and clearance.
+
+The core contribution is a physics-informed decision pipeline where learned molecular endpoints are coupled with a Neural ODE-based PK-PD simulator for scenario analysis, sensitivity analysis, dose optimization, Pareto trade-off exploration, Monte Carlo validation, and in-silico clinical trial simulation. In addition to baseline fingerprint-based models, the work evaluates graph neural network encoders and a joint GNN+MLP fusion architecture for improved binding prediction. A RapidDock-inspired, distance-biased transformer branch is included as an exploratory prototype for structure-aware modeling.
+
+Results show substantial performance improvements over early baselines, successful probability calibration for classification tasks, and coherent PK-PD trends in population-level simulations. The thesis concludes with practical limitations, reproducibility notes, and future directions toward external validation and deployment-oriented decision support.
+
+\noindent \textbf{Keywords:} drug discovery, PK-PD, Neural ODE, multi-task learning, graph neural networks, calibration, dose optimization
+\end{abstract}
+}
+
+
+%% --------------------------- DECLARATIONS ------------------------------------
+%
+%%
+%%	IT IS NECESSARY OT ATTACH FILLED-OUT AUTORSHIP DEECLRATION. SCAN (IN PDF FORMAT) NEEDS TO BE PLACED IN scans FOLDER AND IT SHOULD BE CALLED, FOR EXAMPLE, DECLARATION_OF_AUTORSHIP.PDF. IF THE FILENAME OR FILEPATH IS DIFFERENT, THE FILEPATH IN THE NEXT COMMAND HAS TO BE ADJUSTED ACCORDINGLY.
+%%
+%%	command attacging the declarations of autorship
+%%
+%\includepdf[pages=-]{scans/declaration-of-autorship}
+%\null\thispagestyle{empty}\newpage
+%
+%% optional declaration
+%%
+%%	command attaching the declaataration on granting a license
+%%
+%\includepdf[pages=-]{scans/declaration-on-granting-a-license}
+%%
+%%	.tex corresponding to the above PDF files are present in the 3. declarations folder 
+%
+% ------------------- TABLE OF CONTENTS ---------------------
+% \selectlanguage{english} - for English
+\pagenumbering{gobble}
+\tableofcontents
+\thispagestyle{empty}
+\clearpage
+
+
+% -------------------- THE BODY OF THE THESIS --------------------------------
+
+\pagestyle{fancy}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+
+\chapter{Introduction}
+\markboth{}{Introduction}
+\addcontentsline{toc}{chapter}{Introduction}
+
+Drug discovery pipelines face a fundamental trade-off between throughput and biological realism. Early-stage virtual screening requires fast computational models, while clinically relevant decision-making requires mechanistic understanding of pharmacokinetic and pharmacodynamic behavior. This thesis addresses this gap by combining data-driven molecular property prediction with ordinary differential equation (ODE)-based PK-PD simulation.
+
+The project goal is to build a reproducible, end-to-end framework that starts from molecular representations and ends with decision-support outputs such as risk-benefit profiles, dose trade-offs, uncertainty estimates, and in-silico trial operating characteristics. The work combines multi-task machine learning, graph-based modeling, probability calibration, and population simulation.
+
+\section{Research Problem and Motivation}
+
+The main problem considered in this thesis is how to improve early drug candidate assessment by integrating:
+\begin{enumerate}
+\item multi-endpoint molecular prediction,
+\item mechanistic PK-PD simulation,
+\item and decision-oriented downstream analytics.
+\end{enumerate}
+
+The practical motivation is to move from isolated endpoint prediction to coherent therapeutic assessment under uncertainty.
+
+\section{Objectives and Contributions}
+
+The thesis has four principal objectives:
+\begin{enumerate}
+\item Build a high-quality, leakage-controlled multi-task dataset from heterogeneous public sources.
+\item Develop predictive models for binding affinity, hERG risk, Caco-2 permeability, and clearance.
+\item Integrate model outputs with Neural ODE-based PK-PD simulation for scenario and optimization studies.
+\item Evaluate calibration, interpretability, and robustness with clinically motivated analyses.
+\end{enumerate}
+
+The key contributions are:
+\begin{enumerate}
+\item A full experimental pipeline spanning feature engineering, model training, calibration, and simulation.
+\item A joint GNN+MLP fusion model that improves binding performance over individual branches.
+\item Population-level analyses including sensitivity, Pareto optimization, Monte Carlo validation, and trial simulation.
+\item An exploratory RapidDock-inspired prototype branch with documented protocol and qualitative feasibility assessment.
+\end{enumerate}
+
+\section{Thesis Organization}
+
+The remainder of the thesis is organized as follows. Chapter 2 presents theoretical background. Chapter 3 reviews related work and defines the research gap. Chapter 4 formalizes the problem and metrics. Chapter 5 describes data curation and preprocessing. Chapter 6 presents methods and model architectures. Chapter 7 defines the experimental setup. Chapter 8 reports empirical results. Chapter 9 discusses implications and limitations. Chapter 10 concludes and outlines future work.
+
+\chapter{Background and Theoretical Foundations}
+
+\section{ADME-Tox Endpoints in Early Drug Discovery}
+
+Absorption, distribution, metabolism, excretion, and toxicity (ADME-Tox) endpoints are central to candidate selection. In this thesis, the following endpoints are modeled:
+\begin{enumerate}
+\item binding affinity (regression),
+\item hERG-related cardiotoxicity risk (classification),
+\item Caco-2 permeability proxy (classification),
+\item clearance (regression).
+\end{enumerate}
+
+\section{Multi-Task Learning}
+
+Multi-task learning uses shared representations across related tasks to improve generalization, especially under partial labels. A shared encoder with task-specific heads is used in this work to model common molecular factors while preserving task-specific outputs.
+
+\section{Graph Neural Networks for Molecular Modeling}
+
+Molecules are naturally represented as graphs, where atoms are nodes and bonds are edges. Message Passing Neural Networks (MPNNs) aggregate local structural information into latent embeddings that can be used for property prediction.
+
+\section{PK-PD Modeling with ODEs}
+
+A two-compartment PK model with an effect-site linkage is used to bridge molecular predictions and pharmacodynamic response. A simplified form is:
+\begin{equation}
+\frac{dC_c}{dt} = -\frac{CL}{V_c} C_c - k_{12} C_c + k_{21} C_t + u(t),
+\end{equation}
+\begin{equation}
+\frac{dC_t}{dt} = k_{12} C_c - k_{21} C_t,
+\end{equation}
+\begin{equation}
+E(t) = E_{\max} \cdot \frac{C_e(t)^\gamma}{EC_{50}^\gamma + C_e(t)^\gamma}.
+\end{equation}
+
+\section{Calibration and Decision Reliability}
+
+For classification tasks, probability calibration is required when outputs are used in downstream risk computations. This thesis evaluates Expected Calibration Error (ECE) and applies temperature scaling and Platt scaling.
+
+\chapter{Related Work and Research Gap}
+
+Prior work in molecular machine learning has shown strong performance for single-endpoint prediction with fingerprints, graph networks, and transformers. In parallel, PK-PD literature has established mechanistic ODE-based models for dose-response analysis. However, integrated pipelines that combine robust multi-task molecular prediction, calibrated uncertainty, and decision-focused PK-PD simulation remain relatively limited.
+
+The specific gap addressed here is the lack of a reproducible framework connecting molecular-level predictions to simulation-based therapeutic decision support in a single workflow.
+
+\chapter{Problem Formulation, Objectives, and Scope}
+
+\section{Task Definitions}
+
+Let $x$ denote molecular input features. The target vector is:
+\begin{equation}
+y = \left[y_{\text{bind}},\ y_{\text{hERG}},\ y_{\text{Caco2}},\ y_{\text{CL}}\right].
+\end{equation}
+
+Tasks are defined as:
+\begin{enumerate}
+\item $f_{\text{bind}}(x)$: regression of binding affinity,
+\item $f_{\text{hERG}}(x)$: classification probability of hERG risk,
+\item $f_{\text{Caco2}}(x)$: classification probability for permeability class,
+\item $f_{\text{CL}}(x)$: regression of clearance.
+\end{enumerate}
+
+\section{Evaluation Metrics}
+
+Regression tasks are evaluated with $R^2$ and RMSE. Classification tasks are evaluated with AUROC, F1, and accuracy, with calibrated probability quality measured by ECE.
+
+\section{Scope and Constraints}
+
+The thesis focuses on data-driven preclinical decision support. It does not claim prospective clinical validation. External validation and deployment-grade clinical calibration are part of future work.
+
+\chapter{Data Sources, Curation, and Preprocessing}
+
+\section{Data Sources}
+
+The workflow integrates public datasets including ChEMBL, TDC, ToxCast, PubChem, and PK-related sources. Data harmonization includes endpoint mapping, standardization of identifiers, and removal of invalid or duplicate entries.
+
+\section{Feature Engineering}
+
+Feature sets include physicochemical descriptors and Morgan fingerprints. In selected experiments, an additional docking-derived bridge signal is appended. Separate representations are maintained for baseline MLP and graph-based models.
+
+\section{Quality Control and Split Strategy}
+
+Quality checks include:
+\begin{enumerate}
+\item NaN/Inf detection,
+\item duplicate handling,
+\item data leakage audits between train/validation/test sets,
+\item and class balance diagnostics.
+\end{enumerate}
+
+\chapter{Methodology and Model Architecture}
+
+\section{Baseline Multi-Task MLP}
+
+The baseline model uses a shared encoder with four task heads. This establishes the initial reference for subsequent architecture improvements.
+
+\section{Fine-Tuning Strategy}
+
+Two fine-tuning variants are evaluated: heads-only updates and selective encoder unfreezing. Threshold calibration is applied post-training for classification heads.
+
+\section{Graph Encoder and Fusion Architecture}
+
+An MPNN-based encoder is used for structure-aware binding prediction. A joint GNN+MLP fusion model concatenates graph and tabular latent representations before final regression.
+
+\section{Neural ODE PK-PD Integration}
+
+Predicted molecular endpoints are mapped to PK-PD parameters and used in ODE simulation to derive concentration-time and effect-time profiles. The simulator is then used for downstream decision analysis.
+
+\section{RapidDock-Inspired Alternative Branch}
+
+As an alternative method track, a RapidDock-inspired distance-biased transformer is developed as a prototype branch. The branch uses molecular graph-derived geometric features to construct pairwise distance-biased attention signals and predicts binding-related outputs in a structure-aware manner.
+
+For reproducibility, the prototype follows the same data partitioning policy as the main modeling pipeline (train/validation/test split with leakage checks and scaffold-aware diagnostics), and is trained under the same implementation framework (PyTorch-based optimization, early stopping, and fixed random seeds where feasible). The primary optimization target is binding regression with RMSE-oriented model selection on the validation split.
+
+This branch is intentionally scoped as exploratory: hyperparameter search is limited, calibration and uncertainty procedures are not fully integrated, and the branch is therefore reported as a feasibility pathway rather than a production candidate that replaces the main MLP and GNN+MLP tracks.
+
+\chapter{Experimental Setup and Protocol}
+
+\section{Environment and Reproducibility}
+
+Experiments are implemented in Python with PyTorch and RDKit-based preprocessing. Random seeds and deterministic split logic are used where feasible to support reproducibility.
+
+\section{Training Protocol}
+
+The training setup includes early stopping, learning-rate scheduling, and task-specific losses. Hyperparameter sweeps are conducted for selected settings (e.g., class weighting and hidden dimensions).
+
+\section{RapidDock Prototype Protocol}
+
+The RapidDock-inspired branch is executed as a constrained prototype study. To ensure comparability, it reuses the same split definitions and preprocessing governance used by the primary experiments. The prototype is evaluated on binding-focused performance and scaffold-aware behavior checks, while extensive hyperparameter sweeps and full multi-endpoint calibration are deferred to future work.
+
+\section{Experimental Sequence}
+
+The experimental program proceeds from baseline modeling to advanced analytics:
+\begin{enumerate}
+\item baseline and feature upgrades,
+\item fine-tuning and calibration,
+\item GNN/fusion experiments,
+\item RapidDock-inspired prototype feasibility run,
+\item PK-PD simulation,
+\item scenario, sensitivity, and optimization studies,
+\item Pareto and Monte Carlo validation,
+\item clinical-trial style simulation,
+\item interpretation analysis.
+\end{enumerate}
+
+\chapter{Results}
+
+\section{Predictive Modeling Results}
+
+The baseline multi-task model is progressively improved by feature upgrades and architecture tuning. Fine-tuning increases classification discrimination, while the joint fusion model yields the strongest binding performance among tested variants.
+
+\section{Calibration Results}
+
+Temperature scaling achieves substantial ECE reductions on hERG and Caco-2 tasks, improving reliability for downstream risk computations.
+
+\section{GNN and Fusion Results}
+
+Graph-based modeling improves binding prediction relative to tabular-only baselines. The joint GNN+MLP fusion model provides additional gains, indicating complementary signal between structural and fingerprint descriptors.
+
+\section{RapidDock Prototype Outcomes}
+
+The RapidDock-inspired branch demonstrated architectural feasibility and produced coherent scaffold-sensitive predictions in exploratory runs. However, due to constrained tuning budget and partial integration with the full calibration/uncertainty stack, results are interpreted qualitatively rather than as a definitive benchmark against the primary GNN+MLP pipeline. Accordingly, this branch is treated as a validated research direction for future expansion instead of a production replacement.
+
+\section{PK-PD and Decision Analytics Results}
+
+Population simulation, sensitivity analysis, dose optimization, Pareto front analysis, Monte Carlo confidence estimation, and trial simulation provide a coherent decision-support layer above endpoint prediction.
+
+\section{Interpretability Results}
+
+Feature-level saliency and atom-level analyses are used to identify dominant molecular signals. Cross-task overlap patterns and branch-ablation analyses provide additional insight into model behavior.
+
+\chapter{Discussion}
+
+The results indicate that integrating data-driven predictors with mechanistic simulation supports richer decision-making than isolated endpoint models. The workflow demonstrates both predictive and translational value, especially when calibration and uncertainty-aware analyses are included.
+
+Limitations include dependence on public data quality, endpoint heterogeneity, and assumptions embedded in simulation parameters. The RapidDock branch is promising but requires broader validation and tighter integration with the main pipeline before production use.
+
+\chapter{Conclusion and Future Work}
+
+This thesis presents a complete neural PK-PD framework that links molecular prediction, calibration, mechanistic simulation, and decision analysis in one reproducible workflow. The combined approach improves endpoint modeling and enables clinically motivated in-silico analyses.
+
+Future work should focus on:
+\begin{enumerate}
+\item external and prospective validation,
+\item stronger mechanistic priors and uncertainty quantification,
+\item expanded structure-aware modeling (including the RapidDock branch),
+\item and deployment as an interactive decision-support tool.
+\end{enumerate}
+
+\chapter*{Appendix}
+\addcontentsline{toc}{chapter}{Appendix}
+
+This appendix should include:
+\begin{enumerate}
+\item complete hyperparameter grids,
+\item full metric tables for all experiments,
+\item additional figures (calibration, Pareto, trial operating characteristics),
+\item data schema and preprocessing details,
+\item and reproducibility checklist (software versions, seeds, hardware notes).
+\end{enumerate}
+
+
+
+
+
+% ------------------------------- BIBLIOGRAPHY ---------------------------
+% LEXICOGRAPHICAL ORDER BY AUTHORS' LAST NAMES
+% FOR AMBITIOUS ONES - USE BIBTEX
+
+
+\begin{thebibliography}{20} % IF YOU HAVE MORE REFERENCES, WRITE THE BIGGER NUMBER
+
+\bibitem[1]{chen2018neuralode} R. T. Q. Chen, Y. Rubanova, J. Bettencourt, D. Duvenaud, \emph{Neural Ordinary Differential Equations}, NeurIPS, 2018.
+\bibitem[2]{gilmer2017mpnn} J. Gilmer, S. Schoenholz, P. Riley, O. Vinyals, G. Dahl, \emph{Neural Message Passing for Quantum Chemistry}, ICML, 2017.
+\bibitem[3]{vaswani2017attention} A. Vaswani et al., \emph{Attention Is All You Need}, NeurIPS, 2017.
+\bibitem[4]{toutain2010pkpd} P.-L. Toutain, A. Bousquet-Melou, \emph{PK-PD Approaches in Drug Development}, Journal of Veterinary Pharmacology and Therapeutics, 2010.
+\bibitem[5]{guo2017calibration} C. Guo, G. Pleiss, Y. Sun, K. Q. Weinberger, \emph{On Calibration of Modern Neural Networks}, ICML, 2017.
+\end{thebibliography}
+\pagenumbering{gobble}
+\thispagestyle{empty}
+
+
+
+% ----------------------- LIST OF SYMBOLS AND ABBREVIATIONS ------------------
+\chapter*{List of symbols and abbreviations}
+
+\begin{tabular}{cl}
+ADME & Absorption, Distribution, Metabolism, Excretion \\
+PK/PD & Pharmacokinetics / Pharmacodynamics \\
+ODE & Ordinary Differential Equation \\
+GNN & Graph Neural Network \\
+MPNN & Message Passing Neural Network \\
+AUROC & Area Under Receiver Operating Characteristic \\
+ECE & Expected Calibration Error \\
+RMSE & Root Mean Squared Error \\
+IIV & Inter-individual Variability
+\end{tabular}
+\\
+\thispagestyle{empty}
+
+
+% ----------------------------  LIST OF FIGURES --------------------------------
+% Enable after adding real figure environments to avoid empty list pages.
+% \listoffigures
+% \thispagestyle{empty}
+
+
+% -----------------------------  LIST OF TABLES --------------------------------
+% Enable after adding real table environments to avoid empty list pages.
+% \listoftables
+% \thispagestyle{empty}
+
+% -----------------------------  LIST OF APPENDICES ---------------------------
+\chapter*{List of appendices}
+\begin{enumerate}
+\item Hyperparameter search grids and training configuration snapshots.
+\item Extended performance tables and calibration outputs.
+\item Supplementary simulation plots (population, Pareto, and trial analyses).
+\item Reproducibility sheet: package versions, seed settings, and runtime notes.
+\end{enumerate}
+\thispagestyle{empty}
+
+
+\end{document}
