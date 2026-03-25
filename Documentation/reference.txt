@@ -15,4 +15,13 @@ Y-axis: Target protein names (most represented at top, due to invert_yaxis()).
 X-axis: Number of compounds tested against each target.
 Color: uniform skyblue, showing quantity not quality.
 Reveals which protein families (e.g., kinases, GPCRs, ion channels) dominate the ChEMBL dataset — important for understanding what pharmacodynamic effects the model can learn.
-Why it matters for your model: The pIC50 range captured here defines the dynamic range your pharmacodynamic (Emax/EC50) head must predict, and the target distribution tells you which biological mechanisms have enough data for reliable learning.
+Why it matters for your model: The pIC50 range captured here defines the dynamic range your pharmacodynamic (Emax/EC50) head must predict, and the target distribution tells you which biological mechanisms have enough data for reliable learning
+
+Loaded 5 integrated datasets: PubChem, ChEMBL, TDC ADMET, ToxCast, and PK-DB
+Performed EDA on dataset structure, quality, missingness, and variable distributions
+Visualized key signals for binding affinity, toxicity risk, permeability, and clearance
+Explored PK-DB studies as ground-truth sources for pharmacokinetic trajectories
+Engineered molecular features using descriptors and fingerprints
+Built a multi-task dataset covering binding affinity, hERG inhibition, Caco-2 permeability, and hepatocyte clearance
+Normalized features and saved processed outputs for downstream modeling
+Confirmed readiness for Phase 3: neural ODE-based PK-PD model development.
