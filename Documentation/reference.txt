@@ -1,0 +1,18 @@
+ChEMBL Binding Affinity Distribution
+
+Panel 1 (Left) — ChEMBL Binding Affinity Distribution
+A histogram of pchembl_value (pIC50) across all ChEMBL compounds.
+
+X-axis: pIC50 — a log-scale measure of binding potency. Higher = more potent (e.g., pIC50 8 means IC50 = 10 nM).
+Y-axis: Frequency (number of compounds per bin).
+50 bins give fine-grained resolution of the potency landscape.
+The red dashed vertical line marks the dataset mean, providing a quick reference for average potency.
+Typical shape: roughly bell-shaped, centered around pIC50 5–7, with a tail toward higher potencies.
+Panel 2 (Right) — Top 10 Protein Targets
+A horizontal bar chart ranking the 10 most-screened targets by compound count.
+
+Y-axis: Target protein names (most represented at top, due to invert_yaxis()).
+X-axis: Number of compounds tested against each target.
+Color: uniform skyblue, showing quantity not quality.
+Reveals which protein families (e.g., kinases, GPCRs, ion channels) dominate the ChEMBL dataset — important for understanding what pharmacodynamic effects the model can learn.
+Why it matters for your model: The pIC50 range captured here defines the dynamic range your pharmacodynamic (Emax/EC50) head must predict, and the target distribution tells you which biological mechanisms have enough data for reliable learning.
