@@ -5,9 +5,17 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces ChEMBL Binding Affinity Distribution and Target Coverage. Left panel: histogram of pIC50 values (converted from IC50 [nM]) across 2,000 compounds, mean pIC50 = 6.09, with mean overlay (red dashed line). Right panel: top 10 pharmacological targets by compound frequency (kinases, GPCRs, nuclear receptors).}}{17}{figure.5.1}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces ToxCast Toxicity Risk Stratification (237,660 compound-assay records). Left panel: compound counts across Critical, High, and Representative risk tiers. Right panel: activity rates across the top 10 toxicity assay endpoints. Data sourced from ToxCast critical, high, and representative priority CSVs.}}{18}{figure.5.2}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces TDC ADMET Property Distributions. Left: hERG cardiotoxicity binary balance (655 compounds; 69\% blockers). Middle: Caco-2 intestinal permeability histogram (910 compounds; median = $-5.13$ log$_{10}$ cm/s). Right: log-transformed hepatic clearance distribution (1,213 compounds), showing pronounced right-skew indicative of heterogeneous metabolic stability.}}{20}{figure.5.3}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Training and validation loss curves for the baseline multi-task model (Phase 3B). Both loss curves decrease steadily over epochs, confirming stable gradient propagation through the shared encoder and all four task-specific heads, including the Neural ODE component.}}{52}{figure.8.1}%
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Final model performance (model\_15) versus research targets across all four prediction endpoints. All four targets are met: hERG AUROC = 0.8206 ($\geq $0.80), Caco-2 AUROC = 0.8635 ($\geq $0.75), Clearance R$^2$ = 0.3478 ($\geq $0.20), Binding R$^2$ = 0.5502 ($\geq $0.40).}}{55}{figure.8.2}%
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Expected Calibration Error (ECE) before and after post-hoc probability calibration. Temperature scaling reduces hERG ECE from 0.1727 to 0.0058; Platt scaling reduces Caco-2 ECE from 0.3583 to 0.0448, confirming that predicted probabilities reliably reflect empirical frequencies.}}{56}{figure.8.3}%
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Neural ODE PK-PD simulation: predicted concentration-time and effect-time profiles for representative test compounds. Biexponential concentration decay reflects predicted clearance (high-clearance compounds show rapid decline); Emax effect profiles reflect predicted binding affinity.}}{58}{figure.8.4}%
+\contentsline {figure}{\numberline {8.5}{\ignorespaces Metric progression across all experimental milestones. Dashed red lines mark the four research targets. All targets are first met simultaneously at model\_15 (hERG AUROC push); binding R$^2 \geq 0.40$ is met by model\_15 and the best result of 0.5502 is achieved by the joint GNN+MLP fusion.}}{59}{figure.8.5}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsfinish 

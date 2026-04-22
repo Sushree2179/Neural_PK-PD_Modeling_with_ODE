@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.24)  24 MAR 2026 14:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.24)  22 APR 2026 01:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -548,12 +548,12 @@ Package hyperref Info: Link coloring OFF on input line 170.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<titlepage-en.pdf, id=167, 597.51233pt x 845.0471pt>
+<titlepage-en.pdf, id=561, 597.51233pt x 845.0471pt>
 File: titlepage-en.pdf Graphic file (type pdf)
 <use titlepage-en.pdf>
 Package pdftex.def Info: titlepage-en.pdf  used on input line 174.
 (pdftex.def)             Requested size: 597.51086pt x 845.04504pt.
-<titlepage-en.pdf, id=169, page=1, 597.51233pt x 845.0471pt>
+<titlepage-en.pdf, id=563, page=1, 597.51233pt x 845.0471pt>
 File: titlepage-en.pdf Graphic file (type pdf)
 <use titlepage-en.pdf, page 1>
 Package pdftex.def Info: titlepage-en.pdf , page1 used on input line 174.
@@ -603,7 +603,25 @@ LaTeX Font Info:    Trying to load font information for U+lasy on input line 3.
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ) [1
 
-])
+]
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.67 ...-Task Loss Function}{32}{subsection.6.2.3}
+                                                  % [2]
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.106 ...3}Experimental Sequence}{46}{section.7.3}
+                                                  % [3]
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.142 ... Jointly Important}{63}{subsection.9.1.2}
+                                                  % [4])
 \tf@toc=\write4
 \openout4 = `pkpd_thesis.toc'.
 
@@ -613,92 +631,1802 @@ een already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.236 \clearpage
-                 [2]
+                 [5]
 Chapter 1.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.271 \item I
-             ntegrate model outputs with Neural ODE-based PK-PD simulation f...
-[1
+l.271 \item m
+             ulti-endpoint molecular prediction, [1
 
 
-] [2]
+{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+ [2] [3]
 Chapter 2.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [3
+ [4
 
 ]
-[4]
+[5]
 Chapter 3.
-[5
-
-]
-Chapter 4.
 [6
 
 ]
-Chapter 5.
+Chapter 4.
 [7
 
 ]
-Chapter 6.
-[8
+Chapter 5.
 
-] [9]
-Chapter 7.
-[10
-
-] [11]
-Chapter 8.
-
-Underfull \vbox (badness 4647) has occurred while \output is active []
-
- [12
-
-]
-[13]
-Chapter 9.
-[14
-
-]
-Chapter 10.
-[15
-
-] [16
-
-]
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
-een already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.509 \chapter
-              *{List of symbols and abbreviations} [1
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 511--524
-
+Underfull \hbox (badness 4120) in paragraph at lines 387--388
+\T1/cmr/m/n/10.95 The con-sol-i-dated ar-chi-tec-ture re-places for-merly sep-a
+-rate scripts: \T1/cmtt/m/n/10.95 data_download.py\T1/cmr/m/n/10.95 ,
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
-een already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.538 \chapter
-              *{List of appendices} [2
+Underfull \hbox (badness 10000) in paragraph at lines 387--388
+\T1/cmtt/m/n/10.95 download_chembl_binding_data.py\T1/cmr/m/n/10.95 , \T1/cmtt/
+m/n/10.95 download_chembl_binding_real.py\T1/cmr/m/n/10.95 ,
+ []
+
+
+Underfull \hbox (badness 1297) in paragraph at lines 387--388
+\T1/cmtt/m/n/10.95 download_pkdb_complete.py\T1/cmr/m/n/10.95 , \T1/cmtt/m/n/10
+.95 download_tdc_admet.py\T1/cmr/m/n/10.95 , \T1/cmtt/m/n/10.95 download_toxcas
+t_tox21.py\T1/cmr/m/n/10.95 , and
+ []
+
+[8
 
 ]
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
-een already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.548 \end{document}
-                     [3
+
+! LaTeX Error: Unicode character λ (U+03BB)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.416 ...ilability), MRT (mean residence time), λ
+                                                  z (elimination rate consta...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[9] [10] [11]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 1383) has occurred while \output is active []
+
+ [12]
+[13]
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character └ (U+2514)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character └ (U+2514)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character └ (U+2514)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[14]
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character └ (U+2514)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character └ (U+2514)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character └ (U+2514)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 \end{verbatim}
+                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[15]
+Overfull \hbox (66.53813pt too wide) in paragraph at lines 657--670
+ [][] 
+ []
+
+[16]
+<figures/fig5_1_chembl_binding.pdf, id=1064, 803.37996pt x 303.4133pt>
+File: figures/fig5_1_chembl_binding.pdf Graphic file (type pdf)
+<use figures/fig5_1_chembl_binding.pdf>
+Package pdftex.def Info: figures/fig5_1_chembl_binding.pdf  used on input line 
+695.
+(pdftex.def)             Requested size: 432.48053pt x 163.33147pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[17 <./figures/fig5_1_chembl_binding.pdf>]
+Underfull \hbox (badness 1009) in paragraph at lines 729--730
+\T1/cmr/m/n/10.95 The strat-i-fi-ca-tion shows ap-prox-i-mately 48.6% of com-po
+unds with man-age-able risk
+ []
+
+<figures/fig5_2_toxcast_risk.pdf, id=1130, 803.40103pt x 303.4133pt>
+File: figures/fig5_2_toxcast_risk.pdf Graphic file (type pdf)
+<use figures/fig5_2_toxcast_risk.pdf>
+Package pdftex.def Info: figures/fig5_2_toxcast_risk.pdf  used on input line 73
+5.
+(pdftex.def)             Requested size: 432.48053pt x 163.33147pt.
+[18 <./figures/fig5_2_toxcast_risk.pdf>] [19]
+<figures/fig5_3_tdc_admet.pdf, id=1205, 947.9408pt x 306.30411pt>
+File: figures/fig5_3_tdc_admet.pdf Graphic file (type pdf)
+<use figures/fig5_3_tdc_admet.pdf>
+Package pdftex.def Info: figures/fig5_3_tdc_admet.pdf  used on input line 784.
+(pdftex.def)             Requested size: 441.58736pt x 142.68698pt.
+
+
+! LaTeX Error: Unicode character λ (U+03BB)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.800 ...ax, t½, ka, F (bioavailability), MRT, λ
+                                                  z, fu (fraction unbound), ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[20 <./figures/fig5_3_tdc_admet.pdf>] [21] [22]
+Underfull \hbox (badness 10000) in paragraph at lines 857--858
+[]\T1/cmr/bx/n/10.95 Output\T1/cmr/m/n/10.95 : Pre-pro-cessed fea-tures and tas
+k la-bels saved to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 867--868
+[]\T1/cmr/bx/n/10.95 Extended-Connectivity Fin-ger-prints (ECFP/Morgan fin-ger-
+prints)\T1/cmr/m/n/10.95 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 867--868
+\T1/cmr/m/n/10.95 2048-bit bi-nary vec-tors cap-tur-ing lo-cal molec-u-lar stru
+c-ture via RD-Kit's
+ []
+
+
+Underfull \hbox (badness 1584) in paragraph at lines 867--868
+\T1/cmtt/m/n/10.95 AllChem.GetMorganFingerprintAsBitVect() \T1/cmr/m/n/10.95 wi
+th ra-dius 2. The 2048-bit res-o-lu-
+ []
+
+[23]
+Overfull \hbox (29.58679pt too wide) in paragraph at lines 888--898
+ [][] 
+ []
+
+[24]
+Underfull \hbox (badness 1715) in paragraph at lines 916--917
+[]\T1/cmr/m/n/10.95 The com-plete pre-pro-cessed multi-task fea-ture ma-trix^^V
+including Mor-gan fin-ger-prints,
+ []
+
+
+Underfull \hbox (badness 1796) in paragraph at lines 916--917
+\T1/cmr/m/n/10.95 de-scrip-tor val-ues, task la-bels, and tar-get val-ues^^Vis 
+per-sisted to disk as a CSV file
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[25] [26] [27] [28]
+Chapter 6.
+[29
+
+] [30] [31] [32]
+Underfull \hbox (badness 10000) in paragraph at lines 1181--1182
+[]\T1/cmr/bx/n/10.95 DeepRegressionHead \T1/cmr/m/n/10.95 (bind-ing): \T1/cmtt/
+m/n/10.95 Linear(64,64) -- ReLU -- Dropout(0.1) --
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1188--1189
+[]\T1/cmr/bx/n/10.95 PK pa-ram-e-ter net-work\T1/cmr/m/n/10.95 : \T1/cmtt/m/n/1
+0.95 Linear(64,32) -- Tanh -- Linear(32,2) \T1/cmr/m/n/10.95 pre-dicts
+ []
+
+[33]
+Underfull \hbox (badness 6173) in paragraph at lines 1233--1234
+[]\T1/cmr/m/n/10.95 Phase 3B ar-ti-facts (model weights, scalers, raw ar-rays, 
+con-fig) are saved to
+ []
+
+[34] [35] [36] [37] [38]
+Underfull \hbox (badness 10000) in paragraph at lines 1411--1411
+[]\T1/cmr/m/n/10.95 Table 6.3: []Mapping of pre-dicted molec-u-lar prop-er-ties
+ to ODE phar-ma-coki-
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[39] [40]
+Overfull \hbox (41.52374pt too wide) in paragraph at lines 1467--1468
+[]\T1/cmr/bx/n/10.95 Ligand rep-re-sen-ta-tion\T1/cmr/m/n/10.95 : Real ChEMBL S
+MILES (\T1/cmtt/m/n/10.95 chembl_binding_affinity_with_smiles.csv\T1/cmr/m/n/10
+.95 )
+ []
+
+[41]
+Underfull \hbox (badness 10000) in paragraph at lines 1500--1501
+[]\T1/cmr/m/n/10.95 LayerNorm + MLP (\T1/cmtt/m/n/10.95 Linear(128,512) -- GELU
+ -- Dropout(0.1) --
+ []
+
+[42] [43] [44]
+Chapter 7.
+
+Underfull \hbox (badness 4543) in paragraph at lines 1537--1538
+[]\T1/cmr/bx/n/10.95 RDKit \T1/cmr/m/n/10.95 2025.9.5: Molec-u-lar fin-ger-prin
+t com-pu-ta-tion, SMILES canon-i-cal-iza-tion,
+ []
+
+[45
+
+] [46] [47]
+Chapter 8.
+[48
+
+]
+Underfull \hbox (badness 1173) in paragraph at lines 1652--1653
+[]\T1/cmr/m/n/10.95 Binarization: Median-split yields 48% high-permeability (fa
+-vor-able) and 52% low-
+ []
+
+[49] [50] [51]
+Underfull \hbox (badness 1472) in paragraph at lines 1704--1705
+[]\T1/cmr/bx/n/10.95 PK curve gen-er-a-tion\T1/cmr/m/n/10.95 : The PKODE-Func s
+uc-cess-fully gen-er-ates compound-level
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1706--1707
+[]\T1/cmr/bx/n/10.95 Artifact hand-off\T1/cmr/m/n/10.95 : All weights, scalers,
+ and loader state saved to
+ []
+
+<figures/fig8_1_training_history.png, id=1602, 1004.0712pt x 352.1958pt>
+File: figures/fig8_1_training_history.png Graphic file (type png)
+<use figures/fig8_1_training_history.png>
+Package pdftex.def Info: figures/fig8_1_training_history.png  used on input lin
+e 1711.
+(pdftex.def)             Requested size: 386.96028pt x 135.73283pt.
+
+Overfull \hbox (95.1723pt too wide) in paragraph at lines 1728--1737
+ [][] 
+ []
+
+[52 <./figures/fig8_1_training_history.png>]
+Underfull \hbox (badness 1383) in paragraph at lines 1756--1757
+[]\T1/cmr/m/n/10.95 The Phase 3C qual-ity gate re-run con-firmed zero feature-l
+evel leak-age across all
+ []
+
+[53] [54]
+<figures/fig8_3_performance_summary.pdf, id=1622, 658.86104pt x 333.64601pt>
+File: figures/fig8_3_performance_summary.pdf Graphic file (type pdf)
+<use figures/fig8_3_performance_summary.pdf>
+Package pdftex.def Info: figures/fig8_3_performance_summary.pdf  used on input 
+line 1793.
+(pdftex.def)             Requested size: 400.61705pt x 202.87212pt.
+
+Underfull \vbox (badness 3713) has occurred while \output is active []
+
+ [55 <./figures/fig8_3_performance_summary.pdf>]
+<figures/fig8_4_calibration_ece.pdf, id=1678, 514.32103pt x 297.511pt>
+File: figures/fig8_4_calibration_ece.pdf Graphic file (type pdf)
+<use figures/fig8_4_calibration_ece.pdf>
+Package pdftex.def Info: figures/fig8_4_calibration_ece.pdf  used on input line
+ 1812.
+(pdftex.def)             Requested size: 327.77632pt x 189.60286pt.
+ [56 <./figures/fig8_4_calibration_ece.pdf>] [57]
+<figures/fig8_2_pk_curves.png, id=1738, 714.9912pt x 424.4658pt>
+File: figures/fig8_2_pk_curves.png Graphic file (type png)
+<use figures/fig8_2_pk_curves.png>
+Package pdftex.def Info: figures/fig8_2_pk_curves.png  used on input line 1852.
+
+(pdftex.def)             Requested size: 386.96028pt x 229.72626pt.
+<figures/fig8_5_experiment_progression.pdf, id=1739, 875.35858pt x 514.32103pt>
+
+File: figures/fig8_5_experiment_progression.pdf Graphic file (type pdf)
+<use figures/fig8_5_experiment_progression.pdf>
+Package pdftex.def Info: figures/fig8_5_experiment_progression.pdf  used on inp
+ut line 1859.
+(pdftex.def)             Requested size: 432.48053pt x 254.10706pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[58 <./figures/fig8_2_pk_curves.png>] [59 <./figures/fig8_5_experiment_progress
+ion.pdf>] [60]
+Underfull \hbox (badness 3449) in paragraph at lines 1902--1903
+[]\T1/cmr/bx/n/10.95 Pareto front anal-y-sis\T1/cmr/m/n/10.95 : Pareto-optimal 
+reg-i-mens are vi-su-al-ized and ex-ported
+ []
+
+[61] [62]
+Chapter 9.
+[63
+
+]
+Underfull \hbox (badness 1762) in paragraph at lines 1946--1947
+[]\T1/cmr/bx/n/10.95 ODE pa-ram-e-ter as-sump-tions\T1/cmr/m/n/10.95 : The two-
+compartment PK model uses de-fault
+ []
+
+
+Underfull \vbox (badness 3417) has occurred while \output is active []
+
+ [64]
+[65]
+Chapter 10.
+[66
+
+]
+Overfull \hbox (33.4261pt too wide) in paragraph at lines 2004--2018
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+! LaTeX Error: Unicode character λ (U+03BB)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2042 λ
+         z & Elimination rate constant (h$^{-1}$) \\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[67
+
+]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [68]
+[69] [70] [71]
+Overfull \hbox (102.28252pt too wide) in paragraph at lines 2231--2243
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [72]
+[73]
+Underfull \hbox (badness 10000) in paragraph at lines 2280--2293
+
+ []
+
+[74
+
+] (./pkpd_thesis.lof
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [75
+
+])
+\tf@lof=\write5
+\openout5 = `pkpd_thesis.lof'.
+
+
+[76] (./pkpd_thesis.lot
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+ [][] [][]\T1/cmr/m/n/10.95 Mapping of pre-dicted molec-u-lar prop-er-ties to O
+DE phar-ma-coki- 
+ []
+
+[77
+
+])
+\tf@lot=\write6
+\openout6 = `pkpd_thesis.lot'.
+
+ [78] [79
+
+] [80
+
+] [81] [82
 
 ] (./pkpd_thesis.aux)
  ***********
@@ -706,33 +2434,52 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `pkpd_thesis.out' has not changed.
-(rerunfilecheck)             Checksum: B6648C61ED407AA606A12608625CC739;7635.
+(rerunfilecheck)             Checksum: 0405E9403A8EADD3E5F8798FC3C5AA06;30981.
  ) 
 Here is how much of TeX's memory you used:
- 13676 strings out of 467525
- 213548 string characters out of 5418982
- 659463 words of memory out of 5000000
- 42262 multiletter control sequences out of 15000+600000
- 640217 words of font info for 71 fonts, out of 8000000 for 9000
+ 14426 strings out of 467525
+ 224106 string characters out of 5418982
+ 676595 words of memory out of 5000000
+ 42543 multiletter control sequences out of 15000+600000
+ 652937 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,17n,90p,642b,627s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
-></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
-/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/
-local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
-ocal/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/loc
-al/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local
-/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/t
-exlive/2026/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/tex
-live/2026/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texli
-ve/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive
-/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2
-026/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on pkpd_thesis.pdf (23 pages, 896383 bytes).
+ 75i,17n,90p,954b,660s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
+/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
+/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/l
+ocal/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/loc
+al/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
+/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/te
+xlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texli
+ve/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
+2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2
+026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/202
+6/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2026/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2026/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2026/texm
+f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2026/
+texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/local/texlive/2026/te
+xmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2026/texm
+f-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2026/texmf-
+dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2026/texmf-di
+st/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2026/texmf-dist
+/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2026/texmf-dist/f
+onts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2026/texmf-dist/fon
+ts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2026/texmf-dist/fonts
+/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2026/texmf-dist/fonts/t
+ype1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2026/texmf-dist/fonts/typ
+e1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1
+/public/cm-super/sfrm1200.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/p
+ublic/cm-super/sfti1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/pub
+lic/cm-super/sftt1000.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/publi
+c/cm-super/sftt1095.pfb>
+Output written on pkpd_thesis.pdf (89 pages, 1670815 bytes).
 PDF statistics:
- 512 PDF objects out of 1000 (max. 8388607)
- 405 compressed objects within 5 object streams
- 116 named destinations out of 1000 (max. 500000)
- 344 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2294 PDF objects out of 2487 (max. 8388607)
+ 1646 compressed objects within 17 object streams
+ 551 named destinations out of 1000 (max. 500000)
+ 1168 words of extra memory for PDF output out of 10000 (max. 10000000)
 

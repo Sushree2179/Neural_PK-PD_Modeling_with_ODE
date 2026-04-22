@@ -5,9 +5,27 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces ToxCast/Tox21 Data: Toxicity Categories, Hit Rates, and Risk Levels.}}{12}{table.5.1}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Data Acquisition Pipeline: Summary of All Sources (Note: Multi-task learning uses subset of $\sim $13,030 compounds after integration).}}{13}{table.5.2}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Integrated Data Sources: Record Counts and Primary Applications.}}{16}{table.5.3}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces ToxCast Risk Level Distribution across 332,507 Assay Results.}}{18}{table.5.4}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces Multi-Task Learning Setup: Features, Sample Counts, and Target Definitions.}}{24}{table.5.5}%
+\contentsline {table}{\numberline {5.6}{\ignorespaces Phase 3A Hyperparameter Configuration. Binding and Caco-2 receive elevated loss weights (1.8 and 2.0) to compensate for smaller dataset sizes relative to hERG (7,997 samples).}}{26}{table.5.6}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces Phase 3B target metrics. The architecture is evaluated against these thresholds to determine readiness for fine-tuning in Phase 3C.}}{32}{table.6.1}%
+\contentsline {table}{\numberline {6.2}{\ignorespaces Section 13 vs. Section 12 baseline comparison. Upgrading to 2048-bit real SMILES fingerprints introduces structural SAR information absent from the synthetic-FP baseline.}}{37}{table.6.2}%
+\contentsline {table}{\numberline {6.3}{\ignorespaces Mapping of predicted molecular properties to ODE pharmacokinetic/pharmacodynamic parameters.}}{40}{table.6.3}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {7.1}{\ignorespaces Phase 3D experimental sequence. Each section builds on the previous, with artifacts persisted between sections to enable comparison and ablation.}}{46}{table.7.1}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {8.1}{\ignorespaces Phase 3C fine-tuning variant comparison. The best variant by validation mean AUROC is selected as the calibration source model and carried into production threshold selection.}}{53}{table.8.1}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {table}{\numberline {10.1}{\ignorespaces A.1: TDC ADMET Benchmark Datasets—Categories, Task Types, and Sources.}}{67}{table.10.1}%
+\contentsline {table}{\numberline {10.2}{\ignorespaces A.2: ChEMBL Real-SMILES Targets—Eight Pharmacologically Important Targets.}}{68}{table.10.2}%
+\contentsline {table}{\numberline {10.3}{\ignorespaces A.3: PK Parameters Extracted from PK-DB.}}{68}{table.10.3}%
+\contentsline {table}{\numberline {10.4}{\ignorespaces A.4: Complete Raw Data File Inventory and Approximate Sizes.}}{69}{table.10.4}%
+\contentsline {table}{\numberline {10.5}{\ignorespaces A.5: Data Download Pipeline Section: Typical Execution Times.}}{70}{table.10.5}%
+\contentsline {table}{\numberline {10.6}{\ignorespaces A.6: Hyperparameter configuration summary. Search ranges show grid values evaluated; Selected shows the value used in the final production model (model\_15, 623,078 parameters).}}{72}{table.10.6}%
+\contentsline {table}{\numberline {10.7}{\ignorespaces A.7: Progression of test-set performance across all major experimental milestones. Dashes indicate metrics not the primary focus of that experiment. All classification results use locked thresholds (hERG: 0.49, Caco-2: 0.50). Bold values indicate all four ADME performance targets were met.}}{73}{table.10.7}%
 \contentsfinish 

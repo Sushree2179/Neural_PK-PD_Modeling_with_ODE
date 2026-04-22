@@ -20,7 +20,8 @@
 - **[Notebook (Phase 3B) →](../Coding/phase3b_model_design.ipynb)** - Model architecture & training (30 cells)
 - **[Notebook (Phase 3C) →](../Coding/phase3c_finetuning.ipynb)** - Fine-tuning & calibration (28 cells)
 - **[Notebook (Phase 3D) →](../Coding/phase3d_experiments.ipynb)** - Advanced experiments (88 cells)
-- **[Notebook (RapidDock Prototype) →](../Coding/rapid_dock_transformer_demo.ipynb)** - Distance-biased transformer prototype with GCN baseline and scaffold CV
+- **[Notebook (RapidDock Demo) →](../Coding/rapid_dock_transformer_demo.ipynb)** - Distance-biased transformer prototype with GCN baseline and scaffold CV
+- **[Notebook (RapidDock Paper-Aligned Prototype) →](../Coding/rapid_dock_paper_aligned_prototype.ipynb)** - Paper-aligned implementation: distance-biased MHA, symmetry-aware loss, L-BFGS reconstruction (integrated into thesis §6.9)
 - **[Notebook (Phase 3 — original) →](../Coding/phase3_neural_ode_model.ipynb)** - Monolithic archive (121 cells, preserved)
 - **[Documentation Governance →](DOCUMENTATION_GOVERNANCE.md)** - Update protocol
 - **[Slides Guide →](../Slides/README.md)** - Presentation generation
@@ -38,6 +39,7 @@
   - Scaffold split evaluation with early stopping
   - Scaffold-group cross-validation summary
 - Status classification: **Exploratory prototype (not production model replacement yet)**.
+- **Note**: `rapid_dock_paper_aligned_prototype.ipynb` is the paper-aligned variant described in the thesis (§6.9, §7.4, §8.5); `rapid_dock_transformer_demo.ipynb` is the earlier demo with GCN baseline.
 
 ## 📝 Daily Update (22 Mar 2026)
 
