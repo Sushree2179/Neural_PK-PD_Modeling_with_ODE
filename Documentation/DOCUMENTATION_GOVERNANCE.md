@@ -49,7 +49,7 @@ Use the following structure as the stable documentation layout:
 
 - All dataset and integration documentation is consolidated in [MASTER_DATASET_REFERENCE.md](MASTER_DATASET_REFERENCE.md).
 - Phase 3 is split into 4 notebooks: `phase3a` (features) → `phase3b` (model) → `phase3c` (fine-tuning) → `phase3d` (experiments). The original monolithic `phase3_neural_ode_model.ipynb` is preserved as an archive.
-- RapidDock prototype documentation should point to `Coding/rapid_dock_transformer_demo.ipynb` and indicate whether it is exploratory or production-ready.
+- RapidDock documentation should distinguish between `Coding/rapid_dock_paper_aligned_prototype.ipynb` (thesis-aligned prototype) and `Coding/prototypes/rapid_dock_transformer_demo.ipynb` (legacy exploratory demo).
 - Do not replace old historical metrics; annotate them as snapshots when needed.
 
 ---

@@ -93,7 +93,6 @@ else:
     axes[1].text(0.5, 0.5, "Target column not found", ha="center", va="center")
     axes[1].set_title("Top Protein Targets")
 
-fig.suptitle("Figure 5.1: ChEMBL Binding Affinity Dataset Overview", fontsize=12, y=1.01)
 out = os.path.join(OUT_DIR, "fig5_1_chembl_binding.pdf")
 fig.savefig(out, bbox_inches="tight")
 plt.close(fig)
@@ -151,11 +150,9 @@ if frames:
                 startangle=90)
         ax2.set_title("Risk Tier Proportions")
 
-    fig.suptitle("Figure 5.2: ToxCast Toxicity Dataset Stratification", fontsize=12, y=1.01)
 else:
     fig, ax = plt.subplots(figsize=(8, 4))
     ax.text(0.5, 0.5, "ToxCast data not found", ha="center", va="center")
-    fig.suptitle("Figure 5.2: ToxCast (data unavailable)")
 
 out = os.path.join(OUT_DIR, "fig5_2_toxcast_risk.pdf")
 fig.savefig(out, bbox_inches="tight")
@@ -247,7 +244,6 @@ else:
     ax3.text(0.5, 0.5, "File not found", ha="center", va="center")
     ax3.set_title("Hepatic Clearance")
 
-fig.suptitle("Figure 5.3: TDC ADMET Dataset Overview", fontsize=12, y=1.02)
 out = os.path.join(OUT_DIR, "fig5_3_tdc_admet.pdf")
 fig.savefig(out, bbox_inches="tight")
 plt.close(fig)

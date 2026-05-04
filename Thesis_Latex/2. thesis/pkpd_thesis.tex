@@ -8,7 +8,7 @@
 \usepackage[utf8]{inputenc}
 %\usepackage[MeX]{polski} % Not needed unless You have a name with polish symbols or sth
 \usepackage[T1]{fontenc}
-\usepackage[english, polish]{babel}
+\usepackage[main=english, polish]{babel}
 
 
 \usepackage{amsmath, amsfonts, amsthm, latexsym} % MOSTLY MATHEMATICAL SYMBOLS
@@ -97,181 +97,52 @@
   {}{}
 \makeatother
 
-\usepackage{titletoc}
-\makeatletter
-\titlecontents{chapter}% <section-type>
-  [0pt]% <left>
-  {}% <above-code>
-  {\bfseries \thecontentslabel.\quad}% <numbered-entry-format>
-  {\bfseries}% <numberless-entry-format>
-  {\bfseries\leaders\hbox{\normalfont$\m@th\mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}\hfill\contentspage}% <filler-page-format>
-
-\titlecontents{section}
-  [1em]
-  {}
-  {\thecontentslabel.\quad}
-  {}
-  {\leaders\hbox{\normalfont$\m@th\mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}\hfill\contentspage}
-
-\titlecontents{subsection}
-  [2em]
-  {}
-  {\thecontentslabel.\quad}
-  {}
-  {\leaders\hbox{\normalfont$\m@th\mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}\hfill\contentspage}
-\makeatother
-
-
-
-% ---------------------- TABLES AD FIGURES NUMBERING ----------------------
-
-\renewcommand*{\thetable}{\arabic{chapter}.\arabic{table}}
-\renewcommand*{\thefigure}{\arabic{chapter}.\arabic{figure}}
-
-
-% ------------- DEFINING ENVIRONMENTS FOR THEOREMS, DEFINITIONS ETC. ---------------
-
-\makeatletter
-\newtheoremstyle{definition}
-{3ex}%                           % Space above
-{3ex}%                           % Space below
-{\upshape}%                      % Body font
-{}%                              % Indent amount
-{\bfseries}%                     % Theorem head font
-{.}%                             % Punctuation after theorem head
-{.5em}%                          % Space after theorem head, ' ', or \newline
-{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}
-\makeatother
-
-\theoremstyle{definition}
-\newtheorem{theorem}{Theorem}[chapter]
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{example}[theorem]{Example}
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{definition}[theorem]{Definition}
-\newtheorem{remark}[theorem]{Remark}
-
-% --------------------- END OF PREAMBLE PART (MOSTLY) --------------------------
-
-
-
-
-
-% -------------------------- USER SETTINGS ---------------------------
-
-\newcommand{\tytul}{Modelowanie farmakokinetyczno-farmakodynamiczne z wykorzystaniem metod uczenia maszynowego i równań różniczkowych zwyczajnych}
-\renewcommand{\title}{Neural PK-PD Modeling with ODE: Multi-Task Molecular Property Prediction and Decision-Oriented Simulation}
-\newcommand{\type}{Master} % Master OR Engineer
-\newcommand{\supervisor}{dr inż. Promotor X} % TITLE AND NAME OF THE SUPERVISOR
-
-
+\newcommand{\frontmatterheading}[1]{%
+  \begin{center}
+    {\Large\bfseries #1\par}
+  \end{center}
+  \vspace{1.5\baselineskip}
+}
 
 \begin{document}
-\sloppy
-\selectlanguage{english}
 
-\includepdf[pages=-]{titlepage-en} % THIS INPUTS THE TITLE PAGE
+\includepdf[pages=-]{titlepage-en.pdf}
 
-
-% ------------------ PAGE WITH SIGNATURES --------------------------------
-
-%\thispagestyle{empty}\newpage
-%\null
-%
-%\vfill
-%
-%\begin{center}
-%\begin{tabular}[t]{ccc}
-%............................................. & \hspace*{100pt} & .............................................\\
-%supervisor's signature & \hspace*{100pt} & author's signature
-%\end{tabular}
-%\end{center}
-%
-
-
-% ---------------------------- ABSTRACTS -----------------------------
-
-{  \fontsize{12}{14} \selectfont
-\begin{abstract}
-
-\begin{center}
-\title
-\end{center}
+\pagestyle{empty}
+\frontmatterheading{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
 
 This thesis presents an end-to-end machine learning framework for early drug development that combines molecular property prediction with mechanistic pharmacokinetic-pharmacodynamic (PK-PD) simulation. The proposed workflow integrates heterogeneous public datasets, performs robust feature engineering and data quality checks, and trains multi-task neural models to predict binding affinity, hERG-related cardiotoxicity, Caco-2 permeability, and clearance.
 
-The core contribution is a physics-informed decision pipeline where learned molecular endpoints are coupled with a Neural ODE-based PK-PD simulator for scenario analysis, sensitivity analysis, dose optimization, Pareto trade-off exploration, Monte Carlo validation, and in-silico clinical trial simulation. In addition to baseline fingerprint-based models, the work evaluates graph neural network encoders and a joint GNN+MLP fusion architecture for improved binding prediction. A RapidDock-inspired, distance-biased transformer branch is included as an exploratory prototype for structure-aware modeling.
+The central contribution is a physics-informed decision pipeline in which predicted molecular endpoints are coupled with a Neural ODE-based PK-PD simulator for scenario analysis, sensitivity analysis, dose optimization, Pareto trade-off exploration, Monte Carlo validation, and in-silico clinical trial simulation. Beyond baseline fingerprint-based models, the thesis evaluates graph neural network encoders and a joint GNN+MLP fusion architecture to improve binding prediction. A RapidDock-inspired, distance-biased transformer branch is also included as an exploratory prototype for structure-aware modeling.
 
-Results show substantial performance improvements over early baselines, successful probability calibration for classification tasks, and coherent PK-PD trends in population-level simulations. The thesis concludes with practical limitations, reproducibility notes, and future directions toward external validation and deployment-oriented decision support.
+The results show substantial improvements over early baselines, successful probability calibration for classification tasks, and coherent PK-PD trends in population-level simulations. The thesis concludes by discussing practical limitations, reproducibility considerations, and future directions toward external validation and deployment-oriented decision support.
 
-\noindent \textbf{Keywords:} drug discovery, PK-PD, Neural ODE, multi-task learning, graph neural networks, calibration, dose optimization
-\end{abstract}
-}
+\noindent\textbf{Keywords:} drug discovery, PK-PD, Neural ODE, multi-task learning, graph neural networks, calibration, dose optimization
 
-
-%% --------------------------- DECLARATIONS ------------------------------------
-%
-%%
-%%	IT IS NECESSARY OT ATTACH FILLED-OUT AUTORSHIP DEECLRATION. SCAN (IN PDF FORMAT) NEEDS TO BE PLACED IN scans FOLDER AND IT SHOULD BE CALLED, FOR EXAMPLE, DECLARATION_OF_AUTORSHIP.PDF. IF THE FILENAME OR FILEPATH IS DIFFERENT, THE FILEPATH IN THE NEXT COMMAND HAS TO BE ADJUSTED ACCORDINGLY.
-%%
-%%	command attacging the declarations of autorship
-%%
-%\includepdf[pages=-]{scans/declaration-of-autorship}
-%\null\thispagestyle{empty}\newpage
-%
-%% optional declaration
-%%
-%%	command attaching the declaataration on granting a license
-%%
-%\includepdf[pages=-]{scans/declaration-on-granting-a-license}
-%%
-%%	.tex corresponding to the above PDF files are present in the 3. declarations folder 
-%
-% ------------------- TABLE OF CONTENTS ---------------------
-% \selectlanguage{english} - for English
-\pagenumbering{gobble}
-\tableofcontents
 \thispagestyle{empty}
 \clearpage
 
+\selectlanguage{polish}
+\frontmatterheading{Streszczenie}
+\addcontentsline{toc}{chapter}{Streszczenie}
 
-% -------------------- THE BODY OF THE THESIS --------------------------------
+Niniejsza praca przedstawia kompleksowe podejście z zakresu uczenia maszynowego do wspomagania wczesnego rozwoju leków, łączące predykcję właściwości molekularnych z mechanistyczną symulacją farmakokinetyczno-farmakodynamiczną (PK-PD). Zaproponowany przepływ pracy integruje heterogeniczne publiczne zbiory danych, obejmuje rygorystyczną inżynierię cech i kontrolę jakości danych oraz wykorzystuje wielozadaniowe modele neuronowe do przewidywania powinowactwa wiązania, kardiotoksyczności związanej z hERG, przepuszczalności Caco-2 oraz klirensu.
 
+Główny wkład pracy stanowi fizycznie ugruntowany pipeline decyzyjny, w którym przewidywane molekularne punkty końcowe są sprzęgnięte z symulatorem PK-PD opartym na Neural ODE w celu prowadzenia analizy scenariuszy, analizy wrażliwości, optymalizacji dawkowania, eksploracji kompromisów Pareto, walidacji Monte Carlo oraz symulacji badań klinicznych in silico. Oprócz modeli bazowych opartych na fingerprintach praca ocenia enkodery grafowych sieci neuronowych oraz wspólną architekturę fuzji GNN+MLP, ukierunkowaną na poprawę predykcji powinowactwa wiązania. Dodatkowo uwzględniono eksploracyjną gałąź inspirowaną RapidDock, wykorzystującą transformer z biasem odległościowym jako prototyp modelowania uwzględniającego strukturę.
+
+Wyniki wskazują na istotną poprawę jakości predykcji względem wczesnych rozwiązań bazowych, skuteczną kalibrację prawdopodobieństw dla zadań klasyfikacyjnych oraz spójne trendy PK-PD obserwowane w symulacjach populacyjnych. Pracę zamyka omówienie praktycznych ograniczeń, zagadnień reprodukowalności oraz przyszłych kierunków badań ukierunkowanych na walidację zewnętrzną i wdrożeniowe wspomaganie decyzji.
+
+\noindent\textbf{Słowa kluczowe:} odkrywanie leków, PK-PD, Neural ODE, uczenie wielozadaniowe, grafowe sieci neuronowe, kalibracja, optymalizacja dawkowania
+
+\thispagestyle{empty}
+\clearpage
+
+\selectlanguage{english}
 \pagestyle{fancy}
-\pagenumbering{arabic}
-\setcounter{page}{1}
-
-
-\chapter{Introduction}
-\markboth{}{Introduction}
-\addcontentsline{toc}{chapter}{Introduction}
-
-\noindent \textbf{Notation and Terminology:} Throughout this thesis, the following notation is used:
-\begin{itemize}
-\item \textbf{pIC50}: Negative logarithm (base 10) of the half-maximal inhibitory concentration (IC50) in molar units. Values range from ~3 (weak binding) to ~10 (strong binding).
-\item \textbf{Caco-2}: Caco-2 cell permeability, measured in units of apparent permeability coefficient (Papp) in cm/s.
-\item \textbf{hERG}: Human ether-a-go-go-related gene potassium channel, a key target for cardiac safety assessment.
-\item \textbf{CL/V}: Combination of clearance (CL, in mL/min/kg) and volume of distribution (V, in L), used in PK equations.
-\item \textbf{ODE}: Ordinary differential equation.
-\item \textbf{ADMET}: Absorption, distribution, metabolism, excretion, and toxicity.
-\item \textbf{ECE}: Expected calibration error, a measure of probability calibration quality.
-\end{itemize}
-
-\vspace{0.3cm}
-
-Drug discovery pipelines face a fundamental trade-off between throughput and biological realism. Early-stage virtual screening requires fast computational models, while clinically relevant decision-making requires mechanistic understanding of pharmacokinetic and pharmacodynamic behavior. This thesis addresses this gap by combining data-driven molecular property prediction with ordinary differential equation (ODE)-based PK-PD simulation.
-
-The project goal is to build a reproducible, end-to-end framework that starts from molecular representations and ends with decision-support outputs such as risk-benefit profiles, dose trade-offs, uncertainty estimates, and in-silico trial operating characteristics. The work combines multi-task machine learning, graph-based modeling, probability calibration, and population simulation.
-
-\section{Research Problem and Motivation}
-
-The main problem considered in this thesis is how to improve early drug candidate assessment by integrating:
-\begin{enumerate}
-\item multi-endpoint molecular prediction,
-\item mechanistic PK-PD simulation,
-\item and decision-oriented downstream analytics.
-\end{enumerate}
+\tableofcontents
+\thispagestyle{empty}
+\clearpage
 
 The practical motivation is to move from isolated endpoint prediction to coherent therapeutic assessment under uncertainty.
 
@@ -295,7 +166,37 @@ The key contributions are:
 
 \section{Thesis Organization}
 
-The remainder of the thesis is organized as follows. Chapter 2 presents theoretical background. Chapter 3 reviews related work and defines the research gap. Chapter 4 formalizes the problem and metrics. Chapter 5 describes data curation and preprocessing. Chapter 6 presents methods and model architectures. Chapter 7 defines the experimental setup. Chapter 8 reports empirical results. Chapter 9 discusses implications and limitations. Chapter 10 concludes and outlines future work.
+Table~\ref{tab:thesis_organization} summarizes the organization of the thesis.
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabular}{|p{1.8cm}|p{10.2cm}|}
+\hline
+\textbf{Chapter} & \textbf{Content Summary} \\
+\hline
+Chapter 2 & Theoretical background for ADME-Tox modeling, multi-task learning, graph neural networks, PK-PD modeling, and calibration. \\
+\hline
+Chapter 3 & Related work and the research gap addressed by the thesis. \\
+\hline
+Chapter 4 & Problem formulation, task definitions, evaluation metrics, objectives, and scope. \\
+\hline
+Chapter 5 & Data sources, curation, harmonization, feature engineering, and quality-control strategy. \\
+\hline
+Chapter 6 & Methodology, model architectures, Neural ODE integration, calibration methods, and the RapidDock-inspired branch. \\
+\hline
+Chapter 7 & Experimental environment, training protocol, and study sequence. \\
+\hline
+Chapter 8 & Empirical results across prediction, calibration, simulation, optimization, and interpretability analyses. \\
+\hline
+Chapter 9 & Discussion of findings, interpretation, limitations, and comparison with related work. \\
+\hline
+Chapter 10 & Conclusions and future research directions. \\
+\hline
+\end{tabular}
+\caption{Organization of the thesis.}
+\label{tab:thesis_organization}
+\end{table}
 
 \chapter{Background and Theoretical Foundations}
 
@@ -319,47 +220,248 @@ Molecules are naturally represented as graphs, where atoms are nodes and bonds a
 
 \section{PK-PD Modeling with ODEs}
 
-A two-compartment PK model with an effect-site linkage is used to bridge molecular predictions and pharmacodynamic response. A simplified form is:
+PK-PD modeling connects drug concentration in the body to its biological effect in two linked stages.
+
+\textbf{Pharmacokinetic (PK) stage} describes how drug concentration evolves over time using a two-compartment ODE system:
 \begin{equation}
 \frac{dC_c}{dt} = -\frac{CL}{V_c} C_c - k_{12} C_c + k_{21} C_t + u(t),
 \end{equation}
 \begin{equation}
 \frac{dC_t}{dt} = k_{12} C_c - k_{21} C_t,
 \end{equation}
+where $C_c$ is drug concentration in the \textit{central compartment} (blood/plasma), $C_t$ is drug concentration in the \textit{peripheral compartment} (tissues), $k_{12}$ and $k_{21}$ are inter-compartmental transfer rate constants, $CL/V_c$ is the elimination rate constant (clearance divided by volume), and $u(t)$ is the dosing function (e.g.\ IV bolus).
+
+\textbf{Pharmacodynamic (PD) stage} links drug concentration to biological effect via the Hill--Emax model with effect-site linkage:
 \begin{equation}
-E(t) = E_{\max} \cdot \frac{C_e(t)^\gamma}{EC_{50}^\gamma + C_e(t)^\gamma}.
+E(t) = E_{\max} \cdot \frac{C_c(t)^\gamma}{EC_{50}^\gamma + C_c(t)^\gamma},
 \end{equation}
+where $E_{\max}$ is the maximum achievable pharmacological effect, $EC_{50}$ is the concentration producing 50\% of maximal effect (derived from predicted binding affinity as $EC_{50} = 10^{-\text{pChEMBL}}$), and $\gamma$ is the Hill coefficient controlling the steepness of the response curve.
+
+The predicted molecular endpoints are mapped to ODE parameters as follows:
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ll}
+\hline
+\textbf{Predicted property} & \textbf{ODE/PK-PD role} \\
+\hline
+Hepatic clearance (regression) & Elimination rate constant $k_e = CL/V_c$ \\
+Caco-2 permeability (probability) & Oral absorption rate $k_a$ \\
+Binding affinity pChEMBL (regression) & Pharmacodynamic potency $EC_{50}$ \\
+hERG probability (classification) & Cardiac safety flag \\
+\hline
+\end{tabular}
+\caption{Mapping of predicted molecular properties to ODE pharmacokinetic/pharmacodynamic parameters.}
+\end{table}
+
+The ODEs are solved numerically using \texttt{torchdiffeq.odeint} (Dormand--Prince RK45 solver), which makes the entire pipeline differentiable and enables physics-informed training through the ODE solution if required.
 
 \section{Calibration and Decision Reliability}
 
 For classification tasks, probability calibration is required when outputs are used in downstream risk computations. This thesis evaluates Expected Calibration Error (ECE) and applies temperature scaling and Platt scaling~\cite{guo2017}.
 
+\subsection*{The Problem: Discrimination vs.\ Reliability}
+
+A model can rank compounds correctly (high AUROC) while still assigning systematically wrong probability values. For example, predicting a 95\% hERG inhibition risk when the true empirical rate is 60\% makes the model \textit{overconfident}. Since predicted probabilities are passed directly into downstream PK-PD simulation---as the cardiac safety flag and the Caco-2-derived oral absorption rate $k_a$---this bias propagates into dosing decisions and operating characteristics. Calibration corrects this by aligning predicted confidence with observed accuracy.
+
+\subsection*{Expected Calibration Error (ECE)}
+
+The primary calibration metric used in this thesis partitions predicted probabilities into $M = 10$ equal-width bins and compares the average predicted confidence to the actual accuracy within each bin:
+\begin{equation}
+\text{ECE} = \sum_{m=1}^{M} \frac{|B_m|}{n} \left| \text{acc}(B_m) - \text{conf}(B_m) \right|,
+\end{equation}
+where $B_m$ is the set of samples in bin $m$, $\text{acc}(B_m)$ is the fraction of positive labels in that bin, and $\text{conf}(B_m)$ is the mean predicted probability. A perfectly calibrated model achieves $\text{ECE} = 0$.
+
+\subsection*{Calibration Methods}
+
+Two post-hoc calibration techniques are evaluated:
+
+\begin{enumerate}
+\item \textbf{Temperature Scaling}~\cite{guo2017}: divides the raw logit $z$ by a scalar temperature $T > 0$ before applying the sigmoid:
+\begin{equation}
+\hat{p} = \sigma(z / T), \quad T > 0.
+\end{equation}
+$T > 1$ softens overconfident predictions; $T < 1$ sharpens underconfident ones. The temperature is fitted by minimising negative log-likelihood on the validation set.
+
+\item \textbf{Platt Scaling}: applies an affine transformation to the logit:
+\begin{equation}
+\hat{p} = \sigma(a \cdot z + b),
+\end{equation}
+where parameters $(a, b)$ are learned by logistic regression on validation-set logits and labels.
+\end{enumerate}
+
+\subsection*{Results}
+
+Post-hoc calibration substantially reduced ECE for both classification tasks:
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{lcc}
+\hline
+\textbf{Task} & \textbf{ECE before} & \textbf{ECE after} \\
+\hline
+hERG (temperature scaling) & 0.1727 & \textbf{0.0058} \\
+Caco-2 (Platt scaling)      & 0.3583 & \textbf{0.0448} \\
+\hline
+\end{tabular}
+\caption{Expected Calibration Error before and after post-hoc probability calibration.}
+\end{table}
+
+Calibrated probabilities are used directly in all downstream Neural ODE simulation, Pareto optimisation, and in-silico trial analyses. Uncalibrated outputs would introduce systematic bias into every PK-PD simulation and dose recommendation produced by the framework.
+
 \chapter{Related Work and Research Gap}
 
-The rise of deep learning in drug discovery~\cite{chen2021} has produced strong results for single-endpoint molecular property prediction using fingerprints, graph networks~\cite{gilmer2017mpnn, kearnes2016}, and attention-based transformers~\cite{vaswani2017attention}. Benchmark studies on ADMET prediction~\cite{wang2016, hou2004} have established competitive baselines for absorption, metabolism, excretion, and toxicity endpoints. Independently, PK-PD literature~\cite{toutain2010pkpd} has developed mechanistic ODE-based models for dose-response analysis, and Neural Ordinary Differential Equations~\cite{chen2018neuralode} provide a differentiable framework for learning continuous dynamics from data. However, integrated pipelines that combine robust multi-task molecular prediction, calibrated uncertainty~\cite{guo2017}, and decision-focused PK-PD simulation remain relatively limited~\cite{hastie2009}.
+\section{Molecular Representations for Property Prediction}
 
-The specific gap addressed here is the lack of a reproducible framework connecting molecular-level predictions to simulation-based therapeutic decision support in a single workflow, covering multi-task learning, probability calibration, graph-based molecular encoding, Neural ODE-based pharmacokinetics, and population-level decision analytics end-to-end.
+Recent work in drug discovery has shown that deep learning can achieve strong predictive performance for molecular property estimation when appropriate structural representations are used~\cite{chen2021}. Earlier cheminformatics pipelines relied heavily on fixed descriptors and fingerprints, which remain attractive because they provide compact summaries of local chemical environments and can be used efficiently across large compound libraries~\cite{wale2008}. Later work expanded this representation space through graph neural networks, which operate directly on atom--bond structure rather than on hand-crafted vectors~\cite{kearnes2016, gilmer2017mpnn}, and through attention-based architectures derived from transformers~\cite{vaswani2017attention}. Benchmark efforts such as MoleculeNet further reinforced the importance of representation design by enabling consistent comparison of descriptors, graph models, and learned molecular embeddings across multiple tasks~\cite{wu2018}.
+
+These studies establish a clear methodological trend: as molecular representation becomes more expressive, predictive performance and transferability tend to improve, particularly when tasks depend on subtle structure--activity relationships. This observation is directly relevant to the present thesis because it motivates the comparison between fingerprint-based baselines, graph encoders, and structure-aware extensions.
+
+\section{Multi-Task Learning and ADMET Modeling}
+
+Within ADMET and bioactivity prediction, much of the literature has focused on endpoint-specific problems such as oral absorption, toxicity, and binding prediction~\cite{wang2016, hou2004, overton2019}. At the same time, multi-task learning has emerged as an important strategy for exploiting related pharmacological endpoints within a shared model. In particular, massively multi-task neural networks demonstrated that parameter sharing can improve predictive performance by transferring information across assays and targets that are only partially labeled~\cite{ramsundar2015}. Public resources such as ChEMBL have further enabled large-scale supervised learning on molecular activity data~\cite{gaulton2012}, while benchmark-oriented studies have encouraged standardized model comparison across diverse molecular tasks~\cite{wu2018}.
+
+Despite this progress, a substantial portion of the ADMET literature still evaluates models primarily in terms of isolated predictive metrics for individual endpoints or small collections of related tasks. From a pharmaceutical perspective, this is limiting, because practical candidate evaluation depends on the joint interpretation of potency, safety, permeability, and clearance rather than on any one property in isolation. The present thesis therefore builds on the multi-task learning tradition, but places stronger emphasis on cross-endpoint integration and downstream use.
+
+\section{Mechanistic PK-PD Modeling and Neural ODEs}
+
+Pharmacokinetic-pharmacodynamic research has long provided mechanistic tools for relating dose, concentration, and biological response through systems of ordinary differential equations~\cite{toutain2010pkpd}. Such models are valuable because they translate static parameters into clinically interpretable trajectories, including concentration--time and effect--time profiles. Neural Ordinary Differential Equations generalize this perspective by offering a differentiable framework for modeling continuous dynamics within modern deep-learning systems~\cite{chen2018neuralode}. This creates a natural opportunity to connect molecular prediction to dynamic simulation rather than treating endpoint estimation as the final output.
+
+However, these two literatures often remain separated in practice. PK-PD studies are typically centered on mechanistic or clinical modeling, while molecular machine-learning studies usually stop at endpoint prediction and do not propagate predicted properties into a dynamic simulation layer. This separation leaves a gap between model development and therapeutic interpretation.
+
+\section{Calibration and Decision-Oriented Modeling}
+
+Another limitation in the predictive modeling literature is that probability quality is often treated as secondary to ranking or classification accuracy. For decision-oriented tasks, however, probability calibration is essential, because overconfident or underconfident outputs can distort downstream risk assessment and resource allocation. This issue has been emphasized in the calibration literature, where post-hoc methods such as temperature scaling provide effective correction of neural-network confidence estimates~\cite{guo2017}. In the context of drug discovery, this distinction is especially important when classification outputs are reused as risk variables or surrogate parameters in subsequent modeling stages.
+
+For the present thesis, calibration is therefore not merely a reporting refinement. It is a methodological requirement because hERG and Caco-2 probabilities are carried forward into PK-PD and decision analyses. This shifts the role of calibration from an optional machine-learning diagnostic to a necessary component of simulation reliability.
+
+\section{Research Gap}
+
+The relevant literature strands and their limitations are summarized in Table~\ref{tab:related_work_gap}. Existing studies collectively provide strong foundations for molecular representation learning, multi-task prediction, benchmark evaluation, mechanistic PK-PD modeling, and calibration. Yet they typically emphasize only one or two of these components at a time. As a result, there remains limited support for a single reproducible workflow that begins with heterogeneous molecular datasets and ends with decision-oriented PK-PD simulation.
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabular}{|p{3.4cm}|p{4.3cm}|p{4.3cm}|}
+\hline
+\textbf{Literature strand} & \textbf{Typical strength} & \textbf{Common limitation relative to this thesis} \\
+\hline
+Descriptor and fingerprint models & Efficient molecular encoding and competitive baseline prediction & Limited ability to model higher-order structural interactions or dynamic downstream consequences \\
+\hline
+Graph and attention-based molecular models & Richer structure-aware learning for molecular property prediction & Often evaluated as standalone predictors rather than as components of an end-to-end decision framework \\
+\hline
+Multi-task ADMET and bioactivity learning & Shared representations across related endpoints and assays & Frequently optimized for benchmark prediction metrics without mechanistic simulation or calibrated decision use \\
+\hline
+Mechanistic PK-PD modeling & Interpretable concentration--time and effect--time simulation & Usually parameterized from experimental or clinical quantities rather than from learned molecular predictions \\
+\hline
+Calibration methods & Improved reliability of predicted probabilities & Commonly treated as a final evaluation step instead of an integrated prerequisite for downstream simulation \\
+\hline
+\end{tabular}
+\caption{Summary of the main literature strands relevant to the thesis and the gap addressed by their incomplete integration.}
+\label{tab:related_work_gap}
+\end{table}
+
+The research gap addressed by this thesis is therefore not merely the absence of another molecular predictor, but the lack of a reproducible end-to-end framework that connects multi-task molecular property prediction to mechanistic and decision-oriented simulation in a single workflow. The contribution of the thesis is to integrate heterogeneous public datasets, shared molecular representations, calibrated classification outputs, Neural ODE-based PK-PD modeling, and population-level decision analyses within one coherent pipeline. In this sense, the work aims to bridge the methodological gap between benchmark-oriented molecular prediction and simulation-based therapeutic decision support.
 
 \chapter{Problem Formulation, Objectives, and Scope}
 
 \section{Task Definitions}
 
-Let $x$ denote molecular input features. The target vector is:
+The entire framework is formulated as a \textit{multi-task learning} problem. Let $x$ denote the molecular input feature vector for a drug candidate, comprising 2,050 dimensions: 2,048 Morgan fingerprint bits (radius 2) plus molecular weight (MW) and octanol-water partition coefficient (logP). The joint target vector spans four pharmacologically important endpoints:
 \begin{equation}
 y = \left[y_{\text{bind}},\ y_{\text{hERG}},\ y_{\text{Caco-2}},\ y_{\text{CL}}\right].
 \end{equation}
 
 Tasks are defined as:
 \begin{enumerate}
-\item $f_{\text{bind}}(x)$: regression of binding affinity,
-\item $f_{\text{hERG}}(x)$: classification probability of hERG risk,
-\item $f_{\text{Caco-2}}(x)$: classification probability for permeability class,
-\item $f_{\text{CL}}(x)$: regression of clearance.
+\item $f_{\text{bind}}(x)$: \textbf{Regression of binding affinity} (pIC50, range 3--11). Predicts how strongly the drug binds to its pharmacological target. Higher pIC50 indicates greater potency. Values are sourced from ChEMBL across 8 mechanistically diverse protein targets (kinases, GPCRs, nuclear receptors).
+
+\item $f_{\text{hERG}}(x)$: \textbf{Classification probability of hERG channel inhibition}. Predicts the probability that the drug blocks the hERG cardiac potassium ion channel, which is a primary cause of drug-induced QT prolongation and potentially fatal arrhythmias. A high probability flags a cardiotoxicity liability.
+
+\item $f_{\text{Caco-2}}(x)$: \textbf{Classification probability for intestinal permeability class}. Predicts the probability of high Caco-2 cell permeability (favourable oral absorption). High permeability correlates with good bioavailability; low permeability indicates absorption-limited compounds.
+
+\item $f_{\text{CL}}(x)$: \textbf{Regression of hepatic clearance} (mL/min/kg). Predicts the rate at which the liver metabolises the drug, which controls how long it remains in the body. High clearance compounds require frequent dosing; low clearance compounds may accumulate.
 \end{enumerate}
+
+\subsection*{Rationale for Multi-Task Learning}
+
+A single shared encoder learns molecular representations common to all four endpoints simultaneously, since properties such as molecular weight, ring systems, and functional groups influence multiple ADMET properties. Task-specific heads then branch from this shared bottleneck for individual predictions. This promotes positive transfer learning under uneven task sizes, allowing smaller endpoints such as Caco-2 (900 samples in the baseline harmonized matrix) and hERG (655 samples) to benefit from structural representations learned jointly with binding affinity (2,000 samples) and clearance (1,213 samples).
+
+\subsection*{Connection to PK-PD Simulation}
+
+The four task outputs are directly mapped to pharmacokinetic and pharmacodynamic ODE parameters:
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{lll}
+\hline
+\textbf{Task output} & \textbf{ODE role} & \textbf{Parameter} \\
+\hline
+$f_{\text{bind}}(x)$ — pChEMBL & Pharmacodynamic potency & $EC_{50} = 10^{-\text{pChEMBL}}$ \\
+$f_{\text{Caco-2}}(x)$ — probability & Oral absorption rate & $k_a$ \\
+$f_{\text{CL}}(x)$ — clearance & Elimination rate constant & $k_e = CL/V_c$ \\
+$f_{\text{hERG}}(x)$ — probability & Cardiac safety flag & Safety threshold \\
+\hline
+\end{tabular}
+\caption{Mapping of multi-task model outputs to Neural ODE pharmacokinetic/pharmacodynamic parameters.}
+\end{table}
 
 \section{Evaluation Metrics}
 
 Regression tasks are evaluated with $R^2$ and RMSE. Classification tasks are evaluated with AUROC, F1, and accuracy, with calibrated probability quality measured by ECE.
+
+\subsection*{Regression Metrics}
+
+\begin{enumerate}
+\item \textbf{Coefficient of Determination ($R^2$)}: measures the fraction of variance in the target explained by the model:
+\begin{equation}
+R^2 = 1 - \frac{\sum_i (y_i - \hat{y}_i)^2}{\sum_i (y_i - \bar{y})^2}.
+\end{equation}
+$R^2 = 1$ indicates perfect prediction; $R^2 = 0$ means the model performs no better than predicting the mean; negative values indicate the model is worse than the mean baseline.
+
+\item \textbf{Root Mean Squared Error (RMSE)}: measures the average prediction error in the original units, penalising large errors more than small ones:
+\begin{equation}
+\text{RMSE} = \sqrt{\frac{1}{n}\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}.
+\end{equation}
+Lower RMSE is better. RMSE is reported in normalised units for clearance and in pIC50 units for binding affinity.
+\end{enumerate}
+
+\subsection*{Classification Metrics}
+
+\begin{enumerate}
+\item \textbf{AUROC} (Area Under the Receiver Operating Characteristic Curve): measures ranking quality across all classification thresholds. A value of 0.5 corresponds to random discrimination; 1.0 is perfect. AUROC is the primary classification metric because it is threshold-independent and robust to class imbalance, which is present in both hERG (48\% positive) and Caco-2 (48\% positive) datasets.
+
+\item \textbf{F1 Score}: harmonic mean of precision and recall:
+\begin{equation}
+F1 = \frac{2 \cdot \text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}.
+\end{equation}
+F1 is particularly important for safety-critical endpoints such as hERG, where false negatives (missed cardiotoxic compounds) carry direct clinical risk.
+
+\item \textbf{Accuracy}: fraction of correctly classified samples. Used alongside F1 as a guardrail during threshold calibration (minimum accuracy $\geq 0.50$ required before locking a production threshold).
+
+\item \textbf{Expected Calibration Error (ECE)}: measures whether predicted probabilities reflect true empirical frequencies (see Section~2.5). ECE is critical because calibrated probabilities are passed directly into downstream Neural ODE simulation as absorption and safety parameters.
+\end{enumerate}
+
+\subsection*{Research Targets and Achieved Results}
+
+The following performance thresholds were set at the start of the project and evaluated against the final model:
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{llcc}
+\hline
+\textbf{Task} & \textbf{Metric} & \textbf{Target} & \textbf{Achieved} \\
+\hline
+hERG inhibition      & AUROC  & $\geq 0.80$ & \textbf{0.821} \\
+Caco-2 permeability  & AUROC  & $\geq 0.75$ & \textbf{0.864} \\
+Hepatic clearance    & $R^2$  & $\geq 0.20$ & \textbf{0.348} \\
+Binding affinity     & $R^2$  & $\geq 0.40$ & \textbf{0.550} \\
+\hline
+\end{tabular}
+\caption{Research performance targets and final achieved metrics (model\_15 / joint GNN+MLP fusion).}
+\end{table}
+
+All four targets were first met simultaneously at model\_15 (hERG AUROC push, Section~8.4.3); binding $R^2 \geq 0.40$ was further improved to 0.550 by the joint GNN+MLP fusion model.
 
 \section{Scope and Constraints}
 
@@ -367,257 +469,106 @@ The thesis focuses on data-driven preclinical decision support. It does not clai
 
 \chapter{Data Sources, Curation, and Preprocessing}
 
-\section{Overview of Data Acquisition Pipeline}
+\section{Chapter Overview}
 
-The project integrates heterogeneous public datasets from five primary sources—PubChem, PK-DB, TDC (Therapeutics Data Commons), ChEMBL, and ToxCast—into a consolidated data acquisition pipeline. A unified notebook consolidates seven formerly standalone download scripts, enabling reproducible, modular data ingestion with per-source subfolders, automatic timestamp logging, and integrity verification. The total dataset spans approximately 513,000 records across molecular properties, binding affinities, pharmacokinetic parameters, ADMET benchmarks, and toxicity screening results, with the majority arising from high-throughput ToxCast assays (332,507 records).
+This chapter describes how heterogeneous chemical, toxicological, and pharmacokinetic data were assembled into a modeling-ready resource for the Neural PK-PD framework. The emphasis is not only on data acquisition, but also on the scientific role of each source, the distinction between real and synthetic components, and the harmonization steps required before feature engineering and model training.
 
-\section{Data Sources and Acquisition Strategy}
+The sources used in this thesis fall into three categories. First, \textit{real training data} are obtained from TDC and ChEMBL and provide the endpoint labels used in the baseline harmonized multi-task model. Second, \textit{auxiliary mechanistic data} are obtained from PK-DB and support the pharmacokinetic interpretation of downstream ODE simulations. Third, \textit{illustrative reference data} are drawn from PubChem and a ToxCast/Tox21-style synthetic reference set, which are used to contextualize safety screening and data-collection strategy rather than to define the final supervised learning targets.
 
-\subsection{Pipeline Architecture}
-
-The data download pipeline is implemented as a single reproducible Jupyter notebook that:
-\begin{enumerate}
-\item downloads data from five public sources (PubChem REST API, PK-DB REST API, TDC Python client, ChEMBL REST API, and synthetic ToxCast generation),
-\item validates and standardizes all data into CSV, JSON, and SDF formats,
-\item logs execution timeline with per-cell timestamps and duration tracking,
-\item allows selective execution—each section is independent so any source can be skipped,
-\item creates structured outputs ready for preprocessing and feature engineering.
-\end{enumerate}
-
-\noindent The consolidated architecture replaces formerly separate scripts: \texttt{data\_download.py}, \texttt{download\_chembl\_binding\_data.py}, \texttt{download\_chembl\_binding\_real.py}, \texttt{download\_pkdb\_complete.py}, \texttt{download\_tdc\_admet.py}, \texttt{download\_toxcast\_tox21.py}, and \texttt{explore\_pkdb\_data.py}.
+\section{Data Sources and Scientific Role}
 
 \subsection{PubChem: Assays and Exemplar Compounds}
 
-PubChem (NCBI; https://pubchem.ncbi.nlm.nih.gov/) provides public-domain chemical and bioassay data via the REST API.
+PubChem (NCBI; https://pubchem.ncbi.nlm.nih.gov/) was used as an open-access reference source for public bioassay and compound-structure data. Its role in this thesis is illustrative rather than central to the final multi-task training set: it provides representative screening assays and example molecular structures that help situate the project within an early-discovery workflow.
 
-\noindent \textbf{Downloaded assays:}
-\begin{enumerate}
-\item \textbf{hERG qHTS Assay} (AID 588834) — human ether-a-go-go-related potassium channel qHTS screening (~2,000 compounds), used for cardiac safety risk assessment (QT prolongation liability).
-\item \textbf{CYP3A4 Inhibition Assay} (AID 54772) — cytochrome P450 3A4 metabolic inhibition screening (~3,000 compounds), used for drug-drug interaction potential.
-\item \textbf{Exemplar Compounds (3D SDF structures)} — warfarin, midazolam, and caffeine downloaded with 3D coordinates for structural reference and method development.
-\end{enumerate}
-
-\noindent \textbf{Data format:} CSV for assay tables, SDF for 3D structures. License: Public Domain (NCBI).
+Two assay families were retained for reference purposes: an hERG qHTS screen relevant to cardiac safety, and a CYP3A4 inhibition assay relevant to metabolic interaction risk. In addition, 3D SDF structures for warfarin, midazolam, and caffeine were downloaded as exemplar compounds for structural inspection and method prototyping. PubChem therefore supports the thesis primarily as a source of screening context and chemically interpretable examples, rather than as the main source of model-development labels.
 
 \subsection{PK-DB: Pharmacokinetic Studies and Parameters}
 
-PK-DB (https://www.pk-db.com/; REST API v1) provides curated pharmacokinetic studies with rich individual-level and summary data.
+PK-DB (https://www.pk-db.com/; REST API v1) was selected because it provides curated pharmacokinetic studies with hierarchical study structure, summary outputs, and concentration-time observations. Unlike cross-sectional ADMET datasets, PK-DB captures temporal pharmacokinetic behavior and therefore provides the mechanistic bridge between predicted molecular properties and compartmental PK-PD simulation.
 
-\noindent \textbf{Data structure:} A hierarchical data model of studies, substances, outputs (PK parameters), and timecourses:
-\begin{equation}
-\text{Study} \to \{\text{Substances, Groups, Individuals}\} \to \{\text{PK Outputs, Timecourses}\}
-\end{equation}
+The extracted records include study-level metadata, population structure, intervention information, parameter summaries, and concentration-time measurements. Parameters such as clearance (CL), volume of distribution (Vd), area under the curve (AUC), peak concentration (Cmax), half-life, absorption rate, and bioavailability are particularly important because they inform the interpretation and calibration of the downstream ODE framework. In this thesis, PK-DB is used as an auxiliary mechanistic resource rather than as a direct source of supervised labels for the multi-task neural predictor.
 
-\noindent \textbf{Extracted statistics:}
-\begin{enumerate}
-\item \textbf{Study-level metadata}: study name, author, reference date, compound identifier.
-\item \textbf{Population structure}: group count, individual count per group, intervention count.
-\item \textbf{Data richness}: output count (number of PK parameter estimates), calculated output count, subset count, and timecourse count (plasma concentration time-points).
-\item \textbf{PK parameters}: CL (clearance), Vd (volume of distribution), AUC (area under curve), Cmax (peak concentration), Tmax (time to peak), t½ (half-life), ka (absorption rate), F (bioavailability), MRT (mean residence time), λz (elimination rate constant), fu (fraction unbound), PPB (plasma protein binding).
-\end{enumerate}
+\subsection{TDC: Standardized ADMET Benchmarks}
 
-\noindent \textbf{Total coverage:} 796 studies with documented drug names, subject demographics, and timecourse measurements. This rich temporal structure enables population PK modeling and differential equation parameter fitting, a key advantage over simple cross-sectional property datasets.
+Therapeutics Data Commons (TDC; https://tdcommons.ai/) provides standardized molecular machine-learning benchmarks with canonical splits and well-documented endpoint definitions. TDC forms the core real-data backbone for the classification and regression tasks in the final predictive model because it offers consistent benchmark structure, literature grounding, and direct comparability with prior work.
 
-\noindent \textbf{Data format:} JSON and CSV. License: Variable by study (curated, open-access sources).
+The TDC resources used here span absorption, distribution, metabolism, and toxicity endpoints. Across the eight downloaded benchmark files, the current raw-source total is 20,995 rows. Among these, the hERG inhibition, Caco-2 permeability, and hepatocyte clearance datasets are the most important for the baseline harmonized framework because they map directly onto safety, absorption, and elimination behavior in the PK-PD pipeline. Other TDC datasets are retained to provide broader ADMET context during exploratory analysis and dataset characterization.
 
-\subsection{TDC (Therapeutics Data Commons): ADMET Benchmarks}
+\subsection{ChEMBL: Binding Affinity Data}
 
-TDC (https://tdcommons.ai/; PyTDC Python client) provides standardized ADMET benchmarks with canonical train/validation/test splits.
+ChEMBL (EBI; https://www.ebi.ac.uk/chembl/) is the primary source of binding-affinity information in the thesis and provides the molecular activity data needed for the pharmacodynamic component of the framework. Its importance lies in the fact that binding potency is the endpoint most directly linked to downstream effect modeling through the $EC_{50}$ term in the PD formulation.
 
-\noindent \textbf{Datasets and categories:}
-\begin{enumerate}
-\item \textbf{Absorption (3 datasets)}: Caco-2 cell permeability (Wang et al., 2016), human intestinal absorption / HIA (Hou et al., 2004), aqueous solubility (AqSolDB).
-\item \textbf{Distribution (2 datasets)}: Lipophilicity / logP regression (AstraZeneca), plasma protein binding / PPB regression (AstraZeneca).
-\item \textbf{Metabolism (2 datasets)}: Hepatocyte clearance regression (AstraZeneca), terminal half-life regression (Obach et al., 2008).
-\item \textbf{Toxicity (1 dataset)}: hERG channel inhibition classification (Comprehensive TDC compilation).
-\end{enumerate}
+Two ChEMBL-derived resources are distinguished explicitly. The first is a \textit{real} curated set of canonical SMILES and measured activity values collected for eight pharmacologically relevant targets under consistent activity-type constraints (IC50, Ki, or EC50 with pChEMBL annotation). The second is a \textit{synthetic} binding-affinity reference set constructed to illustrate target coverage and potency-distribution behavior during early exploratory analysis. The synthetic set is useful for controlled visualization and prototype experiments, but it should be interpreted as supportive rather than definitive evidence.
 
-\noindent \textbf{Data specifications:}
-\begin{enumerate}
-\item \textbf{Size per dataset}: 1,000–2,500 compounds depending on benchmark.
-\item \textbf{Total}: Approximately 8,600 samples across the 8 benchmarks.
-\item \textbf{Features}: SMILES (molecule), target endpoint (Y), and in some datasets additional molecular properties (MW, PSA, HBA, HBD).
-\item \textbf{Splits}: Official train/validation/test splits for fair benchmark comparison.
-\end{enumerate}
+For the real ChEMBL subset, only measured activities were retained, canonical SMILES were validated, duplicate compounds were merged, and descriptors such as molecular weight and LogP were recomputed from structure rather than copied uncritically from source annotations. In the current workspace, the downloaded ChEMBL files comprise 2,000 rows in the exploratory synthetic binding set and 3,410 rows in the real SMILES binding set.
 
-\noindent \textbf{Data format:} CSV via PyTDC client API. License: CC0 (Public Domain). These benchmarks are extensively cited in machine learning and cheminformatics literature, enabling direct comparison with published results.
+\subsection{ToxCast/Tox21-Style Toxicity Reference Data}
 
-\subsection{ChEMBL: Binding Affinity and Molecular Diversity}
+ToxCast and Tox21 are important public programs for high-throughput toxicity screening, but in the present work they are represented through a synthetic reference set designed to reflect the structure of broad toxicity-screening data rather than to serve as a final supervised learning target. The purpose of including this material is to illustrate how multi-category safety information can be organized and interpreted in an integrated preclinical pipeline.
 
-ChEMBL (EBI; https://www.ebi.ac.uk/chembl/; REST API) is the world's largest public repository of medicinal chemistry data.
-
-\noindent \textbf{Section 5A—Synthetic Binding Data (2,000 records):}
-
-A representative distribution of synthetic binding affinities is generated to cover 8 pharmacologically important drug targets:
-\begin{enumerate}
-\item Dopamine D2 receptor, Adenosine A2a receptor, EGFR, CDK2, Beta-2 adrenergic receptor, Androgen receptor, Glucocorticoid receptor, Serotonin 5-HT2A receptor.
-\end{enumerate}
-
-\noindent Activity types include Ki (inhibition constant), IC50 (half-maximal inhibitory concentration), and EC50 (half-maximal effective concentration), all converted to pIC50 (negative log10 of IC50 in molar).
-
-\noindent \textbf{Distribution:} Bimodal lognormal pIC50 distribution (approximately 80\% of compounds with pIC50 $\approx 5.5 \pm 1.2$ representing inactive/weakly active set; 20\% with pIC50 $\approx 8.5 \pm 0.8$ representing potent active set).
-
-\noindent \textbf{Molecular properties:} MW drawn from $\mathcal{N}(350, 80)$ g/mol; logP drawn from $\mathcal{N}(2.5, 1.2)$ (octanol-water partition coefficient); HBA and HBD counts assigned consistently.
-
-\vspace{0.3cm}
-
-\noindent \textbf{Section 5B—Real SMILES Data (\textasciitilde3,400 validated records):}
-
-Canonical SMILES and binding activities are retrieved directly from ChEMBL for 8 pharmacologically important targets (see Table 5.1).
-
-\noindent \textbf{Selection criteria:}
-\begin{enumerate}
-\item Only measured activities (no predictions or indirect deductions).
-\item Standard types limited to IC50, Ki, and EC50 for consistency.
-\item pChEMBL annotation required (ChEMBL's quality-controlled potency measure).
-\item Per-target limit of 600 records to balance diversity and statistical power.
-\item Global deduplication: identical SMILES merged with activity averaging.
-\item RDKit validation: invalid SMILES excluded after canonical conversion.
-\end{enumerate}
-
-\noindent \textbf{Descriptor inference:} Molecular weight and logP computed from canonical SMILES string via RDKit (Descriptors.MolWt() and Descriptors.MolLogP()), not retrieved from ChEMBL annotations.
-
-\noindent \textbf{pIC50 range:} Empirically observed 3.0–11.0, with distribution varying by target.
-
-\noindent \textbf{Data format:} CSV and JSON metadata. License: CC-BY-SA 3.0 (ChEMBL Attribution-ShareAlike).
-
-\subsection{ToxCast and Tox21: High-Throughput Toxicity Screening}
-
-ToxCast and Tox21 (https://www.epa.gov/chemical-research/toxicity-forecaster-toxcast) provide high-throughput screening results for toxicity risk assessment across multiple assay categories.
-
-\noindent \textbf{Data generation:} A representative synthetic dataset is created covering 7 disease-relevant toxicity categories with realistic hit rates and risk stratification:
+The reference set covers cardiac, developmental, nuclear receptor, hepatic, renal, stress-response, and metabolic toxicity categories with tiered severity labels. This provides a useful conceptual counterpart to the focused hERG toxicity endpoint used in the final model: whereas hERG gives a specific cardiotoxicity label, the ToxCast/Tox21-style synthetic reference demonstrates the broader safety-screening landscape into which such predictions would ultimately be deployed.
 
 \begin{table}[h!]
 \centering
-\begin{tabular}{l|r|l}
+\begin{tabular}{|l|r|l|}
 \hline
 \textbf{Toxicity Category} & \textbf{Hit Rate} & \textbf{Risk Level} \\
 \hline
 Cardiac toxicity (e.g., QT prolongation) & 25\% & HIGH \\
+\hline
 Developmental/Reproductive toxicity & 15\% & CRITICAL \\
+\hline
 Nuclear receptor activation & 30\% & HIGH \\
+\hline
 Liver toxicity & 22\% & HIGH \\
+\hline
 Kidney toxicity & 12\% & MEDIUM \\
+\hline
 Stress response (e.g., ROS, HSP) & 20\% & HIGH \\
+\hline
 Metabolic effects (glucose/lipid) & 18\% & MEDIUM \\
 \hline
 \end{tabular}
-\caption{ToxCast/Tox21 Data: Toxicity Categories, Hit Rates, and Risk Levels.}
+\caption{Representative toxicity categories used to illustrate multi-domain safety screening in a ToxCast/Tox21-style reference dataset.}
 \label{tab:toxcast_categories}
 \end{table}
 
-\noindent \textbf{Data specifications:}
-\begin{enumerate}
-\item \textbf{Total records}: Approximately 50,000 assay results.
-\item \textbf{Structure}: 5,000–10,000 unique compounds × 5–15 assay endpoints per category, with per-compound and per-assay outcome labels (hit/inactive).
-\item \textbf{Risk categorization}: Records stratified into HIGH priority and CRITICAL priority subsets for triage.
-\item \textbf{Overall hit rate}: Approximately 19–20\% (representative synthetic distribution).
-\end{enumerate}
+\section{Data Curation and Harmonization}
 
-\noindent \textbf{Data format:} CSV. License: Public/representative (synthetic).
+Because the selected sources differ substantially in structure, scale, and scientific purpose, raw download alone is insufficient for model development. A harmonization stage is therefore required to transform heterogeneous source files into a consistent analytical resource.
 
-\section{Summary of Dataset Composition}
+The curation logic used throughout the chapter follows four principles. First, structural identifiers are standardized by canonicalizing SMILES strings and excluding chemically invalid entries. Second, endpoint definitions are harmonized so that binding data, toxicity labels, permeability outcomes, and clearance values can be interpreted consistently across sources. Third, duplicate compounds are resolved before model splitting to avoid optimistic bias. Fourth, molecular descriptors are recomputed from structure where necessary so that downstream features are derived uniformly rather than inherited from mixed source conventions.
 
-Table 5.2 provides an overview of all data sources, record counts, and intended usage:
+This distinction between \textit{source data} and \textit{analysis-ready data} is important for thesis clarity. The scientific contribution lies not in downloading files from public repositories, but in converting them into a coherent multi-task resource with explicit task definitions, traceable provenance, and defensible quality control.
+
+\section{Summary of Source Roles in the Framework}
+
+Table~\ref{tab:data_sources_summary} summarizes the role of each source in the thesis. Rather than combining incompatible record counts into a single total, the table emphasizes the scientific contribution of each source and whether it contributes real training labels, auxiliary mechanistic context, or illustrative reference material.
 
 \begin{table}[h!]
 \centering
-\begin{tabular}{l|l|l|r}
+\small
+\begin{tabular}{|p{0.6cm}|p{2.2cm}|p{4.3cm}|p{3.7cm}|}
 \hline
-\textbf{Section} & \textbf{Data Source} & \textbf{Type} & \textbf{Records/Count} \\
+\textbf{No.} & \textbf{Source} & \textbf{Primary Role} & \textbf{Status in Thesis} \\
 \hline
-2 & PubChem & Assays + exemplar structures & $\sim$5,000 \\
-3 & PK-DB & PK studies, parameters, timecourses & 796 studies \\
-4 & TDC ADMET & 8 benchmark datasets & $\sim$8,600 \\
-5 & ChEMBL & Binding affinity (synthetic + real) & $\sim$5,400 \\
-6 & ToxCast/Tox21 & Toxicity screening (7 categories) & $\sim$332,507 \\
+1 & PubChem & Screening context and exemplar structures & Illustrative reference data \\
 \hline
-& \textbf{TOTAL} & & $\sim$\textbf{351,500+} \\
+2 & PK-DB & Pharmacokinetic studies and time-course interpretation & Auxiliary mechanistic data \\
+\hline
+3 & TDC ADMET & hERG, Caco-2, clearance, and benchmark context & Real training data \\
+\hline
+4 & ChEMBL & Binding affinity and target-specific activity data & Real training data + synthetic reference set \\
+\hline
+5 & ToxCast/Tox21-style set & Multi-category toxicity-screening illustration & Synthetic reference data \\
 \hline
 \end{tabular}
-\caption{Data Acquisition Pipeline: Summary of All Sources (Note: Multi-task learning uses subset of $\sim$13,030 compounds after integration).}
+\caption{Scientific role of each data source in the thesis framework.}
 \label{tab:data_sources_summary}
 \end{table}
 
-\section{Technical Specifications: APIs, Configuration, and Download Settings}
-
-\subsection{API Endpoints and Request Parameters}
-
-\noindent \textbf{PubChem REST API:}
-\begin{verbatim}
-Base: https://pubchem.ncbi.nlm.nih.gov/rest/pug
-  Assay:    /assay/aid/{AID}/CSV
-  Compound: /compound/name/{NAME}/SDF?record_type=3d
-\end{verbatim}
-
-\noindent \textbf{PK-DB REST API v1:}
-\begin{verbatim}
-Base: https://pk-db.com/api/v1
-  Studies: /studies/?format=json
-\end{verbatim}
-
-\noindent \textbf{ChEMBL REST API:}
-\begin{verbatim}
-Base: https://www.ebi.ac.uk/chembl/api/data
-  Activity: /activity/?target_chembl_id={ID}&
-            standard_type__in=IC50,Ki,EC50&
-            pchembl_value__isnull=False&
-            limit=1000&offset={offset}
-\end{verbatim}
-
-\noindent \textbf{TDC (Python SDK, not REST):}
-\begin{verbatim}
-from pytdc import admet_group
-data = admet_group().get(dataset_name)
-\end{verbatim}
-
-\subsection{Download Configuration Parameters}
-
-\noindent The pipeline uses the following runtime configuration to ensure robustness and courtesy:
-\begin{enumerate}
-\item \textbf{Request timeout}: 60 seconds for most APIs, 120 seconds for bulk PK-DB queries.
-\item \textbf{ChEMBL rate-limit delay}: 0.35 seconds between consecutive API page requests (respects EBI service terms).
-\item \textbf{ChEMBL page size}: 1,000 records per API request.
-\item \textbf{ChEMBL cap per target}: 600 records maximum to ensure diversity.
-\item \textbf{Retry logic}: 3 attempts per failed API call with 1.5 second exponential backoff between retries.
-\end{enumerate}
-
-\subsection{File System Organization}
-
-All raw data is organized under \texttt{data/raw/} with per-source subdirectories:
-
-\begin{verbatim}
-data/raw/
-├── pubchem/
-│  ├── assay_herg_qhts_aid588834.csv
-│  ├── assay_cyp3a4_inhibition_aid54772.csv
-│  └── compound_{warfarin,midazolam,caffeine}.sdf
-├── pkdb/
-│  ├── studies.json
-│  ├── studies_top100.json
-│  ├── pkdb_studies_complete.json
-│  └── pkdb_studies_summary.csv
-├── tdc/
-│  ├── tdc_caco2_wang.csv
-│  ├── tdc_hia_hou.csv
-│  ├── tdc_solubility_aqsoldb.csv
-│  ├── tdc_lipophilicity_astrazeneca.csv
-│  ├── tdc_ppbr_az.csv
-│  ├── tdc_clearance_hepatocyte_az.csv
-│  ├── tdc_half_life_obach.csv
-│  ├── tdc_herg.csv
-│  └── tdc_metadata.json
-├── chembl/
-│  ├── chembl_binding_affinity.csv (synthetic)
-│  ├── chembl_binding_affinity_metadata.json
-│  ├── chembl_binding_affinity_with_smiles.csv (real)
-│  └── chembl_binding_affinity_with_smiles_metadata.json
-└── toxcast/
-  ├── toxcast_representative.csv
-  ├── toxcast_high_priority.csv
-  ├── toxcast_critical_priority.csv
-  └── toxcast_representative_metadata.json
-\end{verbatim}
+% Section 5.4 moved to Appendix A.7 — see end of document.
 
 \section{Data Validation and Quality Assurance}
 
@@ -650,45 +601,33 @@ The pipeline verifies that the following files exist before proceeding to featur
 
 \subsection{Dataset Loading and Composition}
 
-Following data download and validation, a comprehensive exploratory data analysis (EDA) was conducted on all five integrated data sources. The consolidated dataset encompasses approximately 513,000 total records distributed across molecular, safety, and pharmacokinetic domains as summarized in Table 5.3.
+Following source acquisition and basic validation, an exploratory data analysis (EDA) stage was conducted to assess whether the downloaded resources were sufficiently coherent for downstream modeling. The purpose of this stage was not to define the final harmonized training matrix directly, but to inspect coverage, distributional behavior, endpoint plausibility, and potential quality issues before harmonization. For that reason, the counts shown in this section should be interpreted as source-level or benchmark-level summaries, whereas the baseline harmonized task counts used for model training are defined later in the multi-task assembly subsection.
 
 \begin{table}[h!]
 \centering
-\begin{tabular}{l|l|r|l}
+\small
+\begin{tabular}{p{2.2cm}|p{3.5cm}|r|p{3.0cm}}
 \hline
 \textbf{Source} & \textbf{Dataset Type} & \textbf{Records} & \textbf{Primary Use} \\
 \hline
 PubChem & Bioassay screening (hERG, CYP3A4) & 5,000 & Toxicity filtering \\
 ChEMBL & Binding affinity data & 2,000 & Pharmacodynamic potency \\
-TDC ADMET & Drug property benchmarks & 11,030 & ADMET prediction \\
-ToxCast & Toxicity screening results & 332,507 & Safety risk assessment \\
-PK-DB & Pharmacokinetic studies + time-courses & 20 studies & ODE parameter fitting \\
-\hline
-\textbf{TOTAL} & & \textbf{$\sim$513,000} & Integrated multi-endpoint training \\
+TDC ADMET & Three benchmark subsets used in EDA & 2,778 & ADMET endpoint inspection \\
+ToxCast-style set & Aggregated priority-tier reference rows & 570,167 & Safety-screening illustration \\
+PK-DB & Pharmacokinetic studies + time-courses & 796 studies & ODE interpretation \\
 \hline
 \end{tabular}
-\caption{Integrated Data Sources: Record Counts and Primary Applications.}
+\caption{Source-level overview used during exploratory analysis. Counts refer to the specific benchmark subsets or aggregated reference files inspected in this section and are distinct from the later harmonized task counts used for model training.}
 \label{tab:eda_summary}
 \end{table}
 
 \subsection{ChEMBL Binding Affinity Analysis}
 
-\noindent \textbf{Data Structure:} The ChEMBL dataset contains 2,000 compounds with binding affinity measurements (pIC50 values) across 8 pharmacologically important targets (dopamine D2, adenosine A2a, EGFR, CDK2, beta-2 adrenergic receptor, androgen receptor, glucocorticoid receptor, serotonin 5-HT2A).
+The ChEMBL exploratory subset provides the pharmacodynamic activity landscape for the thesis. At the EDA stage, the aim is to verify that the retrieved activity values span a chemically meaningful potency range and cover more than one target family, rather than to optimize the exact training subset.
 
-\noindent \textbf{Potency Distribution:} 
-\begin{enumerate}
-\item \textbf{pIC50 range}: 3.0–10.7, providing 7.7 log units of dynamic range for potency prediction.
-\item \textbf{Mean pIC50}: 6.2 ± 1.8 (standard deviation), indicating broad coverage of weak to potent binders.
-\item \textbf{Bimodal structure}: Approximately 75\% of compounds exhibit moderate potency (pIC50 5–7), with a secondary population of highly potent compounds (pIC50 $>$ 8).
-\end{enumerate}
+The observed activity range extends from weak to highly potent compounds, giving the model access to a broad potency spectrum instead of a narrow local structure-activity regime. This is important because downstream pharmacodynamic simulation depends on converting predicted potency into an $EC_{50}$-like quantity; a narrow or highly truncated activity range would make that mapping much less informative. In addition, the eight selected targets span kinases, GPCRs, and nuclear receptors, which gives the binding task some mechanistic diversity rather than confining it to a single assay family.
 
-\noindent \textbf{Target Diversity:} The data spans 8 pharmacologically diverse targets representing key drug discovery areas: kinases (CDK2, EGFR), GPCRs (dopamine D2, adenosine A2a, beta-2 adrenergic, serotonin 5-HT2A), and nuclear receptors (androgen, glucocorticoid). This heterogeneity promotes learning of binding principles that generalize across mechanistically distinct targets and binding modes (allosteric vs. orthosteric).
-
-\noindent \textbf{Visualization:} A two-panel visualization (Figure 5.1) displays:
-\begin{enumerate}
-\item \textbf{Left panel}: Histogram of pIC50 distribution (50 bins) with mean overlay (red dashed line at 6.2), confirming broad coverage across potency space.
-\item \textbf{Right panel}: Horizontal bar chart of top 10 targets by compound count, highlighting EGFR, CDK2, and dopamine D2 as the most densely sampled targets.
-\end{enumerate}
+Figure~\ref{fig:5.1} serves an illustrative purpose here. The left panel shows the overall potency distribution, while the right panel shows that target coverage is not concentrated entirely in one protein class. Taken together, these diagnostics support the use of ChEMBL as the primary source of pharmacodynamic supervision in the later multi-task model.
 
 \begin{figure}[h!]
 \centering
@@ -701,7 +640,7 @@ PK-DB & Pharmacokinetic studies + time-courses & 20 studies & ODE parameter fitt
 
 \subsection{ToxCast Toxicity Assessment}
 
-\noindent \textbf{Data Structure:} The ToxCast dataset spans 332,507 assay results covering 7 major toxicity categories with hazard-based risk stratification (CRITICAL, HIGH, MEDIUM, LOW).
+The ToxCast-style reference set is used in this chapter as a broad safety-screening illustration rather than as a direct supervised learning target. Its value lies in showing how toxicological evidence can be stratified by severity and mechanism, thereby complementing the much narrower but operationally central hERG endpoint used later in the predictive model.
 
 \noindent \textbf{Risk Level Distribution:}
 \begin{table}[h!]
@@ -722,18 +661,12 @@ LOW & 61,063 & 18.4\% & Acceptable safety profile \\
 \label{tab:toxcast_risk}
 \end{table}
 
-\noindent \textbf{Toxicity Categories:} The primary mechanisms include cardiac toxicity (hERG channel inhibition, QT prolongation), nuclear receptor activation (estrogen, androgen, thyroid disruption), hepatic and renal toxicity, developmental toxicity, and metabolic effects. This diversity reflects the multi-mechanistic nature of drug toxicity and the need for comprehensive endpoint coverage in predictive models.
-
-\noindent \textbf{Visualization:} A two-panel visualization (Figure 5.2) displays:
-\begin{enumerate}
-\item \textbf{Left panel}: Color-coded bar chart of risk level distribution with bars colored by severity (RED=CRITICAL, ORANGE=HIGH, YELLOW=MEDIUM, GREEN=LOW). The stratification shows approximately 48.6\% of compounds with manageable risk (HIGH+MEDIUM) and 5.7\% requiring exclusion (CRITICAL).
-\item \textbf{Right panel}: Horizontal bar chart showing the top 7 toxicity categories by frequency (cardiac, developmental, nuclear receptor, hepatic, kidney, stress response, metabolic). This order reflects the current landscape of high-throughput screening assays and their relative priority in drug development.
-\end{enumerate}
+The primary categories represented are cardiac, developmental, nuclear receptor, hepatic, renal, stress-response, and metabolic toxicity. This breadth is useful because it reminds the reader that real preclinical safety assessment is multi-domain even when the final machine-learning framework focuses on a smaller set of tractable endpoints. In this subsection, two complementary views are used: the table above summarizes one representative toxicity reference file (332,507 rows), whereas Figure~\ref{fig:5.2} aggregates the critical-, high-, and representative-priority files into a broader descriptive visualization (570,167 rows). The figure therefore functions as a contextual safety illustration rather than as the definition of a single modeling dataset.
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.95\textwidth]{figures/fig5_2_toxcast_risk.pdf}
-\caption{ToxCast Toxicity Risk Stratification (237,660 compound-assay records). Left panel: compound counts across Critical, High, and Representative risk tiers. Right panel: activity rates across the top 10 toxicity assay endpoints. Data sourced from ToxCast critical, high, and representative priority CSVs.}
+\caption{Illustrative toxicity risk stratification in the aggregated ToxCast-style reference set (570,167 rows across critical-, high-, and representative-priority files). Left panel: compound counts across priority tiers. Right panel: activity rates across the most prevalent toxicity assay endpoints. The figure summarizes broad safety-screening structure rather than defining a final supervised training target.}
 \label{fig:5.2}
 \end{figure}
 
@@ -741,130 +674,101 @@ LOW & 61,063 & 18.4\% & Acceptable safety profile \\
 
 \subsection{TDC ADMET Properties Analysis}
 
-\noindent \textbf{Dataset Coverage:} Three TDC benchmarks are analyzed. A comprehensive three-panel visualization (Figure 5.3) displays the distributions and class balances.
+Three TDC benchmarks are examined in detail because they provide the endpoints that map most directly into the PK-PD framework: hERG inhibition for safety, Caco-2 permeability for absorption, and hepatocyte clearance for elimination. At this stage, the goal is to inspect benchmark-level behavior and confirm that each endpoint exhibits a plausible distribution for later modeling.
 
 \subsubsection{hERG Inhibition (Cardiotoxicity Risk)}
 
-\noindent \textbf{Sample size}: 7,997 compounds with binary inhibitor/non-inhibitor labels.
-
-\noindent \textbf{Class distribution}: Approximately 48\% inhibitors (cardiotoxicity risk) and 52\% non-inhibitors (acceptable cardiac safety).
-
-\noindent \textbf{Imbalance implications}: Mild class imbalance is handled via weighted cross-entropy loss during training, with AUROC as the primary evaluation metric.
-
-\noindent \textbf{Visualization (Figure 5.3, left panel)}: Bar chart comparing inhibitor and non-inhibitor counts (green for non-inhibitor, red for inhibitor), showing reasonable balance for robust binary classification model training.
+The hERG endpoint captures a clinically important liability because potassium-channel blockade is strongly associated with QT prolongation and pro-arrhythmic risk. The benchmark subset used for exploratory visualization contains 655 compounds and remains sufficiently balanced to support meaningful binary discrimination, making AUROC an appropriate primary metric later in the thesis. The figure panel is intended to show class balance at the benchmark level; the final harmonized task counts used in model training are reported separately in the dataset-assembly subsection.
 
 \subsubsection{Caco-2 Permeability (Intestinal Absorption)}
 
-\noindent \textbf{Sample size}: 910 compounds (after outlier filtering at 99th percentile).
-
-\noindent \textbf{Property distribution}: 
-\begin{enumerate}
-\item \textbf{Continuous values}: Log-scale permeability (Papp) ranging from $-7.7$ to $+4.6$ on the transformation scale.
-\item \textbf{Binarization threshold}: Median Papp used as classification boundary, yielding approximately 48\% high-permeability compounds (favorable absorption).
-\item \textbf{Pharmacological relevance}: High permeability ($\geq$ median) indicates good intestinal absorption and bioavailability; low permeability suggests need for formulation strategies (e.g., permeation enhancers, alternative routes).
-\end{enumerate}
-
-\noindent \textbf{Visualization (Figure 5.3, middle panel)}: Histogram of Caco-2 permeability with mean overlay (red dashed line), showing the distribution is approximately lognormal with a right tail, consistent with expected intestinal absorption patterns.
+The Caco-2 benchmark is retained because it provides an experimentally grounded proxy for intestinal absorption. Its distribution is heterogeneous rather than degenerate, which is desirable for classification after thresholding. In pharmacological terms, high permeability suggests good oral absorption potential, while low permeability flags compounds that may require formulation support or alternative administration routes. The middle panel of Figure~\ref{fig:5.3} illustrates this spread at the raw-benchmark level.
 
 \subsubsection{Hepatocyte Clearance (Metabolic Stability)}
 
-\noindent \textbf{Sample size}: 2,123 compounds.
+The clearance benchmark provides the elimination-related endpoint required for the PK component of the framework. The benchmark subset used for exploratory visualization contains 1,213 compounds. Its right-skewed distribution is pharmacologically plausible: many compounds exhibit moderate stability, while a smaller subset is cleared rapidly enough to imply reduced exposure duration. This endpoint is therefore especially valuable because it links a learned molecular property directly to the elimination term in the downstream ODE model.
 
-\noindent \textbf{Clearance distribution}:
-\begin{enumerate}
-\item \textbf{Range}: $-7.7$ to $+4.6$ mL/min/kg (log-scale-compatible units).
-\item \textbf{Mean}: $-1.2 \pm 2.1$ indicating moderate-to-high average clearance.
-\item \textbf{Clinical interpretation}: High-clearance compounds ($>$ 50 mL/min/kg) show rapid elimination and require frequent dosing or sustained-release formulations; low-clearance compounds may accumulate and require dose reduction or extended intervals.
-\end{enumerate}
-
-\noindent \textbf{Visualization (Figure 5.3, right panel)}: Histogram of hepatocyte clearance with mean overlay, showing right-skewed distribution (orange) consistent with accelerated metabolic clearance in a subset of compounds. This distribution is used to calibrate PK-PD ODE parameters downstream.
+Figure~\ref{fig:5.3} should be read as an exploratory benchmark summary rather than a declaration of final model-training counts. The plotted sample sizes reflect the benchmark subsets used for visualization, while the integrated task counts used for supervised learning are reported later after harmonization and deduplication.
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.97\textwidth]{figures/fig5_3_tdc_admet.pdf}
-\caption{TDC ADMET Property Distributions. Left: hERG cardiotoxicity binary balance (655 compounds; 69\% blockers). Middle: Caco-2 intestinal permeability histogram (910 compounds; median = $-5.13$ log$_{10}$ cm/s). Right: log-transformed hepatic clearance distribution (1,213 compounds), showing pronounced right-skew indicative of heterogeneous metabolic stability.}
+\caption{Exploratory benchmark distributions for the three TDC endpoints most relevant to the PK-PD framework. Left: hERG class balance in the benchmark subset used for visualization. Middle: Caco-2 permeability distribution. Right: hepatocyte-clearance distribution showing heterogeneous metabolic stability. These panels illustrate endpoint behavior prior to final harmonized dataset assembly.}
 \label{fig:5.3}
 \end{figure}
 
 \vspace{0.3cm}
 
-\noindent \textbf{Multi-Task Integration:} The three TDC properties (hERG, Caco-2, clearance) directly parameterize the absorption, metabolism, and safety constraints in the PK-PD simulation module. Accurate prediction of these endpoints enables construction of physiologically grounded dose-response models.
+The importance of these three TDC endpoints is that they map directly onto safety, absorption, and elimination constraints in the PK-PD simulation module. In other words, they are not merely generic ADMET benchmarks; they are the endpoints through which the multi-task predictor becomes mechanistically relevant.
 
 \subsection{Pharmacokinetic Studies (PK-DB)}
 
-\noindent \textbf{Data Structure:} The PK-DB dataset comprises 796 curated pharmacokinetic studies with hierarchical nesting of study metadata, subjects, intervention records, and time-course measurements.
-
-\noindent \textbf{Key Statistics:}
-\begin{enumerate}
-\item \textbf{Unique substances}: 20+ documented drugs with multiple studies across different populations and dosing regimens.
-\item \textbf{PK Parameters}: CL (clearance), Vd (volume of distribution), AUC, Cmax, Tmax, t½, ka, F (bioavailability), MRT, λz, fu (fraction unbound), PPB (plasma protein binding).
-\item \textbf{Temporal data}: Rich time-course measurements (plasma/serum concentration vs. time) enable direct fitting of ODE-based compartmental models.
-\item \textbf{Population structure}: Multiple studies per drug, varying subject numbers per study, diverse dosing regimens (IV bolus, oral, infusion) enabling generalization of PK behavior across conditions.
-\end{enumerate}
-
-\noindent \textbf{Use in Neural ODE Framework:} The PK-DB time-courses serve as ground truth for training and validating the neural ODE simulator module. By fitting ODE parameters to observed concentration-time data, the framework learns context-specific clearance and volume effects, which can be modulated by predicted molecular properties (hERG, Caco-2, clearance) from the multi-task model.
+PK-DB plays a different role from ChEMBL and TDC. It is not used primarily to define a high-volume supervised prediction task, but to anchor the mechanistic interpretation of the framework. Its hierarchical records, pharmacokinetic summaries, and concentration-time observations provide the temporal context that cross-sectional ADMET datasets lack. This makes PK-DB essential for showing how molecular predictions can be translated into compartmental PK behavior rather than remaining isolated scalar outputs.
 
 \subsection{Data Quality and Integrity Assessment}
 
-\noindent Following inspection, the following quality attributes were verified:
+The exploratory analyses above were followed by explicit data-quality checks to determine whether the retrieved sources were suitable for harmonization and downstream learning.
 
 \begin{enumerate}
-\item \textbf{Missing value patterns}: ChEMBL and TDC datasets show $<$ 2\% missing values in critical columns (MW, LogP, target labels). PK-DB shows complete PK parameter records for all 796 studies.
-\item \textbf{Outlier distributions}: No extreme outliers in pIC50 or clearance values that suggest data entry errors. Caco-2 permeability shows expected right-tail behavior (few very high-permeability outliers) handled by 99th percentile capping.
-\item \textbf{Descriptor ranges}: Molecular weight spans 150–550 Da (pharmaceutical range); logP ranges –2 to +5 (typical drug-like range); all within expected bounds.
-\item \textbf{Label consistency}: hERG and Caco-2 binary labels show consistent class definitions across TDC versions; no conflicting annotations identified.
-\item \textbf{No systematic bias detected}: Data sources show realistic distributions without evidence of selection bias or systematic measurement artifacts.
+\item \textbf{Missingness}: critical modeling columns in the ChEMBL and TDC sources exhibit low missingness, making descriptor recomputation and target assignment feasible without aggressive imputation.
+\item \textbf{Outlier behavior}: the observed tails in potency, permeability, and clearance are consistent with plausible pharmaceutical variation rather than obvious transcription error. Where needed, extreme values are flagged and handled conservatively rather than removed indiscriminately.
+\item \textbf{Descriptor plausibility}: recomputed molecular descriptors fall predominantly within drug-like ranges, indicating that canonicalization and descriptor extraction are functioning as intended.
+\item \textbf{Label consistency}: endpoint encodings are sufficiently stable to support harmonization into common regression and classification tasks.
+\item \textbf{Bias awareness}: no obvious evidence of catastrophic source distortion was observed at the exploratory stage, although this does not eliminate the broader issue of assay heterogeneity across public data sources.
 \end{enumerate}
 
 \subsection{Multi-Task Learning Dataset Assembly}
 
-\noindent Given the different structures and sizes of the five data sources, a multi-task learning (MTL) strategy was adopted to leverage all available information. A unified feature matrix was constructed by:
+The objective of harmonization is realized in the baseline multi-task dataset assembly used for Phase 2/3A training. Because the contributing sources differ in scale, endpoint definition, and intended scientific role, the final training matrix is not a simple concatenation of raw files. Instead, it is constructed by aligning a shared molecular representation with task-specific labels.
 
 \begin{enumerate}
-\item \textbf{Identifying common features}: Molecular weight (MW) and octanol-water partition coefficient (logP) are present in both ChEMBL and TDC datasets, enabling cross-dataset feature alignment.
-\item \textbf{Extended-connectivity fingerprints (Morgan, 2048-bit)}: Computed from SMILES strings via RDKit to capture structural information for all compounds. Fingerprints reduce bit-collision artifacts compared to lower-resolution alternatives and provide sufficient structural resolution for binding SAR.
-\item \textbf{Task-specific target definitions}: 
+\item \textbf{Shared molecular representation}: molecular weight (MW), octanol-water partition coefficient (LogP), and 2,048-bit Morgan fingerprints define a common feature space across ChEMBL and TDC-derived compounds.
+\item \textbf{Task-specific labels}: 
   \begin{enumerate}
   \item Binding affinity (regression): continuous pIC50 values from ChEMBL.
   \item hERG inhibition (binary classification): TDC hERG labels (inhibitor = 1, non-inhibitor = 0).
   \item Caco-2 permeability (binary classification): median-binarized TDC Caco-2 permeability.
   \item Hepatocyte clearance (regression): continuous TDC clearance values.
   \end{enumerate}
-\item \textbf{Final dataset composition}: 
+\item \textbf{Baseline harmonized task counts}: 
   \begin{enumerate}
-  \item Total training samples: 13,030 compounds across all tasks.
-  \item Binding affinity: 2,000 samples (pIC50 range 3.0–10.7).
-  \item hERG: 7,997 samples (binary, 48\% positive).
-  \item Caco-2: 910 samples (binary, 48\% high-permeability).
-  \item Clearance: 2,123 samples (continuous, mean $-1.2 \pm 2.1$).
+  \item Total rows in the harmonized matrix: 4,768.
+  \item Binding affinity: 2,000 samples.
+  \item hERG inhibition: 655 samples.
+  \item Caco-2 permeability: 900 samples.
+  \item Hepatocyte clearance: 1,213 samples.
   \item Feature dimensionality: 2,050 (2 physicochemical descriptors + 2,048 fingerprint bits).
   \end{enumerate}
 \end{enumerate}
 
+This assembly stage marks the transition from exploratory source inspection to model-ready supervision. It is at this point, rather than at the raw-source stage, that the thesis obtains the definitive baseline task counts used for Phase 2/3A training. Later experimental chapters describe subsequent data upgrades and expanded structural inputs applied in later phases.
+
 \subsection{Feature Preprocessing and Normalization}
 
-\noindent Prior to neural network training, features were standardized to enable stable convergence:
+Before neural-network training, the harmonized feature matrix is preprocessed to ensure numerical stability and cross-task comparability.
 
 \begin{enumerate}
-\item \textbf{Missing value imputation}: Records with missing MW or logP were excluded (less than 2\% of data), ensuring complete descriptor coverage.
-\item \textbf{Feature scaling}: StandardScaler (zero mean, unit variance) applied independently to MW and logP. Fingerprint bits remain in $\{0, 1\}$ and are not scaled.
-\item \textbf{Normalization verification}: Post-scaling statistics confirmed mean $\approx$ 0.0 and standard deviation $\approx$ 1.0 for normalized descriptors.
-\item \textbf{Task-specific target handling}:
+\item \textbf{Descriptor completeness}: records missing MW or LogP are excluded to maintain complete low-dimensional physicochemical inputs.
+\item \textbf{Scaling}: MW and LogP are standardized to zero mean and unit variance. Binary fingerprint bits remain unscaled so that structural presence/absence information is preserved directly.
+\item \textbf{Verification}: post-scaling checks confirm that the standardized descriptors are numerically well behaved and suitable for joint optimization with the fingerprint inputs.
+\item \textbf{Target handling}:
   \begin{enumerate}
-  \item Regression targets (pIC50, clearance): Standardized using fitted scaler; targets remain in original units for interpretability.
-  \item Classification targets (hERG, Caco-2): Binary labels remain unscaled; cross-entropy loss handles label range.
+  \item Regression targets (binding affinity and clearance) are standardized for optimization but remain interpretable in their original scientific units after inverse transformation.
+  \item Classification targets (hERG and Caco-2) remain binary and are handled directly by the classification loss.
   \end{enumerate}
-\item \textbf{Output}: Preprocessed features and task labels saved to \texttt{data/processed/phase2\_multitask\_features\_with\_fingerprints.csv} for downstream model training.
+\item \textbf{Persisted output}: the processed feature matrix is stored as \path{phase2_multitask_features_with_fingerprints.csv} so that all subsequent experiments operate on the same frozen inputs.
 \end{enumerate}
 
 \section{Feature Engineering}
 
 \subsection{Molecular Representations and Feature Space Design}
 
-\noindent Raw SMILES strings are converted into multiple feature spaces for different model branches and integrated prediction tasks:
+Feature engineering in this thesis is designed to support both predictive accuracy and mechanistic interpretability. The chosen representation must be expressive enough for molecular property prediction, while remaining sufficiently structured to support shared learning across four heterogeneous endpoints.
+
+Raw SMILES strings are therefore transformed into complementary feature spaces:
 
 \begin{enumerate}
-\item \textbf{Extended-Connectivity Fingerprints (ECFP/Morgan fingerprints)}: 2048-bit binary vectors capturing local molecular structure via RDKit's \texttt{AllChem.GetMorganFingerprintAsBitVect()} with radius 2. The 2048-bit resolution (vs. lower 256-bit alternatives) provides enhanced structural discrimination and reduces bit-collision artifacts. Each bit encodes a unique local chemical environment (atom type, bond connectivity, functional groups).
+\item \textbf{Extended-connectivity fingerprints (ECFP/Morgan fingerprints)}: 2,048-bit binary vectors computed with radius 2 capture local structural motifs such as atom environments, connectivity patterns, and common functional groups. This fingerprint representation provides a compact but information-rich summary of molecular structure and serves as the primary shared input to the baseline multi-task network.
 \item \textbf{Physicochemical Descriptors}: 
   \begin{enumerate}
   \item Molecular weight (MW): Typically in pharmaceutical range 150–550 Da.
@@ -874,46 +778,53 @@ LOW & 61,063 & 18.4\% & Acceptable safety profile \\
   \item Rotatable bond count (RotBonds): Molecular flexibility metric.
   \item Aromatic ring count: Relevant for metabolic stability.
   \end{enumerate}
-  Computed via RDKit Descriptors module from canonical SMILES.
-\item \textbf{Graph Representation}: Molecular graphs (atoms as nodes with labels \{C, N, O, S, P, X\}; bonds as edges with labels \{single, double, triple, aromatic\}) are encoded for graph neural network branches, enabling message-passing-based structural learning.
-\item \textbf{Binding Affinity Features (ChEMBL-specific)}: Target ID embeddings (one-hot or learned embeddings) capture target-specific binding modalities; pIC50 serves as the regression target.
+  These descriptors are computed from canonical SMILES using RDKit and complement the sparse fingerprint signal with interpretable global molecular properties.
+\item \textbf{Graph representation}: for graph-based experiments, molecules are additionally encoded as atom-bond graphs so that message-passing architectures can learn relational structure directly rather than relying only on fixed fingerprints.
+\item \textbf{Binding-context features}: for ChEMBL-specific experiments, target identity can be included explicitly so that the model can distinguish among target classes and binding regimes.
 \end{enumerate}
+
+The key design decision is to combine a strong generic representation (Morgan fingerprints) with a small set of interpretable physicochemical descriptors. This gives the baseline model structural specificity without making it dependent on heavy task-specific featurization.
 
 \subsection{Task-Specific Feature Sets and Multi-Task Integration}
 
-\noindent The multi-task learning framework uses a shared feature encoder followed by task-specific prediction heads. Feature sets are unified where possible to promote positive transfer learning across related endpoints:
+The multi-task framework uses a shared feature encoder followed by task-specific output heads. This design is appropriate because the four endpoints are biologically distinct but chemically related: the same molecular substructures can influence potency, permeability, safety, and clearance in different ways.
 
 \begin{table}[h!]
 \centering
-\begin{tabular}{l|l|r|l}
+\small
+\begin{tabular}{p{3.0cm}|p{2.8cm}|r|p{2.6cm}}
 \hline
 \textbf{Prediction Task} & \textbf{Features} & \textbf{Samples} & \textbf{Target Type} \\
 \hline
-Binding Affinity (Reg.) & Morgan FP + MW + LogP & 2,000 & Continuous pIC50 \\
-hERG Inhibition (Cls.) & Morgan FP + MW + LogP & 7,997 & Binary (0/1) \\
-Caco-2 Permeability (Cls.) & Morgan FP + MW + LogP & 910 & Binary (0/1) \\
-Hepatocyte Clearance (Reg.) & Morgan FP + MW + LogP & 2,123 & Continuous (mL/min/kg) \\
+Binding affinity (Reg.) & Morgan FP + MW + LogP & 2,000 & Continuous pIC50 \\
+hERG inhibition (Cls.) & Morgan FP + MW + LogP & 655 & Binary (0/1) \\
+Caco-2 permeability (Cls.) & Morgan FP + MW + LogP & 900 & Binary (0/1) \\
+Hepatocyte clearance (Reg.) & Morgan FP + MW + LogP & 1,213 & Continuous (mL/min/kg) \\
 \hline
 \end{tabular}
-\caption{Multi-Task Learning Setup: Features, Sample Counts, and Target Definitions.}
+\caption{Baseline multi-task learning setup for the harmonized Phase 2/3A matrix. Later chapters report upgraded dataset variants.}
 \label{tab:mtl_setup}
 \end{table}
 
-\noindent The shared encoder (e.g., a 3-layer MLP on fingerprints) produces a bottleneck representation of dimension typically 128–512. Task-specific heads then branch from this bottleneck:
+The shared encoder produces a latent representation that is reused across tasks, while the task-specific heads specialize that representation for either regression or classification. This separation between shared and task-specific learning is central to the thesis because it supports positive transfer without forcing all endpoints into the same output geometry.
+
+Task-specific heads then branch from the shared bottleneck:
 \begin{enumerate}
 \item \textbf{Regression heads} (binding, clearance): Linear output layer with continuous predictions; optimized via mean-squared error (MSE) loss.
 \item \textbf{Classification heads} (hERG, Caco-2): Sigmoid output layer with logistic loss; optimized via binary cross-entropy.
 \end{enumerate}
 
-\noindent This architecture promotes learning of shared structural representations while allowing task-specific parameter specialization.
+This architecture is intended to capture the practical reality of molecular discovery data: structure is shared, but supervision is partial and endpoint-specific.
 
 \subsection{Docking-Derived Bridge Signal (RapidDock Prototype)}
 
-In selected fusion experiments, an additional optional bridge signal is computed from molecular docking to protein targets (RapidDock-inspired prototype). This signal includes distance-biased attention features that encode putative binding geometry and pharmacophore alignment. When included, the bridge signal is appended to baseline fingerprint and descriptor features, forming an extended feature vector. The bridge is optional and can be toggled on/off during model training to assess its contribution to binding prediction accuracy.
+In selected fusion experiments, an optional bridge signal derived from a RapidDock-inspired prototype is appended to the baseline molecular representation. This signal is intended to capture coarse geometric information related to protein-ligand compatibility and is used only as an exploratory augmentation, not as a mandatory component of the core thesis model.
 
 \subsection{Feature Storage and Reusability}
 
-The complete preprocessed multi-task feature matrix—including Morgan fingerprints, descriptor values, task labels, and target values—is persisted to disk as a CSV file (\texttt{phase2\_multitask\_features\_with\_fingerprints.csv}). This allows:
+The complete preprocessed feature matrix is persisted to disk as \path{phase2_multitask_features_with_fingerprints.csv}. This is methodologically important because it freezes the exact inputs used in later phases and makes ablation, retraining, and reproducibility checks possible without regenerating descriptors from raw source files.
+
+Persisting the matrix supports:
 \begin{enumerate}
 \item \textbf{Reproducibility}: Exact same features used across all experimental runs and model variants.
 \item \textbf{Efficient loading}: Model training pipelines load pre-computed features directly without re-computing RDKit descriptors or fingerprints.
@@ -923,7 +834,7 @@ The complete preprocessed multi-task feature matrix—including Morgan fingerpri
 
 \subsection{Hyperparameter Configuration}
 
-The feature engineering pipeline is governed by a centralized configuration dictionary, ensuring consistency and reproducibility across all experimental runs. The key hyperparameters are:
+The feature engineering and model training pipeline are controlled through a centralized configuration, ensuring that all experimental runs use a consistent and reproducible set of parameters. The selected configuration fixes the molecular representation, network capacity, optimization schedule, task-loss weighting, and data split proportions used throughout Phase 3A. The complete specification is summarized in Table~\ref{tab:phase3a_config}.
 
 \begin{table}[h!]
 \centering
@@ -962,16 +873,22 @@ The feature engineering pipeline is governed by a centralized configuration dict
 \texttt{val\_size} & 0.10 & Validation set fraction \\
 \hline
 \end{tabular}
-\caption{Phase 3A Hyperparameter Configuration. Binding and Caco-2 receive elevated loss weights (1.8 and 2.0) to compensate for smaller dataset sizes relative to hERG (7,997 samples).}
+\caption{Phase 3A hyperparameter configuration for the baseline harmonized matrix. Binding and Caco-2 receive elevated loss weights to stabilize optimization of the harder and less homogeneous tasks in multi-task training.}
 \label{tab:phase3a_config}
 \end{table}
 
-\noindent The classification tasks use focal loss with $\gamma=2.0$ to down-weight easy examples and focus training on hard classification boundaries. The physics-informed loss weight ($w_\text{physics}=0.1$) introduces a soft ODE-consistency regularizer that encourages predictions to satisfy pharmacokinetic constraints without dominating the supervised signal.
+The input representation is defined by a 2,048-bit Morgan fingerprint combined with two physicochemical descriptors (molecular weight and LogP), yielding a total input dimensionality of 2,050. The shared encoder uses a hidden width of 128 and a latent bottleneck of 64, which provides sufficient capacity to learn cross-task molecular structure relationships while maintaining a compact representation suitable for regularized multi-task training.
+
+The optimization parameters were chosen to balance convergence speed and training stability. In particular, the learning rate of $10^{-3}$, weight decay of $10^{-4}$, early-stopping patience of 40 epochs, and gradient clipping at 1.0 were used to reduce overfitting and prevent unstable updates during joint optimization of heterogeneous endpoints.
+
+Task-specific loss weights were introduced to prevent the shared encoder from drifting toward whichever endpoint was easiest to optimize. Binding affinity and Caco-2 permeability therefore receive elevated weights of 1.8 and 2.0, respectively, reflecting their greater heterogeneity and more limited effective signal in the baseline harmonized matrix. For the classification endpoints, focal loss with $\gamma = 2.0$ down-weights easy examples and concentrates learning on difficult decision boundaries, while the positive-class weight of 2.5 for hERG addresses the greater cost of missing potentially cardiotoxic compounds.
+
+Finally, the physics-informed term ($w_\text{physics} = 0.1$) acts as a soft ODE-consistency regularizer. Its role is not to replace supervised learning, but to bias the model toward predictions that remain compatible with the downstream pharmacokinetic formulation. In this way, the selected hyperparameter configuration supports both predictive performance and mechanistic coherence across the integrated PK-PD workflow.
 
 \subsection{Data Quality Gate}
 \label{sec:phase3a_quality}
 
-Prior to model training, all task-specific feature matrices pass a concrete validation gate implemented in \texttt{phase3a\_feature\_engineering.ipynb}:
+Before model fitting, the harmonized feature matrices are subjected to a concrete validation gate implemented in the feature-engineering workflow. The purpose of this gate is to ensure that no downstream result is inflated by preventable preprocessing artifacts.
 
 \begin{enumerate}
 \item \textbf{NaN/Inf detection}: Any feature or target column with missing or infinite values is flagged and removed. Records with $>5\%$ missing values across feature columns are excluded.
@@ -981,41 +898,40 @@ Prior to model training, all task-specific feature matrices pass a concrete vali
 \item \textbf{Target distribution stability}: Regression task mean and standard deviation are compared between splits using a Kolmogorov-Smirnov test ($p>0.05$ threshold). Significant distribution shifts indicate non-representative splits.
 \end{enumerate}
 
-\noindent This quality gate ensures that all subsequent modeling results are free from data artifacts that could inflate or distort reported performance metrics.
+This quality gate converts general data-quality principles into executable acceptance criteria. It therefore serves as the bridge between descriptive curation and defensible model evaluation.
 
 \section{Quality Control and Split Strategy}
 
 \subsection{Quality Control Procedures}
 
-Before model training, the following checks are applied to all datasets:
+To ensure that downstream model performance reflects genuine predictive signal rather than artifacts of preprocessing or partitioning, a structured quality-control procedure is applied before any training run. These checks address numerical validity, duplicate handling, split integrity, class balance, and descriptor plausibility.
 
 \begin{enumerate}
-\item \textbf{NaN and Inf detection}: Records with missing or infinite values are flagged and handled (imputation, exclusion, or task-specific masking).
-\item \textbf{Duplicate handling}: Exact-match and SMILES-based duplicates are identified and merged (for binding data, activities are averaged; for classification, consensus labels are computed).
-\item \textbf{Data leakage audits}: Train/validation/test sets are checked to ensure no molecule appears in multiple sets. Scaffold-based split diagnostics are run to detect potential structural leakage.
-\item \textbf{Class balance diagnostics}: For classification tasks (hERG, Caco-2), label distributions are reported and imbalance-aware metrics (e.g., weighted F1, AUROC) are prioritized.
-\item \textbf{Descriptor range validation}: Molecular properties (MW, logP, TPSA) are checked against known pharmaceutical ranges; outliers are flagged but not automatically removed.
+\item \textbf{Missing-value and numerical-validity checks}: all task-specific matrices are screened for NaN and infinite values. Records failing these checks are excluded, imputed where justified, or masked on a task-specific basis.
+\item \textbf{Duplicate resolution}: exact duplicates and canonical-SMILES duplicates are identified prior to splitting. For binding affinity data, repeated measurements are merged by activity averaging; for classification tasks, consensus labels are assigned.
+\item \textbf{Leakage auditing}: train, validation, and test partitions are examined to confirm that no molecule appears in more than one split. Scaffold-based diagnostics are additionally used to assess whether structurally similar compounds are disproportionately shared across partitions.
+\item \textbf{Class-balance diagnostics}: for hERG and Caco-2, label prevalence is reported explicitly so that AUROC, F1, and threshold-dependent metrics can be interpreted in the correct imbalance context.
+\item \textbf{Descriptor plausibility checks}: molecular properties such as molecular weight, LogP, and topological polar surface area are compared against plausible pharmaceutical ranges. Outliers are flagged for inspection but are not removed automatically unless there is evidence of annotation or preprocessing error.
 \end{enumerate}
+
+Taken together, these procedures reduce the risk that reported model performance is driven by data artifacts rather than by learnable molecular signal.
 
 \subsection{Train/Validation/Test Split Strategy}
 
-\noindent The project uses randomized stratified splits with leakage prevention:
+The integrated dataset is partitioned into training, validation, and test subsets using a randomized but controlled split strategy. The objective is to preserve label balance where required, maintain strict separation between subsets, and ensure that reported results are reproducible across runs.
 
 \begin{enumerate}
-\item \textbf{Stratification}: For classification tasks (hERG, Caco-2), splits preserve label distribution.
-\item \textbf{Leakage prevention}: 
-  \begin{enumerate}
-  \item SMILES-level deduplication across splits.
-  \item Scaffold-based diagnostics check for high structural similarity between train and test sets (optional check, not enforced).
-  \item Temporal data (if present) respected to avoid time-crossing validation.
-  \end{enumerate}
-\item \textbf{Split proportions}: Typically 70\% training, 15\% validation, 15\% test (or per-dataset benchmark defaults for TDC).
-\item \textbf{Random seed control}: Fixed numpy and PyTorch seeds for reproducible splits across runs.
+\item \textbf{Stratification}: for classification endpoints, the hERG and Caco-2 label distributions are preserved across splits to avoid distorted prevalence in validation and test evaluation.
+\item \textbf{Leakage prevention}: splitting is performed only after SMILES-level deduplication, and post-split overlap audits verify that no feature row or canonical molecule is shared across partitions. Scaffold-based diagnostics remain available as an additional sensitivity check for structural similarity.
+\item \textbf{Split proportions}: the default Phase 3A configuration uses 70\% training, 10\% validation, and 20\% test, consistent with the centralized hyperparameter settings described in Section~5.6.5. TDC benchmark datasets retain their official predefined partitions where such splits are provided.
+\item \textbf{Random seed control}: NumPy and PyTorch seeds are fixed so that split generation, training, and metric estimation remain reproducible.
 \end{enumerate}
+
+This split design provides a practical balance between statistical efficiency and evaluation rigor. The training set remains large enough for stable representation learning, while the validation and test sets remain strictly isolated for model selection and final reporting.
 
 \subsection{Metadata and Provenance Tracking}
 
-Each dataset is accompanied by a JSON metadata file recording:
+Each dataset is accompanied by a JSON metadata record documenting its origin, structure, and known limitations. The stored metadata include:
 \begin{enumerate}
 \item Source (API, version, download date).
 \item Record count and summary statistics.
@@ -1024,7 +940,7 @@ Each dataset is accompanied by a JSON metadata file recording:
 \item Known limitations or data quality notes.
 \end{enumerate}
 
-\noindent This facilitates reproducibility, provenance tracking, and compliance with data use terms.
+This metadata layer supports reproducibility, provenance tracking, and compliance with source-specific licensing and citation requirements. It also preserves an audit trail linking each processed dataset back to its acquisition context, transformation steps, and modeling assumptions.
 
 \chapter{Methodology and Model Architecture}
 
@@ -1076,62 +992,47 @@ Systematic verification applied to all datasets:
 
 \section{Multi-Task Learning Architecture}
 
+\subsection{Phase 3B Data Interface}
+
+The implementation in \texttt{phase3b\_model\_design.ipynb} does not begin from raw tensors alone, but from the persisted Phase 3A artifacts. These artifacts provide task-specific arrays, task types, feature metadata, and scaling objects, after which the notebook augments the feature space with a RapidDock-derived \texttt{docking\_quality} bridge signal for the binding task. The binding matrix is rebuilt from the real ChEMBL SMILES file and extended to 2,051 input features, while the hERG, Caco-2, and clearance tasks receive a padded \texttt{docking\_quality}=0.0 column so that all tasks share a common schema.
+
+After augmentation, the notebook reconstructs per-task train, validation, and test DataLoaders. Feature matrices are standardized separately for each task using \texttt{StandardScaler}; regression targets are also standardized, whereas classification targets remain binary. This design keeps the training pipeline consistent across heterogeneous endpoints while preserving the interpretation of logits for classification tasks.
+
 \subsection{Shared Encoder Design}
 
-The baseline architecture uses a shared feature encoder followed by task-specific prediction heads:
+The Phase 3B baseline uses a single shared encoder followed by task-specific heads. In the implemented notebook, the encoder receives a 2,051-dimensional input vector consisting of molecular weight, logP, 2,048 Morgan fingerprint bits, and the appended \texttt{docking\_quality} feature. The encoder is defined as:
 
-\begin{enumerate}
-\item \textbf{Input layer}: 2,050-dimensional input (2,048 Morgan fingerprint bits + 2 molecular descriptors: MW, logP).
+\begin{itemize}
+\item \textbf{Block 1}: \texttt{Linear(input\_dim, hidden\_dim)} $\rightarrow$ \texttt{LayerNorm(hidden\_dim)} $\rightarrow$ \texttt{ReLU} $\rightarrow$ \texttt{Dropout(config['dropout'])}
+\item \textbf{Block 2}: \texttt{Linear(hidden\_dim, hidden\_dim)} $\rightarrow$ \texttt{LayerNorm(hidden\_dim)} $\rightarrow$ \texttt{ReLU} $\rightarrow$ \texttt{Dropout(config['dropout'])}
+\item \textbf{Latent projection}: \texttt{Linear(hidden\_dim, latent\_dim)} $\rightarrow$ \texttt{ReLU}
+\end{itemize}
 
-\item \textbf{Shared encoder}: 3-4 fully connected layers with ReLU activations and batch normalization. Typical dimensions: 1024 → 512 → 256 → 128, reducing to bottleneck representation.
-
-\item \textbf{Dropout regularization}: 0.2–0.5 dropout applied between layers to mitigate overfitting, with rates tuned on validation set.
-
-\item \textbf{Bottleneck layer}: Fixed 128-dimensional latent representation capturing shared structural information across all tasks.
-\end{enumerate}
+With the current Phase 3B configuration, this corresponds to an encoder of size 2,051 $\rightarrow$ 128 $\rightarrow$ 128 $\rightarrow$ 64. Layer normalization is used instead of batch normalization because training proceeds through interleaved task batches of different sizes; under this regime, LayerNorm is more stable than BatchNorm, whose running statistics can become unreliable.
 
 \subsection{Task-Specific Heads}
 
-Four independent prediction heads branch from the bottleneck:
+Four task-specific heads branch from the 64-dimensional latent representation:
 
 \begin{enumerate}
-\item \textbf{Binding affinity head} (regression, pIC50):
-  \begin{enumerate}
-  \item Architecture: 2 dense layers (128 → 64 → 1) with ReLU.
-  \item Output activation: Linear (unbounded continuous output).
-  \item Loss: Mean-squared error (MSE) with optional $L_2$ regularization on weights.
-  \end{enumerate}
-
-\item \textbf{hERG inhibition head} (binary classification):
-  \begin{enumerate}
-  \item Architecture: 2 dense layers (128 → 64 → 1) with ReLU.
-  \item Output activation: Sigmoid (probability in [0, 1]).
-  \item Loss: Weighted binary cross-entropy with class weights $w_0 = 1.0, w_1 = \frac{\text{n\_negative}}{\text{n\_positive}}$ to handle mild class imbalance (48\% positive).
-  \end{enumerate}
-
-\item \textbf{Caco-2 permeability head} (binary classification):
-  \begin{enumerate}
-  \item Architecture: Identical to hERG head.
-  \item Loss: Weighted binary cross-entropy with similar class weighting.
-  \end{enumerate}
-
-\item \textbf{Clearance head} (regression, mL/min/kg):
-  \begin{enumerate}
-  \item Architecture: Identical to binding affinity head.
-  \item Loss: MSE.
-  \end{enumerate}
+\item \textbf{Binding affinity head} (\texttt{DeepRegressionHead}): a deeper multilayer perceptron, 64 $\rightarrow$ 64 $\rightarrow$ 32 $\rightarrow$ 1, with ReLU activations and dropout on the hidden path. This additional depth is used because binding prediction is empirically the most demanding regression task.
+\item \textbf{hERG head} (\texttt{ClassificationHead}): a compact classifier, 64 $\rightarrow$ 32 $\rightarrow$ 1, returning a raw logit rather than a post-sigmoid probability.
+\item \textbf{Caco-2 head} (\texttt{ClassificationHead}): architecturally identical to the hERG head and likewise producing logits.
+\item \textbf{Clearance head} (\texttt{RegressionHead}): a compact regression head, 64 $\rightarrow$ 32 $\rightarrow$ 1, used for the simpler scalar clearance task.
 \end{enumerate}
 
-\subsection{Multi-Task Loss Function}
+The use of raw logits for the classification heads is important because the training criterion applies \texttt{BCEWithLogits}-based losses directly, while the sigmoid transformation is deferred to evaluation and threshold selection.
 
-The combined objective minimizes a weighted sum of task-specific losses:
+\subsection{Multi-Task Objective}
+
+At the conceptual level, the architecture optimizes a weighted sum of task-specific objectives:
 
 \begin{equation}
-\mathcal{L}_{\text{total}} = w_{\text{bind}} \mathcal{L}_{\text{binding}} + w_{\text{hERG}} \mathcal{L}_{\text{hERG}} + w_{\text{Caco-2}} \mathcal{L}_{\text{Caco-2}} + w_{\text{clear}} \mathcal{L}_{\text{clearance}}
+\mathcal{L}_{\text{task}} = w_{\text{bind}} \mathcal{L}_{\text{binding}} + w_{\text{hERG}} \mathcal{L}_{\text{hERG}} + w_{\text{Caco-2}} \mathcal{L}_{\text{Caco-2}} + w_{\text{clear}} \mathcal{L}_{\text{clearance}}
 \label{eq:mtl_loss}
 \end{equation}
 
-\noindent Task weights $(w_{\text{bind}}, w_{\text{hERG}}, w_{\text{Caco-2}}, w_{\text{clear}})$ are set to $(1.0, 1.0, 0.5, 1.0)$ to balance regression and classification objectives and account for dataset size differences (Caco-2 smallest with 910 samples).
+In the notebook implementation, this base task loss is instantiated as weighted MSE for regression tasks and a logits-based classification loss for hERG and Caco-2, with focal-loss modulation enabled by default. The full Phase 3B loss additionally includes a physics penalty on the predicted PK trajectories, described in Section~\ref{sec:phase3b}.
 
 \section{Full Multi-Task Neural ODE Architecture}
 \label{sec:phase3b}
@@ -1170,24 +1071,24 @@ Before model construction, Phase 3B augments the feature matrix with a docking q
 
 \textbf{SharedEncoder} (\texttt{input\_dim $\to$ hidden\_dim $\to$ hidden\_dim $\to$ latent\_dim}):
 \begin{itemize}
-  \item Block 1: \texttt{Linear(2051, 128) -- LayerNorm(128) -- ReLU -- Dropout(0.3)}
-  \item Block 2: \texttt{Linear(128, 128) -- LayerNorm(128) -- ReLU -- Dropout(0.3)}
+  \item Block 1: \texttt{Linear(2051, 128) -- LayerNorm(128) -- ReLU -- Dropout(config['dropout'])}
+  \item Block 2: \texttt{Linear(128, 128) -- LayerNorm(128) -- ReLU -- Dropout(config['dropout'])}
   \item Bottleneck: \texttt{Linear(128, 64) -- ReLU}
 \end{itemize}
 LayerNorm is used in preference to BatchNorm because interleaved multi-task batches of different sizes destabilize BatchNorm's running statistics.
 
 \noindent \textbf{Task-specific heads} branching from the 64-dimensional bottleneck:
 \begin{itemize}
-  \item \textbf{DeepRegressionHead} (binding): \texttt{Linear(64,64) -- ReLU -- Dropout(0.1) -- Linear(64,32) -- ReLU -- Linear(32,1)}
-  \item \textbf{ClassificationHead} (hERG, Caco-2): \texttt{Linear(64,32) -- ReLU -- Linear(32,1)} (outputs raw logits; sigmoid applied only at inference/loss computation)
-  \item \textbf{RegressionHead} (clearance): \texttt{Linear(64,32) -- ReLU -- Linear(32,1)}
+  \item \textbf{DeepRegressionHead} (binding): a 64 $\to$ 64 $\to$ 32 $\to$ 1 multilayer perceptron with ReLU activations and 0.1 dropout.
+  \item \textbf{ClassificationHead} (hERG, Caco-2): a 64 $\to$ 32 $\to$ 1 head producing raw logits; sigmoid is applied only at inference and loss evaluation.
+  \item \textbf{RegressionHead} (clearance): a 64 $\to$ 32 $\to$ 1 regression head.
 \end{itemize}
 
 \noindent \textbf{PKODEFunc} (Neural ODE pharmacokinetics):
 \begin{itemize}
-  \item \textbf{PK parameter network}: \texttt{Linear(64,32) -- Tanh -- Linear(32,2)} predicts $[\log \widehat{CL},\, \log \widehat{V}]$; exponentiated to ensure positivity.
+  \item \textbf{PK parameter network}: a 64 $\to$ 32 $\to$ 2 network with Tanh nonlinearity predicts $[\log \widehat{CL},\, \log \widehat{V}]$; outputs are exponentiated to ensure positivity.
   \item \textbf{ODE dynamics}: $\dfrac{dC}{dt} = -\dfrac{\widehat{CL}}{\widehat{V}} \cdot C$ (first-order elimination)
-  \item \textbf{Inference}: \texttt{model.predict\_pk\_curve(x, t\_span)} calls \texttt{torchdiffeq.odeint} over a user-specified time grid.
+  \item \textbf{Inference}: the prediction routine calls \path{torchdiffeq.odeint} over a user-specified time grid.
 \end{itemize}
 
 The complete \texttt{MultiTaskPKPDModel} forward pass routes each batch to the appropriate head via a \texttt{task} argument; passing \texttt{task=`all'} returns all four task predictions and the latent representation simultaneously.
@@ -1220,7 +1121,7 @@ The focal classification loss for class-imbalanced tasks uses per-sample down-we
 \begin{equation}
 \mathcal{L}_{\text{focal}} = \sum_i w_i \cdot (1 - p_t^{(i)})^\gamma \cdot \text{BCE}(z_i, y_i), \quad \gamma = 2.0
 \end{equation}
-where $w_i$ is the positive-class weight (hERG: 5.7, Caco-2: computed from class ratio) and $p_t^{(i)} = \exp(-\text{BCE}(z_i, y_i))$ is the sample-level confidence estimate.
+where $w_i$ is the sample-dependent class weight induced by the configured positive-class weight, and $p_t^{(i)} = \exp(-\text{BCE}(z_i, y_i))$ is the sample-level confidence estimate. In the current notebook, hERG uses an elevated positive-class weight and Caco-2 uses its own configured class weight, with both heads trained on raw logits rather than post-sigmoid probabilities.
 
 \subsection{Validation and Threshold Selection}
 
@@ -1230,12 +1131,12 @@ Validation uses Youden's J-statistic to select per-task decision thresholds on t
 \]
 This threshold is reported alongside AUROC and accuracy at each validation epoch, and is used for per-epoch F1 reporting. The final production threshold is re-calibrated in Phase 3C.
 
-Phase 3B artifacts (model weights, scalers, raw arrays, config) are saved to \texttt{data/processed/phase3b\_artifacts/} for loading by Phase 3C.
+Phase 3B artifacts (model weights, scalers, raw arrays, config) are saved to \path{data/processed/phase3b_artifacts/} for loading by Phase 3C.
 
 \section{Fine-Tuning, Calibration, and Leakage Mitigation}
 \label{sec:phase3c}
 
-Phase 3C (\texttt{phase3c\_finetuning.ipynb}) loads the Phase 3B baseline model and applies task-specific fine-tuning, threshold calibration with guardrails, production threshold selection, and split-leakage mitigation.
+Phase 3C (\texttt{phase3c\_finetuning.ipynb}) loads the persisted Phase 3A and Phase 3B artifacts, reconstructs the baseline model and task-specific data loaders, and then applies task-specific fine-tuning, threshold calibration with guardrails, production threshold selection, and split-leakage mitigation. In the implemented notebook, these artifact and checkpoint paths are resolved from the nearest ancestor containing the shared \path{data/} directory, so the workflow remains executable even if the notebooks are reorganized within the \path{Coding/} workspace.
 
 \subsection{Task-Specific Fine-Tuning (Variants 1 and 2)}
 
@@ -1286,7 +1187,7 @@ This policy ensures operational robustness: no classification threshold is locke
 
 \subsection{Split-Leakage Mitigation}
 
-The Phase 3A quality gate (Section~\ref{sec:phase3a_quality}) detected exact-row feature overlaps across train/val/test splits, primarily in the binding task. Phase 3C remediates this:
+The Phase 3A quality gate (Section~\ref{sec:phase3a_quality}) detected feature-row overlap between train, validation, and test splits, primarily in the binding task. Phase 3C remediates this:
 \begin{enumerate}
   \item \textbf{MD5-based deduplication}: For each task's feature matrix, an MD5 hash is computed per row; only the first occurrence of each hash is retained. Duplicate rows that would be trivially learnable (memorized across splits) are removed.
   \item \textbf{Quality gate re-validation}: After deduplication, the full 5-step quality gate is re-run on the cleaned splits to confirm zero leakage across all tasks.
@@ -1294,7 +1195,7 @@ The Phase 3A quality gate (Section~\ref{sec:phase3a_quality}) detected exact-row
   \item \textbf{Comparison against March~8 baseline}: Final locked-threshold metrics on clean splits are compared against a recorded March~8 reference (hERG AUROC = 0.4836, Caco-2 AUROC = 0.4719, binding R$^2$ = 0.0019, clearance RMSE = 0.9766) to quantify the combined benefit of real fingerprints, fine-tuning, and leakage remediation.
 \end{enumerate}
 
-Phase 3C artifacts (production model weights, thresholds, clean loader state, final report metrics) are saved to \texttt{data/processed/phase3c\_artifacts/} for loading by Phase 3D experiments.
+Phase 3C artifacts (production model weights, thresholds, clean loader state, feature metadata, raw arrays, and final report metrics) are saved to \texttt{data/processed/phase3c\_artifacts/} for loading by Phase 3D experiments.
 
 \section{Fingerprint Upgrade: From Synthetic to Real SMILES}
 
@@ -1464,10 +1365,10 @@ As an alternative method track, a RapidDock-inspired distance-biased transformer
 
 The prototype operates on joint protein-ligand representations rather than molecular fingerprints:
 \begin{itemize}
-  \item \textbf{Ligand representation}: Real ChEMBL SMILES (\texttt{chembl\_binding\_affinity\_with\_smiles.csv}) are converted to 3D conformers via RDKit \texttt{EmbedMultipleConfs} (3 conformers, MMFF optimization). Mean coordinates over conformers are used to reduce conformer-dependent noise. Atom types are encoded as 8-class one-hot vectors based on atomic number modulo 8.
+  \item \textbf{Ligand representation}: Real ChEMBL SMILES from the binding-affinity file are converted to 3D conformers via RDKit \path{EmbedMultipleConfs} (3 conformers, MMFF optimization). Mean coordinates over conformers are used to reduce conformer-dependent noise. Atom types are encoded as 8-class one-hot vectors based on atomic number modulo 8.
   \item \textbf{Protein representation}: Synthetic context points (48--96 atoms) sampled near the ligand centroid with Gaussian noise ($\sigma = 8.0$\,\AA). Features are random 32-dimensional vectors. This is a prototype approximation; real implementations use protein residue embeddings from PDB structures.
   \item \textbf{Input filtering}: Only ligands with 8--20 heavy atoms and successful RDKit 3D embedding are retained, yielding approximately 80--120 valid complexes from 140 sampled SMILES.
-  \item \textbf{Train/validation split}: 83\% train, 17\% validation (random split, reproducible via \texttt{np.random.default\_rng(42)}).
+  \item \textbf{Train/validation split}: 83\% train, 17\% validation (random split, reproducible via \path{np.random.default_rng(42)}).
 \end{itemize}
 
 \textbf{Distance targets}:
@@ -1497,7 +1398,7 @@ The full model (\texttt{RapidDockPrototype}) consists of:
   \item \textbf{4 $\times$ DBTransformerBlock}: Each block contains:
     \begin{itemize}
       \item LayerNorm + Distance-Biased MHA (8 heads, $d_\text{head} = 16$)
-      \item LayerNorm + MLP (\texttt{Linear(128,512) -- GELU -- Dropout(0.1) -- Linear(512,128)})
+      \item LayerNorm + feed-forward MLP block
       \item Residual connections around both sub-layers; padded positions zeroed after each block.
     \end{itemize}
   \item \textbf{Final LayerNorm} applied to all tokens.
@@ -1541,6 +1442,10 @@ Experiments are implemented in Python (3.14) with the following key packages:
 \end{itemize}
 
 \noindent All experiments use fixed random seeds (SEED=42, set for numpy, PyTorch, and Python's \texttt{random} module). The complete environment is specified in \texttt{requirements.txt} for reproducibility.
+
+\noindent Reproducibility in the implemented workflow depends not only on package versions and seeds, but also on an explicit phased artifact contract. Phase 3A exports harmonized feature artifacts, Phase 3B exports the baseline model state and loader metadata, Phase 3C exports the production model and calibrated thresholds, and Phase 3D consumes these persisted artifacts for downstream simulation and decision analyses. The notebooks are written to resolve the nearest shared \path{data/} root dynamically, which reduces path fragility when notebooks are moved inside the \path{Coding/} folder while preserving a stable \path{data/processed/} and \path{data/outputs/} interface.
+
+\noindent The current notebooks also maintain lightweight execution logs at runtime, recording section start and completion times. This is used as an execution-audit aid during long-running Phase 3C and Phase 3D runs, complementing fixed seeds and version pinning with better traceability of staged experiments.
 
 \section{Training Protocol}
 
@@ -1640,7 +1545,7 @@ The ChEMBL binding affinity data demonstrates properties favorable for multi-tas
 
 The TDC ADMET benchmarks reveal realistic property distributions aligned with pharmaceutical knowledge:
 
-\noindent \textbf{hERG Cardiotoxicity (7,997 compounds):}
+\noindent \textbf{hERG Cardiotoxicity (655 compounds in the baseline benchmark subset):}
 \begin{enumerate}
 \item Class balance: 48.2\% inhibitors (cardiotoxicity liability) vs. 51.8\% non-inhibitors (acceptable safety). Mild imbalance typical of toxicology screening datasets; addressed via weighted loss functions during training.
 \item Clinical relevance: hERG channel inhibition is a primary cause of drug-induced QT prolongation and torsades de pointes arrhythmias, making this endpoint critical for safety-driven candidate selection.
@@ -1649,11 +1554,11 @@ The TDC ADMET benchmarks reveal realistic property distributions aligned with ph
 \noindent \textbf{Caco-2 Intestinal Permeability (910 compounds after filtering):}
 \begin{enumerate}
 \item Distribution: Lognormal-like pattern with central peak at log-scale Papp $\approx 0$ and right-skewed tail (high-permeability outliers). Mean Papp: $-1.2 \pm 2.1$ indicating mixed absorption potential.
-\item Binarization: Median-split yields 48\% high-permeability (favorable) and 52\% low-permeability (poor) compounds. This balanced binary representation enables effective classification model training.
+\item Binarization: Median-split yields 48\% high-permeability and 52\% low-permeability compounds. This balanced split supports effective classification training.
 \item Pharmacological interpretation: High Caco-2 permeability (Papp $> 10^{-5}$ cm/s, ~-3 log units) correlates with good oral bioavailability; low permeability indicates absorption-limited compounds requiring alternative routes or formulation strategies.
 \end{enumerate}
 
-\noindent \textbf{Hepatocyte Clearance (2,123 compounds):}
+\noindent \textbf{Hepatocyte Clearance (1,213 compounds in the baseline benchmark subset):}
 \begin{enumerate}
 \item Range: $-7.7$ to $+4.6$ mL/min/kg (log-scale units), encompassing low ($<$ 10 mL/min/kg, accumulation risk), moderate (10–50 mL/min/kg), and high ($>$ 50 mL/min/kg, rapid elimination) clearance compounds.
 \item Distribution: Right-skewed with mean $-1.2 \pm 2.1$, indicating average compound exhibits moderate metabolic stability. High-variance compounds require individualized dosing strategies.
@@ -1680,14 +1585,14 @@ The ToxCast dataset provides unprecedented breadth for safety assessment:
 
 \subsection{Multi-Task Dataset Assembly Quality}
 
-The unified feature matrix (13,030 compounds, 2,050 features) demonstrates favorable properties for neural network training:
+The baseline harmonized feature matrix (4,768 rows, 2,050 features) demonstrates favorable properties for neural network training:
 
 \begin{enumerate}
 \item \textbf{Feature sufficiency}: 2,048-bit Morgan fingerprints provide structural information density sufficient for SAR learning while remaining computationally tractable. Mean fingerprint Tanimoto similarity ($\approx 0.62$) indicates appropriate chemical space coverage without excessive structural redundancy.
 
 \item \textbf{Descriptor standardization}: Molecular weight and logP normalized to zero mean, unit variance confirm proper feature scaling. Post-scaling validation: mean MW $= 0.003 \pm 0.001$, std $= 1.001 \pm 0.002$; comparable for logP, indicating numerical stability for neural network optimization.
 
-\item \textbf{Task label alignment}: All 13,030 compounds carry complete task-label information (target values or binary classification labels for all four endpoints). No cross-task contamination detected (molecules appear in only one task per training split, verified via SMILES canonicalization).
+\item \textbf{Task label alignment}: The harmonized matrix preserves one task label per row together with a shared molecular feature representation, and no cross-task contamination was detected in the train/validation/test partitions after canonical-SMILES deduplication.
 
 \item \textbf{Stratified split validation}: Train/validation/test splits preserve label distribution for classification tasks (hERG, Caco-2) and maintain comparable mean/variance for regression targets (binding, clearance). No statistical difference in feature distributions between splits (p $>$ 0.05 via Kolmogorov-Smirnov tests).
 \end{enumerate}
@@ -1699,11 +1604,11 @@ The Phase 3B baseline training establishes the starting-point metrics for the 2,
 
 Key Phase 3B outcomes:
 \begin{itemize}
-  \item \textbf{Architecture validated}: The \texttt{MultiTaskPKPDModel} (SharedEncoder + 4 heads + PKODEFunc) trains stably under interleaved multi-task sampling. Total parameter count is approximately 278,000 for the baseline configuration (input\_dim=2051, hidden\_dim=128, latent\_dim=64).
+  \item \textbf{Architecture validated}: The \texttt{MultiTaskPKPDModel} trains stably under interleaved multi-task sampling. The baseline configuration combines a shared encoder, four prediction heads, and \texttt{PKODEFunc}, with approximately 278{,}000 parameters at input\_dim=2051, hidden\_dim=128, and latent\_dim=64.
   \item \textbf{Baseline discrimination below targets}: Binding R$^2 \approx 0.002$ and hERG AUROC $\approx 0.48$ reflect the near-zero structural signal in the synthetic-SMILES feature matrix used at this stage (Phase 3B loads Phase 3A artifacts which contain placeholder fingerprints for some tasks).
-  \item \textbf{PK curve generation}: The PKODEFunc successfully generates compound-level concentration-time curves via \texttt{torchdiffeq.odeint}, demonstrating end-to-end differentiability of the Neural ODE component.
+  \item \textbf{PK curve generation}: The PKODEFunc generates compound-level concentration-time curves via \texttt{torchdiffeq.odeint}. This confirms end-to-end differentiability of the Neural ODE component.
   \item \textbf{Physics penalty active}: The additional physics penalty $\mathcal{P}$ (Equation~\ref{eq:phase3b_loss}) effectively constrains PK curves to non-negative, monotonically decreasing profiles, as confirmed by visual inspection of 5 test compound trajectories.
-  \item \textbf{Artifact handoff}: All weights, scalers, and loader state saved to \texttt{data/processed/phase3b\_artifacts/} and loaded successfully by Phase 3C.
+  \item \textbf{Artifact handoff}: All weights, scalers, and loader state were saved to \path{data/processed/phase3b_artifacts/} and loaded successfully by Phase 3C.
 \end{itemize}
 
 \begin{figure}[h!]
@@ -1725,16 +1630,16 @@ Two fine-tuning variants are compared on the validation set by mean AUROC (hERG 
 \begin{table}[h!]
 \centering
 \small
-\begin{tabular}{l|c|c|c|c}
+\begin{tabular}{p{3.2cm}|p{2.0cm}|p{2.0cm}|p{2.0cm}|p{1.7cm}}
 \hline
 \textbf{Variant} & \textbf{Trainable Params} & \textbf{hERG val AUROC} & \textbf{Caco-2 val AUROC} & \textbf{Mean AUROC} \\
 \hline
 Phase 3B baseline & 278k (all) & $\approx 0.48$ & $\approx 0.47$ & $\approx 0.48$ \\
-Variant 1 (heads-only) & $\ll 1\%$ of 278k & improved & improved & improved \\
+Variant 1 (heads only) & $\ll 1\%$ of 278k & improved & improved & improved \\
 Variant 2 (last block + heads) & $\sim$5\% of 278k & improved & improved & best variant \\
 \hline
 \end{tabular}
-\caption{Phase 3C fine-tuning variant comparison. The best variant by validation mean AUROC is selected as the calibration source model and carried into production threshold selection.}
+\caption{Phase 3C fine-tuning variant comparison. The best validation mean AUROC variant is used for calibration and threshold selection.}
 \label{tab:phase3c_variants}
 \end{table}
 
@@ -1827,11 +1732,11 @@ The pure-PyTorch 3-layer GCN encoder (Section 17) learns atom-level representati
 
 \subsection{Joint GNN and MLP Fusion}
 
-The fusion model (Section 19) combines graph structural learning (GNN branch) and fingerprint-based pattern matching (MLP branch) into a single joint architecture:
+The fusion model (Section 19) combines a GNN branch with an MLP fingerprint branch in a single joint architecture:
 \begin{itemize}
   \item \textbf{Architecture}: GNN graph embedding concatenated with MLP fingerprint latent representation. Fusion head dimensionality $d_\text{GNN} + d_\text{MLP}$.
   \item \textbf{Training}: Both branches trained jointly with shared binding regression loss, enabling the fusion head to learn optimal weighting of structural vs. fingerprint information.
-  \item \textbf{Performance}: The joint GNN+MLP fusion model yields the strongest binding performance among all tested variants, confirming that graph-structural and fingerprint-based features are complementary and encode partially non-overlapping structural information.
+  \item \textbf{Performance}: The joint GNN+MLP fusion model yields the strongest binding result among all tested variants. This indicates that graph-based and fingerprint-based features are complementary rather than redundant.
 \end{itemize}
 
 \section{Neural ODE PK-PD Integration Results}
@@ -1897,11 +1802,11 @@ The branch is treated as a validated research direction for future expansion---t
 
 Population simulation (Section 20--26) provides a coherent decision-support layer above endpoint prediction:
 \begin{itemize}
-  \item \textbf{Sensitivity analysis}: One-at-a-time perturbation of model parameters identifies $k_e$ (clearance-derived) and $EC_{50}$ (binding-derived) as the dominant drivers of inter-compound variability in exposure and effect profiles.
+  \item \textbf{Sensitivity analysis}: One-at-a-time parameter perturbation identifies $k_e$ (from clearance) and $EC_{50}$ (from binding) as the main drivers of between-compound variability in exposure and effect profiles.
   \item \textbf{Dose optimization}: Grid search over dose$\times$interval space identifies Pareto-optimal regimens balancing efficacy (maximum effect integral) against cardiac safety (minimizing time above hERG threshold).
-  \item \textbf{Pareto front analysis}: Pareto-optimal regimens are visualized and exported (\texttt{s24\_pareto\_front.csv}), providing actionable dose recommendations for each compound.
+  \item \textbf{Pareto front analysis}: Pareto-optimal regimens are visualized and exported to \path{s24_pareto_front.csv}, providing actionable dose recommendations for each compound.
   \item \textbf{Monte Carlo validation}: Bootstrap confidence intervals (Section 25) and Monte Carlo population simulation confirm robustness of recommended regimens under plausible parameter uncertainty.
-  \item \textbf{Trial simulation (Section 26)}: In-silico clinical trial operating characteristics---including power, false positive rate, and Phase II dropout rates---are generated using ToxCast-informed adverse event frequencies and predicted compound profiles.
+  \item \textbf{Trial simulation (Section 26)}: In-silico operating characteristics, including power, false positive rate, and Phase II dropout rates, are generated from ToxCast-informed adverse event frequencies and predicted compound profiles.
 \end{itemize}
 
 \section{Interpretability Results}
@@ -2001,21 +1906,21 @@ Table A.2 lists the eight pharmacologically important targets from which real SM
 \begin{table}[h!]
 \centering
 \small
-\begin{tabular}{l|l|l|l}
+\begin{tabular}{p{1.8cm}|p{3.2cm}|p{2.4cm}|p{3.0cm}}
 \hline
 \textbf{Target ID} & \textbf{Target Name} & \textbf{Target Class} & \textbf{Therapeutic Area} \\
 \hline
-CHEMBL217 & Dopamine D2 receptor & GPCR & CNS (Antipsychotics, Parkinson's) \\
-CHEMBL251 & Adenosine A2a receptor & GPCR & Neuroinflammation, Caffeine Antagonism \\
-CHEMBL203 & EGFR & Kinase & Oncology (Lung Cancer) \\
-CHEMBL301 & CDK2 & Kinase & Cell Cycle, Oncology \\
-CHEMBL210 & Beta-2 adrenergic receptor & GPCR & Respiratory (Asthma, COPD) \\
-CHEMBL1871 & Androgen receptor & Nuclear Receptor & Prostate Cancer, Hormone Therapy \\
-CHEMBL2034 & Glucocorticoid receptor & Nuclear Receptor & Inflammation, Immunosuppression \\
-CHEMBL325 & Serotonin 5-HT2A receptor & GPCR & Depression, Psychedelics \\
+CHEMBL217 & Dopamine D2 receptor & GPCR & CNS; antipsychotics, Parkinson's \\
+CHEMBL251 & Adenosine A2a receptor & GPCR & Neuroinflammation; caffeine antagonism \\
+CHEMBL203 & EGFR & Kinase & Oncology; lung cancer \\
+CHEMBL301 & CDK2 & Kinase & Cell cycle; oncology \\
+CHEMBL210 & Beta-2 adrenergic receptor & GPCR & Respiratory; asthma, COPD \\
+CHEMBL1871 & Androgen receptor & Nuclear Receptor & Prostate cancer; hormone therapy \\
+CHEMBL2034 & Glucocorticoid receptor & Nuclear Receptor & Inflammation; immunosuppression \\
+CHEMBL325 & Serotonin 5-HT2A receptor & GPCR & Depression; psychedelics \\
 \hline
 \end{tabular}
-\caption{A.2: ChEMBL Real-SMILES Targets—Eight Pharmacologically Important Targets.}
+\caption{A.2: ChEMBL real-SMILES targets used in the thesis.}
 \label{tab:chembl_targets}
 \end{table}
 
@@ -2035,11 +1940,11 @@ Vd & Volume of distribution (L) \\
 AUC & Area under the plasma concentration-time curve \\
 Cmax & Maximum (peak) plasma concentration \\
 Tmax & Time to reach peak concentration \\
-t½ & Elimination half-life (hours) \\
+$t_{1/2}$ & Elimination half-life (hours) \\
 ka & Absorption rate constant (oral, h$^{-1}$) \\
 F & Bioavailability (fraction of dose absorbed systemically) \\
 MRT & Mean residence time \\
-λz & Elimination rate constant (h$^{-1}$) \\
+$\lambda_z$ & Elimination rate constant (h$^{-1}$) \\
 fu & Fraction unbound (free drug in plasma) \\
 PPB & Plasma protein binding (percent bound) \\
 \hline
@@ -2190,6 +2095,19 @@ scikit-learn>=0.24.0
 \item \textbf{Runtime}: Full pipeline (all sources, first-time download) typically 5–10 minutes; reuse of cached files (skip download) takes $<$1 minute.
 \end{enumerate}
 
+\subsection*{Notebook Artifact Contract}
+
+\noindent The experimental notebooks communicate through persisted phase artifacts rather than ad hoc in-memory transfer:
+
+\begin{itemize}
+\item Phase 3A writes feature matrices, scalers, and metadata to \path{data/processed/phase3a\_artifacts/}.
+\item Phase 3B loads those artifacts, augments the binding task with the RapidDock-derived bridge feature, and writes model state, loader state, history, and raw arrays to \path{data/processed/phase3b\_artifacts/}.
+\item Phase 3C reloads the Phase 3B baseline, performs fine-tuning and threshold selection, and writes production-ready artifacts to \path{data/processed/phase3c\_artifacts/}.
+\item Phase 3D loads the Phase 3C production bundle and writes figures and summary tables to \path{data/raw/} and \path{data/outputs/}.
+\end{itemize}
+
+\noindent In the current implementation, these notebook stages discover the nearest valid \path{data/} root dynamically. This makes the execution flow less sensitive to notebook relocation within the project while preserving the same artifact directories described in the thesis.
+
 \section*{A.4 Hyperparameter Configuration}
 
 Table~A.6 summarises the fixed and searched hyperparameters used across Phase 3 model training.
@@ -2228,7 +2146,7 @@ Table~A.7 provides the full progression of test-set metrics across all major exp
 \begin{table}[h!]
 \centering
 \small
-\begin{tabular}{l|c|c|c|c}
+\begin{tabular}{p{3.8cm}|c|c|c|c}
 \hline
 \textbf{Experiment} & \textbf{hERG AUROC} & \textbf{Caco-2 AUROC} & \textbf{Clearance R$^2$} & \textbf{Binding R$^2$} \\
 \hline
@@ -2240,7 +2158,7 @@ GNN encoder (MPNN, 3-layer) & -- & -- & -- & 0.4115 \\
 Joint GNN+MLP fusion & -- & -- & -- & \textbf{0.5502} \\
 \hline
 \end{tabular}
-\caption{A.7: Progression of test-set performance across all major experimental milestones. Dashes indicate metrics not the primary focus of that experiment. All classification results use locked thresholds (hERG: 0.49, Caco-2: 0.50). Bold values indicate all four ADME performance targets were met.}
+\caption{A.7: Test-set metric progression across the main experimental milestones. Dashes indicate metrics outside the primary focus of that experiment.}
 \label{tab:extended_results}
 \end{table}
 
@@ -2249,7 +2167,7 @@ Joint GNN+MLP fusion & -- & -- & -- & \textbf{0.5502} \\
 \noindent \textbf{Calibration results (post-hoc, validation set):}
 \begin{itemize}
   \item hERG ECE before calibration: 0.1727; after temperature scaling: \textbf{0.0058}.
-  \item Caco-2 ECE before calibration: 0.3583; after temperature scaling: \textbf{0.0448}.
+  \item Caco-2 ECE before calibration: 0.3583; after Platt scaling: \textbf{0.0448}.
 \end{itemize}
 
 \section*{A.6 Software Environment and Version Control}
@@ -2257,7 +2175,7 @@ Joint GNN+MLP fusion & -- & -- & -- & \textbf{0.5502} \\
 \noindent The project is distributed as a Python notebook environment with:
 
 \begin{enumerate}
-\item \textbf{Python version}: 3.8+
+\item \textbf{Python version}: 3.14.2 in the validated \texttt{venv\_pkpd} environment
 \item \textbf{Package manager}: pip (via venv or conda)
 \item \textbf{Source control}: Git (see project repository for version history)
 \item \textbf{Development environment}: Jupyter Notebook interfaces, VS Code
@@ -2265,6 +2183,76 @@ Joint GNN+MLP fusion & -- & -- & -- & \textbf{0.5502} \\
 \end{enumerate}
 
 This appendix provides the detailed reference material necessary for external validation and reproducibility of the data acquisition and preprocessing pipeline.
+
+\section*{A.7 Technical Specifications: APIs, Configuration, and Download Settings}
+
+\subsection*{A.7.1 API Endpoints and Request Parameters}
+
+\noindent \textbf{PubChem REST API:}
+\begin{verbatim}
+Base: https://pubchem.ncbi.nlm.nih.gov/rest/pug
+  Assay:    /assay/aid/{AID}/CSV
+  Compound: /compound/name/{NAME}/SDF?record_type=3d
+\end{verbatim}
+
+\noindent \textbf{PK-DB REST API v1:}
+\begin{verbatim}
+Base: https://pk-db.com/api/v1
+  Studies: /studies/?format=json
+\end{verbatim}
+
+\noindent \textbf{ChEMBL REST API:}
+\begin{verbatim}
+Base: https://www.ebi.ac.uk/chembl/api/data
+  Activity: /activity/?target_chembl_id={ID}&
+            standard_type__in=IC50,Ki,EC50&
+            pchembl_value__isnull=False&
+            limit=1000&offset={offset}
+\end{verbatim}
+
+\noindent \textbf{TDC (Python SDK, not REST):}
+\begin{verbatim}
+from pytdc import admet_group
+data = admet_group().get(dataset_name)
+\end{verbatim}
+
+\subsection*{A.7.2 Download Configuration Parameters}
+
+The pipeline uses the following runtime configuration to ensure robustness and courtesy:
+\begin{enumerate}
+\item \textbf{Request timeout}: 60 seconds for most APIs, 120 seconds for bulk PK-DB queries.
+\item \textbf{ChEMBL rate-limit delay}: 0.35 seconds between consecutive API page requests (respects EBI service terms).
+\item \textbf{ChEMBL page size}: 1,000 records per API request.
+\item \textbf{ChEMBL cap per target}: 600 records maximum to ensure diversity.
+\item \textbf{Retry logic}: 3 attempts per failed API call with 1.5 second exponential backoff between retries.
+\end{enumerate}
+
+\subsection*{A.7.3 File System Organization}
+
+All raw data is organized under \texttt{data/raw/} with per-source subdirectories:
+
+\begin{verbatim}
+data/raw/
+|-- pubchem/
+|   |-- assay_herg_qhts_aid588834.csv
+|   |-- assay_cyp3a4_inhibition_aid54772.csv
+|   `-- compound_{warfarin,midazolam,caffeine}.sdf
+|-- pkdb/
+|   |-- studies.json
+|   |-- studies_top100.json
+|   |-- pkdb_studies_complete.json
+|   `-- pkdb_studies_summary.csv
+|-- tdc/
+|   |-- tdc_caco2_wang.csv  ...
+|   `-- tdc_metadata.json
+|-- chembl/
+|   |-- chembl_binding_affinity.csv (synthetic)
+|   `-- chembl_binding_affinity_with_smiles.csv (real)
+`-- toxcast/
+    |-- toxcast_representative.csv
+    |-- toxcast_high_priority.csv
+    `-- toxcast_critical_priority.csv
+\end{verbatim}
 
 
 
@@ -2331,6 +2319,10 @@ IIV & Inter-individual Variability
 \bibitem{overton2019} Overton, W., Auerbach, J., Schreiber, J., \& Riley, P. (2019). ``In vivo evaluation of a neural network model for predicting compound cardiotoxicity from molecular structure.'' \textit{Chemical Research in Toxicology}, 32(8), 1527-1535.
 
 \bibitem{chen2021} Chen, H., Engkvist, O., Wang, Y., Olivecrona, M., \& Blaschke, T. (2021). ``The rise of deep learning in drug discovery.'' \textit{Nature Reviews Drug Discovery}, 20(4), 287-289.
+
+\bibitem{ramsundar2015} Ramsundar, B., Kearnes, S., Riley, P., Webster, D., Konerding, D., \& Pande, V. (2015). ``Massively multitask networks for drug discovery.'' \textit{arXiv preprint arXiv:1502.02072}.
+
+\bibitem{wu2018} Wu, Z., Ramsundar, B., Feinberg, E. N., Gomes, J., Geniesse, C., Pappu, A. S., Leswing, K., \& Pande, V. (2018). ``MoleculeNet: a benchmark for molecular machine learning.'' \textit{Chemical Science}, 9(2), 513--530.
 
 \bibitem{wang2016} Wang, N. N., Li, Y., Zhang, L., Zhang, W., Deng, S., \& Wang, B. (2016). ``Collaborative filtering-based recommendation of ADMET properties for drug discovery.'' \textit{Journal of Chemical Information and Modeling}, 56(4), 663-671.
 

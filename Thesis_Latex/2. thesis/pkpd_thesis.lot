@@ -1,31 +1,36 @@
+\babel@toc {english}{}\relax 
 \babel@toc {polish}{}\relax 
 \babel@toc {english}{}\relax 
+\contentsline {table}{\numberline {1}{\ignorespaces Organization of the thesis.}}{10}{table.0.1}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {1.1}{\ignorespaces Mapping of predicted molecular properties to ODE pharmacokinetic/pharmacodynamic parameters.}}{12}{table.1.1}%
+\contentsline {table}{\numberline {1.2}{\ignorespaces Expected Calibration Error before and after post-hoc probability calibration.}}{14}{table.1.2}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces Summary of the main literature strands relevant to the thesis and the gap addressed by their incomplete integration.}}{18}{table.2.1}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces Mapping of multi-task model outputs to Neural ODE pharmacokinetic/pharmacodynamic parameters.}}{20}{table.3.1}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Research performance targets and final achieved metrics (model\_15 / joint GNN+MLP fusion).}}{22}{table.3.2}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Representative toxicity categories used to illustrate multi-domain safety screening in a ToxCast/Tox21-style reference dataset.}}{26}{table.4.1}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Scientific role of each data source in the thesis framework.}}{27}{table.4.2}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Source-level overview used during exploratory analysis. Counts refer to the specific benchmark subsets or aggregated reference files inspected in this section and are distinct from the later harmonized task counts used for model training.}}{28}{table.4.3}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces ToxCast Risk Level Distribution across 332,507 Assay Results.}}{30}{table.4.4}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Baseline multi-task learning setup for the harmonized Phase 2/3A matrix. Later chapters report upgraded dataset variants.}}{36}{table.4.5}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces Phase 3A hyperparameter configuration for the baseline harmonized matrix. Binding and Caco-2 receive elevated loss weights to stabilize optimization of the harder and less homogeneous tasks in multi-task training.}}{38}{table.4.6}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Phase 3B target metrics. The architecture is evaluated against these thresholds to determine readiness for fine-tuning in Phase 3C.}}{45}{table.5.1}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Section 13 vs. Section 12 baseline comparison. Upgrading to 2048-bit real SMILES fingerprints introduces structural SAR information absent from the synthetic-FP baseline.}}{51}{table.5.2}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Mapping of predicted molecular properties to ODE pharmacokinetic/pharmacodynamic parameters.}}{53}{table.5.3}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces Phase 3D experimental sequence. Each section builds on the previous, with artifacts persisted between sections to enable comparison and ablation.}}{60}{table.6.1}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {7.1}{\ignorespaces Phase 3C fine-tuning variant comparison. The best validation mean AUROC variant is used for calibration and threshold selection.}}{66}{table.7.1}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces ToxCast/Tox21 Data: Toxicity Categories, Hit Rates, and Risk Levels.}}{12}{table.5.1}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Data Acquisition Pipeline: Summary of All Sources (Note: Multi-task learning uses subset of $\sim $13,030 compounds after integration).}}{13}{table.5.2}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Integrated Data Sources: Record Counts and Primary Applications.}}{16}{table.5.3}%
-\contentsline {table}{\numberline {5.4}{\ignorespaces ToxCast Risk Level Distribution across 332,507 Assay Results.}}{18}{table.5.4}%
-\contentsline {table}{\numberline {5.5}{\ignorespaces Multi-Task Learning Setup: Features, Sample Counts, and Target Definitions.}}{24}{table.5.5}%
-\contentsline {table}{\numberline {5.6}{\ignorespaces Phase 3A Hyperparameter Configuration. Binding and Caco-2 receive elevated loss weights (1.8 and 2.0) to compensate for smaller dataset sizes relative to hERG (7,997 samples).}}{26}{table.5.6}%
-\addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Phase 3B target metrics. The architecture is evaluated against these thresholds to determine readiness for fine-tuning in Phase 3C.}}{32}{table.6.1}%
-\contentsline {table}{\numberline {6.2}{\ignorespaces Section 13 vs. Section 12 baseline comparison. Upgrading to 2048-bit real SMILES fingerprints introduces structural SAR information absent from the synthetic-FP baseline.}}{37}{table.6.2}%
-\contentsline {table}{\numberline {6.3}{\ignorespaces Mapping of predicted molecular properties to ODE pharmacokinetic/pharmacodynamic parameters.}}{40}{table.6.3}%
-\addvspace {10\p@ }
-\contentsline {table}{\numberline {7.1}{\ignorespaces Phase 3D experimental sequence. Each section builds on the previous, with artifacts persisted between sections to enable comparison and ablation.}}{46}{table.7.1}%
-\addvspace {10\p@ }
-\contentsline {table}{\numberline {8.1}{\ignorespaces Phase 3C fine-tuning variant comparison. The best variant by validation mean AUROC is selected as the calibration source model and carried into production threshold selection.}}{53}{table.8.1}%
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {table}{\numberline {10.1}{\ignorespaces A.1: TDC ADMET Benchmark Datasets—Categories, Task Types, and Sources.}}{67}{table.10.1}%
-\contentsline {table}{\numberline {10.2}{\ignorespaces A.2: ChEMBL Real-SMILES Targets—Eight Pharmacologically Important Targets.}}{68}{table.10.2}%
-\contentsline {table}{\numberline {10.3}{\ignorespaces A.3: PK Parameters Extracted from PK-DB.}}{68}{table.10.3}%
-\contentsline {table}{\numberline {10.4}{\ignorespaces A.4: Complete Raw Data File Inventory and Approximate Sizes.}}{69}{table.10.4}%
-\contentsline {table}{\numberline {10.5}{\ignorespaces A.5: Data Download Pipeline Section: Typical Execution Times.}}{70}{table.10.5}%
-\contentsline {table}{\numberline {10.6}{\ignorespaces A.6: Hyperparameter configuration summary. Search ranges show grid values evaluated; Selected shows the value used in the final production model (model\_15, 623,078 parameters).}}{72}{table.10.6}%
-\contentsline {table}{\numberline {10.7}{\ignorespaces A.7: Progression of test-set performance across all major experimental milestones. Dashes indicate metrics not the primary focus of that experiment. All classification results use locked thresholds (hERG: 0.49, Caco-2: 0.50). Bold values indicate all four ADME performance targets were met.}}{73}{table.10.7}%
-\contentsfinish 
+\contentsline {table}{\numberline {9.1}{\ignorespaces A.1: TDC ADMET Benchmark Datasets—Categories, Task Types, and Sources.}}{80}{table.9.1}%
+\contentsline {table}{\numberline {9.2}{\ignorespaces A.2: ChEMBL real-SMILES targets used in the thesis.}}{81}{table.9.2}%
+\contentsline {table}{\numberline {9.3}{\ignorespaces A.3: PK Parameters Extracted from PK-DB.}}{81}{table.9.3}%
+\contentsline {table}{\numberline {9.4}{\ignorespaces A.4: Complete Raw Data File Inventory and Approximate Sizes.}}{82}{table.9.4}%
+\contentsline {table}{\numberline {9.5}{\ignorespaces A.5: Data Download Pipeline Section: Typical Execution Times.}}{83}{table.9.5}%
+\contentsline {table}{\numberline {9.6}{\ignorespaces A.6: Hyperparameter configuration summary. Search ranges show grid values evaluated; Selected shows the value used in the final production model (model\_15, 623,078 parameters).}}{86}{table.9.6}%
+\contentsline {table}{\numberline {9.7}{\ignorespaces A.7: Test-set metric progression across the main experimental milestones. Dashes indicate metrics outside the primary focus of that experiment.}}{87}{table.9.7}%

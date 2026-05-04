@@ -36,4 +36,5 @@ Phase 3 execution work was completed end-to-end today across Phase 3B, 3C, and 3
 - Coding/phase3b_model_design.ipynb
 - Coding/phase3c_finetuning.ipynb
 - Coding/phase3d_experiments.ipynb
-- Coding/rapid_dock_transformer_demo.ipynb
+- Coding/rapid_dock_paper_aligned_prototype.ipynb
+- Coding/prototypes/rapid_dock_transformer_demo.ipynb
