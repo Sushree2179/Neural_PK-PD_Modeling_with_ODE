@@ -22,17 +22,17 @@
 \contentsline {table}{\numberline {5.2}{\ignorespaces Section 13 vs. Section 12 baseline comparison. Upgrading to 2048-bit real SMILES fingerprints introduces structural SAR information absent from the synthetic-FP baseline.}}{51}{table.5.2}%
 \contentsline {table}{\numberline {5.3}{\ignorespaces Mapping of predicted molecular properties to ODE pharmacokinetic/pharmacodynamic parameters.}}{53}{table.5.3}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Phase 3D experimental sequence. Each section builds on the previous, with artifacts persisted between sections to enable comparison and ablation.}}{60}{table.6.1}%
+\contentsline {table}{\numberline {6.1}{\ignorespaces Phase 3D thesis-essential experimental sequence. Each section builds on the previous, with artifacts persisted between sections to enable comparison and ablation.}}{60}{table.6.1}%
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {7.1}{\ignorespaces Summary of the molecular representation upgrade. The real-SMILES 2048-bit encoding replaces structurally uninformative placeholder fingerprints with chemically meaningful descriptors.}}{63}{table.7.1}%
 \contentsline {table}{\numberline {7.2}{\ignorespaces Selected knee-point regimen from the Pareto frontier analysis. Although no regimen satisfied all efficacy and safety constraints simultaneously, the knee-point provided the most balanced trade-off among the non-dominated solutions.}}{68}{table.7.2}%
 \contentsline {table}{\numberline {7.3}{\ignorespaces Summary of the virtual clinical trial arms. Active doses produced strong efficacy separation from placebo and uniformly high simulated power, but the associated hERG burden remained high across all treatment arms.}}{69}{table.7.3}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {9.1}{\ignorespaces A.1: TDC ADMET Benchmark Datasets—Categories, Task Types, and Sources.}}{77}{table.9.1}%
-\contentsline {table}{\numberline {9.2}{\ignorespaces A.2: ChEMBL real-SMILES targets used in the thesis.}}{78}{table.9.2}%
-\contentsline {table}{\numberline {9.3}{\ignorespaces A.3: PK Parameters Extracted from PK-DB.}}{78}{table.9.3}%
-\contentsline {table}{\numberline {9.4}{\ignorespaces A.4: Complete Raw Data File Inventory and Approximate Sizes.}}{79}{table.9.4}%
-\contentsline {table}{\numberline {9.5}{\ignorespaces A.5: Data Download Pipeline Section: Typical Execution Times.}}{80}{table.9.5}%
-\contentsline {table}{\numberline {9.6}{\ignorespaces A.6: Hyperparameter configuration summary. Search ranges show grid values evaluated; Selected shows the value used in the final production model (model\_15, 623,078 parameters).}}{83}{table.9.6}%
-\contentsline {table}{\numberline {9.7}{\ignorespaces A.7: Test-set metric progression across the main experimental milestones. Dashes indicate metrics outside the primary focus of that experiment.}}{84}{table.9.7}%
+\contentsline {table}{\numberline {9.1}{\ignorespaces A.1: TDC ADMET Benchmark Datasets—Categories, Task Types, and Sources.}}{76}{table.9.1}%
+\contentsline {table}{\numberline {9.2}{\ignorespaces A.2: ChEMBL real-SMILES targets used in the thesis.}}{77}{table.9.2}%
+\contentsline {table}{\numberline {9.3}{\ignorespaces A.3: PK Parameters Extracted from PK-DB.}}{77}{table.9.3}%
+\contentsline {table}{\numberline {9.4}{\ignorespaces A.4: Complete Raw Data File Inventory and Approximate Sizes.}}{78}{table.9.4}%
+\contentsline {table}{\numberline {9.5}{\ignorespaces A.5: Data Download Pipeline Section: Typical Execution Times.}}{79}{table.9.5}%
+\contentsline {table}{\numberline {9.6}{\ignorespaces A.6: Hyperparameter configuration summary. Search ranges show grid values evaluated; Selected shows the value used in the final production model (model\_15, 623,078 parameters).}}{82}{table.9.6}%
+\contentsline {table}{\numberline {9.7}{\ignorespaces A.7: Test-set metric progression across the main experimental milestones. Dashes indicate metrics outside the primary focus of that experiment.}}{83}{table.9.7}%

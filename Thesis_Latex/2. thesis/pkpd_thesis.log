@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.24)  7 MAY 2026 00:57
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.24)  7 MAY 2026 01:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -420,9 +420,6 @@ Package hyperref Info: Link coloring OFF on input line 108.
 \@outlinefile=\write3
 \openout3 = `pkpd_thesis.out'.
 
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -937,7 +934,7 @@ Overfull \hbox (5.48944pt too wide) in paragraph at lines 1439--1440
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [59]
-Overfull \hbox (1.6965pt too wide) in paragraph at lines 1498--1499
+Overfull \hbox (1.6965pt too wide) in paragraph at lines 1496--1497
 []\T1/lmr/m/n/10.95 The RapidDock-inspired branch (\T1/lmtt/m/n/10.95 rapid_dock_prototype.ipynb\T1/lmr/m/n/10.95 ) is ex-e-cuted as a con-strained
  []
 
@@ -965,163 +962,158 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: figures/fig8_4_calibration_ece.pdf Graphic file (type pdf)
 <use figures/fig8_4_calibration_ece.pdf>
  [67]
-Underfull \hbox (badness 10000) in paragraph at lines 1644--1644
+Underfull \hbox (badness 10000) in paragraph at lines 1642--1642
 []\T1/lmr/bx/n/9 Dose
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1644--1644
+Underfull \hbox (badness 10000) in paragraph at lines 1642--1642
 []\T1/lmr/bx/n/9 Median
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1644--1644
+Underfull \hbox (badness 10000) in paragraph at lines 1642--1642
 []\T1/lmr/bx/n/9 Median
  []
 
 
-Underfull \hbox (badness 3769) in paragraph at lines 1644--1644
+Underfull \hbox (badness 3769) in paragraph at lines 1642--1642
 []$\OT1/cmr/m/n/9 ^^A\OML/cmm/m/it/9 AUC[]$ \T1/lmr/bx/n/9 vs
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1644--1645
+Underfull \hbox (badness 10000) in paragraph at lines 1642--1643
 []\T1/lmr/bx/n/9 Mean
  []
 
-[68]
-Overfull \hbox (8.4631pt too wide) in paragraph at lines 1658--1659
-[]\T1/lmr/m/n/10.95 Additional in-ter-pretabil-ity ex-per-i-ments, in-clud-ing fea-ture at-tri-bu-tion, atom-level GNN saliency,
- []
-
-[69] [70]
+[68] [69]
 Chapter 8.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [71
+ [70
 
-] [72]
+] [71]
 Underfull \vbox (badness 3364) has occurred while \output is active []
 
- [73]
-Overfull \hbox (1.28052pt too wide) in paragraph at lines 1713--1714
+ [72]
+Overfull \hbox (1.28052pt too wide) in paragraph at lines 1709--1710
 \T1/lmr/m/n/10.95 Tox-Cast, PK-DB). Mea-sure-ment het-ero-gene-ity (dif-fer-ent as-say pro-to-cols, cell lines, species)
  []
 
 
-Overfull \hbox (8.27362pt too wide) in paragraph at lines 1714--1715
+Overfull \hbox (8.27362pt too wide) in paragraph at lines 1710--1711
 \T1/lmr/m/n/10.95 tal) re-flects that not all com-pounds have as-so-ci-ated canon-i-cal SMILES in the TDC/ChEMBL
  []
 
 
-Overfull \hbox (6.55478pt too wide) in paragraph at lines 1715--1716
+Overfull \hbox (6.55478pt too wide) in paragraph at lines 1711--1712
 []\T1/lmr/bx/n/10.95 ODE pa-ram-e-ter as-sump-tions\T1/lmr/m/n/10.95 : The two-compartment PK model uses de-fault population-
  []
 
-[74] [75]
+[73] [74]
 Chapter 9.
-[76
+[75
 
 ]
 Missing character: There is no — ("2014) in font ec-lmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1778--1779
+Underfull \hbox (badness 10000) in paragraph at lines 1774--1775
 []\T1/lmr/bx/n/10 Therapeutic
  []
 
 
-Overfull \hbox (7.81244pt too wide) in paragraph at lines 1780--1780
+Overfull \hbox (7.81244pt too wide) in paragraph at lines 1776--1776
 []\T1/lmr/m/n/10 CHEMBL217| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1780--1781
+Underfull \hbox (badness 10000) in paragraph at lines 1776--1777
 []\T1/lmr/m/n/10 CNS; an-tipsy-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1780--1781
+Underfull \hbox (badness 10000) in paragraph at lines 1776--1777
 \T1/lmr/m/n/10 chotics, Parkin-
  []
 
 
-Overfull \hbox (7.81244pt too wide) in paragraph at lines 1781--1781
+Overfull \hbox (7.81244pt too wide) in paragraph at lines 1777--1777
 []\T1/lmr/m/n/10 CHEMBL251| 
  []
 
 
-Underfull \hbox (badness 3291) in paragraph at lines 1781--1781
+Underfull \hbox (badness 3291) in paragraph at lines 1777--1777
 []\T1/lmr/m/n/10 Adenosine A2a re-
  []
 
 
-Overfull \hbox (1.61316pt too wide) in paragraph at lines 1781--1782
+Overfull \hbox (1.61316pt too wide) in paragraph at lines 1777--1778
 []\T1/lmr/m/n/10 Neuroinflammation;
  []
 
 
-Overfull \hbox (7.81244pt too wide) in paragraph at lines 1782--1782
+Overfull \hbox (7.81244pt too wide) in paragraph at lines 1778--1778
 []\T1/lmr/m/n/10 CHEMBL203| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1782--1783
+Underfull \hbox (badness 10000) in paragraph at lines 1778--1779
 []\T1/lmr/m/n/10 Oncology; lung
  []
 
 
-Overfull \hbox (7.81244pt too wide) in paragraph at lines 1783--1783
+Overfull \hbox (7.81244pt too wide) in paragraph at lines 1779--1779
 []\T1/lmr/m/n/10 CHEMBL301| 
  []
 
 
-Overfull \hbox (7.81244pt too wide) in paragraph at lines 1784--1784
+Overfull \hbox (7.81244pt too wide) in paragraph at lines 1780--1780
 []\T1/lmr/m/n/10 CHEMBL210| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1784--1785
+Underfull \hbox (badness 10000) in paragraph at lines 1780--1781
 []\T1/lmr/m/n/10 Respiratory;
  []
 
 
-Overfull \hbox (12.81244pt too wide) in paragraph at lines 1785--1785
+Overfull \hbox (12.81244pt too wide) in paragraph at lines 1781--1781
 []\T1/lmr/m/n/10 CHEMBL1871| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1785--1786
+Underfull \hbox (badness 10000) in paragraph at lines 1781--1782
 []\T1/lmr/m/n/10 Prostate can-cer;
  []
 
 
-Overfull \hbox (12.81244pt too wide) in paragraph at lines 1786--1786
+Overfull \hbox (12.81244pt too wide) in paragraph at lines 1782--1782
 []\T1/lmr/m/n/10 CHEMBL2034| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1786--1786
+Underfull \hbox (badness 10000) in paragraph at lines 1782--1782
 []\T1/lmr/m/n/10 Glucocorticoid re-
  []
 
 
-Underfull \hbox (badness 1515) in paragraph at lines 1786--1787
+Underfull \hbox (badness 1515) in paragraph at lines 1782--1783
 []\T1/lmr/m/n/10 Inflammation; im-
  []
 
 
-Overfull \hbox (7.81244pt too wide) in paragraph at lines 1787--1787
+Overfull \hbox (7.81244pt too wide) in paragraph at lines 1783--1783
 []\T1/lmr/m/n/10 CHEMBL325| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1787--1787
+Underfull \hbox (badness 10000) in paragraph at lines 1783--1783
 []\T1/lmr/m/n/10 Serotonin 5-HT2A
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1787--1788
+Underfull \hbox (badness 10000) in paragraph at lines 1783--1784
 []\T1/lmr/m/n/10 Depression;
  []
 
@@ -1131,13 +1123,13 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[77
+[76
 
 ]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[78]
+[77]
 Missing character: There is no – ("2013) in font ec-lmr9!
 Missing character: There is no – ("2013) in font ec-lmr9!
 Missing character: There is no – ("2013) in font ec-lmr9!
@@ -1147,48 +1139,48 @@ Missing character: There is no – ("2013) in font ec-lmbx9!
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[79] [80] [81]
+[78] [79] [80]
 Missing character: There is no – ("2013) in font ec-lmr10!
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[82]
-Underfull \hbox (badness 4832) in paragraph at lines 2022--2022
+[81]
+Underfull \hbox (badness 4832) in paragraph at lines 2018--2018
 []\T1/lmr/m/n/10 Real bind-ing SMILES
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2023--2023
+Underfull \hbox (badness 10000) in paragraph at lines 2019--2019
 []\T1/lmr/m/n/10 hERG push (hid-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2023--2023
+Underfull \hbox (badness 10000) in paragraph at lines 2019--2019
 \T1/lmr/m/n/10 den_dim=256,
  []
 
 
-Underfull \hbox (badness 1062) in paragraph at lines 2024--2024
+Underfull \hbox (badness 1062) in paragraph at lines 2020--2020
 []\T1/lmr/m/n/10 GNN en-coder (MPNN,
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[83] [84] [85] [86]
-Underfull \hbox (badness 10000) in paragraph at lines 2135--2148
+[82] [83] [84] [85]
+Underfull \hbox (badness 10000) in paragraph at lines 2131--2144
 
  []
 
-[87
+[86
 
 ] (./pkpd_thesis.lof)
 \tf@lof=\write5
 \openout5 = `pkpd_thesis.lof'.
 
- [88
+ [87
 
-] [89] (./pkpd_thesis.lot
+] [88] (./pkpd_thesis.lot
 Overfull \hbox (26.97963pt too wide) in paragraph at lines 6--6
  [][] [][]\T1/lmr/m/n/10.95 Mapping of pre-dicted molec-u-lar prop-er-ties to ODE phar-ma-coki-netic/pharmacodynamic 
  []
@@ -1213,7 +1205,7 @@ Overfull \hbox (20.71272pt too wide) in paragraph at lines 22--22
  \T1/lmr/m/n/10.95 SMILES fin-ger-prints in-tro-duces struc-tural SAR in-for-ma-tion ab-sent from the synthetic- 
  []
 
-[90
+[89
 
 ]
 Overfull \hbox (26.97963pt too wide) in paragraph at lines 23--23
@@ -1225,31 +1217,27 @@ Missing character: There is no — ("2014) in font ec-lmr10!
 \tf@lot=\write6
 \openout6 = `pkpd_thesis.lot'.
 
- [91] [92
+ [90] [91
 
-] [93
+] [92
 
-] [94] [95
+] [93] [94
 
 ] (./pkpd_thesis.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `pkpd_thesis.out' has not changed.
-(rerunfilecheck)             Checksum: AEA52CE074638550AFC923C6F870AA0D;27852.
+(rerunfilecheck)             Checksum: 3BD1156D666CE37CF75F2DE080B22FE4;27741.
  ) 
 Here is how much of TeX's memory you used:
- 13350 strings out of 468168
- 212296 string characters out of 5432815
- 692882 words of memory out of 5000000
- 41832 multiletter control sequences out of 15000+600000
+ 13348 strings out of 468168
+ 212250 string characters out of 5432815
+ 692800 words of memory out of 5000000
+ 41830 multiletter control sequences out of 15000+600000
  689500 words of font info for 109 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 72i,17n,90p,1109b,621s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,17n,90p,1109b,617s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on pkpd_thesis.pdf (95 pages).
+Output written on pkpd_thesis.pdf (94 pages).

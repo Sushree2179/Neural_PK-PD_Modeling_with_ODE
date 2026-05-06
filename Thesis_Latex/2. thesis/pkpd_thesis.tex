@@ -154,7 +154,7 @@ The thesis has four principal objectives:
 \item Build a high-quality, leakage-controlled multi-task dataset from heterogeneous public sources.
 \item Develop predictive models for binding affinity, hERG risk, Caco-2 permeability, and clearance.
 \item Integrate model outputs with Neural ODE-based PK-PD simulation for scenario and optimization studies.
-\item Evaluate calibration, interpretability, and robustness with clinically motivated analyses.
+\item Evaluate calibration, robustness, and decision-oriented behavior with clinically motivated analyses.
 \end{enumerate}
 
 The key contributions are:
@@ -188,7 +188,7 @@ Chapter 6 & Methodology, model architectures, Neural ODE integration, calibratio
 \hline
 Chapter 7 & Experimental environment, training protocol, and study sequence. \\
 \hline
-Chapter 8 & Empirical results across prediction, calibration, simulation, optimization, and interpretability analyses. \\
+Chapter 8 & Empirical results across prediction, calibration, simulation, optimization, and virtual trial analyses. \\
 \hline
 Chapter 9 & Discussion of findings, interpretation, limitations, and comparison with related work. \\
 \hline
@@ -1465,7 +1465,7 @@ All models are trained using the Adam optimizer with:
 
 \section{Experimental Sequence}
 
-The full experimental program in \texttt{phase3d\_experiments.ipynb} proceeds through 28 sections:
+The thesis-essential experimental program in \texttt{phase3d\_experiments.ipynb} proceeds through Section 26:
 
 \begin{table}[h!]
 \centering
@@ -1485,11 +1485,9 @@ The full experimental program in \texttt{phase3d\_experiments.ipynb} proceeds th
 23--24 & Pareto-front analysis, Monte Carlo confidence interval estimation \\
 25 & Bootstrap confidence intervals \\
 26 & In-silico clinical trial simulation (operating characteristics) \\
-27 & Cross-section performance dashboard, end-to-end pipeline summary \\
-28 & Model interpretation: gradient saliency, atom-level GNN attribution, t-SNE \\
 \hline
 \end{tabular}
-\caption{Phase 3D experimental sequence. Each section builds on the previous, with artifacts persisted between sections to enable comparison and ablation.}
+\caption{Phase 3D thesis-essential experimental sequence. Each section builds on the previous, with artifacts persisted between sections to enable comparison and ablation.}
 \label{tab:phase3d_sequence}
 \end{table}
 
@@ -1653,9 +1651,7 @@ High dose & 160.0 & 19.48 & 16.13 & +19.37 & 100.0\% & 99.9\% \\
 \label{tab:8.2}
 \end{table}
 
-\section{Interpretability and Exploratory Extensions}
-
-Additional interpretability experiments, including feature attribution, atom-level GNN saliency, and latent-space visualization, were used to identify the molecular features driving the final predictions. These analyses support the plausibility of the learned representations by highlighting chemically meaningful regions associated with binding and safety. They provide useful supporting evidence, but they are not the primary basis of the thesis claims and are therefore treated as secondary result material.
+\section{Exploratory Extensions}
 
 An exploratory RapidDock-inspired branch was also implemented as a proof-of-feasibility study for geometry-aware protein-ligand modeling. The branch confirmed that distance-biased attention, symmetry-aware loss, and coordinate reconstruction can be trained end to end. However, due to the synthetic protein context and limited scale, the prototype is treated as a forward-looking research direction rather than as a production alternative to the main predictive pipeline.
 
