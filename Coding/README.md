@@ -24,7 +24,7 @@ This folder contains the notebooks, scripts, artifacts, and data used to build t
 
 ## Auxiliary / Prototype Notebooks
 
-- `rapid_dock_paper_aligned_prototype.ipynb`
+- `rapid_dock_prototype.ipynb`
    Prototype branch aligned with the RapidDock-style geometry workflow and the thesis narrative.
 
 - `prototypes/rapid_dock_transformer_demo.ipynb`

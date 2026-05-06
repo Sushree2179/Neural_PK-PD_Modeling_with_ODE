@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.24)  6 MAY 2026 23:24
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.24)  7 MAY 2026 00:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -373,6 +373,8 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \titlewidth=\dimen182
 \titlewidthlast=\dimen183
 \titlewidthfirst=\dimen184
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
 ) (/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
 File: l3backend-xetex.def 2025-10-09 L3 backend support: XeTeX
 \g__graphics_track_int=\count317
@@ -384,26 +386,26 @@ Package babel Info: 'polish' activates 'polish' shorthands.
 )
 \openout1 = `pkpd_thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2025-06-23 v0.14 Display of landscape pages in PDF
  (/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
@@ -413,7 +415,7 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 ))
-Package hyperref Info: Link coloring OFF on input line 107.
+Package hyperref Info: Link coloring OFF on input line 108.
  (./pkpd_thesis.out) (./pkpd_thesis.out)
 \@outlinefile=\write3
 \openout3 = `pkpd_thesis.out'.
@@ -473,7 +475,7 @@ File: ../1. title_page/Pkpd_Sushree.pdf Graphic file (type pdf)
 
 
 ]
-Overfull \hbox (7.99971pt too wide) in paragraph at lines 115--116
+Overfull \hbox (7.99971pt too wide) in paragraph at lines 116--117
 \T1/lmr/m/n/10.95 that com-bines molec-u-lar prop-erty pre-dic-tion with mech-a-nis-tic pharmacokinetic-pharmacodynamic
  []
 
@@ -570,7 +572,7 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 \openout4 = `pkpd_thesis.toc'.
 
  [8]
-Overfull \hbox (10.34344pt too wide) in paragraph at lines 153--154
+Overfull \hbox (10.34344pt too wide) in paragraph at lines 154--155
 []\T1/lmr/m/n/10.95 Build a high-quality, leakage-controlled multi-task dataset from het-ero-ge-neous pub-lic sources. 
  []
 
@@ -584,15 +586,15 @@ Chapter 1.
 [11
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 254--254
+Underfull \hbox (badness 10000) in paragraph at lines 255--255
 []\T1/lmr/m/n/10.95 Table 1.1: []Mapping of pre-dicted molec-u-lar prop-er-ties to ODE phar-ma-coki-
  []
 
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 257.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 258.
 (/usr/local/texlive/2026/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Overfull \hbox (3.81343pt too wide) in paragraph at lines 257--258
+Overfull \hbox (3.81343pt too wide) in paragraph at lines 258--259
 []\T1/lmr/m/n/10.95 The ODEs are solved nu-mer-i-cally us-ing \T1/lmtt/m/n/10.95 torchdiffeq.odeint \T1/lmr/m/n/10.95 (Dormand--Prince RK45 solver),
  []
 
@@ -608,87 +610,87 @@ Chapter 2.
 Underfull \vbox (badness 3364) has occurred while \output is active []
 
  [16]
-Underfull \hbox (badness 1867) in paragraph at lines 349--349
+Underfull \hbox (badness 1867) in paragraph at lines 350--350
 []\T1/lmr/m/n/10 Efficient molec-u-lar en-cod-
  []
 
 
-Underfull \hbox (badness 2837) in paragraph at lines 349--350
+Underfull \hbox (badness 2837) in paragraph at lines 350--351
 []\T1/lmr/m/n/10 Limited abil-ity to model
  []
 
 
-Underfull \hbox (badness 1231) in paragraph at lines 349--350
+Underfull \hbox (badness 1231) in paragraph at lines 350--351
 \T1/lmr/m/n/10 higher-order struc-tural in-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 351--351
+Underfull \hbox (badness 10000) in paragraph at lines 352--352
 []\T1/lmr/m/n/10 Richer structure-aware
  []
 
 
-Underfull \hbox (badness 3009) in paragraph at lines 351--352
+Underfull \hbox (badness 3009) in paragraph at lines 352--353
 []\T1/lmr/m/n/10 Often eval-u-ated as stan-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 351--352
+Underfull \hbox (badness 10000) in paragraph at lines 352--353
 \T1/lmr/m/n/10 dalone pre-dic-tors rather
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 353--353
+Underfull \hbox (badness 10000) in paragraph at lines 354--354
 []\T1/lmr/m/n/10 Multi-task AD-MET
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 353--353
+Underfull \hbox (badness 10000) in paragraph at lines 354--354
 []\T1/lmr/m/n/10 Shared rep-re-sen-ta-tions
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 353--353
+Underfull \hbox (badness 10000) in paragraph at lines 354--354
 \T1/lmr/m/n/10 across re-lated end-points
  []
 
 
-Underfull \hbox (badness 8000) in paragraph at lines 353--354
+Underfull \hbox (badness 8000) in paragraph at lines 354--355
 []\T1/lmr/m/n/10 Frequently op-ti-mized for
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 353--354
+Underfull \hbox (badness 10000) in paragraph at lines 354--355
 \T1/lmr/m/n/10 rics with-out mech-a-nis-tic
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 353--354
+Underfull \hbox (badness 10000) in paragraph at lines 354--355
 \T1/lmr/m/n/10 sim-u-la-tion or cal-i-brated
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 355--355
+Underfull \hbox (badness 10000) in paragraph at lines 356--356
 []\T1/lmr/m/n/10 Mechanistic PK-PD
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 355--355
+Underfull \hbox (badness 10000) in paragraph at lines 356--356
 []\T1/lmr/m/n/10 Interpretable
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 355--355
+Underfull \hbox (badness 10000) in paragraph at lines 356--356
 \T1/lmr/m/n/10 concentration--time and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 355--356
+Underfull \hbox (badness 10000) in paragraph at lines 356--357
 \T1/lmr/m/n/10 ex-per-i-men-tal or clin-i-cal
  []
 
 
-Underfull \hbox (badness 4328) in paragraph at lines 355--356
+Underfull \hbox (badness 4328) in paragraph at lines 356--357
 \T1/lmr/m/n/10 learned molec-u-lar pre-dic-
  []
 
@@ -705,7 +707,7 @@ Missing character: There is no — ("2014) in font ec-lmr10!
 Missing character: There is no — ("2014) in font ec-lmr10!
 Missing character: There is no — ("2014) in font ec-lmr10!
 
-Underfull \hbox (badness 7151) in paragraph at lines 406--406
+Underfull \hbox (badness 7151) in paragraph at lines 407--407
 []\T1/lmr/m/n/10.95 Table 3.1: []Mapping of multi-task model out-puts to Neu-ral ODE phar-ma-coki-
  []
 
@@ -722,57 +724,54 @@ Chapter 4.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [25]
-Overfull \hbox (0.87265pt too wide) in paragraph at lines 554--554
+Overfull \hbox (0.87265pt too wide) in paragraph at lines 555--555
 []\T1/lmr/bx/n/10 No.| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 556--557
+Underfull \hbox (badness 10000) in paragraph at lines 557--558
 []\T1/lmr/m/n/10 Illustrative ref-er-ence
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 558--558
+Underfull \hbox (badness 10000) in paragraph at lines 559--559
 []\T1/lmr/m/n/10 Pharmacokinetic stud-ies
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 558--559
+Underfull \hbox (badness 10000) in paragraph at lines 559--560
 []\T1/lmr/m/n/10 Auxiliary mech-a-nis-tic
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 560--560
+Underfull \hbox (badness 10000) in paragraph at lines 561--561
 []\T1/lmr/m/n/10 TDC AD-
  []
 
 
-Underfull \hbox (badness 1910) in paragraph at lines 560--560
+Underfull \hbox (badness 1910) in paragraph at lines 561--561
 []\T1/lmr/m/n/10 hERG, Caco-2, clear-ance,
  []
 
 
-Underfull \hbox (badness 2189) in paragraph at lines 562--563
+Underfull \hbox (badness 2189) in paragraph at lines 563--564
 []\T1/lmr/m/n/10 Real train-ing data +
  []
 
 
-Overfull \hbox (8.57057pt too wide) in paragraph at lines 564--564
+Overfull \hbox (8.57057pt too wide) in paragraph at lines 565--565
 []\T1/lmr/m/n/10 ToxCast/Tox21-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 564--564
+Underfull \hbox (badness 10000) in paragraph at lines 565--565
 []\T1/lmr/m/n/10 Multi-category toxicity-
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [26]
+[26]
 Missing character: There is no — ("2014) in font ec-lmr10!
 Missing character: There is no — ("2014) in font ec-lmr10!
 Missing character: There is no — ("2014) in font ec-lmr10!
@@ -780,37 +779,37 @@ Missing character: There is no — ("2014) in font ec-lmr10!
 Missing character: There is no — ("2014) in font ec-lmr10!
 Missing character: There is no — ("2014) in font ec-lmr10!
 
-Overfull \hbox (1.03384pt too wide) in paragraph at lines 597--598
+Overfull \hbox (1.03384pt too wide) in paragraph at lines 598--599
 []\T1/lmtt/m/n/10.95 chembl_binding_affinity_with_smiles.csv  \T1/lmr/m/n/10.95 Bind-ing affin-ity, real SMILES (re-gres-sion). 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 613--613
+Underfull \hbox (badness 10000) in paragraph at lines 614--614
 []\T1/lmr/m/n/10 Bioassay screen-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 614--615
+Underfull \hbox (badness 10000) in paragraph at lines 615--616
 []\T1/lmr/m/n/10 Pharmacodynamic
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 615--615
+Underfull \hbox (badness 10000) in paragraph at lines 616--616
 []\T1/lmr/m/n/10 TDC AD-
  []
 
 
-Underfull \hbox (badness 3323) in paragraph at lines 615--616
+Underfull \hbox (badness 3323) in paragraph at lines 616--617
 []\T1/lmr/m/n/10 ADMET end-point
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 616--616
+Underfull \hbox (badness 10000) in paragraph at lines 617--617
 []\T1/lmr/m/n/10 ToxCast-style
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 616--616
+Underfull \hbox (badness 10000) in paragraph at lines 617--617
 []\T1/lmr/m/n/10 Aggregated priority-
  []
 
@@ -832,7 +831,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: figures/fig5_3_tdc_admet.pdf Graphic file (type pdf)
 <use figures/fig5_3_tdc_admet.pdf>
  [31] [32] [33]
-Overfull \hbox (8.39967pt too wide) in paragraph at lines 759--760
+Overfull \hbox (8.39967pt too wide) in paragraph at lines 760--761
 []\T1/lmr/bx/n/10.95 Persisted out-put\T1/lmr/m/n/10.95 : the pro-cessed fea-ture ma-trix is stored as $\T1/lmtt/m/n/10.95 phase2 _ multitask _ features _
  []
 
@@ -840,33 +839,23 @@ Overfull \hbox (8.39967pt too wide) in paragraph at lines 759--760
 Missing character: There is no – ("2013) in font ec-lmr10!
 Missing character: There is no – ("2013) in font ec-lmr10!
 [35]
-Underfull \hbox (badness 10000) in paragraph at lines 799--799
+Underfull \hbox (badness 10000) in paragraph at lines 800--800
 []\T1/lmr/m/n/10 Binding affin-ity
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 799--799
+Underfull \hbox (badness 10000) in paragraph at lines 800--800
 []\T1/lmr/m/n/10 Morgan FP +
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 799--800
+Underfull \hbox (badness 10000) in paragraph at lines 800--801
 []\T1/lmr/m/n/10 Continuous
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 800--800
+Underfull \hbox (badness 10000) in paragraph at lines 801--801
 []\T1/lmr/m/n/10 hERG in-hi-bi-tion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 800--800
-[]\T1/lmr/m/n/10 Morgan FP +
- []
-
-
-Underfull \hbox (badness 3803) in paragraph at lines 801--801
-[]\T1/lmr/m/n/10 Caco-2 per-me-abil-
  []
 
 
@@ -875,8 +864,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 801--801
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 802--802
-[]\T1/lmr/m/n/10 Hepatocyte clear-
+Underfull \hbox (badness 3803) in paragraph at lines 802--802
+[]\T1/lmr/m/n/10 Caco-2 per-me-abil-
  []
 
 
@@ -885,12 +874,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 802--802
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 802--803
+Underfull \hbox (badness 10000) in paragraph at lines 803--803
+[]\T1/lmr/m/n/10 Hepatocyte clear-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 803--803
+[]\T1/lmr/m/n/10 Morgan FP +
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 803--804
 []\T1/lmr/m/n/10 Continuous
  []
 
 [36]
-Overfull \hbox (8.63153pt too wide) in paragraph at lines 825--826
+Overfull \hbox (8.63153pt too wide) in paragraph at lines 826--827
 []\T1/lmr/m/n/10.95 The com-plete pre-pro-cessed fea-ture ma-trix is per-sisted to disk as $\T1/lmtt/m/n/10.95 phase2 _ multitask _ features _
  []
 
@@ -905,29 +904,29 @@ Chapter 5.
 [42
 
 ] [43] [44] [45]
-Overfull \hbox (16.66913pt too wide) in paragraph at lines 1074--1075
+Overfull \hbox (16.66913pt too wide) in paragraph at lines 1075--1076
 []\T1/lmr/m/n/10.95 Block 1: \T1/lmtt/m/n/10.95 Linear(2051, 128) -- LayerNorm(128) -- ReLU -- Dropout(config['dropout']) 
  []
 
 
-Overfull \hbox (10.9204pt too wide) in paragraph at lines 1075--1076
+Overfull \hbox (10.9204pt too wide) in paragraph at lines 1076--1077
 []\T1/lmr/m/n/10.95 Block 2: \T1/lmtt/m/n/10.95 Linear(128, 128) -- LayerNorm(128) -- ReLU -- Dropout(config['dropout']) 
  []
 
 [46] [47] [48] [49] [50] [51] [52]
-Underfull \hbox (badness 10000) in paragraph at lines 1312--1312
+Underfull \hbox (badness 10000) in paragraph at lines 1313--1313
 []\T1/lmr/m/n/10.95 Table 5.3: []Mapping of pre-dicted molec-u-lar prop-er-ties to ODE phar-ma-coki-
  []
 
 [53]
-Overfull \hbox (6.89407pt too wide) in paragraph at lines 1331--1332
+Overfull \hbox (6.89407pt too wide) in paragraph at lines 1332--1333
 \T1/lmr/m/n/10.95 The ODEs are nu-mer-i-cally in-te-grated us-ing \T1/lmtt/m/n/10.95 torchdiffeq.odeint \T1/lmr/m/n/10.95 (Dormand-Prince RK45 solver),
  []
 
 [54] [55] [56] [57]
 Chapter 6.
 
-Overfull \hbox (5.48944pt too wide) in paragraph at lines 1438--1439
+Overfull \hbox (5.48944pt too wide) in paragraph at lines 1439--1440
 []\T1/lmr/bx/n/10.95 RDKit \T1/lmr/m/n/10.95 2025.9.5: Molec-u-lar fin-ger-print com-pu-ta-tion, SMILES canon-i-cal-iza-tion, atom/bond
  []
 
@@ -937,211 +936,192 @@ Overfull \hbox (5.48944pt too wide) in paragraph at lines 1438--1439
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-Overfull \hbox (4.76833pt too wide) in paragraph at lines 1497--1498
-[]\T1/lmr/m/n/10.95 The RapidDock-inspired branch (\T1/lmtt/m/n/10.95 rapid_dock_paper_aligned_prototype.ipynb\T1/lmr/m/n/10.95 ) is ex-e-cuted
+[59]
+Overfull \hbox (1.6965pt too wide) in paragraph at lines 1498--1499
+[]\T1/lmr/m/n/10.95 The RapidDock-inspired branch (\T1/lmtt/m/n/10.95 rapid_dock_prototype.ipynb\T1/lmr/m/n/10.95 ) is ex-e-cuted as a con-strained
  []
 
-[59] [60]
+[60] [61]
 Chapter 7.
-Missing character: There is no – ("2013) in font ec-lmr10!
-Missing character: There is no – ("2013) in font ec-lmr10!
-[61
-
-]
-Missing character: There is no – ("2013) in font ec-lmr10!
-Missing character: There is no – ("2013) in font ec-lmr10!
-Missing character: There is no – ("2013) in font ec-lmr10!
-[62]
-Missing character: There is no – ("2013) in font ec-lmr10!
-[63]
-Overfull \hbox (3.03436pt too wide) in paragraph at lines 1607--1608
-[]\T1/lmr/bx/n/10.95 Architecture val-i-dated\T1/lmr/m/n/10.95 : The \T1/lmtt/m/n/10.95 MultiTaskPKPDModel \T1/lmr/m/n/10.95 trains sta-bly un-der in-ter-leaved multi-
- []
-
-[64]
 File: figures/fig8_1_training_history.png Graphic file (type bmp)
 <figures/fig8_1_training_history.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 1635--1635
-[]\T1/lmr/bx/n/10 Trainable
- []
-
-
-Underfull \hbox (badness 6157) in paragraph at lines 1635--1635
-[]\T1/lmr/bx/n/10 hERG val
- []
-
-
-Underfull \hbox (badness 1303) in paragraph at lines 1635--1635
-[]\T1/lmr/bx/n/10 Caco-2 val
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1635--1636
-[]\T1/lmr/bx/n/10 Mean
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1638--1638
-[]\T1/lmr/m/n/10 Variant 1 (heads
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1638--1638
-[]$\OMS/cmsy/m/n/10 ^^\ \OT1/cmr/m/n/10 1%$ \T1/lmr/m/n/10 of
- []
-
-
-Underfull \hbox (badness 7963) in paragraph at lines 1639--1640
-[]\T1/lmr/m/n/10 best vari-
- []
-
-[65]
-Overfull \hbox (9.5221pt too wide) in paragraph at lines 1661--1662
-[]\T1/lmr/m/n/10.95 The Phase 3C qual-ity gate re-run con-firmed zero feature-level leak-age across all train/val/test
- []
-
-[66] [67]
-File: figures/fig8_3_performance_summary.pdf Graphic file (type pdf)
-<use figures/fig8_3_performance_summary.pdf>
- [68]
-File: figures/fig8_4_calibration_ece.pdf Graphic file (type pdf)
-<use figures/fig8_4_calibration_ece.pdf>
- [69] [70]
-File: figures/fig8_2_pk_curves.png Graphic file (type bmp)
-<figures/fig8_2_pk_curves.png>
-File: figures/fig8_5_experiment_progression.pdf Graphic file (type pdf)
-<use figures/fig8_5_experiment_progression.pdf>
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[71] [72] [73] [74] [75]
-Chapter 8.
-[76
+[62
 
 ]
-Overfull \hbox (1.28052pt too wide) in paragraph at lines 1849--1850
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [63]
+File: figures/fig8_3_performance_summary.pdf Graphic file (type pdf)
+<use figures/fig8_3_performance_summary.pdf>
+File: figures/fig8_5_experiment_progression.pdf Graphic file (type pdf)
+<use figures/fig8_5_experiment_progression.pdf>
+ [64] [65]
+File: figures/fig8_2_pk_curves.png Graphic file (type bmp)
+<figures/fig8_2_pk_curves.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [66]
+File: figures/fig8_4_calibration_ece.pdf Graphic file (type pdf)
+<use figures/fig8_4_calibration_ece.pdf>
+ [67]
+Underfull \hbox (badness 10000) in paragraph at lines 1644--1644
+[]\T1/lmr/bx/n/9 Dose
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1644--1644
+[]\T1/lmr/bx/n/9 Median
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1644--1644
+[]\T1/lmr/bx/n/9 Median
+ []
+
+
+Underfull \hbox (badness 3769) in paragraph at lines 1644--1644
+[]$\OT1/cmr/m/n/9 ^^A\OML/cmm/m/it/9 AUC[]$ \T1/lmr/bx/n/9 vs
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1644--1645
+[]\T1/lmr/bx/n/9 Mean
+ []
+
+[68]
+Overfull \hbox (8.4631pt too wide) in paragraph at lines 1658--1659
+[]\T1/lmr/m/n/10.95 Additional in-ter-pretabil-ity ex-per-i-ments, in-clud-ing fea-ture at-tri-bu-tion, atom-level GNN saliency,
+ []
+
+[69] [70]
+Chapter 8.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [71
+
+] [72]
+Underfull \vbox (badness 3364) has occurred while \output is active []
+
+ [73]
+Overfull \hbox (1.28052pt too wide) in paragraph at lines 1713--1714
 \T1/lmr/m/n/10.95 Tox-Cast, PK-DB). Mea-sure-ment het-ero-gene-ity (dif-fer-ent as-say pro-to-cols, cell lines, species)
  []
 
 
-Overfull \hbox (8.27362pt too wide) in paragraph at lines 1850--1851
+Overfull \hbox (8.27362pt too wide) in paragraph at lines 1714--1715
 \T1/lmr/m/n/10.95 tal) re-flects that not all com-pounds have as-so-ci-ated canon-i-cal SMILES in the TDC/ChEMBL
  []
 
 
-Overfull \hbox (6.55478pt too wide) in paragraph at lines 1851--1852
+Overfull \hbox (6.55478pt too wide) in paragraph at lines 1715--1716
 []\T1/lmr/bx/n/10.95 ODE pa-ram-e-ter as-sump-tions\T1/lmr/m/n/10.95 : The two-compartment PK model uses de-fault population-
  []
 
-
-Underfull \vbox (badness 3417) has occurred while \output is active []
-
- [77] [78]
+[74] [75]
 Chapter 9.
-[79
+[76
 
 ]
 Missing character: There is no — ("2014) in font ec-lmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1911--1912
+Underfull \hbox (badness 10000) in paragraph at lines 1778--1779
 []\T1/lmr/bx/n/10 Therapeutic
  []
 
 
-Overfull \hbox (7.81244pt too wide) in paragraph at lines 1913--1913
+Overfull \hbox (7.81244pt too wide) in paragraph at lines 1780--1780
 []\T1/lmr/m/n/10 CHEMBL217| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1913--1914
+Underfull \hbox (badness 10000) in paragraph at lines 1780--1781
 []\T1/lmr/m/n/10 CNS; an-tipsy-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1913--1914
+Underfull \hbox (badness 10000) in paragraph at lines 1780--1781
 \T1/lmr/m/n/10 chotics, Parkin-
  []
 
 
-Overfull \hbox (7.81244pt too wide) in paragraph at lines 1914--1914
+Overfull \hbox (7.81244pt too wide) in paragraph at lines 1781--1781
 []\T1/lmr/m/n/10 CHEMBL251| 
  []
 
 
-Underfull \hbox (badness 3291) in paragraph at lines 1914--1914
+Underfull \hbox (badness 3291) in paragraph at lines 1781--1781
 []\T1/lmr/m/n/10 Adenosine A2a re-
  []
 
 
-Overfull \hbox (1.61316pt too wide) in paragraph at lines 1914--1915
+Overfull \hbox (1.61316pt too wide) in paragraph at lines 1781--1782
 []\T1/lmr/m/n/10 Neuroinflammation;
  []
 
 
-Overfull \hbox (7.81244pt too wide) in paragraph at lines 1915--1915
+Overfull \hbox (7.81244pt too wide) in paragraph at lines 1782--1782
 []\T1/lmr/m/n/10 CHEMBL203| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1915--1916
+Underfull \hbox (badness 10000) in paragraph at lines 1782--1783
 []\T1/lmr/m/n/10 Oncology; lung
  []
 
 
-Overfull \hbox (7.81244pt too wide) in paragraph at lines 1916--1916
+Overfull \hbox (7.81244pt too wide) in paragraph at lines 1783--1783
 []\T1/lmr/m/n/10 CHEMBL301| 
  []
 
 
-Overfull \hbox (7.81244pt too wide) in paragraph at lines 1917--1917
+Overfull \hbox (7.81244pt too wide) in paragraph at lines 1784--1784
 []\T1/lmr/m/n/10 CHEMBL210| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1917--1918
+Underfull \hbox (badness 10000) in paragraph at lines 1784--1785
 []\T1/lmr/m/n/10 Respiratory;
  []
 
 
-Overfull \hbox (12.81244pt too wide) in paragraph at lines 1918--1918
+Overfull \hbox (12.81244pt too wide) in paragraph at lines 1785--1785
 []\T1/lmr/m/n/10 CHEMBL1871| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1918--1919
+Underfull \hbox (badness 10000) in paragraph at lines 1785--1786
 []\T1/lmr/m/n/10 Prostate can-cer;
  []
 
 
-Overfull \hbox (12.81244pt too wide) in paragraph at lines 1919--1919
+Overfull \hbox (12.81244pt too wide) in paragraph at lines 1786--1786
 []\T1/lmr/m/n/10 CHEMBL2034| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1919--1919
+Underfull \hbox (badness 10000) in paragraph at lines 1786--1786
 []\T1/lmr/m/n/10 Glucocorticoid re-
  []
 
 
-Underfull \hbox (badness 1515) in paragraph at lines 1919--1920
+Underfull \hbox (badness 1515) in paragraph at lines 1786--1787
 []\T1/lmr/m/n/10 Inflammation; im-
  []
 
 
-Overfull \hbox (7.81244pt too wide) in paragraph at lines 1920--1920
+Overfull \hbox (7.81244pt too wide) in paragraph at lines 1787--1787
 []\T1/lmr/m/n/10 CHEMBL325| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1920--1920
+Underfull \hbox (badness 10000) in paragraph at lines 1787--1787
 []\T1/lmr/m/n/10 Serotonin 5-HT2A
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1920--1921
+Underfull \hbox (badness 10000) in paragraph at lines 1787--1788
 []\T1/lmr/m/n/10 Depression;
  []
 
@@ -1151,13 +1131,13 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[80
+[77
 
 ]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[81]
+[78]
 Missing character: There is no – ("2013) in font ec-lmr9!
 Missing character: There is no – ("2013) in font ec-lmr9!
 Missing character: There is no – ("2013) in font ec-lmr9!
@@ -1167,52 +1147,48 @@ Missing character: There is no – ("2013) in font ec-lmbx9!
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [82] [83] [84]
+[79] [80] [81]
 Missing character: There is no – ("2013) in font ec-lmr10!
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-Underfull \hbox (badness 4832) in paragraph at lines 2155--2155
+[82]
+Underfull \hbox (badness 4832) in paragraph at lines 2022--2022
 []\T1/lmr/m/n/10 Real bind-ing SMILES
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2156--2156
+Underfull \hbox (badness 10000) in paragraph at lines 2023--2023
 []\T1/lmr/m/n/10 hERG push (hid-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2156--2156
+Underfull \hbox (badness 10000) in paragraph at lines 2023--2023
 \T1/lmr/m/n/10 den_dim=256,
  []
 
 
-Underfull \hbox (badness 1062) in paragraph at lines 2157--2157
+Underfull \hbox (badness 1062) in paragraph at lines 2024--2024
 []\T1/lmr/m/n/10 GNN en-coder (MPNN,
  []
 
-[85]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[86] [87] [88] [89]
-Underfull \hbox (badness 10000) in paragraph at lines 2268--2281
+[83] [84] [85] [86]
+Underfull \hbox (badness 10000) in paragraph at lines 2135--2148
 
  []
 
-[90
+[87
 
-] (./pkpd_thesis.lof [91
-
-])
+] (./pkpd_thesis.lof)
 \tf@lof=\write5
 \openout5 = `pkpd_thesis.lof'.
 
- [92] (./pkpd_thesis.lot
+ [88
+
+] [89] (./pkpd_thesis.lot
 Overfull \hbox (26.97963pt too wide) in paragraph at lines 6--6
  [][] [][]\T1/lmr/m/n/10.95 Mapping of pre-dicted molec-u-lar prop-er-ties to ODE phar-ma-coki-netic/pharmacodynamic 
  []
@@ -1237,7 +1213,7 @@ Overfull \hbox (20.71272pt too wide) in paragraph at lines 22--22
  \T1/lmr/m/n/10.95 SMILES fin-ger-prints in-tro-duces struc-tural SAR in-for-ma-tion ab-sent from the synthetic- 
  []
 
-[93
+[90
 
 ]
 Overfull \hbox (26.97963pt too wide) in paragraph at lines 23--23
@@ -1249,27 +1225,31 @@ Missing character: There is no — ("2014) in font ec-lmr10!
 \tf@lot=\write6
 \openout6 = `pkpd_thesis.lot'.
 
- [94] [95
+ [91] [92
 
-] [96
+] [93
 
-] [97] [98
+] [94] [95
 
 ] (./pkpd_thesis.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `pkpd_thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 188F38EBA4D20DFA69E5D7541DEC8CD2;30783.
+(rerunfilecheck)             Checksum: AEA52CE074638550AFC923C6F870AA0D;27852.
  ) 
 Here is how much of TeX's memory you used:
- 13327 strings out of 468168
- 211658 string characters out of 5432815
- 695529 words of memory out of 5000000
- 41813 multiletter control sequences out of 15000+600000
+ 13350 strings out of 468168
+ 212296 string characters out of 5432815
+ 692882 words of memory out of 5000000
+ 41832 multiletter control sequences out of 15000+600000
  689500 words of font info for 109 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 72i,17n,90p,1109b,617s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,17n,90p,1109b,621s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on pkpd_thesis.pdf (98 pages).
+Output written on pkpd_thesis.pdf (95 pages).

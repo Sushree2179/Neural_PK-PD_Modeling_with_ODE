@@ -20,7 +20,7 @@
 - **[Notebook (Phase 3B) →](../Coding/phase3b_model_design.ipynb)** - Model architecture & training (30 cells)
 - **[Notebook (Phase 3C) →](../Coding/phase3c_finetuning.ipynb)** - Fine-tuning & calibration (28 cells)
 - **[Notebook (Phase 3D) →](../Coding/phase3d_experiments.ipynb)** - Advanced experiments (88 cells)
-- **[Notebook (RapidDock Paper-Aligned Prototype) →](../Coding/rapid_dock_paper_aligned_prototype.ipynb)** - Paper-aligned implementation: distance-biased MHA, symmetry-aware loss, L-BFGS reconstruction (integrated into thesis §6.9)
+- **[Notebook (RapidDock Paper-Aligned Prototype) →](../Coding/rapid_dock_prototype.ipynb)** - Paper-aligned implementation: distance-biased MHA, symmetry-aware loss, L-BFGS reconstruction (integrated into thesis §6.9)
 - **[Notebook (RapidDock Legacy Demo) →](../Coding/prototypes/rapid_dock_transformer_demo.ipynb)** - Earlier exploratory demo with GCN baseline and scaffold CV; retained for historical reference, not the main thesis path
 - **[Documentation Governance →](DOCUMENTATION_GOVERNANCE.md)** - Update protocol
 - **[Slides Guide →](../Slides/README.md)** - Presentation generation
@@ -29,7 +29,7 @@
 
 ## 🆕 Current Addendum (22 Mar 2026)
 
-- RapidDock paper-aligned prototype is the notebook aligned with the thesis narrative: `Coding/rapid_dock_paper_aligned_prototype.ipynb`.
+- RapidDock paper-aligned prototype is the notebook aligned with the thesis narrative: `Coding/rapid_dock_prototype.ipynb`.
 - Current prototype includes:
   - Real-data loading from ChEMBL with fallback to synthetic sample
   - 3D conformer and distance-matrix preprocessing (RDKit)
@@ -38,7 +38,7 @@
   - Scaffold split evaluation with early stopping
   - Scaffold-group cross-validation summary
 - Status classification: **Exploratory prototype (not production model replacement yet)**.
-- **Note**: `rapid_dock_paper_aligned_prototype.ipynb` is the paper-aligned variant described in the thesis (§6.9, §7.4, §8.5); `prototypes/rapid_dock_transformer_demo.ipynb` is retained as an earlier legacy demo with GCN baseline.
+- **Note**: `rapid_dock_prototype.ipynb` is the paper-aligned variant described in the thesis (§6.9, §7.4, §8.5); `prototypes/rapid_dock_transformer_demo.ipynb` is retained as an earlier legacy demo with GCN baseline.
 
 ## 📝 Daily Update (22 Mar 2026)
 

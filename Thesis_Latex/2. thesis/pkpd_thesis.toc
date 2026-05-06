@@ -29,7 +29,7 @@
 \contentsline {subsection}{\numberline {4.2.3}TDC: Standardized ADMET Benchmarks}{24}{subsection.4.2.3}%
 \contentsline {subsection}{\numberline {4.2.4}ChEMBL: Binding Affinity Data}{24}{subsection.4.2.4}%
 \contentsline {subsection}{\numberline {4.2.5}ToxCast/Tox21-Style Toxicity Reference Data}{25}{subsection.4.2.5}%
-\contentsline {section}{\numberline {4.3}Data Curation and Harmonization}{25}{section.4.3}%
+\contentsline {section}{\numberline {4.3}Data Curation and Harmonization}{26}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Summary of Source Roles in the Framework}{26}{section.4.4}%
 \contentsline {section}{\numberline {4.5}Data Validation and Quality Assurance}{27}{section.4.5}%
 \contentsline {subsection}{\numberline {4.5.1}Validation Checks in the Pipeline}{27}{subsection.4.5.1}%
@@ -106,46 +106,29 @@
 \contentsline {section}{\numberline {6.1}Environment and Reproducibility}{58}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Training Protocol}{59}{section.6.2}%
 \contentsline {section}{\numberline {6.3}Experimental Sequence}{59}{section.6.3}%
-\contentsline {section}{\numberline {6.4}RapidDock Prototype Protocol}{59}{section.6.4}%
-\contentsline {chapter}{\numberline {7}Results}{61}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Exploratory Data Analysis Findings}{61}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1}Data Quality and Completeness}{61}{subsection.7.1.1}%
-\contentsline {subsection}{\numberline {7.1.2}Binding Affinity Dataset Characteristics}{62}{subsection.7.1.2}%
-\contentsline {subsection}{\numberline {7.1.3}ADMET Property Distributions}{62}{subsection.7.1.3}%
-\contentsline {subsection}{\numberline {7.1.4}Toxicity Risk Stratification}{63}{subsection.7.1.4}%
-\contentsline {subsection}{\numberline {7.1.5}Multi-Task Dataset Assembly Quality}{64}{subsection.7.1.5}%
-\contentsline {section}{\numberline {7.2}Baseline Multi-Task Model Results}{64}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Fine-Tuning and Leakage Mitigation Results}{65}{section.7.3}%
-\contentsline {subsection}{\numberline {7.3.1}Fine-Tuning Variants: Comparison}{66}{subsection.7.3.1}%
-\contentsline {subsection}{\numberline {7.3.2}Threshold Calibration Outcomes}{66}{subsection.7.3.2}%
-\contentsline {subsection}{\numberline {7.3.3}Split-Leakage Mitigation Outcomes}{66}{subsection.7.3.3}%
-\contentsline {section}{\numberline {7.4}Predictive Modeling Results}{67}{section.7.4}%
-\contentsline {subsection}{\numberline {7.4.1}2048-Bit Real-SMILES Fingerprint Upgrade}{67}{subsection.7.4.1}%
-\contentsline {subsection}{\numberline {7.4.2}Real Binding SMILES Integration}{67}{subsection.7.4.2}%
-\contentsline {subsection}{\numberline {7.4.3}hERG AUROC Push}{68}{subsection.7.4.3}%
-\contentsline {section}{\numberline {7.5}Calibration Results}{69}{section.7.5}%
-\contentsline {subsection}{\numberline {7.5.1}Temperature and Platt Scaling}{69}{subsection.7.5.1}%
-\contentsline {section}{\numberline {7.6}GNN and Fusion Results}{70}{section.7.6}%
-\contentsline {subsection}{\numberline {7.6.1}GNN Molecular Encoder}{70}{subsection.7.6.1}%
-\contentsline {subsection}{\numberline {7.6.2}Joint GNN and MLP Fusion}{70}{subsection.7.6.2}%
-\contentsline {section}{\numberline {7.7}Neural ODE PK-PD Integration Results}{70}{section.7.7}%
-\contentsline {subsection}{\numberline {7.7.1}Concentration-Time and Effect Profiles}{70}{subsection.7.7.1}%
-\contentsline {section}{\numberline {7.8}RapidDock Prototype Outcomes}{72}{section.7.8}%
-\contentsline {subsection}{\numberline {7.8.1}Training Convergence}{72}{subsection.7.8.1}%
-\contentsline {subsection}{\numberline {7.8.2}Architecture Validation}{72}{subsection.7.8.2}%
-\contentsline {subsection}{\numberline {7.8.3}Ligand Coordinate Reconstruction}{73}{subsection.7.8.3}%
-\contentsline {subsection}{\numberline {7.8.4}Scope and Limitations}{73}{subsection.7.8.4}%
-\contentsline {section}{\numberline {7.9}PK-PD and Decision Analytics Results}{74}{section.7.9}%
-\contentsline {section}{\numberline {7.10}Interpretability Results}{74}{section.7.10}%
-\contentsline {subsection}{\numberline {7.10.1}Feature Attribution and Model Interpretation}{74}{subsection.7.10.1}%
-\contentsline {chapter}{\numberline {8}Discussion}{76}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Interpretation of Key Findings}{76}{section.8.1}%
-\contentsline {subsection}{\numberline {8.1.1}Structural Information Is Essential}{76}{subsection.8.1.1}%
-\contentsline {subsection}{\numberline {8.1.2}Architecture and Calibration Are Jointly Important}{76}{subsection.8.1.2}%
-\contentsline {subsection}{\numberline {8.1.3}Complementarity of Graph and Fingerprint Features}{76}{subsection.8.1.3}%
-\contentsline {section}{\numberline {8.2}Pharmacokinetic Simulation Validation}{77}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Limitations}{77}{section.8.3}%
-\contentsline {section}{\numberline {8.4}Comparison with Related Work}{78}{section.8.4}%
-\contentsline {chapter}{\numberline {9}Conclusion and Future Work}{79}{chapter.9}%
-\contentsline {chapter}{Appendix}{80}{chapter*.2}%
-\contentsline {chapter}{References}{95}{chapter*.6}%
+\contentsline {section}{\numberline {6.4}RapidDock Prototype Protocol}{60}{section.6.4}%
+\contentsline {chapter}{\numberline {7}Results}{62}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Chapter Overview}{62}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Baseline Multi-Task Predictive Performance}{62}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Effect of Improved Molecular Representation}{63}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Impact of Real Binding Data Integration}{64}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Architectural Refinement and Final Predictive Model}{64}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Mechanistic PK-PD Integration Through Neural ODEs}{66}{section.7.6}%
+\contentsline {section}{\numberline {7.7}Calibration and Robustness}{67}{section.7.7}%
+\contentsline {section}{\numberline {7.8}Efficacy-Safety Trade-Off Analysis}{67}{section.7.8}%
+\contentsline {section}{\numberline {7.9}Virtual Clinical Trial Simulation}{68}{section.7.9}%
+\contentsline {section}{\numberline {7.10}Interpretability and Exploratory Extensions}{69}{section.7.10}%
+\contentsline {section}{\numberline {7.11}Summary of Key Findings}{69}{section.7.11}%
+\contentsline {chapter}{\numberline {8}Discussion}{71}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Interpretation of Key Findings}{71}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Structural Information Is Essential}{71}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Task-Relevant Data Quality Matters as Much as Representation Quality}{72}{subsection.8.1.2}%
+\contentsline {subsection}{\numberline {8.1.3}Architecture, Calibration, and Mechanistic Use Must Be Considered Together}{72}{subsection.8.1.3}%
+\contentsline {subsection}{\numberline {8.1.4}Complementarity of Graph and Fingerprint Features}{72}{subsection.8.1.4}%
+\contentsline {section}{\numberline {8.2}Pharmacokinetic Simulation Validation}{73}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Implications for Efficacy-Safety Decision Support}{73}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Limitations}{74}{section.8.4}%
+\contentsline {section}{\numberline {8.5}Comparison with Related Work}{75}{section.8.5}%
+\contentsline {chapter}{\numberline {9}Conclusion and Future Work}{76}{chapter.9}%
+\contentsline {chapter}{Appendix}{77}{chapter*.2}%
+\contentsline {chapter}{References}{92}{chapter*.6}%

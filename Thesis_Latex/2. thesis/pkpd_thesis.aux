@@ -72,9 +72,9 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}TDC: Standardized ADMET Benchmarks}{24}{subsection.4.2.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.4}ChEMBL: Binding Affinity Data}{24}{subsection.4.2.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.5}ToxCast/Tox21-Style Toxicity Reference Data}{25}{subsection.4.2.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Data Curation and Harmonization}{25}{section.4.3}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Representative toxicity categories used to illustrate multi-domain safety screening in a ToxCast/Tox21-style reference dataset.}}{26}{table.4.1}\protected@file@percent }
 \newlabel{tab:toxcast_categories}{{4.1}{26}{Representative toxicity categories used to illustrate multi-domain safety screening in a ToxCast/Tox21-style reference dataset}{table.4.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Data Curation and Harmonization}{26}{section.4.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {4.4}Summary of Source Roles in the Framework}{26}{section.4.4}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces Scientific role of each data source in the thesis framework.}}{27}{table.4.2}\protected@file@percent }
 \newlabel{tab:data_sources_summary}{{4.2}{27}{Scientific role of each data source in the thesis framework}{table.4.2}{}}
@@ -185,85 +185,71 @@
 \@writefile{toc}{\contentsline {section}{\numberline {6.1}Environment and Reproducibility}{58}{section.6.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {6.2}Training Protocol}{59}{section.6.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {6.3}Experimental Sequence}{59}{section.6.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.4}RapidDock Prototype Protocol}{59}{section.6.4}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces Phase 3D experimental sequence. Each section builds on the previous, with artifacts persisted between sections to enable comparison and ablation.}}{60}{table.6.1}\protected@file@percent }
 \newlabel{tab:phase3d_sequence}{{6.1}{60}{Phase 3D experimental sequence. Each section builds on the previous, with artifacts persisted between sections to enable comparison and ablation}{table.6.1}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Results}{61}{chapter.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}RapidDock Prototype Protocol}{60}{section.6.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Results}{62}{chapter.7}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {7.1}Exploratory Data Analysis Findings}{61}{section.7.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.1.1}Data Quality and Completeness}{61}{subsection.7.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.1.2}Binding Affinity Dataset Characteristics}{62}{subsection.7.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.1.3}ADMET Property Distributions}{62}{subsection.7.1.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.1.4}Toxicity Risk Stratification}{63}{subsection.7.1.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.1.5}Multi-Task Dataset Assembly Quality}{64}{subsection.7.1.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7.2}Baseline Multi-Task Model Results}{64}{section.7.2}\protected@file@percent }
-\newlabel{sec:phase3b_results}{{7.2}{64}{Baseline Multi-Task Model Results}{section.7.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.1}{\ignorespaces Training and validation loss curves for the baseline multi-task model (Phase 3B). Both loss curves decrease steadily over epochs, confirming stable gradient propagation through the shared encoder and all four task-specific heads, including the Neural ODE component.}}{65}{figure.7.1}\protected@file@percent }
-\newlabel{fig:8.1}{{7.1}{65}{Training and validation loss curves for the baseline multi-task model (Phase 3B). Both loss curves decrease steadily over epochs, confirming stable gradient propagation through the shared encoder and all four task-specific heads, including the Neural ODE component}{figure.7.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.3}Fine-Tuning and Leakage Mitigation Results}{65}{section.7.3}\protected@file@percent }
-\newlabel{sec:phase3c_results}{{7.3}{65}{Fine-Tuning and Leakage Mitigation Results}{section.7.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.1}Fine-Tuning Variants: Comparison}{66}{subsection.7.3.1}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {7.1}{\ignorespaces Phase 3C fine-tuning variant comparison. The best validation mean AUROC variant is used for calibration and threshold selection.}}{66}{table.7.1}\protected@file@percent }
-\newlabel{tab:phase3c_variants}{{7.1}{66}{Phase 3C fine-tuning variant comparison. The best validation mean AUROC variant is used for calibration and threshold selection}{table.7.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.2}Threshold Calibration Outcomes}{66}{subsection.7.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.3}Split-Leakage Mitigation Outcomes}{66}{subsection.7.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7.4}Predictive Modeling Results}{67}{section.7.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.4.1}2048-Bit Real-SMILES Fingerprint Upgrade}{67}{subsection.7.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.4.2}Real Binding SMILES Integration}{67}{subsection.7.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.4.3}hERG AUROC Push}{68}{subsection.7.4.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {7.2}{\ignorespaces Final model performance (model\_15) versus research targets across all four prediction endpoints. All four targets are met: hERG AUROC = 0.8206 ($\geq $0.80), Caco-2 AUROC = 0.8635 ($\geq $0.75), Clearance R$^2$ = 0.3478 ($\geq $0.20), Binding R$^2$ = 0.5502 ($\geq $0.40).}}{68}{figure.7.2}\protected@file@percent }
-\newlabel{fig:8.3}{{7.2}{68}{Final model performance (model\_15) versus research targets across all four prediction endpoints. All four targets are met: hERG AUROC = 0.8206 ($\geq $0.80), Caco-2 AUROC = 0.8635 ($\geq $0.75), Clearance R$^2$ = 0.3478 ($\geq $0.20), Binding R$^2$ = 0.5502 ($\geq $0.40)}{figure.7.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.5}Calibration Results}{69}{section.7.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.5.1}Temperature and Platt Scaling}{69}{subsection.7.5.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {7.3}{\ignorespaces Expected Calibration Error (ECE) before and after post-hoc probability calibration. Temperature scaling reduces hERG ECE from 0.1727 to 0.0058; Platt scaling reduces Caco-2 ECE from 0.3583 to 0.0448, confirming that predicted probabilities reliably reflect empirical frequencies.}}{69}{figure.7.3}\protected@file@percent }
-\newlabel{fig:8.4}{{7.3}{69}{Expected Calibration Error (ECE) before and after post-hoc probability calibration. Temperature scaling reduces hERG ECE from 0.1727 to 0.0058; Platt scaling reduces Caco-2 ECE from 0.3583 to 0.0448, confirming that predicted probabilities reliably reflect empirical frequencies}{figure.7.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.6}GNN and Fusion Results}{70}{section.7.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.6.1}GNN Molecular Encoder}{70}{subsection.7.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.6.2}Joint GNN and MLP Fusion}{70}{subsection.7.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7.7}Neural ODE PK-PD Integration Results}{70}{section.7.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.7.1}Concentration-Time and Effect Profiles}{70}{subsection.7.7.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {7.4}{\ignorespaces Neural ODE PK-PD simulation: predicted concentration-time and effect-time profiles for representative test compounds. Biexponential concentration decay reflects predicted clearance (high-clearance compounds show rapid decline); Emax effect profiles reflect predicted binding affinity.}}{71}{figure.7.4}\protected@file@percent }
-\newlabel{fig:8.2}{{7.4}{71}{Neural ODE PK-PD simulation: predicted concentration-time and effect-time profiles for representative test compounds. Biexponential concentration decay reflects predicted clearance (high-clearance compounds show rapid decline); Emax effect profiles reflect predicted binding affinity}{figure.7.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.5}{\ignorespaces Metric progression across all experimental milestones. Dashed red lines mark the four research targets. All targets are first met simultaneously at model\_15 (hERG AUROC push); binding R$^2 \geq 0.40$ is met by model\_15 and the best result of 0.5502 is achieved by the joint GNN+MLP fusion.}}{72}{figure.7.5}\protected@file@percent }
-\newlabel{fig:8.5}{{7.5}{72}{Metric progression across all experimental milestones. Dashed red lines mark the four research targets. All targets are first met simultaneously at model\_15 (hERG AUROC push); binding R$^2 \geq 0.40$ is met by model\_15 and the best result of 0.5502 is achieved by the joint GNN+MLP fusion}{figure.7.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.8}RapidDock Prototype Outcomes}{72}{section.7.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.8.1}Training Convergence}{72}{subsection.7.8.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.8.2}Architecture Validation}{72}{subsection.7.8.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.8.3}Ligand Coordinate Reconstruction}{73}{subsection.7.8.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.8.4}Scope and Limitations}{73}{subsection.7.8.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7.9}PK-PD and Decision Analytics Results}{74}{section.7.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7.10}Interpretability Results}{74}{section.7.10}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.10.1}Feature Attribution and Model Interpretation}{74}{subsection.7.10.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {8}Discussion}{76}{chapter.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}Chapter Overview}{62}{section.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}Baseline Multi-Task Predictive Performance}{62}{section.7.2}\protected@file@percent }
+\newlabel{sec:results_baseline}{{7.2}{62}{Baseline Multi-Task Predictive Performance}{section.7.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.1}{\ignorespaces Training and validation loss curves for the baseline multi-task model. The smooth decrease in both curves confirms stable optimization of the shared encoder and task-specific heads, including the differentiable PK component.}}{63}{figure.7.1}\protected@file@percent }
+\newlabel{fig:8.1}{{7.1}{63}{Training and validation loss curves for the baseline multi-task model. The smooth decrease in both curves confirms stable optimization of the shared encoder and task-specific heads, including the differentiable PK component}{figure.7.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.3}Effect of Improved Molecular Representation}{63}{section.7.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {7.1}{\ignorespaces Summary of the molecular representation upgrade. The real-SMILES 2048-bit encoding replaces structurally uninformative placeholder fingerprints with chemically meaningful descriptors.}}{63}{table.7.1}\protected@file@percent }
+\newlabel{tab:results_representation_upgrade}{{7.1}{63}{Summary of the molecular representation upgrade. The real-SMILES 2048-bit encoding replaces structurally uninformative placeholder fingerprints with chemically meaningful descriptors}{table.7.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.4}Impact of Real Binding Data Integration}{64}{section.7.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.5}Architectural Refinement and Final Predictive Model}{64}{section.7.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7.2}{\ignorespaces Summary of final predictive performance against the research targets. The upgraded predictive pipeline meets all four project targets, with the strongest binding performance achieved by the final fusion architecture.}}{65}{figure.7.2}\protected@file@percent }
+\newlabel{fig:8.3}{{7.2}{65}{Summary of final predictive performance against the research targets. The upgraded predictive pipeline meets all four project targets, with the strongest binding performance achieved by the final fusion architecture}{figure.7.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.3}{\ignorespaces Progression of key metrics across major experimental milestones. The results show that meaningful gains arise first from representation improvement and real binding integration, and are then consolidated by architectural refinement.}}{65}{figure.7.3}\protected@file@percent }
+\newlabel{fig:8.5}{{7.3}{65}{Progression of key metrics across major experimental milestones. The results show that meaningful gains arise first from representation improvement and real binding integration, and are then consolidated by architectural refinement}{figure.7.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.6}Mechanistic PK-PD Integration Through Neural ODEs}{66}{section.7.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7.4}{\ignorespaces Representative Neural ODE PK-PD profiles. The concentration-time curves reflect predicted elimination behavior, while the effect-time curves show expected Emax-type pharmacodynamic saturation.}}{66}{figure.7.4}\protected@file@percent }
+\newlabel{fig:8.2}{{7.4}{66}{Representative Neural ODE PK-PD profiles. The concentration-time curves reflect predicted elimination behavior, while the effect-time curves show expected Emax-type pharmacodynamic saturation}{figure.7.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.7}Calibration and Robustness}{67}{section.7.7}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7.5}{\ignorespaces Expected Calibration Error (ECE) before and after post-hoc calibration. Calibration substantially improves the reliability of predicted probabilities for both safety-relevant classification tasks.}}{67}{figure.7.5}\protected@file@percent }
+\newlabel{fig:8.4}{{7.5}{67}{Expected Calibration Error (ECE) before and after post-hoc calibration. Calibration substantially improves the reliability of predicted probabilities for both safety-relevant classification tasks}{figure.7.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.8}Efficacy-Safety Trade-Off Analysis}{67}{section.7.8}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {7.2}{\ignorespaces Selected knee-point regimen from the Pareto frontier analysis. Although no regimen satisfied all efficacy and safety constraints simultaneously, the knee-point provided the most balanced trade-off among the non-dominated solutions.}}{68}{table.7.2}\protected@file@percent }
+\newlabel{tab:8.1}{{7.2}{68}{Selected knee-point regimen from the Pareto frontier analysis. Although no regimen satisfied all efficacy and safety constraints simultaneously, the knee-point provided the most balanced trade-off among the non-dominated solutions}{table.7.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.9}Virtual Clinical Trial Simulation}{68}{section.7.9}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {7.3}{\ignorespaces Summary of the virtual clinical trial arms. Active doses produced strong efficacy separation from placebo and uniformly high simulated power, but the associated hERG burden remained high across all treatment arms.}}{69}{table.7.3}\protected@file@percent }
+\newlabel{tab:8.2}{{7.3}{69}{Summary of the virtual clinical trial arms. Active doses produced strong efficacy separation from placebo and uniformly high simulated power, but the associated hERG burden remained high across all treatment arms}{table.7.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.10}Interpretability and Exploratory Extensions}{69}{section.7.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.11}Summary of Key Findings}{69}{section.7.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {8}Discussion}{71}{chapter.8}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {8.1}Interpretation of Key Findings}{76}{section.8.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.1.1}Structural Information Is Essential}{76}{subsection.8.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.1.2}Architecture and Calibration Are Jointly Important}{76}{subsection.8.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.1.3}Complementarity of Graph and Fingerprint Features}{76}{subsection.8.1.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {8.2}Pharmacokinetic Simulation Validation}{77}{section.8.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {8.3}Limitations}{77}{section.8.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {8.4}Comparison with Related Work}{78}{section.8.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {9}Conclusion and Future Work}{79}{chapter.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8.1}Interpretation of Key Findings}{71}{section.8.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1.1}Structural Information Is Essential}{71}{subsection.8.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1.2}Task-Relevant Data Quality Matters as Much as Representation Quality}{72}{subsection.8.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1.3}Architecture, Calibration, and Mechanistic Use Must Be Considered Together}{72}{subsection.8.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1.4}Complementarity of Graph and Fingerprint Features}{72}{subsection.8.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8.2}Pharmacokinetic Simulation Validation}{73}{section.8.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8.3}Implications for Efficacy-Safety Decision Support}{73}{section.8.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8.4}Limitations}{74}{section.8.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8.5}Comparison with Related Work}{75}{section.8.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {9}Conclusion and Future Work}{76}{chapter.9}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{Appendix}{80}{chapter*.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {9.1}{\ignorespaces A.1: TDC ADMET Benchmark Datasets—Categories, Task Types, and Sources.}}{80}{table.9.1}\protected@file@percent }
-\newlabel{tab:tdc_benchmarks}{{9.1}{80}{A.1: TDC ADMET Benchmark Datasets—Categories, Task Types, and Sources}{table.9.1}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {9.2}{\ignorespaces A.2: ChEMBL real-SMILES targets used in the thesis.}}{81}{table.9.2}\protected@file@percent }
-\newlabel{tab:chembl_targets}{{9.2}{81}{A.2: ChEMBL real-SMILES targets used in the thesis}{table.9.2}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {9.3}{\ignorespaces A.3: PK Parameters Extracted from PK-DB.}}{81}{table.9.3}\protected@file@percent }
-\newlabel{tab:pk_parameters}{{9.3}{81}{A.3: PK Parameters Extracted from PK-DB}{table.9.3}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {9.4}{\ignorespaces A.4: Complete Raw Data File Inventory and Approximate Sizes.}}{82}{table.9.4}\protected@file@percent }
-\newlabel{tab:file_inventory}{{9.4}{82}{A.4: Complete Raw Data File Inventory and Approximate Sizes}{table.9.4}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {9.5}{\ignorespaces A.5: Data Download Pipeline Section: Typical Execution Times.}}{83}{table.9.5}\protected@file@percent }
-\newlabel{tab:execution_timeline}{{9.5}{83}{A.5: Data Download Pipeline Section: Typical Execution Times}{table.9.5}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {9.6}{\ignorespaces A.6: Hyperparameter configuration summary. Search ranges show grid values evaluated; Selected shows the value used in the final production model (model\_15, 623,078 parameters).}}{86}{table.9.6}\protected@file@percent }
-\newlabel{tab:hyperparam_summary}{{9.6}{86}{A.6: Hyperparameter configuration summary. Search ranges show grid values evaluated; Selected shows the value used in the final production model (model\_15, 623,078 parameters)}{table.9.6}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {9.7}{\ignorespaces A.7: Test-set metric progression across the main experimental milestones. Dashes indicate metrics outside the primary focus of that experiment.}}{87}{table.9.7}\protected@file@percent }
-\newlabel{tab:extended_results}{{9.7}{87}{A.7: Test-set metric progression across the main experimental milestones. Dashes indicate metrics outside the primary focus of that experiment}{table.9.7}{}}
-\@writefile{toc}{\contentsline {chapter}{References}{95}{chapter*.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Appendix}{77}{chapter*.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {9.1}{\ignorespaces A.1: TDC ADMET Benchmark Datasets—Categories, Task Types, and Sources.}}{77}{table.9.1}\protected@file@percent }
+\newlabel{tab:tdc_benchmarks}{{9.1}{77}{A.1: TDC ADMET Benchmark Datasets—Categories, Task Types, and Sources}{table.9.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {9.2}{\ignorespaces A.2: ChEMBL real-SMILES targets used in the thesis.}}{78}{table.9.2}\protected@file@percent }
+\newlabel{tab:chembl_targets}{{9.2}{78}{A.2: ChEMBL real-SMILES targets used in the thesis}{table.9.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {9.3}{\ignorespaces A.3: PK Parameters Extracted from PK-DB.}}{78}{table.9.3}\protected@file@percent }
+\newlabel{tab:pk_parameters}{{9.3}{78}{A.3: PK Parameters Extracted from PK-DB}{table.9.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {9.4}{\ignorespaces A.4: Complete Raw Data File Inventory and Approximate Sizes.}}{79}{table.9.4}\protected@file@percent }
+\newlabel{tab:file_inventory}{{9.4}{79}{A.4: Complete Raw Data File Inventory and Approximate Sizes}{table.9.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {9.5}{\ignorespaces A.5: Data Download Pipeline Section: Typical Execution Times.}}{80}{table.9.5}\protected@file@percent }
+\newlabel{tab:execution_timeline}{{9.5}{80}{A.5: Data Download Pipeline Section: Typical Execution Times}{table.9.5}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {9.6}{\ignorespaces A.6: Hyperparameter configuration summary. Search ranges show grid values evaluated; Selected shows the value used in the final production model (model\_15, 623,078 parameters).}}{83}{table.9.6}\protected@file@percent }
+\newlabel{tab:hyperparam_summary}{{9.6}{83}{A.6: Hyperparameter configuration summary. Search ranges show grid values evaluated; Selected shows the value used in the final production model (model\_15, 623,078 parameters)}{table.9.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {9.7}{\ignorespaces A.7: Test-set metric progression across the main experimental milestones. Dashes indicate metrics outside the primary focus of that experiment.}}{84}{table.9.7}\protected@file@percent }
+\newlabel{tab:extended_results}{{9.7}{84}{A.7: Test-set metric progression across the main experimental milestones. Dashes indicate metrics outside the primary focus of that experiment}{table.9.7}{}}
+\@writefile{toc}{\contentsline {chapter}{References}{92}{chapter*.6}\protected@file@percent }
 \bibcite{chen2018neuralode}{1}
 \bibcite{gilmer2017mpnn}{2}
 \bibcite{vaswani2017attention}{3}
@@ -283,4 +269,4 @@
 \bibcite{gaulton2012}{17}
 \bibcite{hastie2009}{18}
 \bibcite{breiman2001}{19}
-\gdef \@abspage@last{98}
+\gdef \@abspage@last{95}

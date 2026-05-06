@@ -22,7 +22,7 @@ Everything you need - status, metrics, notebook guide, design decisions, and nex
 | Phase 3B: Architecture & Training | [Coding/phase3b_model_design.ipynb](Coding/phase3b_model_design.ipynb) |
 | Phase 3C: Fine-tuning & Calibration | [Coding/phase3c_finetuning.ipynb](Coding/phase3c_finetuning.ipynb) |
 | Phase 3D: Advanced Experiments | [Coding/phase3d_experiments.ipynb](Coding/phase3d_experiments.ipynb) |
-| RapidDock Paper-Aligned Prototype | [Coding/rapid_dock_paper_aligned_prototype.ipynb](Coding/rapid_dock_paper_aligned_prototype.ipynb) |
+| RapidDock Paper-Aligned Prototype | [Coding/rapid_dock_prototype.ipynb](Coding/rapid_dock_prototype.ipynb) |
 | RapidDock Legacy Demo | [Coding/prototypes/rapid_dock_transformer_demo.ipynb](Coding/prototypes/rapid_dock_transformer_demo.ipynb) |
 | Master Dataset Reference | [Documentation/MASTER_DATASET_REFERENCE.md](Documentation/MASTER_DATASET_REFERENCE.md) |
 | Slides Guide | [Slides/README.md](Slides/README.md) |
