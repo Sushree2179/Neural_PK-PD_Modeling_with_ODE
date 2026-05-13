@@ -113,11 +113,11 @@
 \frontmatterheading{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}
 
-This thesis presents an end-to-end machine learning framework for early drug development that combines molecular property prediction with mechanistic pharmacokinetic-pharmacodynamic (PK-PD) simulation. The proposed workflow integrates heterogeneous public datasets, performs robust feature engineering and data quality checks, and trains multi-task neural models to predict binding affinity, hERG-related cardiotoxicity, Caco-2 permeability, and clearance.
+This thesis presents an end-to-end machine learning framework for early drug development that combines molecular property prediction with mechanistic pharmacokinetic-pharmacodynamic (PK-PD) simulation. The workflow integrates heterogeneous public datasets, applies feature engineering and data-quality controls, and trains multi-task neural models to predict binding affinity, hERG-related cardiotoxicity, Caco-2 permeability, and clearance.
 
-The central contribution is a physics-informed decision pipeline in which predicted molecular endpoints are coupled with a Neural ODE-based PK-PD simulator for scenario analysis, sensitivity analysis, dose optimization, Pareto trade-off exploration, Monte Carlo validation, and in-silico clinical trial simulation. Beyond baseline fingerprint-based models, the thesis evaluates graph neural network encoders and a joint GNN+MLP fusion architecture to improve binding prediction. A RapidDock-inspired, distance-biased transformer branch is also included as an exploratory prototype for structure-aware modeling.
+The central contribution is a physics-informed decision pipeline in which predicted molecular endpoints are coupled with a Neural ODE-based PK-PD simulator to support translational analysis. The thesis follows a staged experimental sequence: improvement of molecular representation, integration of real ChEMBL binding data, hERG-focused predictive refinement, probability calibration for safety classifiers, structure-aware joint GNN+MLP fusion modeling, mechanistic PK-PD simulation, Pareto efficacy-safety trade-off analysis, Monte Carlo robustness assessment, and in-silico clinical trial simulation. A RapidDock-inspired, distance-biased transformer branch is also included as an exploratory prototype for future structure-aware extension.
 
-The results show substantial improvements over early baselines, successful probability calibration for classification tasks, and coherent PK-PD trends in population-level simulations. The thesis concludes by discussing practical limitations, reproducibility considerations, and future directions toward external validation and deployment-oriented decision support.
+The results show that predictive quality improves materially after real-data integration and fusion modeling, that post-hoc calibration is necessary before using classifier outputs as risk variables, and that the resulting PK-PD framework supports clinically motivated trade-off and trial-level analyses. The thesis concludes by discussing practical limitations, reproducibility considerations, and future directions toward external validation and deployment-oriented decision support.
 
 \noindent\textbf{Keywords:} drug discovery, PK-PD, Neural ODE, multi-task learning, graph neural networks, calibration, dose optimization
 
@@ -128,11 +128,11 @@ The results show substantial improvements over early baselines, successful proba
 \frontmatterheading{Streszczenie}
 \addcontentsline{toc}{chapter}{Streszczenie}
 
-Niniejsza praca przedstawia kompleksowe podejście z zakresu uczenia maszynowego do wspomagania wczesnego rozwoju leków, łączące predykcję właściwości molekularnych z mechanistyczną symulacją farmakokinetyczno-farmakodynamiczną (PK-PD). Zaproponowany przepływ pracy integruje heterogeniczne publiczne zbiory danych, obejmuje rygorystyczną inżynierię cech i kontrolę jakości danych oraz wykorzystuje wielozadaniowe modele neuronowe do przewidywania powinowactwa wiązania, kardiotoksyczności związanej z hERG, przepuszczalności Caco-2 oraz klirensu.
+Niniejsza praca przedstawia kompleksowe podejście z zakresu uczenia maszynowego do wspomagania wczesnego rozwoju leków, łączące predykcję właściwości molekularnych z mechanistyczną symulacją farmakokinetyczno-farmakodynamiczną (PK-PD). Zaproponowany przepływ pracy integruje heterogeniczne publiczne zbiory danych, obejmuje inżynierię cech i kontrolę jakości danych oraz wykorzystuje wielozadaniowe modele neuronowe do przewidywania powinowactwa wiązania, kardiotoksyczności związanej z hERG, przepuszczalności Caco-2 oraz klirensu.
 
-Główny wkład pracy stanowi fizycznie ugruntowany pipeline decyzyjny, w którym przewidywane molekularne punkty końcowe są sprzęgnięte z symulatorem PK-PD opartym na Neural ODE w celu prowadzenia analizy scenariuszy, analizy wrażliwości, optymalizacji dawkowania, eksploracji kompromisów Pareto, walidacji Monte Carlo oraz symulacji badań klinicznych in silico. Oprócz modeli bazowych opartych na fingerprintach praca ocenia enkodery grafowych sieci neuronowych oraz wspólną architekturę fuzji GNN+MLP, ukierunkowaną na poprawę predykcji powinowactwa wiązania. Dodatkowo uwzględniono eksploracyjną gałąź inspirowaną RapidDock, wykorzystującą transformer z biasem odległościowym jako prototyp modelowania uwzględniającego strukturę.
+Główny wkład pracy stanowi fizycznie ugruntowany pipeline decyzyjny, w którym przewidywane molekularne punkty końcowe są sprzęgnięte z symulatorem PK-PD opartym na Neural ODE w celu prowadzenia analiz translacyjnych. Praca realizuje uporządkowaną sekwencję eksperymentalną obejmującą ulepszenie reprezentacji molekularnej, integrację rzeczywistych danych wiązania z ChEMBL, ukierunkowane doskonalenie predykcji hERG, kalibrację prawdopodobieństw dla klasyfikatorów bezpieczeństwa, modelowanie strukturalne z użyciem wspólnej architektury fuzji GNN+MLP, mechanistyczną symulację PK-PD, analizę kompromisów skuteczność--bezpieczeństwo w ujęciu Pareto, ocenę odporności metodą Monte Carlo oraz symulację badań klinicznych in silico. Dodatkowo uwzględniono eksploracyjną gałąź inspirowaną RapidDock, wykorzystującą transformer z biasem odległościowym jako prototyp przyszłego modelowania uwzględniającego strukturę.
 
-Wyniki wskazują na istotną poprawę jakości predykcji względem wczesnych rozwiązań bazowych, skuteczną kalibrację prawdopodobieństw dla zadań klasyfikacyjnych oraz spójne trendy PK-PD obserwowane w symulacjach populacyjnych. Pracę zamyka omówienie praktycznych ograniczeń, zagadnień reprodukowalności oraz przyszłych kierunków badań ukierunkowanych na walidację zewnętrzną i wdrożeniowe wspomaganie decyzji.
+Wyniki pokazują, że jakość predykcji istotnie wzrasta po integracji danych rzeczywistych i zastosowaniu modelu fuzji, że kalibracja post-hoc jest konieczna przed wykorzystaniem wyjść klasyfikacyjnych jako zmiennych ryzyka, oraz że otrzymany framework PK-PD wspiera klinicznie motywowane analizy kompromisów i symulacje na poziomie badań klinicznych. Pracę zamyka omówienie praktycznych ograniczeń, zagadnień reprodukowalności oraz przyszłych kierunków badań ukierunkowanych na walidację zewnętrzną i wdrożeniowe wspomaganie decyzji.
 
 \noindent\textbf{Słowa kluczowe:} odkrywanie leków, PK-PD, Neural ODE, uczenie wielozadaniowe, grafowe sieci neuronowe, kalibracja, optymalizacja dawkowania
 
@@ -152,16 +152,16 @@ The practical motivation is to move from isolated endpoint prediction to coheren
 The thesis has four principal objectives:
 \begin{enumerate}
 \item Build a high-quality, leakage-controlled multi-task dataset from heterogeneous public sources.
-\item Develop predictive models for binding affinity, hERG risk, Caco-2 permeability, and clearance.
-\item Integrate model outputs with Neural ODE-based PK-PD simulation for scenario and optimization studies.
-\item Evaluate calibration, robustness, and decision-oriented behavior with clinically motivated analyses.
+\item Develop predictive models for binding affinity, hERG risk, Caco-2 permeability, and clearance, with explicit evaluation of real-data integration and structure-aware fusion modeling.
+\item Integrate calibrated model outputs with Neural ODE-based PK-PD simulation for mechanistic and translational analysis.
+\item Evaluate decision-oriented behavior through Pareto trade-off analysis, Monte Carlo robustness assessment, and virtual clinical trial simulation.
 \end{enumerate}
 
 The key contributions are:
 \begin{enumerate}
-\item A full experimental pipeline spanning feature engineering, model training, calibration, and simulation.
-\item A joint GNN+MLP fusion model that improves binding performance over individual branches.
-\item Population-level analyses including sensitivity, Pareto optimization, Monte Carlo validation, and trial simulation.
+\item A full experimental pipeline spanning data curation, feature engineering, predictive modeling, calibration, mechanistic simulation, and translational decision analysis.
+\item A thesis-essential modeling sequence showing that real binding-data integration, hERG-focused refinement, and joint GNN+MLP fusion produce the strongest predictive basis for downstream PK-PD analysis.
+\item A decision-support layer combining Pareto trade-off analysis, Monte Carlo validation, and virtual clinical trial simulation on top of calibrated predictive outputs.
 \item An exploratory RapidDock-inspired prototype branch with documented protocol and qualitative feasibility assessment.
 \end{enumerate}
 
@@ -184,11 +184,11 @@ Chapter 4 & Problem formulation, task definitions, evaluation metrics, objective
 \hline
 Chapter 5 & Data sources, curation, harmonization, feature engineering, and quality-control strategy. \\
 \hline
-Chapter 6 & Methodology, model architectures, Neural ODE integration, calibration methods, and the RapidDock-inspired branch. \\
+Chapter 6 & Methodology, model architectures, calibration methods, Neural ODE integration, and the RapidDock-inspired branch. \\
 \hline
-Chapter 7 & Experimental environment, training protocol, and study sequence. \\
+Chapter 7 & Experimental environment, training protocol, and the thesis-essential experimental sequence. \\
 \hline
-Chapter 8 & Empirical results across prediction, calibration, simulation, optimization, and virtual trial analyses. \\
+Chapter 8 & Empirical results across real-data integration, predictive refinement, calibration, PK-PD simulation, Pareto analysis, Monte Carlo validation, and virtual clinical evaluation. \\
 \hline
 Chapter 9 & Discussion of findings, interpretation, limitations, and comparison with related work. \\
 \hline
@@ -1204,7 +1204,7 @@ Phase 3C artifacts (production model weights, thresholds, clean loader state, fe
 
 Initial experiments (Sections 1--12) used 256-bit Morgan fingerprints computed on synthetic placeholder SMILES (\texttt{SMILES\_0}, \texttt{SMILES\_1}, \ldots), resulting in all-zero feature vectors. The model therefore learned only from physicochemical descriptors (MW, LogP), with no structural information. This is reported as the synthetic-FP baseline.
 
-The upgrade to 2048-bit real-SMILES fingerprints (Section 13) replaces all zero vectors with Morgan fingerprints computed from canonical ChEMBL SMILES, directly encoding structural information such as:
+The upgrade to 2048-bit real-SMILES fingerprints in the representation-upgrade experiment replaces all zero vectors with Morgan fingerprints computed from canonical ChEMBL SMILES, directly encoding structural information such as:
 \begin{itemize}
   \item Functional groups (hydroxyl, carbonyl, amine)
   \item Ring systems (aromatic, aliphatic)
@@ -1218,7 +1218,7 @@ The upgrade to 2048-bit real-SMILES fingerprints (Section 13) replaces all zero 
 \small
 \begin{tabular}{l|c|c}
 \hline
-\textbf{Property} & \textbf{Section 12 (Baseline)} & \textbf{Section 13 (Upgraded)} \\
+\textbf{Property} & \textbf{Baseline Encoding} & \textbf{Upgraded Encoding} \\
 \hline
 Fingerprint bits & 256 & 2048 \\
 SMILES type & Synthetic (all zeros) & Real ChEMBL \\
@@ -1228,13 +1228,13 @@ Caco-2 samples & 910 & 1,836 \\
 Clearance samples & 2,123 & 2,127 \\
 \hline
 \end{tabular}
-\caption{Section 13 vs. Section 12 baseline comparison. Upgrading to 2048-bit real SMILES fingerprints introduces structural SAR information absent from the synthetic-FP baseline.}
+\caption{Representation-upgrade comparison. Upgrading to 2048-bit real SMILES fingerprints introduces structural SAR information absent from the synthetic-FP baseline.}
 \label{tab:sec13_upgrade}
 \end{table}
 
 \subsection{Real Binding SMILES and ChEMBL Integration}
 
-Section 14 replaces synthetic placeholder ChEMBL binding data with real binding affinity records (Ki/IC50, expressed as pChEMBL values) from 3,410 unique compounds:
+The real binding integration experiment replaces synthetic placeholder ChEMBL binding data with real binding affinity records (Ki/IC50, expressed as pChEMBL values) from 3,410 unique compounds:
 \begin{itemize}
   \item Targets: Dopamine D2, Adenosine A2a, EGFR, CDK2, Beta-2 adrenergic, Androgen receptor, Glucocorticoid receptor, Serotonin 5-HT2A
   \item pChEMBL range: 4.00--10.52 (mean $6.67 \pm 1.11$); continuous regression target
@@ -1455,7 +1455,7 @@ All models are trained using the Adam optimizer with:
   \item Learning rate: $10^{-3}$
   \item Weight decay (L2): $10^{-4}$
   \item Gradient clipping: max norm = 1.0 (prevents exploding gradients)
-  \item Early stopping: patience = 40 epochs (extended to 60 for Section 15)
+  \item Early stopping: patience = 40 epochs (extended to 60 for the hERG improvement sweep)
   \item Learning rate scheduling: ReduceLROnPlateau with factor 0.5 and patience 10
   \item Batch size: 64
   \item Maximum epochs: 300
@@ -1465,31 +1465,32 @@ All models are trained using the Adam optimizer with:
 
 \section{Experimental Sequence}
 
-The thesis-essential experimental program in \texttt{phase3d\_experiments.ipynb} proceeds through Section 26:
+The thesis-essential Phase 3D experimental program was organized as a staged progression from data realism, through predictive refinement, to mechanistic and translational evaluation. Rather than presenting every exploratory notebook branch with equal emphasis, the main thesis sequence focuses on the experiments that most directly strengthened predictive performance, improved decision reliability, and enabled downstream PK-PD analysis. This yields a clearer narrative: first, the molecular representation and binding data were upgraded; second, the predictive models were refined and calibrated; third, the resulting predictions were integrated into a mechanistic PK-PD framework; and finally, the framework was used for multi-objective regimen selection and virtual clinical evaluation.
+
+In practice, the core sequence begins with real binding-data integration and task-specific hERG improvement, because these steps establish the strongest predictive foundation for later analysis. Probability calibration is then applied to ensure that classification outputs can be interpreted as reliable decision variables rather than only rank-based scores. After that, a joint GNN + MLP fusion model is evaluated as the strongest structure-aware predictor for binding affinity. These predictive outputs are then propagated into the Neural ODE PK-PD layer, which supports efficacy-safety trade-off analysis, uncertainty quantification, and trial-level simulation. Exploratory branches such as standalone GNN testing, one-factor scenario sweeps, and single-objective optimization are retained as supporting analyses, but are not treated as the main thesis path because they are either intermediate ablations or are superseded by more defensible multi-objective analyses.
 
 \begin{table}[h!]
 \centering
 \small
-\begin{tabular}{l|l}
+\begin{tabular}{l|p{10.5cm}}
 \hline
-\textbf{Section} & \textbf{Experiment} \\
+\textbf{Experiment} & \textbf{Thesis-essential experiment and role} \\
 \hline
-13 & 2048-bit real-SMILES fingerprint upgrade (vs. synthetic-FP baseline) \\
-14 & Real ChEMBL binding SMILES + full 2048-bit fingerprint integration \\
-15 & hERG AUROC push: hidden\_dim=256 + pos\_weight sweep \\
-16 & Neural ODE PK/PD integration (2-compartment model, Emax pharmacodynamics) \\
-17 & GNN molecular encoder (pure-PyTorch MPNN, 3-layer GCN) \\
-18 & Probability calibration (temperature scaling, Platt scaling, ECE evaluation) \\
-19 & End-to-end joint GNN + MLP fusion model \\
-20--22 & Scenario analysis, sensitivity studies, dose optimization \\
-23--24 & Pareto-front analysis, Monte Carlo confidence interval estimation \\
-25 & Bootstrap confidence intervals \\
-26 & In-silico clinical trial simulation (operating characteristics) \\
+Experiment 1 & Real ChEMBL binding SMILES and full 2048-bit fingerprint integration; establishes the transition from synthetic placeholders to a realistic molecular input representation. \\
+Experiment 2 & hERG AUROC improvement via hidden\_dim expansion and positive-class weighting; defines the strongest toxicity-classification configuration carried forward into later analysis. \\
+Experiment 3 & Probability calibration using temperature scaling and Platt scaling with ECE evaluation; converts raw classifier outputs into decision-relevant risk probabilities. \\
+Experiment 4 & End-to-end joint GNN + MLP fusion model; provides the strongest structure-aware binding model and the final predictive architecture for downstream translation. \\
+Experiment 5 & Neural ODE PK/PD integration with population simulation; links predictive outputs to mechanistic exposure-response behavior. \\
+Experiment 6 & Pareto-front efficacy-safety analysis; replaces single-objective optimization with a clinically interpretable multi-objective trade-off framework. \\
+Experiment 7 & Monte Carlo and bootstrap uncertainty analysis; quantifies robustness of the recommended regimens and validates stability of the simulated conclusions. \\
+Experiment 8 & In-silico clinical trial simulation and operating characteristics; demonstrates how the final framework can support translational dose-selection decisions. \\
 \hline
 \end{tabular}
-\caption{Phase 3D thesis-essential experimental sequence. Each section builds on the previous, with artifacts persisted between sections to enable comparison and ablation.}
+\caption{Revised Phase 3D thesis-essential experimental sequence. The main narrative emphasizes the experiments that most directly improved predictive quality, calibration, mechanistic interpretability, and translational decision support. Intermediate exploratory analyses are discussed only as supporting evidence.}
 \label{tab:phase3d_sequence}
 \end{table}
+
+The representation-upgrade experiment, the standalone GNN ablation, and the scenario, sensitivity, and single-objective optimization analyses remain useful for internal comparison, but they are better treated as supporting or exploratory analyses. The representation-upgrade stage mainly serves as a transitional step before full real-data integration. The standalone GNN is informative as an architectural ablation, yet it is less important than the final fusion model. The scenario, sensitivity, and single-objective optimization analyses help illustrate system behavior, but the single-objective regimen search is ultimately less defensible than the Pareto-front formulation. For this reason, the main thesis argument is built around real binding integration, hERG-focused refinement, probability calibration, joint fusion modeling, Neural ODE PK-PD integration, Pareto analysis, Monte Carlo validation, and virtual clinical trial simulation.
 
 \section{RapidDock Prototype Protocol}
 
@@ -1510,7 +1511,9 @@ The RapidDock-inspired branch (\texttt{rapid\_dock\_prototype.ipynb}) is execute
 
 \section{Chapter Overview}
 
-This chapter presents the empirical results as a focused progression from baseline prediction toward translational PK-PD decision support. Rather than reproducing every exploratory notebook branch, the results are organized around the experiments that most directly support the thesis claims: baseline multi-task prediction, molecular representation improvement, real binding-data integration, architectural refinement, mechanistic PK-PD integration, calibration and robustness, efficacy-safety trade-off analysis, and virtual clinical trial simulation. Exploratory or strongly repetitive experiments are discussed only where they help justify a design choice or clarify a final modeling decision.
+This chapter presents the empirical results as a focused progression from baseline multi-task prediction toward translational PK-PD decision support. The main narrative follows the thesis-essential sequence defined in Chapter 6: real-data integration, target-specific predictive improvement, probability calibration, structure-aware fusion modeling, mechanistic PK-PD simulation, multi-objective trade-off analysis, uncertainty quantification, and virtual clinical evaluation. Earlier or intermediate branches are retained only where they establish a necessary comparison point or explain why a later modeling decision was adopted.
+
+Accordingly, the baseline and fingerprint-upgrade results are treated primarily as reference stages rather than as the final contribution of the study. The central emphasis is placed on the sequence formed by real binding-data integration, hERG-focused refinement, calibration of the safety classifiers, the final joint GNN+MLP architecture, Neural ODE PK-PD integration, Pareto-based efficacy-safety analysis, Monte Carlo robustness checks, and in-silico clinical trial simulation. This organization ensures that the chapter reflects the final thesis argument rather than the full exploratory notebook chronology.
 
 \section{Baseline Multi-Task Predictive Performance}
 \label{sec:results_baseline}
@@ -1526,9 +1529,9 @@ The main weakness of the baseline is that it operates before the full molecular 
 \label{fig:8.1}
 \end{figure}
 
-\section{Effect of Improved Molecular Representation}
+\section{Transitional Molecular Representation Upgrade}
 
-The first major improvement examined in this study was the transition from low-information synthetic fingerprints to 2048-bit fingerprints derived from real molecular structures. This experiment isolates the effect of feature quality and tests whether a richer structural encoding improves prediction even before substantial architectural changes are introduced. The result is affirmative: once real molecular structure is represented explicitly, all four tasks benefit, and the classification endpoints improve most strongly.
+The first major improvement examined in this study was the transition from low-information synthetic fingerprints to 2048-bit fingerprints derived from real molecular structures. This experiment functions mainly as a transitional reference stage before the thesis-essential real-data and calibration sequence, but it remains important because it isolates the effect of feature quality and tests whether a richer structural encoding improves prediction even before substantial architectural changes are introduced. The result is affirmative: once real molecular structure is represented explicitly, all four tasks benefit, and the classification endpoints improve most strongly.
 
 This finding indicates that the early performance ceiling was driven at least in part by limited molecular representation rather than by insufficient model complexity. The fingerprint upgrade transforms the problem from one dominated by only a few physicochemical descriptors into one in which structure-activity patterns can be learned directly. As a result, the representation upgrade becomes the new reference point for all subsequent experiments.
 
@@ -1549,13 +1552,13 @@ Primary role & Minimal structural signal & Full structural SAR signal \\
 \label{tab:results_representation_upgrade}
 \end{table}
 
-\section{Impact of Real Binding Data Integration}
+\section{Real Binding Data Integration}
 
 Although the fingerprint upgrade improves all tasks, binding affinity remains the endpoint most sensitive to data realism. The next experiment therefore replaces synthetic or weakly informative binding placeholders with real ChEMBL-derived binding records covering 3,410 compounds and multiple pharmacological target classes. This intervention produces the clearest gain in binding affinity prediction and demonstrates that task-specific data quality is as important as general feature richness.
 
 Scientifically, this result matters because it shows that the model benefits not only from richer descriptors, but also from more faithful endpoint-aligned information. The gains in binding prediction are larger than the corresponding gains in the other tasks, which is expected: the added information is most directly relevant to affinity modeling. This confirms that the framework is sensitive to the realism of the underlying molecular evidence and that improvements in one task need not transfer uniformly to all other tasks.
 
-\section{Architectural Refinement and Final Predictive Model}
+\section{hERG Refinement and Final Fusion Model}
 
 Once the input representation and binding data were improved, the next question was whether structure-aware learning could further enhance performance. A graph neural network encoder was introduced to learn directly from molecular topology, followed by a joint GNN+MLP fusion model that combines graph-derived embeddings with fingerprint-based latent features. The graph-based model outperformed the fingerprint-only baseline on binding affinity, and the fused model delivered the strongest final predictive performance.
 
@@ -1575,7 +1578,7 @@ These results indicate that graph and fingerprint representations are complement
 \label{fig:8.5}
 \end{figure}
 
-\section{Mechanistic PK-PD Integration Through Neural ODEs}
+\section{Neural ODE PK-PD Integration}
 
 The predictive modeling pipeline was next extended with a Neural ODE-based PK-PD module. This step transforms static molecular endpoint prediction into dynamic pharmacological simulation by mapping predicted clearance, permeability, binding affinity, and safety probabilities to PK-PD parameters and then solving the corresponding concentration-time and effect-time equations. The resulting simulations produce coherent PK decay profiles and interpretable pharmacodynamic saturation behavior.
 
@@ -1588,7 +1591,7 @@ This is a central result of the thesis because it links machine learning outputs
 \label{fig:8.2}
 \end{figure}
 
-\section{Calibration and Robustness}
+\section{Probability Calibration and Robustness}
 
 Because later decision-oriented analyses depend on predicted probabilities rather than on ranking alone, post-hoc calibration was applied to the hERG and Caco-2 classifiers. Temperature scaling and Platt scaling both reduced expected calibration error, with temperature scaling yielding the most consistent improvement. This confirms that the raw classifier outputs were overconfident and that calibration was necessary before using these probabilities in safety-aware simulation and optimization.
 
@@ -1601,7 +1604,7 @@ Calibration is not the main novelty of the thesis, but it is essential for metho
 \label{fig:8.4}
 \end{figure}
 
-\section{Efficacy-Safety Trade-Off Analysis}
+\section{Pareto Efficacy-Safety Trade-Off Analysis}
 
 After integrating prediction and simulation, the framework was used to analyze efficacy-safety trade-offs across candidate regimens. Rather than optimizing efficacy alone, the analysis considered exposure-derived efficacy together with predicted hERG and Caco-2 risk. Pareto frontier analysis showed that no tested regimen simultaneously satisfied all efficacy and safety criteria, indicating that the problem is constrained by a genuine multi-objective trade-off rather than by incomplete optimization.
 
@@ -1657,7 +1660,7 @@ An exploratory RapidDock-inspired branch was also implemented as a proof-of-feas
 
 \section{Summary of Key Findings}
 
-The results support a clear progression of conclusions. First, molecular representation quality materially affects predictive performance. Second, the integration of real binding information substantially improves binding affinity modeling. Third, graph-aware fusion provides the strongest final predictive architecture. Fourth, Neural ODE integration connects endpoint prediction to mechanistic PK-PD behavior in a coherent way. Finally, the resulting framework supports efficacy-safety trade-off analysis and virtual trial simulation, while also revealing that safety liabilities remain a dominant constraint even when predictive efficacy improves.
+The results support a clear staged interpretation of the framework. First, baseline performance is limited until structurally meaningful molecular inputs and real endpoint-aligned data are introduced. Second, real binding-data integration and hERG-focused refinement establish the predictive backbone that is later used for decision-oriented analysis. Third, post-hoc calibration is necessary to make the safety probabilities usable as risk quantities rather than only as ranking scores. Fourth, the joint GNN+MLP model provides the strongest final predictive architecture for binding-aware downstream modeling. Fifth, Neural ODE integration connects these predictive outputs to mechanistic PK-PD behavior in a coherent way. Finally, Pareto analysis, Monte Carlo uncertainty quantification, and virtual clinical trial simulation show that the framework can support translational decision analysis while also revealing that safety liabilities remain a dominant constraint even when predictive efficacy improves.
 
 Taken together, these findings support the central thesis of this work: combining data-driven molecular prediction with mechanistic PK-PD simulation produces a more informative and translationally useful framework than either component alone. At the same time, the results also show that translational modeling must remain explicitly multi-objective, because higher predicted efficacy does not automatically imply clinically acceptable safety.
 
@@ -1665,41 +1668,41 @@ Taken together, these findings support the central thesis of this work: combinin
 
 \section{Interpretation of Key Findings}
 
-The results chapter supports a coherent interpretation of the proposed neural PK-PD framework as a staged progression from molecular prediction to translational decision support. The central conclusion is not simply that one model variant performed best, but that useful pharmacological decision support emerged only after combining improved molecular representation, task-relevant data integration, architectural refinement, and mechanistic simulation. The discussion below therefore follows the same logic as the final results chapter rather than the exploratory notebook chronology.
+The results chapter supports a coherent interpretation of the proposed neural PK-PD framework as a staged progression from molecular prediction to translational decision support. The central conclusion is not simply that one model variant performed best, but that useful pharmacological decision support emerged only after combining structural representation improvement, real binding-data integration, hERG-focused refinement, probability calibration, fusion modeling, mechanistic simulation, and decision-oriented downstream analysis. The discussion below therefore follows the same thesis-essential sequence as the final results chapter rather than the broader exploratory notebook chronology.
 
-\subsection{Structural Information Is Essential}
+\subsection{Structural Representation Is a Necessary Starting Point}
 
 The first decisive result of the study is that predictive quality depends critically on the quality of the molecular representation. The transition from synthetic or structurally uninformative fingerprints to 2048-bit fingerprints derived from real SMILES produced a substantial improvement across the main endpoints, especially for the classification tasks. This finding shows that the early limitations of the baseline model were not solely architectural; they were strongly constrained by the absence of chemically meaningful structural information.
 
 This result is significant because it establishes representation quality as a prerequisite for all later modeling steps. The poor baseline binding performance demonstrates that physicochemical descriptors alone are insufficient for learning robust structure-activity relationships in this setting. From a drug-discovery perspective, this reinforces a broader methodological point: complex models cannot compensate for structurally weak inputs. Consequently, the fingerprint upgrade was not a minor preprocessing refinement, but a foundational change that enabled the rest of the thesis.
 
-\subsection{Task-Relevant Data Quality Matters as Much as Representation Quality}
+\subsection{Real Binding Data Provides the First Major Task-Specific Gain}
 
 The second major finding is that real binding information produces a task-specific gain beyond the general fingerprint upgrade. The introduction of real ChEMBL-derived binding data yielded the clearest improvement in affinity prediction, far stronger than would be expected from a generic feature-space expansion alone. This indicates that endpoint-aligned realism in the underlying data is essential, particularly for tasks such as binding affinity that depend directly on molecular recognition mechanisms.
 
 This observation also clarifies the behavior of the multi-task framework. Although shared learning can transfer useful information across endpoints, each task still benefits most strongly from improvements in the data that are directly relevant to it. The larger gain in binding performance compared with the more modest secondary changes in the ADMET tasks therefore supports a disciplined interpretation of multi-task learning: shared representation is valuable, but it does not eliminate dependence on endpoint-specific data quality.
 
-\subsection{Architecture, Calibration, and Mechanistic Use Must Be Considered Together}
+\subsection{Predictive Refinement and Calibration Must Precede Translation}
 
 The architectural experiments show that stronger prediction required more than better features alone. The hERG-focused refinement demonstrated that model capacity and task-specific optimization choices, such as positive-class weighting, influence discrimination quality in meaningful ways. More importantly, the graph-based and fusion experiments showed that the best final architecture was not the most specialized single branch, but the joint GNN+MLP fusion model that combined graph-derived structural information with fingerprint-derived latent features.
 
 However, predictive discrimination alone was not sufficient for translational use. The calibration experiments showed that even models with strong AUROC could still produce poorly calibrated probabilities. This distinction matters because the later PK-PD and regimen analyses interpret predicted probabilities as risk-related quantities rather than as ranking scores alone. The thesis therefore supports a broader methodological point: in decision-oriented modeling, discrimination and calibration are complementary properties, and both are required if model outputs are to be used in downstream pharmacological reasoning.
 
-\subsection{Complementarity of Graph and Fingerprint Features}
+\subsection{Fusion Modeling Benefits from Complementary Structural Views}
 
 The fusion results indicate that graph-derived and fingerprint-derived representations encode overlapping but non-identical information. Fingerprints efficiently summarize local substructures and chemically interpretable bit patterns, whereas graph neural networks learn adaptive topological features through message passing. The superior performance of the fused model therefore suggests that neither representation is complete on its own for the binding prediction problem addressed here.
 
 This result is particularly important for the scientific positioning of the thesis. It shows that the work does not argue for replacing traditional molecular descriptors with graph learning, nor for rejecting graph-based models in favor of handcrafted fingerprints. Instead, the evidence supports a hybrid view in which each representation captures different aspects of molecular structure and their combination produces a stronger predictive basis for downstream pharmacological analysis.
 
-\section{Pharmacokinetic Simulation Validation}
+\section{Mechanistic PK-PD Interpretation}
 
 The Neural ODE simulation successfully translated predicted molecular properties into dynamic concentration-time and effect-time profiles with interpretable pharmacological behavior. This is one of the defining contributions of the thesis, because it shifts the framework from static endpoint prediction to mechanistic trajectory generation. The observed PK and PD trends are qualitatively consistent with expected behavior: higher predicted clearance leads to faster decline in concentration, while stronger predicted affinity produces higher effect at comparable exposure levels.
 
 The value of this result lies not only in generating plausible curves, but in establishing a functional bridge between molecular prediction and dynamic therapeutic interpretation. In many drug-discovery workflows, molecular property prediction and PK-PD modeling remain separate analytical steps. By connecting them directly, the present framework supports a more coherent pipeline in which predicted structure-property relationships can be interpreted in terms of simulated exposure, effect, and downstream safety trade-offs.
 
-\section{Implications for Efficacy-Safety Decision Support}
+\section{Pareto, Monte Carlo, and Virtual Trial Implications}
 
-The Pareto analysis, dose optimization, Monte Carlo validation, and virtual clinical trial simulation collectively demonstrate that predictive improvement does not eliminate the central efficacy-safety tension. Across these downstream analyses, higher efficacy was repeatedly associated with persistently high safety burden, especially in the hERG-related dimension. This is not a failure of the framework; rather, it is an informative result revealing that the modeled regimen space is constrained by genuine competing objectives.
+The Pareto analysis, Monte Carlo validation, and virtual clinical trial simulation collectively demonstrate that predictive improvement does not eliminate the central efficacy-safety tension. Across these downstream analyses, higher efficacy was repeatedly associated with persistently high safety burden, especially in the hERG-related dimension. This is not a failure of the framework; rather, it is an informative result revealing that the modeled regimen space is constrained by genuine competing objectives.
 
 This finding has two implications. First, it validates the decision-oriented design of the framework, because a single-objective optimization strategy would have hidden this tension behind a superficially optimal regimen. Second, it suggests that translational utility in this domain depends not on finding one universally optimal solution, but on characterizing the trade-off landscape in a transparent manner. The knee-point regimen and virtual trial analyses are therefore best interpreted as tools for rational prioritization under constraint rather than as definitive clinical recommendations.
 
@@ -1707,9 +1710,9 @@ This finding has two implications. First, it validates the decision-oriented des
 
 \begin{enumerate}
   \item \textbf{Public data quality}: All datasets are derived from public databases (ChEMBL, TDC, ToxCast, PK-DB). Measurement heterogeneity (different assay protocols, cell lines, species) introduces label noise that may limit maximum achievable performance.
-  \item \textbf{SMILES availability}: Section 13's filtered hERG dataset (4,916 compounds vs. 7,997 total) reflects that not all compounds have associated canonical SMILES in the TDC/ChEMBL releases at the time of data collection.
+  \item \textbf{SMILES availability}: the filtered hERG dataset used in the representation-upgrade stage (4,916 compounds vs. 7,997 total) reflects that not all compounds have associated canonical SMILES in the TDC/ChEMBL releases at the time of data collection.
   \item \textbf{ODE parameter assumptions}: The two-compartment PK model uses default population-average transfer constants ($k_{12}$, $k_{21}$) not predicted per-compound. Individualized PK parameter prediction would require PK-DB or clinical trial training data, which is limited in scale.
-  \item \textbf{GNN training data}: The GNN branch is trained only on binding affinity; the other three tasks retain MLP-only heads in Section 19. Extension to multi-task GNN with graph inputs for all tasks is deferred to future work.
+  \item \textbf{GNN training data}: The GNN branch is trained only on binding affinity; the other three tasks retain MLP-only heads in the joint fusion model. Extension to multi-task GNN with graph inputs for all tasks is deferred to future work.
   \item \textbf{Decision-layer assumptions}: The regimen optimization and virtual trial analyses rely on modeled efficacy and safety relationships rather than prospectively validated clinical outcomes. These sections should therefore be interpreted as translational feasibility studies, not as direct clinical prediction.
   \item \textbf{RapidDock scope}: The RapidDock prototype is exploratory and not fully integrated with calibration, uncertainty quantification, or real protein structural context.
 \end{enumerate}

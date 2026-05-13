@@ -32,5 +32,14 @@ Coding/data/processed/
 # LaTeX thesis template (external)
 #Thesis_Latex/
 
+# LaTeX build artifacts
+*.aux
+*.lof
+*.log
+*.lot
+*.out
+*.toc
+*.synctex.gz
+
 # Slide-generation template
 Slides/Masters-thesis-title-page-template-*.docx
