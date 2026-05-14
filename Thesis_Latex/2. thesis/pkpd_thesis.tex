@@ -181,99 +181,34 @@ The key contributions are:
 
 \section{Thesis Organization}
 
-Table~\ref{tab:thesis_organization} summarizes the organization of the thesis.
 
-\begin{table}[htbp]
-\centering
-\small
-\begin{tabular}{|p{1.8cm}|p{10.2cm}|}
-\hline
-\textbf{Chapter} & \textbf{Content Summary} \\
-\hline
-Chapter 2 & Theoretical background for ADME-Tox modeling, multi-task learning, graph neural networks, PK-PD modeling, and calibration. \\
-\hline
-Chapter 3 & Related work and the research gap addressed by the thesis. \\
-\hline
-Chapter 4 & Problem formulation, task definitions, evaluation metrics, objectives, and scope. \\
-\hline
-Chapter 5 & Data sources, curation, harmonization, feature engineering, and quality-control strategy. \\
-\hline
-Chapter 6 & Methodology, model architectures, calibration methods, Neural ODE integration, and the RapidDock-inspired branch. \\
-\hline
-Chapter 7 & Experimental environment, training protocol, and the thesis-essential experimental sequence. \\
-\hline
-Chapter 8 & Empirical results across real-data integration, predictive refinement, calibration, PK-PD simulation, Pareto analysis, Monte Carlo validation, and virtual clinical evaluation. \\
-\hline
-Chapter 9 & Discussion of findings, interpretation, limitations, and comparison with related work. \\
-\hline
-Chapter 10 & Conclusions and future research directions. \\
-\hline
-\end{tabular}
-\caption{Organization of the thesis.}
-\label{tab:thesis_organization}
-\end{table}
+See Appendix~\ref{app:supplementary} for the full table of thesis organization.
 
 \chapter{Background and Theoretical Foundations}
 
 \section{ADME-Tox Endpoints in Early Drug Discovery}
 
-Absorption, distribution, metabolism, excretion, and toxicity (ADME-Tox) endpoints are central to candidate selection. In this thesis, the following endpoints are modeled:
-\begin{enumerate}
-\item binding affinity (regression),
-\item hERG-related cardiotoxicity risk (classification),
-\item Caco-2 permeability proxy (classification),
-\item clearance (regression).
-\end{enumerate}
+
+Absorption, distribution, metabolism, excretion, and toxicity (ADME-Tox) endpoints are central to candidate selection. This thesis models binding affinity, hERG-related cardiotoxicity risk, Caco-2 permeability, and clearance. See Appendix for endpoint definitions and full details.
 
 \section{Multi-Task Learning}
 
-Multi-task learning uses shared representations across related tasks to improve generalization, especially under partial labels~\cite{goodfellow2016}. A shared encoder with task-specific heads is used in this work to model common molecular factors while preserving task-specific outputs.
+
+Multi-task learning leverages shared representations to improve generalization across related endpoints~\cite{goodfellow2016}. See Appendix for architectural details.
 
 \section{Graph Neural Networks for Molecular Modeling}
 
-Molecules are naturally represented as graphs, where atoms are nodes and bonds are edges. Message Passing Neural Networks (MPNNs)~\cite{gilmer2017mpnn} aggregate local structural information into latent embeddings that can be used for property prediction~\cite{kearnes2016}.
+
+Molecules are represented as graphs, and message passing neural networks (MPNNs)~\cite{gilmer2017mpnn} are used for property prediction. See Appendix for details.
 
 \section{PK-PD Modeling with ODEs}
 
-PK-PD modeling connects drug concentration in the body to its biological effect in two linked stages.
-
-\textbf{Pharmacokinetic (PK) stage} describes how drug concentration evolves over time using a two-compartment ODE system:
-\begin{equation}
-\frac{dC_c}{dt} = -\frac{CL}{V_c} C_c - k_{12} C_c + k_{21} C_t + u(t),
-\end{equation}
-\begin{equation}
-\frac{dC_t}{dt} = k_{12} C_c - k_{21} C_t,
-\end{equation}
-where $C_c$ is drug concentration in the \textit{central compartment} (blood/plasma), $C_t$ is drug concentration in the \textit{peripheral compartment} (tissues), $k_{12}$ and $k_{21}$ are inter-compartmental transfer rate constants, $CL/V_c$ is the elimination rate constant (clearance divided by volume), and $u(t)$ is the dosing function (e.g.\ IV bolus).
-
-\textbf{Pharmacodynamic (PD) stage} links drug concentration to biological effect via the Hill--Emax model with effect-site linkage:
-\begin{equation}
-E(t) = E_{\max} \cdot \frac{C_c(t)^\gamma}{EC_{50}^\gamma + C_c(t)^\gamma},
-\end{equation}
-where $E_{\max}$ is the maximum achievable pharmacological effect, $EC_{50}$ is the concentration producing 50\% of maximal effect (derived from predicted binding affinity as $EC_{50} = 10^{-\text{pChEMBL}}$), and $\gamma$ is the Hill coefficient controlling the steepness of the response curve.
-
-The predicted molecular endpoints are mapped to ODE parameters as follows:
-
-\begin{table}[htbp]
-\centering
-\begin{tabular}{ll}
-\hline
-\textbf{Predicted property} & \textbf{ODE/PK-PD role} \\
-\hline
-Hepatic clearance (regression) & Elimination rate constant $k_e = CL/V_c$ \\
-Caco-2 permeability (probability) & Oral absorption rate $k_a$ \\
-Binding affinity pChEMBL (regression) & Pharmacodynamic potency $EC_{50}$ \\
-hERG probability (classification) & Cardiac safety flag \\
-\hline
-\end{tabular}
-\caption{Mapping of predicted molecular properties to ODE pharmacokinetic/pharmacodynamic parameters.}
-\end{table}
-
-The ODEs are solved numerically using \texttt{torchdiffeq.odeint} (Dormand--Prince RK45 solver), which makes the entire pipeline differentiable and enables physics-informed training through the ODE solution if required.
+PK-PD modeling connects drug concentration in the body to its biological effect using ODEs. See Appendix for full equations and parameter mapping.
 
 \section{Calibration and Decision Reliability}
 
-For classification tasks, probability calibration is required when outputs are used in downstream risk computations. This thesis evaluates Expected Calibration Error (ECE) and applies temperature scaling and Platt scaling~\cite{guo2017}.
+
+Probability calibration is required for classification tasks when outputs are used in downstream risk computations. This thesis evaluates Expected Calibration Error (ECE) and applies temperature scaling and Platt scaling~\cite{guo2017}. See Appendix for calibration details.
 
 \subsection*{The Problem: Discrimination vs.\ Reliability}
 
@@ -423,60 +358,8 @@ $f_{\text{hERG}}(x)$ -- probability & Cardiac safety flag & Safety threshold \\
 
 \section{Evaluation Metrics}
 
-Regression tasks are evaluated with $R^2$ and RMSE. Classification tasks are evaluated with AUROC, F1, and accuracy, with calibrated probability quality measured by ECE.
 
-\subsection*{Regression Metrics}
-
-\begin{enumerate}
-\item \textbf{Coefficient of Determination ($R^2$)}: measures the fraction of variance in the target explained by the model:
-\begin{equation}
-R^2 = 1 - \frac{\sum_i (y_i - \hat{y}_i)^2}{\sum_i (y_i - \bar{y})^2}.
-\end{equation}
-$R^2 = 1$ indicates perfect prediction; $R^2 = 0$ means the model performs no better than predicting the mean; negative values indicate the model is worse than the mean baseline.
-
-\item \textbf{Root Mean Squared Error (RMSE)}: measures the average prediction error in the original units, penalising large errors more than small ones:
-\begin{equation}
-\text{RMSE} = \sqrt{\frac{1}{n}\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}.
-\end{equation}
-Lower RMSE is better. RMSE is reported in normalised units for clearance and in pIC50 units for binding affinity.
-\end{enumerate}
-
-\subsection*{Classification Metrics}
-
-\begin{enumerate}
-\item \textbf{AUROC} (Area Under the Receiver Operating Characteristic Curve): measures ranking quality across all classification thresholds. A value of 0.5 corresponds to random discrimination; 1.0 is perfect. AUROC is the primary classification metric because it is threshold-independent and robust to class imbalance, which is present in both hERG and Caco-2 classification tasks. In the current Phase 2 harmonized matrix, the Caco-2 task is explicitly median-binarized to an approximately balanced 50\% positive rate.
-
-\item \textbf{F1 Score}: harmonic mean of precision and recall:
-\begin{equation}
-F1 = \frac{2 \cdot \text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}.
-\end{equation}
-F1 is particularly important for safety-critical endpoints such as hERG, where false negatives (missed cardiotoxic compounds) carry direct clinical risk.
-
-\item \textbf{Accuracy}: fraction of correctly classified samples. Used alongside F1 as a guardrail during threshold calibration (minimum accuracy $\geq 0.50$ required before locking a production threshold).
-
-\item \textbf{Expected Calibration Error (ECE)}: measures whether predicted probabilities reflect true empirical frequencies (see Section~2.5). ECE is critical because calibrated probabilities are passed directly into downstream Neural ODE simulation as absorption and safety parameters.
-\end{enumerate}
-
-\subsection*{Research Targets and Achieved Results}
-
-The following performance thresholds were set at the start of the project and evaluated against the final model:
-
-\begin{table}[htbp]
-\centering
-\begin{tabular}{llcc}
-\hline
-\textbf{Task} & \textbf{Metric} & \textbf{Target} & \textbf{Achieved} \\
-\hline
-hERG inhibition      & AUROC  & $\geq 0.80$ & \textbf{0.821} \\
-Caco-2 permeability  & AUROC  & $\geq 0.75$ & \textbf{0.864} \\
-Hepatic clearance    & $R^2$  & $\geq 0.20$ & \textbf{0.348} \\
-Binding affinity     & $R^2$  & $\geq 0.40$ & \textbf{0.550} \\
-\hline
-\end{tabular}
-\caption{Research performance targets and final achieved metrics (model\_15 / joint GNN+MLP fusion).}
-\end{table}
-
-All four targets were first met simultaneously at model\_15 (hERG AUROC push, Section~8.4.3); binding $R^2 \geq 0.40$ was further improved to 0.550 by the joint GNN+MLP fusion model.
+Regression tasks are evaluated with $R^2$ and RMSE. Classification tasks are evaluated with AUROC, F1, and accuracy, with calibrated probability quality measured by ECE. See Appendix~\ref{app:supplementary} for full metric definitions, equations, and research targets.
 
 \section{Scope and Constraints}
 
@@ -524,64 +407,8 @@ ToxCast and Tox21 are important public programs for high-throughput toxicity scr
 
 The reference set covers cardiac, developmental, nuclear receptor, hepatic, renal, stress-response, and metabolic toxicity categories with tiered severity labels. This provides a useful conceptual counterpart to the focused hERG toxicity endpoint used in the final model: whereas hERG gives a specific cardiotoxicity label, the ToxCast/Tox21-style synthetic reference demonstrates the broader safety-screening landscape into which such predictions would ultimately be deployed.
 
-\begin{table}[htbp]
-\centering
-\begin{tabular}{|l|r|l|}
-\hline
-\textbf{Toxicity Category} & \textbf{Hit Rate} & \textbf{Risk Level} \\
-\hline
-Cardiac toxicity (e.g., QT prolongation) & 25\% & HIGH \\
-\hline
-Developmental/Reproductive toxicity & 15\% & CRITICAL \\
-\hline
-Nuclear receptor activation & 30\% & HIGH \\
-\hline
-Liver toxicity & 22\% & HIGH \\
-\hline
-Kidney toxicity & 12\% & MEDIUM \\
-\hline
-Stress response (e.g., ROS, HSP) & 20\% & HIGH \\
-\hline
-Metabolic effects (glucose/lipid) & 18\% & MEDIUM \\
-\hline
-\end{tabular}
-\caption{Representative toxicity categories used to illustrate multi-domain safety screening in a ToxCast/Tox21-style reference dataset.}
-\label{tab:toxcast_categories}
-\end{table}
 
-\section{Data Curation and Harmonization}
-
-Because the selected sources differ substantially in structure, scale, and scientific purpose, raw download alone is insufficient for model development. A harmonization stage is therefore required to transform heterogeneous source files into a consistent analytical resource.
-
-The curation logic used throughout the chapter follows four principles. First, structural identifiers are standardized by canonicalizing SMILES strings and excluding chemically invalid entries. Second, endpoint definitions are harmonized so that binding data, toxicity labels, permeability outcomes, and clearance values can be interpreted consistently across sources. Third, duplicate compounds are resolved before model splitting to avoid optimistic bias. Fourth, molecular descriptors are recomputed from structure where necessary so that downstream features are derived uniformly rather than inherited from mixed source conventions.
-
-This distinction between \textit{source data} and \textit{analysis-ready data} is important for thesis clarity. The scientific contribution lies not in downloading files from public repositories, but in converting them into a coherent multi-task resource with explicit task definitions, traceable provenance, and defensible quality control.
-
-\section{Summary of Source Roles in the Framework}
-
-Table~\ref{tab:data_sources_summary} summarizes the role of each source in the thesis. Rather than combining incompatible record counts into a single total, the table emphasizes the scientific contribution of each source and whether it contributes real training labels, auxiliary mechanistic context, or illustrative reference material.
-
-\begin{table}[htbp]
-\centering
-\small
-\begin{tabular}{|p{0.6cm}|p{2.2cm}|p{4.3cm}|p{3.7cm}|}
-\hline
-\textbf{No.} & \textbf{Source} & \textbf{Primary Role} & \textbf{Status in Thesis} \\
-\hline
-1 & PubChem & Screening context and exemplar structures & Illustrative reference data \\
-\hline
-2 & PK-DB & Pharmacokinetic studies and time-course interpretation & Auxiliary mechanistic data \\
-\hline
-3 & TDC ADMET & hERG, Caco-2, clearance, and benchmark context & Real training data \\
-\hline
-4 & ChEMBL & Binding affinity and target-specific activity data & Real training data + synthetic reference set \\
-\hline
-5 & ToxCast/Tox21-style set & Multi-category toxicity-screening illustration & Synthetic reference data \\
-\hline
-\end{tabular}
-\caption{Scientific role of each data source in the thesis framework.}
-\label{tab:data_sources_summary}
-\end{table}
+See Appendix~\ref{app:supplementary} for full data source descriptions and supplementary tables.
 
 % Section 5.4 moved to Appendix A.7 -- see end of document.
 
@@ -776,27 +603,7 @@ Before neural-network training, the harmonized feature matrix is preprocessed to
 
 \section{Feature Engineering}
 
-\subsection{Molecular Representations and Feature Space Design}
-
-Feature engineering in this thesis is designed to support both predictive accuracy and mechanistic interpretability. The chosen representation must be expressive enough for molecular property prediction, while remaining sufficiently structured to support shared learning across four heterogeneous endpoints.
-
-Raw SMILES strings are therefore transformed into complementary feature spaces:
-
-\begin{enumerate}
-\item \textbf{Extended-connectivity fingerprints (ECFP/Morgan fingerprints)}: 2,048-bit binary vectors computed with radius 2 capture local structural motifs such as atom environments, connectivity patterns, and common functional groups. This fingerprint representation provides a compact but information-rich summary of molecular structure and serves as the primary shared input to the baseline multi-task network.
-\item \textbf{Physicochemical Descriptors}: 
-  \begin{enumerate}
-  \item Molecular weight (MW): Typically in pharmaceutical range 150--550 Da.
-  \item Octanol-water partition coefficient (logP): Lipophilicity measure (typically -2 to +5).
-  \item Topological polar surface area (TPSA): Polarity and permeability predictor.
-  \item Hydrogen bond donors (HBD) and acceptors (HBA): Counts relevant for absorption and solubility (Lipinski's rule of five).
-  \item Rotatable bond count (RotBonds): Molecular flexibility metric.
-  \item Aromatic ring count: Relevant for metabolic stability.
-  \end{enumerate}
-  These descriptors are computed from canonical SMILES using RDKit and complement the sparse fingerprint signal with interpretable global molecular properties.
-\item \textbf{Graph representation}: for graph-based experiments, molecules are additionally encoded as atom-bond graphs so that message-passing architectures can learn relational structure directly rather than relying only on fixed fingerprints.
-\item \textbf{Binding-context features}: for ChEMBL-specific experiments, target identity can be included explicitly so that the model can distinguish among target classes and binding regimes.
-\end{enumerate}
+Feature engineering combines molecular fingerprints, physicochemical descriptors, and graph representations. See Appendix~\ref{app:supplementary} for full feature engineering details and descriptor lists.
 
 The key design decision is to combine a strong generic representation (Morgan fingerprints) with a small set of interpretable physicochemical descriptors. This gives the baseline model structural specificity without making it dependent on heavy task-specific featurization.
 
@@ -849,56 +656,7 @@ Persisting the matrix supports:
 
 \subsection{Hyperparameter Configuration}
 
-The feature engineering and model training pipeline are controlled through a centralized configuration, ensuring that all experimental runs use a consistent and reproducible set of parameters. The selected configuration fixes the molecular representation, network capacity, optimization schedule, task-loss weighting, and data split proportions used throughout the feature-engineering notebook. The complete specification is summarized in Table~\ref{tab:phase3a_config}.
-
-\begin{table}[htbp]
-\centering
-\small
-\begin{tabular}{l|l|l}
-\hline
-\textbf{Parameter} & \textbf{Value} & \textbf{Description} \\
-\hline
-\texttt{n\_bits} & 2048 & Morgan fingerprint bits (radius=2) \\
-\texttt{physico\_dim} & 2 & MW and LogP physicochemical descriptors \\
-\texttt{input\_dim} & 2050 & Total feature dimensionality \\
-\texttt{hidden\_dim} & 128 & Shared encoder hidden layer size \\
-\texttt{latent\_dim} & 64 & Bottleneck representation dimension \\
-\texttt{dropout} & 0.2 & Encoder dropout rate \\
-\texttt{reg\_head\_hidden} & 64 & Regression head hidden width \\
-\texttt{reg\_head\_dropout} & 0.1 & Regression head dropout \\
-\hline
-\texttt{batch\_size} & 64 & Mini-batch size \\
-\texttt{epochs} & 300 & Maximum training epochs \\
-\texttt{learning\_rate} & $10^{-3}$ & Adam optimizer learning rate \\
-\texttt{weight\_decay} & $10^{-4}$ & L2 regularization \\
-\texttt{patience} & 40 & Early stopping patience \\
-\texttt{grad\_clip} & 1.0 & Gradient clipping norm \\
-\hline
-\texttt{w\_binding} & 1.8 & Binding affinity loss weight \\
-\texttt{w\_hERG} & 1.0 & hERG inhibition loss weight \\
-\texttt{w\_caco2} & 2.0 & Caco-2 permeability loss weight \\
-\texttt{w\_clearance} & 1.0 & Clearance loss weight \\
-\texttt{w\_physics} & 0.1 & Physics-informed ODE loss weight \\
-\hline
-\texttt{focal\_gamma} & 2.0 & Focal loss gamma (classification) \\
-\texttt{herg\_pos\_weight} & 2.5 & hERG positive class weight \\
-\texttt{caco2\_pos\_weight} & 1.0 & Caco-2 positive class weight \\
-\hline
-\texttt{test\_size} & 0.20 & Test set fraction \\
-\texttt{val\_size} & 0.10 & Validation set fraction \\
-\hline
-\end{tabular}
-\caption{Feature-engineering notebook hyperparameter configuration for the baseline harmonized matrix. Binding and Caco-2 receive elevated loss weights to stabilize optimization of the harder and less homogeneous tasks in multi-task training.}
-\label{tab:phase3a_config}
-\end{table}
-
-The input representation is defined by a 2,048-bit Morgan fingerprint combined with two physicochemical descriptors (molecular weight and LogP), yielding a total input dimensionality of 2,050. The shared encoder uses a hidden width of 128 and a latent bottleneck of 64, which provides sufficient capacity to learn cross-task molecular structure relationships while maintaining a compact representation suitable for regularized multi-task training.
-
-The optimization parameters were chosen to balance convergence speed and training stability. In particular, the learning rate of $10^{-3}$, weight decay of $10^{-4}$, early-stopping patience of 40 epochs, and gradient clipping at 1.0 were used to reduce overfitting and prevent unstable updates during joint optimization of heterogeneous endpoints.
-
-Task-specific loss weights were introduced to prevent the shared encoder from drifting toward whichever endpoint was easiest to optimize. Binding affinity and Caco-2 permeability therefore receive elevated weights of 1.8 and 2.0, respectively, reflecting their greater heterogeneity and more limited effective signal in the baseline harmonized matrix. For the classification endpoints, focal loss with $\gamma = 2.0$ down-weights easy examples and concentrates learning on difficult decision boundaries, while the positive-class weight of 2.5 for hERG addresses the greater cost of missing potentially cardiotoxic compounds.
-
-Finally, the physics-informed term ($w_\text{physics} = 0.1$) acts as a soft ODE-consistency regularizer. Its role is not to replace supervised learning, but to bias the model toward predictions that remain compatible with the downstream pharmacokinetic formulation. In this way, the selected hyperparameter configuration supports both predictive performance and mechanistic coherence across the integrated PK-PD workflow.
+The feature engineering and model training pipeline are controlled through a centralized configuration. See Appendix~\ref{app:supplementary} for the full hyperparameter table and configuration details.
 
 \subsection{Data Quality Gate}
 \label{sec:phase3a_quality}
@@ -917,19 +675,7 @@ This quality gate converts general data-quality principles into executable accep
 
 \section{Quality Control and Split Strategy}
 
-\subsection{Quality Control Procedures}
-
-To ensure that downstream model performance reflects genuine predictive signal rather than artifacts of preprocessing or partitioning, a structured quality-control procedure is applied before any training run. These checks address numerical validity, duplicate handling, split integrity, class balance, and descriptor plausibility.
-
-\begin{enumerate}
-\item \textbf{Missing-value and numerical-validity checks}: all task-specific matrices are screened for NaN and infinite values. Records failing these checks are excluded, imputed where justified, or masked on a task-specific basis.
-\item \textbf{Duplicate resolution}: exact duplicates and canonical-SMILES duplicates are identified prior to splitting. For binding affinity data, repeated measurements are merged by activity averaging; for classification tasks, consensus labels are assigned.
-\item \textbf{Leakage auditing}: train, validation, and test partitions are examined to confirm that no molecule appears in more than one split. Scaffold-based diagnostics are additionally used to assess whether structurally similar compounds are disproportionately shared across partitions.
-\item \textbf{Class-balance diagnostics}: for hERG and Caco-2, label prevalence is reported explicitly so that AUROC, F1, and threshold-dependent metrics can be interpreted in the correct imbalance context.
-\item \textbf{Descriptor plausibility checks}: molecular properties such as molecular weight, LogP, and topological polar surface area are compared against plausible pharmaceutical ranges. Outliers are flagged for inspection but are not removed automatically unless there is evidence of annotation or preprocessing error.
-\end{enumerate}
-
-Taken together, these procedures reduce the risk that reported model performance is driven by data artifacts rather than by learnable molecular signal.
+Quality control procedures ensure that model performance reflects genuine predictive signal rather than artifacts. See Appendix~\ref{app:supplementary} for full quality control and split strategy details.
 
 \subsection{Train/Validation/Test Split Strategy}
 
@@ -1009,7 +755,8 @@ Systematic verification applied to all datasets:
 
 \subsection{Model Design Notebook Data Interface}
 
-The implementation in \texttt{phase3b\_model\_design.ipynb} does not begin from raw tensors alone, but from the persisted feature-engineering artifacts. These artifacts provide task-specific arrays, task types, feature metadata, and scaling objects, after which the notebook augments the feature space with a RapidDock-derived \texttt{docking\_quality} bridge signal for the binding task. The binding matrix is rebuilt from the real ChEMBL SMILES file and extended to 2,051 input features, while the hERG, Caco-2, and clearance tasks receive a padded \texttt{docking\_quality}=0.0 column so that all tasks share a common schema.
+
+The implementation in \texttt{phase3b\_model\_design.ipynb} begins from the persisted feature-engineering artifacts. These artifacts provide task-specific arrays, task types, feature metadata, and scaling objects. The notebook augments the feature space with a RapidDock-derived \texttt{docking\_quality} bridge signal for the binding task. The binding matrix is rebuilt from the real ChEMBL SMILES file and extended to 2,051 input features, while the hERG, Caco-2, and clearance tasks receive a padded \texttt{docking\_quality}=0.0 column so that all tasks share a common schema.
 
 After augmentation, the notebook reconstructs per-task train, validation, and test DataLoaders. Feature matrices are standardized separately for each task using \texttt{StandardScaler}; regression targets are also standardized, whereas classification targets remain binary. This design keeps the training pipeline consistent across heterogeneous endpoints while preserving the interpretation of logits for classification tasks.
 
@@ -1152,30 +899,20 @@ This threshold is reported alongside AUROC and accuracy at each validation epoch
 
 Model-design artifacts (model weights, scalers, raw arrays, config) are saved to \path{data/processed/phase3b_artifacts/} for loading by the fine-tuning notebook.
 
+
 \section{Fine-Tuning, Calibration, and Leakage Mitigation}
-\label{sec:phase3c}
+\label{sec:finetuning}
 
 The fine-tuning notebook (\texttt{phase3c\_finetuning.ipynb}) loads the persisted feature-engineering and model-design artifacts, reconstructs the baseline model and task-specific data loaders, and then applies task-specific fine-tuning, threshold calibration with guardrails, production threshold selection, and split-leakage mitigation. In the implemented notebook, these artifact and checkpoint paths are resolved from the nearest ancestor containing the shared \path{data/} directory, so the workflow remains executable even if the notebooks are reorganized within the \path{Coding/} workspace.
 
-\subsection{Task-Specific Fine-Tuning (Variants 1 and 2)}
 
-\subsubsection{Variant 1: Heads-Only Fine-Tuning}
+\subsection{Task-Specific Fine-Tuning}
 
-All parameters except the two classification heads are frozen:
+Two fine-tuning strategies are evaluated:
 \begin{itemize}
-  \item \textbf{Frozen}: SharedEncoder, PKODEFunc, DeepRegressionHead (binding), RegressionHead (clearance)
-  \item \textbf{Trainable}: \texttt{herg\_head} and \texttt{caco2\_head} only ($\ll 1\%$ of total parameters)
+  \item \textbf{Heads-only fine-tuning}: All parameters except the two classification heads are frozen (SharedEncoder, PKODEFunc, DeepRegressionHead, RegressionHead frozen; \texttt{herg\_head} and \texttt{caco2\_head} trainable). Configuration: $\text{lr} = 3\times10^{-4}$, $\text{weight\_decay} = 10^{-5}$, 40 epochs, patience = 10. Scheduler monitors mean validation AUROC.
+  \item \textbf{Partial encoder unfreeze}: Additionally unfreezes the final encoder block (PKODEFunc, regression heads, encoder blocks 0--7 frozen; encoder blocks 8--9, \texttt{herg\_head}, \texttt{caco2\_head} trainable). Configuration: $\text{lr} = 10^{-4}$, 60 epochs, patience = 12. The best by validation mean AUROC is selected as the calibration base model.
 \end{itemize}
-Configuration: $\text{lr} = 3\times10^{-4}$, $\text{weight\_decay} = 10^{-5}$, 40 epochs, patience = 10. The scheduler monitors mean validation AUROC (mode='max').
-
-\subsubsection{Variant 2: Partial Encoder Unfreeze}
-
-A controlled variant that additionally unfreezes the final encoder block:
-\begin{itemize}
-  \item \textbf{Frozen}: PKODEFunc, regression heads, encoder blocks 0--7
-  \item \textbf{Trainable}: Encoder blocks 8--9 (final \texttt{Linear(128,64)} + \texttt{ReLU}), \texttt{herg\_head}, \texttt{caco2\_head}
-\end{itemize}
-Configuration: $\text{lr} = 10^{-4}$ (lower to protect partially-frozen representations), 60 epochs, patience = 12. The best of Variant 1 and Variant 2 by validation mean AUROC is selected as the calibration base model.
 
 \subsection{Threshold Calibration}
 
@@ -1253,7 +990,7 @@ Clearance samples & 1,213 & 1,213 \\
 
 \subsection{Current Notebook-Aligned Representation Upgrade}
 
-The current Phase 2 notebook does not yet replace the exploratory ChEMBL binding subset with a real-SMILES binding file. Instead, it performs the following notebook-aligned upgrade:
+The current feature engineering and data preparation notebook does not yet replace the exploratory ChEMBL binding subset with a real-SMILES binding file. Instead, it performs the following upgrade:
 \begin{itemize}
   \item ChEMBL binding subset: 2,000 compounds with MW, LogP, and pChEMBL targets; fingerprint columns remain zero because SMILES are not present in the snapshot used here.
   \item TDC hERG subset: 655 compounds with real SMILES and 100\% non-zero 2,048-bit Morgan fingerprints.
@@ -1264,7 +1001,7 @@ The current Phase 2 notebook does not yet replace the exploratory ChEMBL binding
 
 \section{Fine-Tuning Strategy}
 
-Two fine-tuning variants are evaluated: heads-only updates and selective encoder unfreezing. Threshold calibration is applied post-training for classification heads.
+Two fine-tuning strategies are evaluated: heads-only updates and selective encoder unfreezing. Threshold calibration is applied post-training for classification heads.
 
 \subsection{hERG AUROC Push (hidden\_dim=256 + pos\_weight sweep)}
 
@@ -1484,34 +1221,22 @@ All models are trained using the Adam optimizer with:
 
 \noindent Classification tasks use focal loss ($\gamma=2.0$) to handle class imbalance. Regression tasks use mean squared error (MSE). The combined multi-task loss is a weighted sum (Equation~6.1) with task-specific weights from Table~\ref{tab:phase3a_config}.
 
+
 \section{Experimental Sequence}
 
-The thesis-essential experiment notebook program was organized as a staged progression from data realism, through predictive refinement, to mechanistic and translational evaluation. Rather than presenting every exploratory notebook branch with equal emphasis, the main thesis sequence focuses on the experiments that most directly strengthened predictive performance, improved decision reliability, and enabled downstream PK-PD analysis. This yields a clearer narrative: first, the molecular representation and binding data were upgraded; second, the predictive models were refined and calibrated; third, the resulting predictions were integrated into a mechanistic PK-PD framework; and finally, the framework was used for multi-objective regimen selection and virtual clinical evaluation.
+The main experiment notebook program is organized as a staged progression from data realism, through predictive refinement, to mechanistic and translational evaluation. The core sequence is as follows:
+\begin{enumerate}
+  \item Real ChEMBL binding SMILES and full 2048-bit fingerprint integration: establishes the transition from the TDC-focused upgrade to a realistic binding-input representation.
+  \item hERG AUROC improvement via hidden dimension expansion and positive-class weighting: defines the strongest toxicity-classification configuration for later analysis.
+  \item Probability calibration using temperature scaling and Platt scaling with ECE evaluation: converts raw classifier outputs into decision-relevant risk probabilities.
+  \item End-to-end joint GNN + MLP fusion model: provides the strongest structure-aware binding model and the final predictive architecture for downstream translation.
+  \item Neural ODE PK/PD integration with population simulation: links predictive outputs to mechanistic exposure-response behavior.
+  \item Pareto-front efficacy-safety analysis: replaces single-objective optimization with a clinically interpretable multi-objective trade-off framework.
+  \item Monte Carlo and bootstrap uncertainty analysis: quantifies robustness of the recommended regimens and validates stability of the simulated conclusions.
+  \item In-silico clinical trial simulation and operating characteristics: demonstrates how the final framework can support translational dose-selection decisions.
+\end{enumerate}
 
-In practice, the core sequence begins with real binding-data integration and task-specific hERG improvement, because these steps establish the strongest predictive foundation for later analysis. Probability calibration is then applied to ensure that classification outputs can be interpreted as reliable decision variables rather than only rank-based scores. After that, a joint GNN + MLP fusion model is evaluated as the strongest structure-aware predictor for binding affinity. These predictive outputs are then propagated into the Neural ODE PK-PD layer, which supports efficacy-safety trade-off analysis, uncertainty quantification, and trial-level simulation. Exploratory branches such as standalone GNN testing, one-factor scenario sweeps, and single-objective optimization are retained as supporting analyses, but are not treated as the main thesis path because they are either intermediate ablations or are superseded by more defensible multi-objective analyses.
-
-\begin{table}[htbp]
-\centering
-\small
-\begin{tabular}{l|p{10.5cm}}
-\hline
-\textbf{Experiment} & \textbf{Thesis-essential experiment and role} \\
-\hline
-Experiment 1 & Later real ChEMBL binding SMILES and full 2048-bit fingerprint integration; establishes the transition from the notebook-aligned TDC-focused upgrade to a realistic binding-input representation. \\
-Experiment 2 & hERG AUROC improvement via hidden\_dim expansion and positive-class weighting; defines the strongest toxicity-classification configuration carried forward into later analysis. \\
-Experiment 3 & Probability calibration using temperature scaling and Platt scaling with ECE evaluation; converts raw classifier outputs into decision-relevant risk probabilities. \\
-Experiment 4 & End-to-end joint GNN + MLP fusion model; provides the strongest structure-aware binding model and the final predictive architecture for downstream translation. \\
-Experiment 5 & Neural ODE PK/PD integration with population simulation; links predictive outputs to mechanistic exposure-response behavior. \\
-Experiment 6 & Pareto-front efficacy-safety analysis; replaces single-objective optimization with a clinically interpretable multi-objective trade-off framework. \\
-Experiment 7 & Monte Carlo and bootstrap uncertainty analysis; quantifies robustness of the recommended regimens and validates stability of the simulated conclusions. \\
-Experiment 8 & In-silico clinical trial simulation and operating characteristics; demonstrates how the final framework can support translational dose-selection decisions. \\
-\hline
-\end{tabular}
-\caption{Revised thesis-essential experimental sequence for the experiment notebook. The main narrative emphasizes the experiments that most directly improved predictive quality, calibration, mechanistic interpretability, and translational decision support. Intermediate exploratory analyses are discussed only as supporting evidence.}
-\label{tab:phase3d_sequence}
-\end{table}
-
-The representation-upgrade experiment, the standalone GNN ablation, and the scenario, sensitivity, and single-objective optimization analyses remain useful for internal comparison, but they are better treated as supporting or exploratory analyses. The representation-upgrade stage mainly serves as a transitional step before full real-data integration. The standalone GNN is informative as an architectural ablation, yet it is less important than the final fusion model. The scenario, sensitivity, and single-objective optimization analyses help illustrate system behavior, but the single-objective regimen search is ultimately less defensible than the Pareto-front formulation. For this reason, the main thesis argument is built around real binding integration, hERG-focused refinement, probability calibration, joint fusion modeling, Neural ODE PK-PD integration, Pareto analysis, Monte Carlo validation, and virtual clinical trial simulation.
+Supporting and exploratory analyses (such as the representation-upgrade stage, standalone GNN ablation, scenario/sensitivity/single-objective optimization) are discussed as internal comparisons but are not emphasized in the main thesis argument.
 
 \section{RapidDock Prototype Protocol}
 
@@ -1556,22 +1281,8 @@ The first major improvement examined in this study was the transition from a low
 
 This finding indicates that the early performance ceiling was driven at least in part by limited molecular representation rather than by insufficient model complexity. The fingerprint upgrade transforms the problem from one dominated by only a few physicochemical descriptors into one in which structure-activity patterns can be learned directly. As a result, the representation upgrade becomes the new reference point for all subsequent experiments.
 
-\begin{table}[htbp]
-\centering
-\small
-\begin{tabular}{l|c|c}
-\hline
-\textbf{Property} & \textbf{Baseline Encoding} & \textbf{Upgraded Encoding} \\
-\hline
-Fingerprint bits & 256 & 2048 \\
-SMILES source & Limited / partially uninformative baseline & Real TDC structures + ChEMBL zero-fallback \\
-Input dimensionality & 258 & 2050 \\
-Primary role & Minimal structural signal & Stronger structural SAR signal for TDC tasks \\
-\hline
-\end{tabular}
-\caption{Summary of the molecular representation upgrade aligned with the current notebook state. The 2,048-bit encoding introduces real structural signal for the TDC-derived tasks while the exploratory ChEMBL subset remains a zero-fingerprint fallback.}
-\label{tab:results_representation_upgrade}
-\end{table}
+
+See Appendix~\ref{app:supplementary} for the full table summarizing the molecular representation upgrade.
 
 \section{Real Binding Data Integration}
 
@@ -1585,19 +1296,8 @@ Once the input representation and binding data were improved, the next question 
 
 These results indicate that graph and fingerprint representations are complementary rather than redundant. The GNN branch captures relational and local structural context, while the MLP branch retains dense tabular information from the molecular fingerprint space. Their integration produces a stronger predictive model than either branch alone. For this reason, the joint GNN+MLP fusion architecture is treated as the final predictive model of the thesis, while the GNN-only model is retained as an ablation demonstrating why the fused design is justified.
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.88\textwidth]{figures/fig8_3_performance_summary.pdf}
-\caption{Summary of final predictive performance against the research targets. The upgraded predictive pipeline meets all four project targets, with the strongest binding performance achieved by the final fusion architecture.}
-\label{fig:8.3}
-\end{figure}
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.95\textwidth]{figures/fig8_5_experiment_progression.pdf}
-\caption{Progression of key metrics across major experimental milestones. The results show that meaningful gains arise first from the notebook-aligned TDC representation improvement, then from later real binding integration, and are finally consolidated by architectural refinement.}
-\label{fig:8.5}
-\end{figure}
+See Appendix~\ref{app:supplementary} for full performance summary and experiment progression figures.
 
 \section{Neural ODE PK-PD Integration}
 
@@ -1605,12 +1305,8 @@ The predictive modeling pipeline was next extended with a Neural ODE-based PK-PD
 
 This is a central result of the thesis because it links machine learning outputs to mechanistic downstream behavior. Compounds with higher predicted clearance exhibit faster concentration decay, whereas compounds with stronger predicted affinity achieve pharmacodynamic effect at lower concentrations through the inferred $EC_{50}$ relationship. The framework therefore moves beyond isolated endpoint prediction and provides a mechanistically interpretable bridge between molecular structure and dynamic therapeutic response.
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.85\textwidth]{figures/fig8_2_pk_curves.png}
-\caption{Representative Neural ODE PK-PD profiles. The concentration-time curves reflect predicted elimination behavior, while the effect-time curves show expected Emax-type pharmacodynamic saturation.}
-\label{fig:8.2}
-\end{figure}
+
+See Appendix~\ref{app:supplementary} for representative Neural ODE PK-PD profiles.
 
 \section{Probability Calibration and Robustness}
 
@@ -1618,12 +1314,8 @@ Because later decision-oriented analyses depend on predicted probabilities rathe
 
 Calibration is not the main novelty of the thesis, but it is essential for methodological credibility. Downstream decision support depends on whether predicted probabilities can be interpreted as plausible empirical risks. The observed ECE reductions therefore justify the use of calibrated hERG and Caco-2 probabilities in later scenario, optimization, and trial-simulation sections.
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.72\textwidth]{figures/fig8_4_calibration_ece.pdf}
-\caption{Expected Calibration Error (ECE) before and after post-hoc calibration. Calibration substantially improves the reliability of predicted probabilities for both safety-relevant classification tasks.}
-\label{fig:8.4}
-\end{figure}
+
+See Appendix~\ref{app:supplementary} for calibration ECE figures.
 
 \section{Pareto Efficacy-Safety Trade-Off Analysis}
 
@@ -1631,26 +1323,8 @@ After integrating prediction and simulation, the framework was used to analyze e
 
 Within the set of Pareto-optimal regimens, a knee-point solution provides the most balanced trade-off between therapeutic effect and safety burden. This result is important because it demonstrates that the framework does not merely select the highest-efficacy regimen, but instead exposes the geometry of the underlying trade-off space. In this way, the model becomes a decision-support tool rather than a pure predictive engine.
 
-\begin{table}[htbp]
-\centering
-\small
-\begin{tabular}{p{5.6cm}|p{5.2cm}}
-\hline
-\textbf{Metric} & \textbf{Knee-point regimen} \\
-\hline
-Dose & 114.3 mg \\
-CV IIV & 0.150 \\
-Median efficacy exposure ($AUC_E$) & 18.13 \\
-hERG event rate & 83.10\% \\
-Caco-2 event rate & 82.80\% \\
-Composite score & -9.2066 \\
-Distance to utopia & 0.9907 \\
-Pareto feasibility & Not fully feasible under all constraints \\
-\hline
-\end{tabular}
-\caption{Selected knee-point regimen from the Pareto frontier analysis. Although no regimen satisfied all efficacy and safety constraints simultaneously, the knee-point provided the most balanced trade-off among the non-dominated solutions.}
-\label{tab:8.1}
-\end{table}
+
+See Appendix~\ref{app:supplementary} for the full Pareto analysis table.
 
 \section{Virtual Clinical Trial Simulation}
 
@@ -1658,26 +1332,13 @@ To assess translational utility, the selected regimen space was evaluated in a v
 
 This result should be interpreted as a model-based planning experiment rather than a literal prediction of real clinical trial outcomes. Its value lies in showing that molecular prediction, mechanistic simulation, and trial-like decision metrics can be linked within a single computational framework. In the thesis context, the virtual trial is therefore the final translational demonstration of the pipeline rather than a substitute for empirical validation.
 
-\begin{table}[htbp]
-\centering
-\footnotesize
-\begin{tabular}{p{1.6cm}|p{1.3cm}|p{1.5cm}|p{1.5cm}|p{1.9cm}|p{1.2cm}|p{1.6cm}}
-\hline
-\textbf{Arm} & \textbf{Dose (mg)} & \textbf{Median $AUC_E$} & \textbf{Median $C_{\max}$} & \textbf{$\Delta AUC_E$ vs placebo} & \textbf{Power} & \textbf{Mean hERG} \\
-\hline
-Placebo & 0.0 & 0.00 & 0.00 & --- & --- & 0.0\% \\
-Low dose & 68.6 & 13.54 & 6.76 & +13.43 & 100.0\% & 98.3\% \\
-Knee-point & 114.3 & 17.02 & 11.59 & +16.91 & 100.0\% & 99.7\% \\
-High dose & 160.0 & 19.48 & 16.13 & +19.37 & 100.0\% & 99.9\% \\
-\hline
-\end{tabular}
-\caption{Summary of the virtual clinical trial arms. Active doses produced strong efficacy separation from placebo and uniformly high simulated power, but the associated hERG burden remained high across all treatment arms.}
-\label{tab:8.2}
-\end{table}
+
+See Appendix~\ref{app:supplementary} for the full virtual clinical trial summary table.
 
 \section{Exploratory Extensions}
 
-An exploratory RapidDock-inspired branch was also implemented as a proof-of-feasibility study for geometry-aware protein-ligand modeling. The branch confirmed that distance-biased attention, symmetry-aware loss, and coordinate reconstruction can be trained end to end. However, due to the synthetic protein context and limited scale, the prototype is treated as a forward-looking research direction rather than as a production alternative to the main predictive pipeline.
+
+An exploratory RapidDock-inspired branch was implemented as a proof-of-feasibility study for geometry-aware protein-ligand modeling. See Appendix~\ref{app:supplementary} for full protocol and results.
 
 \section{Summary of Key Findings}
 
@@ -1689,31 +1350,7 @@ Taken together, these findings support the central thesis of this work: combinin
 
 \section{Interpretation of Key Findings}
 
-The discussion chapter interprets the proposed neural PK-PD framework as a staged progression from molecular prediction to translational decision support. The central conclusion is not simply that one model variant performed best, but that useful pharmacological decision support emerged only after combining a transitional structural representation improvement, later real binding-data integration, hERG-focused refinement, probability calibration, fusion modeling, mechanistic simulation, and decision-oriented downstream analysis. The discussion therefore follows the same thesis-essential sequence as the results chapter rather than the broader exploratory notebook chronology.
-
-\subsection{Structural Representation Is a Necessary Starting Point}
-
-The first decisive result of the study is that predictive quality depends critically on the quality of the molecular representation. The transition from synthetic or structurally uninformative fingerprints to 2048-bit fingerprints derived from real TDC SMILES where available produced a substantial improvement across the main endpoints, especially for the classification tasks, even though the exploratory ChEMBL binding subset still remained a zero-fingerprint fallback at this stage. This finding shows that the early limitations of the baseline model were not solely architectural; they were strongly constrained by the absence of chemically meaningful structural information.
-
-This result is significant because it establishes representation quality as a prerequisite for all later modeling steps. The poor baseline binding performance demonstrates that physicochemical descriptors alone are insufficient for learning robust structure-activity relationships in this setting. From a drug-discovery perspective, this reinforces a broader methodological point: complex models cannot compensate for structurally weak inputs. Consequently, the fingerprint upgrade was not a minor preprocessing refinement, but a foundational change that enabled the rest of the thesis.
-
-\subsection{Real Binding Data Provides the First Major Task-Specific Gain}
-
-The second major finding is that real binding information produces a task-specific gain beyond the general fingerprint upgrade. The introduction of real ChEMBL-derived binding data yielded the clearest improvement in affinity prediction, far stronger than would be expected from a generic feature-space expansion alone. This indicates that endpoint-aligned realism in the underlying data is essential, particularly for tasks such as binding affinity that depend directly on molecular recognition mechanisms.
-
-This observation also clarifies the behavior of the multi-task framework. Although shared learning can transfer useful information across endpoints, each task still benefits most strongly from improvements in the data that are directly relevant to it. The larger gain in binding performance compared with the more modest secondary changes in the ADMET tasks therefore supports a disciplined interpretation of multi-task learning: shared representation is valuable, but it does not eliminate dependence on endpoint-specific data quality.
-
-\subsection{Predictive Refinement and Calibration Must Precede Translation}
-
-The architectural experiments show that stronger prediction required more than better features alone. The hERG-focused refinement demonstrated that model capacity and task-specific optimization choices, such as positive-class weighting, influence discrimination quality in meaningful ways. More importantly, the graph-based and fusion experiments showed that the best final architecture was not the most specialized single branch, but the joint GNN+MLP fusion model that combined graph-derived structural information with fingerprint-derived latent features.
-
-However, predictive discrimination alone was not sufficient for translational use. The calibration experiments showed that even models with strong AUROC could still produce poorly calibrated probabilities. This distinction matters because the later PK-PD and regimen analyses interpret predicted probabilities as risk-related quantities rather than as ranking scores alone. The thesis therefore supports a broader methodological point: in decision-oriented modeling, discrimination and calibration are complementary properties, and both are required if model outputs are to be used in downstream pharmacological reasoning.
-
-\subsection{Fusion Modeling Benefits from Complementary Structural Views}
-
-The fusion results indicate that graph-derived and fingerprint-derived representations encode overlapping but non-identical information. Fingerprints efficiently summarize local substructures and chemically interpretable bit patterns, whereas graph neural networks learn adaptive topological features through message passing. The superior performance of the fused model therefore suggests that neither representation is complete on its own for the binding prediction problem addressed here.
-
-This result is particularly important for the scientific positioning of the thesis. It shows that the work does not argue for replacing traditional molecular descriptors with graph learning, nor for rejecting graph-based models in favor of handcrafted fingerprints. Instead, the evidence supports a hybrid view in which each representation captures different aspects of molecular structure and their combination produces a stronger predictive basis for downstream pharmacological analysis.
+The discussion chapter interprets the neural PK-PD framework as a staged progression from molecular prediction to translational decision support. Key findings and supporting details are summarized in the main text; see Appendix~\ref{app:supplementary} for extended discussion and supporting tables/figures.
 
 \section{Mechanistic PK-PD Interpretation}
 
