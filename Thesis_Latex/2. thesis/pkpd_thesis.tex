@@ -28,8 +28,14 @@
 
 \usepackage[hidelinks]{hyperref} % for hyperlinks, for example, urls, references to equations, entries in a bibliography --- hidelinks option removes rectangles around hiperlinks
 
+\usepackage{setspace}
+\usepackage{chngcntr}
+\counterwithout{footnote}{chapter}
+
 \usepackage{caption}
 \captionsetup{font={small}, labelfont=bf, justification=raggedright, singlelinecheck=false}
+\captionsetup[table]{font={sf,footnotesize}, position=above}
+\captionsetup[figure]{font={sf,footnotesize}}
 
 % ---------------- MARGINS, INDENTATION, LINESPREAD ------------------
 
@@ -122,13 +128,18 @@
 \frontmatterheading{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}
 
+\begin{singlespace}
+\fontsize{12pt}{14.4pt}\selectfont
+
 This thesis presents an end-to-end machine learning framework for early drug development that combines molecular property prediction with mechanistic pharmacokinetic-pharmacodynamic (PK-PD) simulation. The workflow integrates heterogeneous public datasets, applies feature engineering and data-quality controls, and trains multi-task neural models to predict binding affinity, hERG-related cardiotoxicity, Caco-2 permeability, and clearance.
 
 The central contribution is a physics-informed decision pipeline in which predicted molecular endpoints are coupled with a Neural ODE-based PK-PD simulator to support translational analysis. The experimental sequence begins with a notebook-aligned molecular-representation upgrade for the TDC-derived tasks, then proceeds to real ChEMBL binding-data integration, hERG-focused predictive refinement, probability calibration for safety classifiers, structure-aware joint GNN+MLP fusion modeling, mechanistic PK-PD simulation, Pareto efficacy-safety trade-off analysis, Monte Carlo robustness assessment, and in-silico clinical trial simulation. A RapidDock-inspired, distance-biased transformer branch is included as an exploratory prototype for future structure-aware extension.
 
 The results show that predictive quality improves materially after real-data integration and fusion modeling, that post-hoc calibration is necessary before classifier outputs can be used as risk variables, and that the resulting PK-PD framework supports clinically motivated trade-off and trial-level analyses. The thesis concludes by discussing practical limitations, reproducibility considerations, and future directions for external validation and deployment-oriented decision support.
 
-\noindent\textbf{Keywords:} drug discovery, PK-PD, Neural ODE, multi-task learning, graph neural networks, calibration, dose optimization
+\noindent\textbf{Keywords:} drug discovery, PK-PD, Neural ODE, multi-task learning, graph neural networks, calibration
+
+\end{singlespace}
 
 \thispagestyle{empty}
 \clearpage
@@ -137,13 +148,18 @@ The results show that predictive quality improves materially after real-data int
 \frontmatterheading{Streszczenie}
 \addcontentsline{toc}{chapter}{Streszczenie}
 
+\begin{singlespace}
+\fontsize{12pt}{14.4pt}\selectfont
+
 Niniejsza praca przedstawia kompleksowe podejście z zakresu uczenia maszynowego do wspomagania wczesnego rozwoju leków, łączące predykcję właściwości molekularnych z mechanistyczną symulacją farmakokinetyczno-farmakodynamiczną (PK-PD). Zaproponowany przepływ pracy integruje heterogeniczne publiczne zbiory danych, obejmuje inżynierię cech i kontrolę jakości danych oraz wykorzystuje wielozadaniowe modele neuronowe do przewidywania powinowactwa wiązania, kardiotoksyczności związanej z hERG, przepuszczalności Caco-2 oraz klirensu.
 
 Główny wkład pracy stanowi fizycznie ugruntowany pipeline decyzyjny, w którym przewidywane molekularne punkty końcowe są sprzęgnięte z symulatorem PK-PD opartym na Neural ODE w celu prowadzenia analiz translacyjnych. Praca realizuje uporządkowaną sekwencję eksperymentalną obejmującą przejściowe ulepszenie reprezentacji molekularnej dla zadań pochodzących z TDC, późniejszą integrację rzeczywistych danych wiązania z ChEMBL, ukierunkowane doskonalenie predykcji hERG, kalibrację prawdopodobieństw dla klasyfikatorów bezpieczeństwa, modelowanie strukturalne z użyciem wspólnej architektury fuzji GNN+MLP, mechanistyczną symulację PK-PD, analizę kompromisów skuteczność--bezpieczeństwo w ujęciu Pareto, ocenę odporności metodą Monte Carlo oraz symulację badań klinicznych in silico. Dodatkowo uwzględniono eksploracyjną gałąź inspirowaną RapidDock, wykorzystującą transformer z biasem odległościowym jako prototyp przyszłego modelowania uwzględniającego strukturę.
 
 Wyniki pokazują, że jakość predykcji istotnie wzrasta po integracji danych rzeczywistych i zastosowaniu modelu fuzji, że kalibracja post-hoc jest konieczna przed wykorzystaniem wyjść klasyfikacyjnych jako zmiennych ryzyka, oraz że otrzymany framework PK-PD wspiera klinicznie motywowane analizy kompromisów i symulacje na poziomie badań klinicznych. Pracę zamyka omówienie praktycznych ograniczeń, zagadnień reprodukowalności oraz przyszłych kierunków badań ukierunkowanych na walidację zewnętrzną i wdrożeniowe wspomaganie decyzji.
 
-\noindent\textbf{Słowa kluczowe:} odkrywanie leków, PK-PD, Neural ODE, uczenie wielozadaniowe, grafowe sieci neuronowe, kalibracja, optymalizacja dawkowania
+\noindent\textbf{Słowa kluczowe:} odkrywanie leków, PK-PD, Neural ODE, uczenie wielozadaniowe, grafowe sieci neuronowe, kalibracja
+
+\end{singlespace}
 
 \thispagestyle{empty}
 \clearpage
@@ -180,6 +196,7 @@ The key contributions are:
 \begin{table}[htbp]
 \centering
 \small
+\caption{Overview of thesis structure.}
 \begin{tabular}{p{2.8cm} p{9.5cm}}
 \hline
 \textbf{Chapter} & \textbf{Content} \\
@@ -196,7 +213,6 @@ Chapter~10 & Concludes with a summary and directions for future work. \\[4pt]
 Appendix & Collects supporting tables, hyperparameter configurations, calibration figures, and reproducibility notes. \\
 \hline
 \end{tabular}
-\caption{Overview of thesis structure.}
 \end{table}
 
 \chapter{Background and Theoretical Foundations}
@@ -261,6 +277,7 @@ Post-hoc calibration substantially reduced ECE for both classification tasks:
 
 \begin{table}[htbp]
 \centering
+\caption{Expected Calibration Error before and after post-hoc probability calibration.}
 \begin{tabular}{lcc}
 \hline
 \textbf{Task} & \textbf{ECE before} & \textbf{ECE after} \\
@@ -269,7 +286,6 @@ hERG (temperature scaling) & 0.1727 & \textbf{0.0058} \\
 Caco-2 (Platt scaling)      & 0.3583 & \textbf{0.0448} \\
 \hline
 \end{tabular}
-\caption{Expected Calibration Error before and after post-hoc probability calibration.}
 \end{table}
 
 Calibrated probabilities are used directly in all downstream Neural ODE simulation, Pareto optimisation, and in-silico trial analyses. Uncalibrated outputs would introduce systematic bias into every PK-PD simulation and dose recommendation produced by the framework.
@@ -307,6 +323,8 @@ The relevant literature strands and their limitations are summarized in Table~\r
 \begin{table}[htbp]
 \centering
 \small
+\caption{Summary of the main literature strands relevant to the thesis and the gap addressed by their incomplete integration.}
+\label{tab:related_work_gap}
 \begin{tabular}{|p{3.4cm}|p{4.3cm}|p{4.3cm}|}
 \hline
 \textbf{Literature strand} & \textbf{Typical strength} & \textbf{Common limitation relative to this thesis} \\
@@ -322,8 +340,6 @@ Mechanistic PK-PD modeling & Interpretable concentration--time and effect--time 
 Calibration methods & Improved reliability of predicted probabilities & Commonly treated as a final evaluation step instead of an integrated prerequisite for downstream simulation \\
 \hline
 \end{tabular}
-\caption{Summary of the main literature strands relevant to the thesis and the gap addressed by their incomplete integration.}
-\label{tab:related_work_gap}
 \end{table}
 
 The research gap addressed by this thesis is therefore not merely the absence of another molecular predictor, but the lack of a reproducible end-to-end framework that connects multi-task molecular property prediction to mechanistic and decision-oriented simulation in a single workflow. The contribution of the thesis is to integrate heterogeneous public datasets, shared molecular representations, calibrated classification outputs, Neural ODE-based PK-PD modeling, and population-level decision analyses within one coherent pipeline. In this sense, the work aims to bridge the methodological gap between benchmark-oriented molecular prediction and simulation-based therapeutic decision support.
@@ -358,6 +374,7 @@ The four task outputs are directly mapped to pharmacokinetic and pharmacodynamic
 
 \begin{table}[htbp]
 \centering
+\caption{Mapping of multi-task model outputs to Neural ODE pharmacokinetic/pharmacodynamic parameters.}
 \begin{tabular}{lll}
 \hline
 \textbf{Task output} & \textbf{ODE role} & \textbf{Parameter} \\
@@ -368,7 +385,6 @@ $f_{\text{CL}}(x)$ -- clearance & Elimination rate constant & $k_e = CL/V_c$ \\
 $f_{\text{hERG}}(x)$ -- probability & Cardiac safety flag & Safety threshold \\
 \hline
 \end{tabular}
-\caption{Mapping of multi-task model outputs to Neural ODE pharmacokinetic/pharmacodynamic parameters.}
 \end{table}
 
 \section{Evaluation Metrics}
@@ -463,6 +479,8 @@ Following source acquisition and basic validation, an exploratory data analysis 
 \begin{table}[htbp]
 \centering
 \small
+\caption{Source-level overview used during exploratory analysis. Counts refer to the specific benchmark subsets or aggregated reference files inspected in this section and are distinct from the later harmonized task counts used for model training.}
+\label{tab:eda_summary}
 \begin{tabular}{p{2.2cm}|p{3.5cm}|r|p{3.0cm}}
 \hline
 \textbf{Source} & \textbf{Dataset Type} & \textbf{Records} & \textbf{Primary Use} \\
@@ -474,8 +492,6 @@ ToxCast-style set & Aggregated priority-tier reference rows & 570,167 & Safety-s
 PK-DB & Pharmacokinetic studies + time-courses & 796 studies & ODE interpretation \\
 \hline
 \end{tabular}
-\caption{Source-level overview used during exploratory analysis. Counts refer to the specific benchmark subsets or aggregated reference files inspected in this section and are distinct from the later harmonized task counts used for model training.}
-\label{tab:eda_summary}
 \end{table}
 
 \subsection{ChEMBL Binding Affinity Analysis}
@@ -502,6 +518,8 @@ The ToxCast-style reference set is used in this chapter as a broad safety-screen
 \noindent \textbf{Risk Level Distribution:}
 \begin{table}[htbp]
 \centering
+\caption{ToxCast Risk Level Distribution across 332,507 Assay Results.}
+\label{tab:toxcast_risk}
 \begin{tabular}{l|r|r|l}
 \hline
 \textbf{Risk Level} & \textbf{Count} & \textbf{Percentage} & \textbf{Interpretation} \\
@@ -514,8 +532,6 @@ LOW & 61,063 & 18.4\% & Acceptable safety profile \\
 \textbf{Total} & \textbf{332,507} & \textbf{100\%} & -- \\
 \hline
 \end{tabular}
-\caption{ToxCast Risk Level Distribution across 332,507 Assay Results.}
-\label{tab:toxcast_risk}
 \end{table}
 
 The primary categories represented are cardiac, developmental, nuclear receptor, hepatic, renal, stress-response, and metabolic toxicity. This breadth is useful because it reminds the reader that real preclinical safety assessment is multi-domain even when the final machine-learning framework focuses on a smaller set of tractable endpoints. In this subsection, two complementary views are used: the table above summarizes one representative toxicity reference file (332,507 rows), whereas Figure~\ref{fig:5.2} aggregates the critical-, high-, and representative-priority files into a broader descriptive visualization (570,167 rows). The figure therefore functions as a contextual safety illustration rather than as the definition of a single modeling dataset.
@@ -629,6 +645,8 @@ The multi-task framework uses a shared feature encoder followed by task-specific
 \begin{table}[htbp]
 \centering
 \small
+\caption{Baseline multi-task learning setup for the harmonized feature-engineering matrix. Later chapters report upgraded dataset variants.}
+\label{tab:mtl_setup}
 \begin{tabular}{p{3.0cm}|p{2.8cm}|r|p{2.6cm}}
 \hline
 \textbf{Prediction Task} & \textbf{Features} & \textbf{Samples} & \textbf{Target Type} \\
@@ -639,8 +657,6 @@ Caco-2 permeability (Cls.) & Morgan FP + MW + LogP & 900 & Binary (0/1) \\
 Hepatocyte clearance (Reg.) & Morgan FP + MW + LogP & 1,213 & Continuous (mL/min/kg) \\
 \hline
 \end{tabular}
-\caption{Baseline multi-task learning setup for the harmonized feature-engineering matrix. Later chapters report upgraded dataset variants.}
-\label{tab:mtl_setup}
 \end{table}
 
 The shared encoder produces a latent representation that is reused across tasks, while the task-specific heads specialize that representation for either regression or classification. This separation between shared and task-specific learning is central to the thesis because it supports positive transfer without forcing all endpoints into the same output geometry.
@@ -825,6 +841,8 @@ The model-design notebook (\texttt{phase3b\_model\_design.ipynb}) implements the
 \begin{table}[htbp]
 \centering
 \small
+\caption{Model-design notebook target metrics. The architecture is evaluated against these thresholds to determine readiness for the fine-tuning notebook.}
+\label{tab:phase3b_targets}
 \begin{tabular}{l|c|c}
 \hline
 \textbf{Task} & \textbf{Metric} & \textbf{Target} \\
@@ -835,8 +853,6 @@ Caco-2 permeability (classification) & AUROC & $> 0.75$ \\
 Hepatic clearance (regression) & RMSE & $< 1.0$ \\
 \hline
 \end{tabular}
-\caption{Model-design notebook target metrics. The architecture is evaluated against these thresholds to determine readiness for the fine-tuning notebook.}
-\label{tab:phase3b_targets}
 \end{table}
 
 \subsection{RapidDock Bridge Feature Augmentation}
@@ -986,6 +1002,8 @@ In this current notebook-aligned representation-upgrade stage, the 2,048-bit Mor
 \begin{table}[htbp]
 \centering
 \small
+\caption{Representation-upgrade comparison aligned with the current executed notebook. The upgrade increases fingerprint resolution to 2,048 bits and introduces real structural signal for the TDC-derived tasks, while the exploratory ChEMBL binding subset remains a zero-fingerprint fallback because SMILES are not available in the current snapshot.}
+\label{tab:sec13_upgrade}
 \begin{tabular}{l|c|c}
 \hline
 \textbf{Property} & \textbf{Baseline Encoding} & \textbf{Upgraded Encoding} \\
@@ -999,8 +1017,6 @@ Caco-2 samples & 910 & 900 \\
 Clearance samples & 1,213 & 1,213 \\
 \hline
 \end{tabular}
-\caption{Representation-upgrade comparison aligned with the current executed notebook. The upgrade increases fingerprint resolution to 2,048 bits and introduces real structural signal for the TDC-derived tasks, while the exploratory ChEMBL binding subset remains a zero-fingerprint fallback because SMILES are not available in the current snapshot.}
-\label{tab:sec13_upgrade}
 \end{table}
 
 \subsection{Current Notebook-Aligned Representation Upgrade}
@@ -1073,6 +1089,8 @@ Predicted molecular endpoints are mapped to PK-PD parameters and used in ODE sim
 \begin{table}[htbp]
 \centering
 \small
+\caption{Mapping of predicted molecular properties to ODE pharmacokinetic/pharmacodynamic parameters.}
+\label{tab:pkpd_mapping}
 \begin{tabular}{l|l|l}
 \hline
 \textbf{Predicted Property} & \textbf{PK/PD Role} & \textbf{Parameter} \\
@@ -1083,8 +1101,6 @@ Binding affinity pChEMBL (regression) & Pharmacodynamic potency & $EC_{50}$ \\
 hERG probability (classification) & Cardiac safety flag & Safety threshold \\
 \hline
 \end{tabular}
-\caption{Mapping of predicted molecular properties to ODE pharmacokinetic/pharmacodynamic parameters.}
-\label{tab:pkpd_mapping}
 \end{table}
 
 \noindent \textbf{Two-compartment PK ODE system} (IV bolus administration):
@@ -1421,6 +1437,8 @@ Table A.1 details the eight TDC ADMET benchmark datasets used in the project. Ea
 \begin{table}[htbp]
 \centering
 \small
+\caption{A.1: TDC ADMET Benchmark Datasets--Categories, Task Types, and Sources.}
+\label{tab:tdc_benchmarks}
 \begin{tabular}{l|l|l|l}
 \hline
 \textbf{Dataset Name} & \textbf{Category} & \textbf{Task Type} & \textbf{Source Publication} \\
@@ -1435,8 +1453,6 @@ half\_life\_obach & Metabolism & Regression & Obach et al., 2008 \\
 herg & Toxicity & Classification & Comprehensive (Gaulton et al.) \\
 \hline
 \end{tabular}
-\caption{A.1: TDC ADMET Benchmark Datasets--Categories, Task Types, and Sources.}
-\label{tab:tdc_benchmarks}
 \end{table}
 
 \subsection*{A.1.2 ChEMBL Real-SMILES Targets}
@@ -1446,6 +1462,8 @@ Table A.2 lists the eight pharmacologically important targets from which real SM
 \begin{table}[htbp]
 \centering
 \small
+\caption{A.2: ChEMBL real-SMILES targets used in the thesis.}
+\label{tab:chembl_targets}
 \begin{tabular}{p{1.8cm}|p{3.2cm}|p{2.4cm}|p{3.0cm}}
 \hline
 \textbf{Target ID} & \textbf{Target Name} & \textbf{Target Class} & \textbf{Therapeutic Area} \\
@@ -1460,8 +1478,6 @@ CHEMBL2034 & Glucocorticoid receptor & Nuclear Receptor & Inflammation; immunosu
 CHEMBL325 & Serotonin 5-HT2A receptor & GPCR & Depression; psychedelics \\
 \hline
 \end{tabular}
-\caption{A.2: ChEMBL real-SMILES targets used in the thesis.}
-\label{tab:chembl_targets}
 \end{table}
 
 \subsection*{A.1.3 PK Parameters Extracted from PK-DB}
@@ -1471,6 +1487,8 @@ Table A.3 lists the PK parameters available in the PK-DB database. These paramet
 \begin{table}[htbp]
 \centering
 \small
+\caption{A.3: PK Parameters Extracted from PK-DB.}
+\label{tab:pk_parameters}
 \begin{tabular}{l|l}
 \hline
 \textbf{Parameter} & \textbf{Description} \\
@@ -1489,8 +1507,6 @@ fu & Fraction unbound (free drug in plasma) \\
 PPB & Plasma protein binding (percent bound) \\
 \hline
 \end{tabular}
-\caption{A.3: PK Parameters Extracted from PK-DB.}
-\label{tab:pk_parameters}
 \end{table}
 
 \subsection*{A.1.4 Data File Inventory and Sizes}
@@ -1500,6 +1516,8 @@ Table A.4 provides a complete inventory of all raw data files produced by the do
 \begin{table}[htbp]
 \centering
 \footnotesize
+\caption{A.4: Complete Raw Data File Inventory and Approximate Sizes.}
+\label{tab:file_inventory}
 \begin{tabular}{l|l|r}
 \hline
 \textbf{Directory} & \textbf{File} & \textbf{Size (KB)} \\
@@ -1538,8 +1556,6 @@ toxcast/ & toxcast\_representative\_metadata.json & 50 \\
  & \textbf{TOTAL} & \textbf{$\sim$25,000+} \\
 \hline
 \end{tabular}
-\caption{A.4: Complete Raw Data File Inventory and Approximate Sizes.}
-\label{tab:file_inventory}
 \end{table}
 
 \subsection*{A.1.5 Data Download Pipeline Execution Timeline}
@@ -1549,6 +1565,8 @@ The consolidated data download pipeline automatically logs execution time for ea
 \begin{table}[htbp]
 \centering
 \footnotesize
+\caption{A.5: Data Download Pipeline Section: Typical Execution Times.}
+\label{tab:execution_timeline}
 \begin{tabular}{l|l|l|r}
 \hline
 \textbf{Section} & \textbf{Description} & \textbf{Data Source} & \textbf{Typical Duration} \\
@@ -1570,8 +1588,6 @@ The consolidated data download pipeline automatically logs execution time for ea
  & \textbf{Total (all sections)} & & \textbf{$\sim$5--10 min} \\
 \hline
 \end{tabular}
-\caption{A.5: Data Download Pipeline Section: Typical Execution Times.}
-\label{tab:execution_timeline}
 \end{table}
 
 \section*{A.2 Data Quality Assurance Checklist}
@@ -1655,6 +1671,8 @@ Table~A.6 summarises the fixed and searched hyperparameters used across Phase 3 
 \begin{table}[htbp]
 \centering
 \small
+\caption{A.6: Hyperparameter configuration summary. Search ranges show grid values evaluated; Selected shows the value used in the final production model (model\_15, 623,078 parameters).}
+\label{tab:hyperparam_summary}
 \begin{tabular}{l|l|l}
 \hline
 \textbf{Parameter} & \textbf{Value / Search Range} & \textbf{Selected} \\
@@ -1675,8 +1693,6 @@ Dropout (MLP head) & 0.1 & 0.1 \\
 Focal loss $\gamma$ & 2.0 & 2.0 \\
 \hline
 \end{tabular}
-\caption{A.6: Hyperparameter configuration summary. Search ranges show grid values evaluated; Selected shows the value used in the final production model (model\_15, 623,078 parameters).}
-\label{tab:hyperparam_summary}
 \end{table}
 
 \section*{A.5 Extended Results by Experiment}
@@ -1686,6 +1702,8 @@ Table~A.7 provides the full progression of test-set metrics across all major exp
 \begin{table}[htbp]
 \centering
 \small
+\caption{A.7: Test-set metric progression across the main experimental milestones. Dashes indicate metrics outside the primary focus of that experiment.}
+\label{tab:extended_results}
 \begin{tabular}{p{3.8cm}|c|c|c|c}
 \hline
 \textbf{Experiment} & \textbf{hERG AUROC} & \textbf{Caco-2 AUROC} & \textbf{Clearance R$^2$} & \textbf{Binding R$^2$} \\
@@ -1698,8 +1716,6 @@ GNN encoder (MPNN, 3-layer) & -- & -- & -- & 0.4115 \\
 Joint GNN+MLP fusion & -- & -- & -- & \textbf{0.5502} \\
 \hline
 \end{tabular}
-\caption{A.7: Test-set metric progression across the main experimental milestones. Dashes indicate metrics outside the primary focus of that experiment.}
-\label{tab:extended_results}
 \end{table}
 
 \vspace{0.3cm}
@@ -1827,53 +1843,6 @@ IIV & Inter-individual Variability \\
 % -----------------------------  LIST OF TABLES --------------------------------
 \listoftables
 \thispagestyle{empty}
-
-% ----------------------------- BIBLIOGRAPHY ------------------------------------
-
-\chapter*{References}
-\addcontentsline{toc}{chapter}{References}
-
-\begin{thebibliography}{99}
-
-\bibitem{chen2018neuralode} Chen, R. T. Q., Rubanova, Y., Bettencourt, J., \& Duvenaud, D. (2018). ``Neural ordinary differential equations.'' \textit{Advances in Neural Information Processing Systems} (NeurIPS), 31.
-
-\bibitem{gilmer2017mpnn} Gilmer, J., Schoenholz, S. S., Riley, P. F., Vinyals, O., \& Dahl, G. E. (2017). ``Neural message passing for quantum chemistry.'' \textit{International Conference on Machine Learning} (ICML), pp.~1263--1272.
-
-\bibitem{vaswani2017attention} Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L., \& Polosukhin, I. (2017). ``Attention is all you need.'' \textit{Advances in Neural Information Processing Systems} (NeurIPS), 30.
-
-\bibitem{toutain2010pkpd} Toutain, P.-L., \& Bousquet-Melou, A. (2010). ``Plasma terminal half-life.'' \textit{Journal of Veterinary Pharmacology and Therapeutics}, 27(6), 427--439.
-
-\bibitem{wale2008} Wale, N., \& Karypis, G. (2008). ``Comparison of descriptor spaces for chemical compound retrieval and classification.'' \textit{Journal of Chemical Information and Modeling}, 48(1), 27-35.
-
-\bibitem{kearnes2016} Kearnes, F., McCloskey, K., Berndl, M., Pande, V., \& Riley, P. (2016). ``Molecular graph convolutions: Moving beyond fingerprints.'' \textit{Journal of Computer-Aided Molecular Design}, 30(8), 595-608.
-
-\bibitem{goodfellow2016} Goodfellow, I., Bengio, Y., \& Courville, A. (2016). \textit{Deep Learning}. MIT Press.
-
-\bibitem{duchi2011} Duchi, J., Hazan, E., \& Singer, Y. (2011). ``Adaptive subgradient methods for online learning and stochastic optimization.'' \textit{Journal of Machine Learning Research}, 12, 2121-2159.
-
-\bibitem{kingma2014} Kingma, D. P., \& Ba, J. (2014). ``Adam: A method for stochastic optimization.'' \textit{arXiv preprint arXiv:1412.6980}.
-
-\bibitem{guo2017} Guo, C., \& Pleiss, G., Sun, Y., \& Weinberger, K. Q. (2017). ``On calibration of modern neural networks.'' \textit{International Conference on Machine Learning} (pp. 1321-1330).
-
-\bibitem{overton2019} Overton, W., Auerbach, J., Schreiber, J., \& Riley, P. (2019). ``In vivo evaluation of a neural network model for predicting compound cardiotoxicity from molecular structure.'' \textit{Chemical Research in Toxicology}, 32(8), 1527-1535.
-
-\bibitem{chen2021} Chen, H., Engkvist, O., Wang, Y., Olivecrona, M., \& Blaschke, T. (2021). ``The rise of deep learning in drug discovery.'' \textit{Nature Reviews Drug Discovery}, 20(4), 287-289.
-
-\bibitem{ramsundar2015} Ramsundar, B., Kearnes, S., Riley, P., Webster, D., Konerding, D., \& Pande, V. (2015). ``Massively multitask networks for drug discovery.'' \textit{arXiv preprint arXiv:1502.02072}.
-
-\bibitem{wu2018} Wu, Z., Ramsundar, B., Feinberg, E. N., Gomes, J., Geniesse, C., Pappu, A. S., Leswing, K., \& Pande, V. (2018). ``MoleculeNet: a benchmark for molecular machine learning.'' \textit{Chemical Science}, 9(2), 513--530.
-
-\bibitem{wang2016} Wang, N. N., Li, Y., Zhang, L., Zhang, W., Deng, S., \& Wang, B. (2016). ``Collaborative filtering-based recommendation of ADMET properties for drug discovery.'' \textit{Journal of Chemical Information and Modeling}, 56(4), 663-671.
-
-\bibitem{hou2004} Hou, T., Wang, J., Zhang, W., \& Xu, X. (2004). ``ADME evaluation in drug discovery. 6. Can oral bioavailability in humans be effectively predicted by simple molecular property-based rules?'' \textit{Journal of Chemical Information and Computer Sciences}, 44(5), 1655-1667.
-
-\bibitem{gaulton2012} Gaulton, A., Bellis, L. J., Bento, A. P., Chambers, J., Davies, M., Hersey, A., ... \& Overington, J. P. (2012). ``ChEMBL: a large-scale bioactivity database for drug discovery.'' \textit{Nucleic Acids Research}, 40(D1), D1100-D1107.
-
-\bibitem{hastie2009} Hastie, T., Tibshirani, R., \& Friedman, J. (2009). \textit{The elements of statistical learning: Data mining, inference, and prediction} (2nd ed.). Springer.
-
-\bibitem{breiman2001} Breiman, L., Friedman, J., Stone, C. J., \& Olshen, R. A. (2001). \textit{Classification and regression trees}. Chapman and Hall/CRC.
-
-\end{thebibliography}
 
 % ----------------------------- LIST OF APPENDICES ---------------------------
 \chapter*{List of appendices}
