@@ -13,14 +13,7 @@
 \else
 \usepackage{fontspec}
 \defaultfontfeatures{Ligatures=TeX}
-\setmainfont[
-  Path = /usr/local/texlive/2026/texmf-dist/fonts/opentype/public/lm/,
-  UprightFont = lmroman10-regular.otf,
-  BoldFont = lmroman10-bold.otf,
-  ItalicFont = lmroman10-italic.otf,
-  BoldItalicFont = lmroman10-bolditalic.otf,
-  SmallCapsFont = lmromancaps10-regular.otf
-]{lmroman10-regular.otf}
+% Latin Modern Roman is the XeLaTeX default; no \setmainfont needed
 \fi
 \usepackage[main=english, polish]{babel}
 
