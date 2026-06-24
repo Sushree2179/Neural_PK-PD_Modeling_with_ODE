@@ -1,31 +1,149 @@
-INFORMATION ABOUT THE DIPLOMA THESIS TEMPLATE
+Editing guidelines
+Layout of the diploma thesis:
 
-This template is an update of Maria Czaplicka's 2018 template.
+title page (please, do not change the types and sizes of fonts!)
+Bachelor’s thesis title page template 
+Master’s thesis title page template CSaIS
+Master’s thesis title page template DS
 
-It was created due to the decision No. 109/2021 of the Rector of the Warsaw University of Technology
-regulating the content of declarations on authorship and license of the thesis.
+In case of an engineering thesis the inscription ‘consultation’ and the name and surname below refer to the scientific tutor, who is required when the thesis supervisor does not hold the PhD degree (only MSc degree). In case the thesis supervisor has got the PhD degree or higher, please remove the inscription ‘consultation’ and the name and surname below.
 
-Update 27.01.2022 implemented the decision No. 4/2022 of the Rector of the Warsaw University of Technology
-and removed obligatory statements and signatures in the text.
-Additional title pages were also created and file names were unified. 
+an abstract in English including the thesis title and keywords (4 -6 expressions), the abstract should be one-page long with single line spacing and font size: 12;
 
-Update 14.05.2025 changed university logo in the front page. 
+an abstract in Polish including the thesis title in Polish and keywords (4 -6 expressions), the abstract should be one-page long with single line spacing and font size: 12;
 
-The files that need to be customized are in the folders
-    1. title_page
-    2. thesis
+optionally – an abstract in a foreign language including the thesis title and keywords (4 -6 expressions) – in case a student applies for issuing his/her diploma in a language other than English or Polish, the abstract should be one-page long with single line spacing and font size: 12.
 
-After creating the cover page, move the PDF file to the 2. thesis folder.
-(
- If you give it a name other than titlepage.pdf (titlepage-eng.pdf in the case of the English version)
- you need to adjust the path in the command include a cover page - see files
- thesis_pl.pdf and thesis_eng.tex in folder 2. thesis.
-)
+Table of contents
 
+in a diploma thesis which is a team project: Descritpion of the work division in the team, including the scope of each co-author’s contribution to the practical part (Team Programming Project) and the descriptive part of the diploma thesis
+Chapters of the thesis
 
-The author of the original version of the template: 	Maria Czaplicka
-Update author:                                      	Kacper Kurowski
-Update 27.01.2022:               			Krzysztof Kaczmarski
-Update 14.05.2025:              			Krzysztof Kaczmarski
+References
 
+List of symbols and abbreviations
+
+List of figures
+
+List of tables
+
+List of appendices
+
+Appendices
+
+Editing rules
+
+It is recommended to follow the rules of editing diploma theses listed below.
+
+Element of editing
+
+required/advisable/optional
+
+Duplex printing; A4
+
+required
+
+Margins
+
+inside – 30 mm,
+
+outside – 20 mm,
+
+top and bottom – 25 mm
+
+advisable
+
+Typeface (font) sans serif typeface size 11 (e.g. Arial, Verdana) *
+
+advisable
+
+leading 1.15
+
+advisable
+
+Page numbering: at the bottom, on the outer side, mirror location on odd and even pages
+
+required
+
+paragraph
+
+indent 0.5 cm
+
+no indent with 4 spaces before the paragraph
+
+optional
+
+References:
+
+numbering in accordance with the Polish Norm
+
+Harvard style
+
+optional
+
+Numbering of tables and figures
+
+continued throughout the thesis
+
+separate in each chapter
+
+optional
+
+References – in alphabetical order (according to authors’ surnames)
+
+advisable
+
+Table title
+
+above the table – justified to the left, a sans serif font of size 9
+
+advisable
+
+Figure caption
+
+under the figure – justified to the left, a sans serif font of size 9
+
+advisable
+
+Source of the figure or table
+
+under the figure or table – justified to the left, a sans serif font of size 9
+
+advisable
+
+Subchapters
+
+up to three levels
+
+required
+
+First-level subchapters – start on a new page
+
+advisable
+
+Typeface of titles of the main chapters
+
+bold, sans serif;
+
+size:
+
+first-level title -14,
+
+second-level title -13,
+
+third-level title -12,
+
+advisable
+
+listing – only a point or a dash
+
+advisable
+
+footnotes – continued numbering in the whole thesis
+
+Sans serif typeface, like in the text, size 9
+
+advisable
+
+*in theses with a large number of mathematical formulae and calculations, it is possible to use serif typefaces (e.g. Times New Roman)
 

@@ -35,13 +35,15 @@
 
 \usepackage[hidelinks]{hyperref} % for hyperlinks, for example, urls, references to equations, entries in a bibliography --- hidelinks option removes rectangles around hiperlinks
 
+\usepackage{caption}
+\captionsetup{font={small}, labelfont=bf, justification=raggedright, singlelinecheck=false}
 
 % ---------------- MARGINS, INDENTATION, LINESPREAD ------------------
 
 \usepackage[inner=20mm, outer=20mm, bindingoffset=10mm, top=25mm, bottom=25mm]{geometry} % MARGINS
 
 
-\linespread{1.5}
+\linespread{1.15}
 \allowdisplaybreaks         % ALLOWS BREAKING PAGE IN MATH MODE
 
 \usepackage{indentfirst}    % IT MAKES THE FIRST PARAGRAPH INDENTED; NOT NEEDED
@@ -82,17 +84,17 @@
 \usepackage{titlesec}
 \usepackage[section]{placeins}
 \titleformat{\chapter}
-  {\normalfont\Large \bfseries}
-  {\thechapter.}{1ex}{\Large}
+  {\normalfont\fontsize{14pt}{16.8pt}\selectfont\bfseries}
+  {\thechapter.}{1ex}{}
 
 \titleformat{\section}
-  {\normalfont\large\bfseries}
+  {\normalfont\fontsize{13pt}{15.6pt}\selectfont\bfseries}
   {\thesection.}{1ex}{}
 \titlespacing{\section}{0pt}{30pt}{20pt} 
 
     
 \titleformat{\subsection}
-  {\normalfont \bfseries}
+  {\normalfont\fontsize{12pt}{14.4pt}\selectfont\bfseries}
   {\thesubsection.}{1ex}{}
 
 
@@ -159,6 +161,7 @@ Wyniki pokazują, że jakość predykcji istotnie wzrasta po integracji danych r
 \thispagestyle{empty}
 \clearpage
 
+\chapter{Introduction}
 The practical motivation is to move from isolated endpoint prediction to coherent therapeutic assessment under uncertainty.
 
 \section{Objectives and Contributions}
@@ -181,8 +184,7 @@ The key contributions are:
 
 \section{Thesis Organization}
 
-
-See Appendix~\ref{app:supplementary} for the full table of thesis organization.
+The thesis is organized as follows. Chapter~2 reviews the background in ADME-Tox endpoint modeling, multi-task learning, graph neural networks, PK-PD ODE theory, and probability calibration. Chapter~3 surveys the related literature and identifies the research gap addressed by the work. Chapter~4 formally defines the multi-task learning problem, evaluation metrics, and scope. Chapter~5 describes the data sources, curation pipeline, feature engineering, and split strategy. Chapter~6 presents the full methodology, covering the shared encoder architecture, task-specific heads, Neural ODE PK-PD module, calibration procedures, and the RapidDock exploratory branch. Chapter~7 defines the experimental setup, environment, and training protocol. Chapter~8 reports the empirical results as a staged progression from baseline prediction to translational decision analysis. Chapter~9 discusses the findings, limitations, and comparisons with related work. Chapter~10 concludes with a summary and directions for future work. The Appendix collects supporting tables, hyperparameter configurations, calibration figures, and reproducibility notes.
 
 \chapter{Background and Theoretical Foundations}
 
@@ -518,15 +520,15 @@ The primary categories represented are cardiac, developmental, nuclear receptor,
 
 Three TDC benchmarks are examined in detail because they provide the endpoints that map most directly into the PK-PD framework: hERG inhibition for safety, Caco-2 permeability for absorption, and hepatocyte clearance for elimination. At this stage, the goal is to inspect benchmark-level behavior and confirm that each endpoint exhibits a plausible distribution for later modeling.
 
-\subsubsection{hERG Inhibition (Cardiotoxicity Risk)}
+\noindent\textbf{hERG Inhibition (Cardiotoxicity Risk)}\par\medskip
 
 The hERG endpoint captures a clinically important liability because potassium-channel blockade is strongly associated with QT prolongation and pro-arrhythmic risk. The benchmark subset used for exploratory visualization contains 655 compounds and remains sufficiently balanced to support meaningful binary discrimination, making AUROC an appropriate primary metric later in the thesis. The figure panel is intended to show class balance at the benchmark level; the final harmonized task counts used in model training are reported separately in the dataset-assembly subsection.
 
-\subsubsection{Caco-2 Permeability (Intestinal Absorption)}
+\noindent\textbf{Caco-2 Permeability (Intestinal Absorption)}\par\medskip
 
 The Caco-2 benchmark is retained because it provides an experimentally grounded proxy for intestinal absorption. Its distribution is heterogeneous rather than degenerate, which is desirable for classification after thresholding. In pharmacological terms, high permeability suggests good oral absorption potential, while low permeability flags compounds that may require formulation support or alternative administration routes. The middle panel of Figure~\ref{fig:5.3} illustrates this spread at the raw-benchmark level.
 
-\subsubsection{Hepatocyte Clearance (Metabolic Stability)}
+\noindent\textbf{Hepatocyte Clearance (Metabolic Stability)}\par\medskip
 
 The clearance benchmark provides the elimination-related endpoint required for the PK component of the framework. The benchmark subset used for exploratory visualization contains 1,213 compounds. Its right-skewed distribution is pharmacologically plausible: many compounds exhibit moderate stability, while a smaller subset is cleared rapidly enough to imply reduced exposure duration. This endpoint is therefore especially valuable because it links a learned molecular property directly to the elimination term in the downstream ODE model.
 
@@ -916,14 +918,14 @@ Two fine-tuning strategies are evaluated:
 
 \subsection{Threshold Calibration}
 
-\subsubsection{Unconstrained Threshold Sweep}
+\noindent\textbf{Unconstrained Threshold Sweep}\par\medskip
 
 For each classification task, a grid of 91 thresholds $\theta \in [0.05, 0.95]$ is evaluated on the validation set; the threshold maximizing F1 is locked:
 \[
   \hat{\theta} = \arg\max_{\theta \in \Theta}\; \text{F1}\bigl(y_{\text{val}},\; \mathbf{1}[p_{\text{val}} \geq \theta]\bigr)
 \]
 
-\subsubsection{Constrained Threshold Calibration}
+\noindent\textbf{Constrained Threshold Calibration}\par\medskip
 
 To avoid degenerate low-threshold policies (which inflate F1 while collapsing operational behavior), a guardrail-constrained sweep enforces minimum accuracy and precision:
 \begin{itemize}
@@ -932,7 +934,7 @@ To avoid degenerate low-threshold policies (which inflate F1 while collapsing op
 \end{itemize}
 The constrained threshold $\hat{\theta}_c$ is the F1-maximizing threshold that satisfies both guardrails on the validation set.
 
-\subsubsection{Production Threshold Policy}
+\noindent\textbf{Production Threshold Policy}\par\medskip
 
 The production threshold is selected per task via an automatic decision rule:
 \begin{enumerate}
@@ -1219,7 +1221,7 @@ All models are trained using the Adam optimizer with:
   \item Maximum epochs: 300
 \end{itemize}
 
-\noindent Classification tasks use focal loss ($\gamma=2.0$) to handle class imbalance. Regression tasks use mean squared error (MSE). The combined multi-task loss is a weighted sum (Equation~6.1) with task-specific weights from Table~\ref{tab:phase3a_config}.
+\noindent Classification tasks use focal loss ($\gamma=2.0$) to handle class imbalance. Regression tasks use mean squared error (MSE). The combined multi-task loss is a weighted sum (Equation~\ref{eq:mtl_loss}) with task-specific weights from Table~\ref{tab:hyperparam_summary}.
 
 
 \section{Experimental Sequence}
@@ -1395,6 +1397,7 @@ Future work should focus on:
 
 \chapter*{Appendix}
 \addcontentsline{toc}{chapter}{Appendix}
+\label{app:supplementary}
 
 \section*{A.1 Data Acquisition Supplementary Tables}
 
